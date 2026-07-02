@@ -1,0 +1,143 @@
+{
+  "category": {
+    "slug": "bande-a-joint",
+    "parentLabel": "Préparation des surfaces",
+    "parentHref": "/preparation-materiaux",
+    "name": "Bande à Joint",
+    "tagline": "Finition Plaques de Plâtre",
+    "description": "Bandes à joint papier, armées et autocollantes pour le traitement des joints entre plaques de plâtre, avant mise en peinture ou enduit.",
+    "stats": { "products": 37, "brands": 7, "delivery": "J+1" }
+  },
+  "sharedImage": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=600&q=80&auto=format&fit=crop",
+  "brands": [
+    { "name": "Placo", "count": 12 },
+    { "name": "Knauf", "count": 9 },
+    { "name": "Toupret", "count": 6 },
+    { "name": "Fissnet", "count": 4 },
+    { "name": "Siniat", "count": 3 },
+    { "name": "Trio", "count": 2 },
+    { "name": "Novatex", "count": 1 }
+  ],
+  "surfaceTypes": [
+    { "name": "Plaque de Plâtre", "count": 24 },
+    { "name": "Plâtre", "count": 9 },
+    { "name": "Béton", "count": 4 }
+  ],
+  "priceRange": { "min": 0, "max": 120, "currentMin": 0, "currentMax": 70 },
+  "activeFilters": [],
+  "totalCount": 37,
+  "page": 1,
+  "totalPages": 5,
+  "sortOptions": ["Pertinence", "Prix croissant", "Prix décroissant", "Nouveautés", "Meilleures ventes"],
+  "products": [
+    {
+      "id": "PLC-BJP-75",
+      "sku": "PLC-BJP-75",
+      "brand": "Placo",
+      "name": "Bande à Joint Papier 75m",
+      "image": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=600&q=80&auto=format&fit=crop",
+      "tags": ["75 M", "PLAQUE DE PLÂTRE"],
+      "price": 9.90,
+      "compareAtPrice": 11.50,
+      "unitPrice": "0,13 €/m",
+      "badge": { "label": "PRO", "tone": "dark" },
+      "discount": "-14%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "KNF-BJA-75",
+      "sku": "KNF-BJA-75",
+      "brand": "Knauf",
+      "name": "Bande à Joint Armée Fibre de Verre 75m",
+      "image": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=600&q=80&auto=format&fit=crop",
+      "tags": ["75 M", "PLAQUE DE PLÂTRE", "BÉTON"],
+      "price": 17.40,
+      "compareAtPrice": null,
+      "unitPrice": "0,23 €/m",
+      "badge": { "label": "NOUVEAU", "tone": "stock" },
+      "ribbon": "STOCK",
+      "stock": "in_stock"
+    },
+    {
+      "id": "TRP-BJP-150",
+      "sku": "TRP-BJP-150",
+      "brand": "Toupret",
+      "name": "Bande à Joint Papier Renforcée 150m",
+      "image": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=600&q=80&auto=format&fit=crop",
+      "tags": ["150 M", "PLAQUE DE PLÂTRE"],
+      "price": 16.80,
+      "compareAtPrice": 19.90,
+      "unitPrice": "0,11 €/m",
+      "badge": { "label": "PRO", "tone": "dark" },
+      "stock": "in_stock"
+    },
+    {
+      "id": "FSN-BJA-50",
+      "sku": "FSN-BJA-50",
+      "brand": "Fissnet",
+      "name": "Bande à Joint Autocollante Fissnet 50m",
+      "image": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=600&q=80&auto=format&fit=crop",
+      "tags": ["50 M", "PLÂTRE", "PLAQUE DE PLÂTRE"],
+      "price": 13.20,
+      "compareAtPrice": null,
+      "unitPrice": "0,26 €/m",
+      "badge": { "label": "NOUVEAU", "tone": "stock" },
+      "cornerBadge": "A+",
+      "stock": "low_stock"
+    },
+    {
+      "id": "SIN-BJP-75",
+      "sku": "SIN-BJP-75",
+      "brand": "Siniat",
+      "name": "Bande à Joint Papier Standard 75m",
+      "image": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=600&q=80&auto=format&fit=crop",
+      "tags": ["75 M", "PLAQUE DE PLÂTRE"],
+      "price": 8.40,
+      "compareAtPrice": 9.80,
+      "unitPrice": "0,11 €/m",
+      "badge": { "label": "PRO", "tone": "dark" },
+      "discount": "-14%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "TRI-BJA-90",
+      "sku": "TRI-BJA-90",
+      "brand": "Trio",
+      "name": "Bande à Joint Armée Polyester 90m",
+      "image": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=600&q=80&auto=format&fit=crop",
+      "tags": ["90 M", "PLAQUE DE PLÂTRE", "BÉTON"],
+      "price": 19.90,
+      "compareAtPrice": null,
+      "unitPrice": "0,22 €/m",
+      "ribbon": "STOCK",
+      "stock": "in_stock"
+    },
+    {
+      "id": "NVT-BJP-100",
+      "sku": "NVT-BJP-100",
+      "brand": "Novatex",
+      "name": "Bande à Joint Papier Économique 100m",
+      "image": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=600&q=80&auto=format&fit=crop",
+      "tags": ["100 M", "PLAQUE DE PLÂTRE"],
+      "price": 10.60,
+      "compareAtPrice": null,
+      "unitPrice": "0,11 €/m",
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "PLC-BJA-75",
+      "sku": "PLC-BJA-75",
+      "brand": "Placo",
+      "name": "Bande à Joint Armée Calicot 75m",
+      "image": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=600&q=80&auto=format&fit=crop",
+      "tags": ["75 M", "PLÂTRE"],
+      "price": 15.20,
+      "compareAtPrice": null,
+      "unitPrice": "0,20 €/m",
+      "badge": { "label": "PRO", "tone": "dark" },
+      "badge2": { "label": "NOUVEAU", "tone": "stock" },
+      "stock": "in_stock"
+    }
+  ]
+}
