@@ -1,6 +1,13 @@
 "use client";
 
-import { useRef, useState } from "react";
+import {
+  useRef,
+  useState,
+  type ReactNode,
+  type CSSProperties,
+  type MouseEvent,
+  type ChangeEvent,
+} from "react";
 import { useRouter } from "next/navigation";
 import {
   motion,
@@ -34,8 +41,23 @@ function useInViewAnim(threshold = "-80px") {
 }
 
 // ─── Reusable bits (copied from ContactPage so this page is self-contained) ──
+interface SectionLabelProps {
+  children: ReactNode;
+  color?: string;
+}
 
-function SectionLabel({ children, color = BLUE_DEEP }) {
+interface MagneticBtnProps {
+  children: ReactNode;
+  className?: string;
+  style?: CSSProperties;
+  href?: string;
+  onClick?: () => void;
+  type?: "button" | "submit" | "reset";
+}
+function SectionLabel({
+  children,
+  color = BLUE_DEEP,
+}: SectionLabelProps) {
   return (
     <div className="flex items-center gap-3 mb-4">
       <div className="w-8 h-px" style={{ background: color }} />
@@ -44,14 +66,28 @@ function SectionLabel({ children, color = BLUE_DEEP }) {
   );
 }
 
-function MagneticBtn({ children, className, style, href, onClick, type }) {
-  const ref = useRef(null);
+function MagneticBtn({
+  children,
+  className,
+  style,
+  href,
+  onClick,
+  type = "button",
+}: MagneticBtnProps) {
+  const ref = useRef<HTMLDivElement>(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const sx = useSpring(x, { stiffness: 200, damping: 20 });
   const sy = useSpring(y, { stiffness: 200, damping: 20 });
 
-  const handleMove = (e) => {
+  const handleMove = (e: MouseEvent<HTMLDivElement>) => {
+  if (!ref.current) return;
+
+  const r = ref.current.getBoundingClientRect();
+
+  x.set((e.clientX - r.left - r.width / 2) * 0.35);
+  y.set((e.clientY - r.top - r.height / 2) * 0.35);
+};
     const r = ref.current.getBoundingClientRect();
     x.set((e.clientX - r.left - r.width / 2) * 0.35);
     y.set((e.clientY - r.top - r.height / 2) * 0.35);
@@ -113,7 +149,9 @@ function ContactForm() {
     "Autre demande",
   ];
 
-  const handleChange = (e) => setFields(f => ({ ...f, [e.target.name]: e.target.value }));
+  const handleChange = (
+  e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+) =>setFields(f => ({ ...f, [e.target.name]: e.target.value }));
 
   const handleSubmit = () => {
     if (!requestType || !fields.firstName || !fields.email || !agreed) return;
