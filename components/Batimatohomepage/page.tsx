@@ -15,6 +15,15 @@
  *  9. Footer
  *
  * Stack: Next.js + Tailwind CSS + Framer Motion
+ *
+ * MOBILE NOTES
+ * ─────────────────────────────────────────────────────────────────
+ * Layout is built with inline styles (fixed multi-column grids), so
+ * plain CSS can't override them without `!important`. The
+ * <ResponsiveStyles /> component below injects a single global
+ * stylesheet with `!important` media-query rules that only kick in
+ * under 768px / 480px, targeting the `bm-*` classNames sprinkled
+ * through the sections. Desktop is completely untouched.
  */
 
 import { useRef, useEffect, useState, useCallback } from "react";
@@ -96,6 +105,7 @@ function SectionHeader({
       variants={stagger}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
+      className="bm-heading-wrap"
       style={{ textAlign: centered ? "center" : "left", margin: centered ? "0 auto" : "0" }}
     >
       <motion.div variants={fadeUp}>
@@ -109,15 +119,15 @@ function SectionHeader({
           {centered && <span style={{ display: "inline-block", width: "22px", height: "1px", background: Y }} />}
         </span>
       </motion.div>
-      <motion.h2 variants={fadeUp} style={{
-        color: "#fff", fontWeight: 900, lineHeight: 1.05,
+      <motion.h2 variants={fadeUp} className="bm-heading" style={{
+        color: "#fff", fontWeight: 900, lineHeight: 1.1,
         letterSpacing: "-0.03em", marginBottom: subtitle ? "18px" : 0,
         fontSize: "clamp(2rem, 4vw, 3.2rem)",
       }}>
         {title}
       </motion.h2>
       {subtitle && (
-        <motion.p variants={fadeUp} style={{
+        <motion.p variants={fadeUp} className="bm-subtitle" style={{
           color: MUT, lineHeight: 1.7, fontSize: "clamp(0.88rem, 1.1vw, 1rem)",
           maxWidth: centered ? "520px" : "480px",
           margin: centered ? "0 auto" : "0",
@@ -152,6 +162,81 @@ function ArchGrid({ opacity = 0.7 }: { opacity?: number }) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
+// GLOBAL RESPONSIVE STYLES — injected once, only affects mobile widths
+// ═══════════════════════════════════════════════════════════════════════════
+function ResponsiveStyles() {
+  return (
+    <style>{`
+      /* ---------- Tablet & mobile (≤768px) ---------- */
+      @media (max-width: 768px) {
+        .bm-container { padding-left: 24px !important; padding-right: 24px !important; }
+        .bm-section-pad { padding-top: 64px !important; padding-bottom: 64px !important; }
+
+        .bm-heading { font-size: clamp(1.6rem, 6vw, 2.1rem) !important; line-height: 1.15 !important; }
+        .bm-subtitle { max-width: 100% !important; }
+        .bm-section-head-row { flex-direction: column !important; align-items: flex-start !important; gap: 16px !important; }
+
+        /* Category showcase */
+        .bm-cat-top { grid-template-columns: 1fr !important; }
+        .bm-cat-bottom { grid-template-columns: 1fr !important; gap: 12px !important; }
+        .bm-cat-card { min-height: 220px !important; }
+
+        /* Why Batimato */
+        .bm-why-main { grid-template-columns: 1fr !important; gap: 24px !important; }
+        .bm-pillars-grid { grid-template-columns: 1fr 1fr !important; gap: 12px !important; }
+        .bm-why-photo { min-height: 260px !important; order: -1 !important; }
+
+        /* Expertise strip */
+        .bm-expertise-main { grid-template-columns: 1fr !important; gap: 48px !important; }
+        .bm-expertise-float { position: static !important; margin: -32px 16px 0 auto !important; width: fit-content !important; }
+
+        /* Projects (masonry) */
+        .bm-projects-grid { grid-template-columns: 1fr 1fr !important; gap: 10px !important; }
+        .bm-project-card { grid-column: span 1 !important; grid-row: span 1 !important; min-height: 200px !important; }
+
+        /* Process timeline */
+        .bm-process-grid { grid-template-columns: 1fr 1fr !important; gap: 40px 16px !important; }
+        .bm-process-connector { display: none !important; }
+
+        /* Testimonials */
+        .bm-quote-mark { font-size: 140px !important; top: 12px !important; }
+
+        /* Brand ticker */
+        .bm-brand-item { padding: 0 24px !important; height: 64px !important; }
+        .bm-brand-logo { height: 64px !important; max-width: 150px !important; }
+
+        /* CTA banner */
+        .bm-cta-pad { padding: 56px 24px !important; }
+        .bm-cta-row { flex-direction: column !important; align-items: flex-start !important; }
+        .bm-cta-actions { width: 100% !important; }
+        .bm-cta-actions a { width: 100% !important; justify-content: center !important; }
+
+        /* Footer */
+        .bm-footer { border-radius: 20px !important; margin: 24px auto !important; }
+        .bm-footer-grid { grid-template-columns: 1fr 1fr !important; gap: 32px 24px !important; padding: 56px 24px 40px !important; }
+        .bm-footer-bottom { padding: 24px !important; flex-direction: column !important; text-align: center !important; gap: 16px !important; }
+        .bm-footer-logo { height: 60px !important; }
+        .bm-footer-col-link { font-size: 1.05rem !important; }
+      }
+
+      /* ---------- Small phones (≤480px) ---------- */
+      @media (max-width: 480px) {
+        .bm-container { padding-left: 16px !important; padding-right: 16px !important; }
+        .bm-section-pad { padding-top: 48px !important; padding-bottom: 48px !important; }
+
+        .bm-cat-bottom { grid-template-columns: 1fr !important; }
+        .bm-pillars-grid { grid-template-columns: 1fr !important; }
+        .bm-process-grid { grid-template-columns: 1fr !important; gap: 28px !important; }
+        .bm-projects-grid { grid-template-columns: 1fr !important; }
+        .bm-project-card { min-height: 220px !important; }
+        .bm-footer-grid { grid-template-columns: 1fr !important; padding: 48px 20px 32px !important; }
+        .bm-cta-pad { padding: 40px 16px !important; }
+      }
+    `}</style>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
 // 1. CATEGORY SHOWCASE — full-bleed photo cards, no prices, just explore
 // ═══════════════════════════════════════════════════════════════════════════
 const CATEGORIES = [
@@ -167,6 +252,7 @@ function CategoryCard({ cat, delay = 0 }: { cat: typeof CATEGORIES[0]; delay?: n
   return (
     <motion.a
       href={cat.href}
+      className="bm-cat-card"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
@@ -241,10 +327,10 @@ function CategoryCard({ cat, delay = 0 }: { cat: typeof CATEGORIES[0]; delay?: n
 
 function CategoryShowcase() {
   return (
-    <section style={{ background: INK, padding: "100px 0 80px", position: "relative", overflow: "hidden" }}>
+    <section className="bm-section-pad" style={{ background: INK, padding: "100px 0 80px", position: "relative", overflow: "hidden" }}>
       <ArchGrid opacity={0.5} />
-      <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 48px" }}>
-        <div style={{ marginBottom: "56px", display: "flex", flexWrap: "wrap", alignItems: "flex-end", justifyContent: "space-between", gap: "24px" }}>
+      <div className="bm-container" style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 48px" }}>
+        <div className="bm-section-head-row" style={{ marginBottom: "56px", display: "flex", flexWrap: "wrap", alignItems: "flex-end", justifyContent: "space-between", gap: "24px" }}>
           <SectionHeader
             eyebrow="Nos Univers"
             title={<>Tout ce qu'il faut pour<br /><span style={{ color: Y }}>bâtir, rénover, embellir</span></>}
@@ -269,12 +355,12 @@ function CategoryShowcase() {
         </div>
 
         {/* Main 2+1 top row */}
-        <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr", gap: "12px", marginBottom: "12px" }}>
+        <div className="bm-cat-top" style={{ display: "grid", gridTemplateColumns: "2fr 1fr", gap: "12px", marginBottom: "12px" }}>
           <CategoryCard cat={CATEGORIES[0]} delay={0} />
           <CategoryCard cat={CATEGORIES[1]} delay={0.1} />
         </div>
         {/* Bottom 3-column row */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "12px" }}>
+        <div className="bm-cat-bottom" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "12px" }}>
           {CATEGORIES.slice(2).map((cat, i) => (
             <CategoryCard key={cat.label} cat={{ ...cat, span: 1 }} delay={0.15 + i * 0.08} />
           ))}
@@ -322,15 +408,15 @@ function WhyBatimato() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section style={{ background: INKL, padding: "100px 0", position: "relative", overflow: "hidden" }}>
+    <section className="bm-section-pad" style={{ background: INKL, padding: "100px 0", position: "relative", overflow: "hidden" }}>
       <div aria-hidden style={{
         position: "absolute", top: 0, left: 0, right: 0, height: "3px",
         background: `linear-gradient(90deg, transparent, ${Y} 40%, transparent 100%)`,
       }} />
 
-      <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 48px" }}>
+      <div className="bm-container" style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 48px" }}>
         {/* Header + link */}
-        <div style={{ display: "flex", flexWrap: "wrap", alignItems: "flex-end", justifyContent: "space-between", gap: "32px", marginBottom: "64px" }}>
+        <div className="bm-section-head-row" style={{ display: "flex", flexWrap: "wrap", alignItems: "flex-end", justifyContent: "space-between", gap: "32px", marginBottom: "64px" }}>
           <SectionHeader
             eyebrow="Pourquoi Batimato"
             title={<>L'excellence au service<br /><span style={{ color: Y }}>de vos chantiers</span></>}
@@ -347,9 +433,10 @@ function WhyBatimato() {
           </motion.a>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "32px", alignItems: "stretch" }}>
+        <div className="bm-why-main" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "32px", alignItems: "stretch" }}>
           {/* Left — pillars */}
           <motion.div ref={ref} variants={stagger} initial="hidden" animate={inView ? "visible" : "hidden"}
+            className="bm-pillars-grid"
             style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}
           >
             {PILLARS.map(p => (
@@ -370,6 +457,7 @@ function WhyBatimato() {
           <motion.div
             initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-60px" }} transition={{ duration: 0.85, ease: [0.25, 0.46, 0.45, 0.94] }}
+            className="bm-why-photo"
             style={{ position: "relative", borderRadius: "16px", overflow: "hidden", minHeight: "420px" }}
           >
             <img src={PHOTOS.expertise} alt="Expert Batimato au travail"
@@ -415,10 +503,10 @@ const EXPERTISE_ITEMS = [
 
 function ExpertiseStrip() {
   return (
-    <section style={{ background: INK, padding: "100px 0", position: "relative", overflow: "hidden" }}>
+    <section className="bm-section-pad" style={{ background: INK, padding: "100px 0", position: "relative", overflow: "hidden" }}>
       <ArchGrid opacity={0.4} />
-      <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 48px" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "64px", alignItems: "center" }}>
+      <div className="bm-container" style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 48px" }}>
+        <div className="bm-expertise-main" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "64px", alignItems: "center" }}>
           {/* Left — stacked photos */}
           <motion.div
             initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }}
@@ -435,6 +523,7 @@ function ExpertiseStrip() {
             <motion.div
               animate={{ y: [0, -8, 0] }}
               transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+              className="bm-expertise-float"
               style={{
                 position: "absolute", bottom: "-24px", right: "-24px",
                 background: CARD, border: `1px solid ${BDRY}`,
@@ -479,7 +568,7 @@ function ExpertiseStrip() {
               ))}
             </div>
 
-            <motion.div style={{ marginTop: "40px", display: "flex", gap: "12px" }}
+            <motion.div className="bm-cta-actions" style={{ marginTop: "40px", display: "flex", gap: "12px" }}
               initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.4 }}
             >
@@ -531,6 +620,7 @@ function ProjectCard({ p, delay = 0 }: { p: typeof PROJECTS[0]; delay?: number }
   const [hovered, setHovered] = useState(false);
   return (
     <motion.div
+      className="bm-project-card"
       initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }} transition={{ duration: 0.75, delay }}
       onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}
@@ -564,9 +654,9 @@ function ProjectCard({ p, delay = 0 }: { p: typeof PROJECTS[0]; delay?: number }
 
 function Projects() {
   return (
-    <section style={{ background: INKL, padding: "100px 0", position: "relative", overflow: "hidden" }}>
-      <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 48px" }}>
-        <div style={{ display: "flex", flexWrap: "wrap", alignItems: "flex-end", justifyContent: "space-between", gap: "24px", marginBottom: "48px" }}>
+    <section className="bm-section-pad" style={{ background: INKL, padding: "100px 0", position: "relative", overflow: "hidden" }}>
+      <div className="bm-container" style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 48px" }}>
+        <div className="bm-section-head-row" style={{ display: "flex", flexWrap: "wrap", alignItems: "flex-end", justifyContent: "space-between", gap: "24px", marginBottom: "48px" }}>
           <SectionHeader
             eyebrow="Réalisations"
             title={<>Des projets qui<br /><span style={{ color: Y }}>parlent d'eux-mêmes</span></>}
@@ -583,7 +673,7 @@ function Projects() {
         </div>
 
         {/* Masonry grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gridTemplateRows: "auto", gap: "12px" }}>
+        <div className="bm-projects-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gridTemplateRows: "auto", gap: "12px" }}>
           {PROJECTS.map((p, i) => <ProjectCard key={p.title} p={p} delay={i * 0.08} />)}
         </div>
       </div>
@@ -626,19 +716,20 @@ function ProcessTimeline() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section style={{ background: INK, padding: "100px 0", position: "relative", overflow: "hidden" }}>
+    <section className="bm-section-pad" style={{ background: INK, padding: "100px 0", position: "relative", overflow: "hidden" }}>
       <div aria-hidden style={{ position: "absolute", left: "50%", top: "20%", transform: "translateX(-50%)", width: "700px", height: "300px", background: "radial-gradient(ellipse, rgba(255,196,0,0.05) 0%, transparent 70%)", filter: "blur(40px)", pointerEvents: "none" }} />
 
-      <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 48px" }}>
+      <div className="bm-container" style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 48px" }}>
         <div style={{ textAlign: "center", marginBottom: "72px" }}>
           <SectionHeader eyebrow="Comment ça marche" title={<>Simple comme<br /><span style={{ color: Y }}>un chantier réussi</span></>} subtitle="Quatre étapes. Un interlocuteur. Zéro prise de tête." centered />
         </div>
 
         <motion.div ref={ref} variants={stagger} initial="hidden" animate={inView ? "visible" : "hidden"}
+          className="bm-process-grid"
           style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "24px", position: "relative" }}
         >
           {/* Connector */}
-          <div aria-hidden style={{ position: "absolute", top: "40px", left: "12.5%", right: "12.5%", height: "1px", background: `linear-gradient(90deg, ${BDRY}, ${BDRY})`, zIndex: 0 }} />
+          <div aria-hidden className="bm-process-connector" style={{ position: "absolute", top: "40px", left: "12.5%", right: "12.5%", height: "1px", background: `linear-gradient(90deg, ${BDRY}, ${BDRY})`, zIndex: 0 }} />
 
           {STEPS.map((s, i) => (
             <motion.div key={s.n} variants={fadeUp} style={{ textAlign: "center", position: "relative", zIndex: 1 }}>
@@ -676,10 +767,10 @@ function Testimonials() {
   }, []);
 
   return (
-    <section style={{ background: INKL, padding: "100px 0", position: "relative", overflow: "hidden" }}>
-      <div aria-hidden style={{ position: "absolute", top: "40px", left: "50%", transform: "translateX(-50%)", fontSize: "280px", lineHeight: 1, fontWeight: 900, color: "rgba(255,196,0,0.03)", pointerEvents: "none", userSelect: "none", fontFamily: "Georgia, serif" }}>"</div>
+    <section className="bm-section-pad" style={{ background: INKL, padding: "100px 0", position: "relative", overflow: "hidden" }}>
+      <div aria-hidden className="bm-quote-mark" style={{ position: "absolute", top: "40px", left: "50%", transform: "translateX(-50%)", fontSize: "280px", lineHeight: 1, fontWeight: 900, color: "rgba(255,196,0,0.03)", pointerEvents: "none", userSelect: "none", fontFamily: "Georgia, serif" }}>"</div>
 
-      <div ref={ref} style={{ maxWidth: "800px", margin: "0 auto", padding: "0 48px", textAlign: "center" }}>
+      <div ref={ref} className="bm-container" style={{ maxWidth: "800px", margin: "0 auto", padding: "0 48px", textAlign: "center" }}>
         <motion.div initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ duration: 0.6 }}>
           <div style={{ marginBottom: "48px" }}>
             <span style={{ display: "inline-flex", alignItems: "center", gap: "8px", color: Y, fontSize: "0.68rem", letterSpacing: "0.28em", fontWeight: 700, textTransform: "uppercase" }}>
@@ -755,7 +846,7 @@ function BrandTicker() {
             style={{ display: "flex", width: "max-content" }}
           >
             {[...BRANDS, ...BRANDS].map((b, i) => (
-              <div key={i} style={{
+              <div key={i} className="bm-brand-item" style={{
                 padding: "0 40px",
                 borderRight: `1px solid ${BDR}`,
                 display: "flex",
@@ -768,6 +859,7 @@ function BrandTicker() {
                   alt={b.name}
                   title={b.name}
                   loading="lazy"
+                  className="bm-brand-logo"
                   style={{
                     height: "90px",
                     width: "auto",
@@ -825,10 +917,11 @@ function CTABanner() {
         {/* Yellow left border accent */}
         <div style={{ position: "absolute", top: 0, left: 0, width: "4px", height: "100%", background: `linear-gradient(180deg, transparent, ${Y} 30%, ${Y} 70%, transparent)` }} />
 
-        <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "80px 48px", position: "relative", zIndex: 1, width: "100%" }}>
+        <div className="bm-cta-pad" style={{ maxWidth: "1280px", margin: "0 auto", padding: "80px 48px", position: "relative", zIndex: 1, width: "100%" }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.75, delay: 0.2 }}
+            className="bm-cta-row"
             style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "40px" }}
           >
             <div style={{ maxWidth: "560px" }}>
@@ -836,7 +929,7 @@ function CTABanner() {
                 <span style={{ display: "inline-block", width: "22px", height: "1px", background: Y }} />
                 Prêt à démarrer ?
               </span>
-              <h2 style={{ color: "#fff", fontWeight: 900, lineHeight: 1.1, fontSize: "clamp(2rem, 4vw, 3rem)", letterSpacing: "-0.03em", margin: "0 0 16px" }}>
+              <h2 className="bm-heading" style={{ color: "#fff", fontWeight: 900, lineHeight: 1.15, fontSize: "clamp(2rem, 4vw, 3rem)", letterSpacing: "-0.03em", margin: "0 0 16px" }}>
                 Votre chantier mérite<br /><span style={{ color: Y }}>les meilleurs matériaux.</span>
               </h2>
               <p style={{ color: MUT, fontSize: "1rem", lineHeight: 1.7, margin: 0 }}>
@@ -844,7 +937,7 @@ function CTABanner() {
               </p>
             </div>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
+            <div className="bm-cta-actions" style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
               <motion.a href="/devis"
                 whileHover={{ scale: 1.04, backgroundColor: YD } as any}
                 whileTap={{ scale: 0.97 }}
@@ -917,7 +1010,7 @@ function FooterColumn({ heading, links, delay = 0 }: { heading: string; links: {
       <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: "16px" }}>
         {links.map(l => (
           <li key={l.label}>
-            <a href={l.href}
+            <a href={l.href} className="bm-footer-col-link"
               style={{ color: "#fff", textDecoration: "none", fontWeight: 800, fontSize: "1.35rem", letterSpacing: "-0.01em", lineHeight: 1.2, transition: "color 0.2s" }}
               onMouseEnter={e => (e.currentTarget.style.color = Y)}
               onMouseLeave={e => (e.currentTarget.style.color = "#fff")}
@@ -931,7 +1024,7 @@ function FooterColumn({ heading, links, delay = 0 }: { heading: string; links: {
 
 function Footer() {
   return (
-    <footer style={{
+    <footer className="bm-footer" style={{
       background: INK,
       borderRadius: "28px",
       overflow: "hidden",
@@ -943,7 +1036,7 @@ function Footer() {
       <ArchGrid opacity={0.35} />
 
       {/* Top — link columns */}
-      <div style={{
+      <div className="bm-footer-grid" style={{
         position: "relative", zIndex: 1,
         padding: "80px 56px 64px",
         display: "grid",
@@ -963,14 +1056,14 @@ function Footer() {
             {FOOTER_CONTACT.heading}
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-            <a href={`mailto:${FOOTER_CONTACT.email}`}
+            <a href={`mailto:${FOOTER_CONTACT.email}`} className="bm-footer-col-link"
               style={{ color: Y, textDecoration: "none", fontWeight: 800, fontSize: "1.15rem", letterSpacing: "-0.01em", lineHeight: 1.25, wordBreak: "break-word", transition: "opacity 0.2s" }}
               onMouseEnter={e => (e.currentTarget.style.opacity = "0.75")}
               onMouseLeave={e => (e.currentTarget.style.opacity = "1")}
             >
               {FOOTER_CONTACT.email}
             </a>
-            <a href="tel:+33123456789"
+            <a href="tel:+33123456789" className="bm-footer-col-link"
               style={{ color: "#fff", textDecoration: "none", fontWeight: 800, fontSize: "1.35rem", letterSpacing: "-0.01em", lineHeight: 1.2, transition: "color 0.2s" }}
               onMouseEnter={e => (e.currentTarget.style.color = Y)}
               onMouseLeave={e => (e.currentTarget.style.color = "#fff")}
@@ -982,7 +1075,7 @@ function Footer() {
       </div>
 
       {/* Bottom — yellow theme bar */}
-      <div style={{
+      <div className="bm-footer-bottom" style={{
         position: "relative", zIndex: 1,
         background: "white",
         padding: "28px 56px",
@@ -997,6 +1090,7 @@ function Footer() {
           <img
             src="/logo.JPG"
             alt="Batimato"
+            className="bm-footer-logo"
             style={{ height: "114px", width: "auto", objectFit: "contain", display: "block" }}
           />
         </a>
@@ -1007,7 +1101,7 @@ function Footer() {
         </span>
 
         {/* Social icons */}
-        <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "14px" }}>
           {/* Instagram */}
           <a href="#" aria-label="Instagram" style={{ color: INK, display: "flex", transition: "opacity 0.2s" }}
             onMouseEnter={e => (e.currentTarget.style.opacity = "0.6")}
@@ -1041,6 +1135,7 @@ function Footer() {
 export default function HomePage() {
   return (
     <main style={{ background: INK }}>
+      <ResponsiveStyles />
       <CategoryShowcase />
       <BrandTicker />
       <WhyBatimato />

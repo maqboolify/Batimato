@@ -14,6 +14,11 @@
  * Plomberie) and specify how many of each item they need — they can add as
  * many line items as their project requires.
  *
+ * UPDATED: reworked for a polished, professional mobile experience —
+ * tighter breakpoints, a stacked 2-column layout for line items on small
+ * screens, richer yellow accents (glow, gradient rails, focus rings,
+ * hover lift on the CTA), and tuned spacing at every viewport.
+ *
  * NOTE: adjust the Navbar import path below to match your project
  * structure (e.g. "@/components/Navbar").
  */
@@ -35,6 +40,7 @@ const MUT          = "rgba(26,26,26,0.55)";
 const DIM          = "rgba(26,26,26,0.28)";
 const MUT_DARKBG   = "rgba(255,255,255,0.55)";
 const DIM_DARKBG   = "rgba(255,255,255,0.16)";
+const RING         = "0 0 0 4px rgba(245,195,0,0.16)";
 
 // ─── Quote form data ──────────────────────────────────────────────────────────
 // Categories mirror the site catalogue (Peinture, Outillage, Préparation &
@@ -89,10 +95,19 @@ const Icon = {
 const inputStyle = {
   width: "100%", height: 44, border: `1px solid ${BDR}`, borderRadius: 9,
   padding: "0 14px", fontSize: "0.88rem", color: INK, background: "#fff", outline: "none",
-  transition: "border-color 0.15s",
+  transition: "border-color 0.15s, box-shadow 0.15s",
 };
 const labelStyle = { display: "block", color: INK, fontWeight: 700, fontSize: "0.78rem", marginBottom: 8 };
 const stepperBtn = { width: 34, height: 36, border: "none", background: "none", color: INK, display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", flexShrink: 0 };
+
+function focusRing(e: React.FocusEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) {
+  e.currentTarget.style.borderColor = BDRY;
+  e.currentTarget.style.boxShadow = RING;
+}
+function blurRing(e: React.FocusEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) {
+  e.currentTarget.style.borderColor = BDR;
+  e.currentTarget.style.boxShadow = "none";
+}
 
 function BgGrid() {
   return (
@@ -107,6 +122,17 @@ function BgGrid() {
   );
 }
 
+// Soft radial glow used behind hero copy — the one bold, signature accent.
+function HeroGlow() {
+  return (
+    <div aria-hidden className="hero-glow" style={{
+      position: "absolute", top: "-20%", left: "-10%", width: 620, height: 620,
+      background: "radial-gradient(circle, rgba(245,195,0,0.16) 0%, rgba(245,195,0,0) 68%)",
+      pointerEvents: "none", zIndex: 0,
+    }} />
+  );
+}
+
 // ═══════════════════════════════════════════════════════════════════════════
 // HERO
 // ═══════════════════════════════════════════════════════════════════════════
@@ -118,34 +144,35 @@ function ContactHero() {
   ];
 
   return (
-    <section style={{ background: INK, position: "relative", overflow: "hidden", padding: "88px 0 72px" }}>
+    <section className="contact-hero" style={{ background: INK, position: "relative", overflow: "hidden", padding: "88px 0 72px" }}>
       <BgGrid />
-      <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 48px", position: "relative", zIndex: 1 }}>
+      <HeroGlow />
+      <div className="hero-container" style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 48px", position: "relative", zIndex: 1 }}>
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
           <span style={{ display: "inline-flex", alignItems: "center", gap: 8, color: YELLOW, fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.3em", textTransform: "uppercase", marginBottom: 20 }}>
             <span style={{ width: 22, height: 1, background: YELLOW, display: "inline-block" }} />
             Contact
           </span>
-          <h1 style={{ color: "#fff", fontWeight: 900, fontSize: "clamp(2.2rem, 4.5vw, 3.4rem)", lineHeight: 1.05, letterSpacing: "-0.03em", margin: "0 0 18px", maxWidth: 720 }}>
+          <h1 className="hero-title" style={{ color: "#fff", fontWeight: 900, fontSize: "clamp(2.1rem, 4.5vw, 3.4rem)", lineHeight: 1.05, letterSpacing: "-0.03em", margin: "0 0 18px", maxWidth: 720 }}>
             Un projet ? Une question ?<br /><span style={{ color: YELLOW }}>Parlons-en.</span>
           </h1>
-          <p style={{ color: MUT_DARKBG, fontSize: "1rem", lineHeight: 1.7, maxWidth: 560, margin: "0 0 40px" }}>
+          <p className="hero-sub" style={{ color: MUT_DARKBG, fontSize: "1rem", lineHeight: 1.7, maxWidth: 560, margin: "0 0 40px" }}>
             Décrivez-nous votre chantier et les références dont vous avez besoin — notre équipe technique vous prépare un devis sous 2 heures ouvrées.
           </p>
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.15 }}
-          style={{ display: "flex", flexWrap: "wrap", gap: 12 }}
+          className="hero-chips" style={{ display: "flex", flexWrap: "wrap", gap: 12 }}
         >
           {chips.map(c => (
-            <a key={c.label} href={c.href} style={{
+            <a key={c.label} href={c.href} className="hero-chip" style={{
               display: "inline-flex", alignItems: "center", gap: 9,
               background: "rgba(255,255,255,0.06)", border: `1px solid ${DIM_DARKBG}`,
               borderRadius: 10, padding: "11px 18px", color: "#fff", textDecoration: "none", fontSize: "0.85rem", fontWeight: 600,
-              transition: "border-color 0.2s, background 0.2s",
+              transition: "border-color 0.2s, background 0.2s, transform 0.2s",
             }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = BDRY; e.currentTarget.style.background = "rgba(245,195,0,0.08)"; }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = DIM_DARKBG; e.currentTarget.style.background = "rgba(255,255,255,0.06)"; }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = BDRY; e.currentTarget.style.background = "rgba(245,195,0,0.08)"; e.currentTarget.style.transform = "translateY(-1px)"; }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = DIM_DARKBG; e.currentTarget.style.background = "rgba(255,255,255,0.06)"; e.currentTarget.style.transform = "translateY(0)"; }}
             >
               <span style={{ color: YELLOW, display: "flex" }}><c.icon /></span>
               {c.label}
@@ -170,7 +197,7 @@ type InfoRowProps = {
 function InfoRow({ icon: IconComp, label, value, href }: InfoRowProps) {
   const content = (
     <div style={{ display: "flex", gap: 14, alignItems: "flex-start" }}>
-      <div style={{ width: 38, height: 38, borderRadius: 9, background: YELLOW_LIGHT, border: `1px solid ${BDRY}`, display: "flex", alignItems: "center", justifyContent: "center", color: YELLOW_DARK, flexShrink: 0 }}>
+      <div className="info-icon" style={{ width: 38, height: 38, borderRadius: 9, background: YELLOW_LIGHT, border: `1px solid ${BDRY}`, display: "flex", alignItems: "center", justifyContent: "center", color: YELLOW_DARK, flexShrink: 0, transition: "box-shadow 0.2s, transform 0.2s" }}>
         <IconComp />
       </div>
       <div>
@@ -179,7 +206,24 @@ function InfoRow({ icon: IconComp, label, value, href }: InfoRowProps) {
       </div>
     </div>
   );
-  return href ? <a href={href} style={{ textDecoration: "none" }}>{content}</a> : content;
+  return href
+    ? (
+      <a
+        href={href}
+        style={{ textDecoration: "none" }}
+        onMouseEnter={e => {
+          const icon = e.currentTarget.querySelector<HTMLElement>(".info-icon");
+          if (icon) { icon.style.boxShadow = "0 0 0 4px rgba(245,195,0,0.14)"; icon.style.transform = "translateY(-1px)"; }
+        }}
+        onMouseLeave={e => {
+          const icon = e.currentTarget.querySelector<HTMLElement>(".info-icon");
+          if (icon) { icon.style.boxShadow = "none"; icon.style.transform = "translateY(0)"; }
+        }}
+      >
+        {content}
+      </a>
+    )
+    : content;
 }
 
 function ContactInfoColumn() {
@@ -187,7 +231,7 @@ function ContactInfoColumn() {
     <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-60px" }} transition={{ duration: 0.6 }}
       style={{ display: "flex", flexDirection: "column", gap: 20 }}
     >
-      <div style={{ background: GRAY, border: `1px solid ${BDR}`, borderRadius: 16, padding: "28px 24px", display: "flex", flexDirection: "column", gap: 22 }}>
+      <div className="info-card" style={{ background: GRAY, border: `1px solid ${BDR}`, borderTop: `3px solid ${YELLOW}`, borderRadius: 16, padding: "28px 24px", display: "flex", flexDirection: "column", gap: 22 }}>
         <div style={{ color: INK, fontWeight: 800, fontSize: "1.05rem" }}>Nos coordonnées</div>
         <InfoRow icon={Icon.Phone} label="Téléphone" value="01 23 45 67 89" href="tel:+33123456789" />
         <InfoRow icon={Icon.Mail} label="Email" value="contact@batimato.fr" href="mailto:contact@batimato.fr" />
@@ -211,8 +255,8 @@ function ContactInfoColumn() {
       <div style={{ display: "flex", gap: 10 }}>
         {[Icon.Instagram, Icon.TikTok, Icon.YouTube].map((IconComp, i) => (
           <a key={i} href="#" aria-label="Réseau social" style={{ width: 38, height: 38, borderRadius: 9, border: `1px solid ${BDR}`, display: "flex", alignItems: "center", justifyContent: "center", color: INK, transition: "all 0.2s" }}
-            onMouseEnter={e => { e.currentTarget.style.background = YELLOW; e.currentTarget.style.borderColor = YELLOW; }}
-            onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.borderColor = BDR; }}
+            onMouseEnter={e => { e.currentTarget.style.background = YELLOW; e.currentTarget.style.borderColor = YELLOW; e.currentTarget.style.transform = "translateY(-2px)"; }}
+            onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.borderColor = BDR; e.currentTarget.style.transform = "translateY(0)"; }}
           ><IconComp /></a>
         ))}
       </div>
@@ -239,8 +283,8 @@ function Field({ label, value, onChange, placeholder, type = "text", required = 
       <input type={type} value={value} required={required} placeholder={placeholder}
         onChange={e => onChange(e.target.value)}
         style={inputStyle}
-        onFocus={e => (e.currentTarget.style.borderColor = BDRY)}
-        onBlur={e => (e.currentTarget.style.borderColor = BDR)}
+        onFocus={focusRing}
+        onBlur={blurRing}
       />
     </div>
   );
@@ -251,11 +295,16 @@ type SelectProps = {
   onChange: (value: string) => void;
   options: string[];
   ariaLabel?: string;
+  className?: string;
 };
 
-function Select({ value, onChange, options, ariaLabel }: SelectProps) {
+function Select({ value, onChange, options, ariaLabel, className }: SelectProps) {
   return (
-    <select aria-label={ariaLabel} value={value} onChange={e => onChange(e.target.value)} style={{ ...inputStyle, cursor: "pointer" }}>
+    <select className={className} aria-label={ariaLabel} value={value} onChange={e => onChange(e.target.value)}
+      style={{ ...inputStyle, cursor: "pointer" }}
+      onFocus={focusRing}
+      onBlur={blurRing}
+    >
       {options.map(o => <option key={o} value={o}>{o}</option>)}
     </select>
   );
@@ -293,7 +342,8 @@ function QuoteForm() {
   if (submitted) {
     return (
       <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
-        style={{ background: "#fff", border: `1px solid ${BDR}`, borderRadius: 18, padding: "64px 40px", textAlign: "center" }}
+        className="quote-card"
+        style={{ background: "#fff", border: `1px solid ${BDR}`, borderTop: `3px solid ${YELLOW}`, borderRadius: 18, padding: "64px 40px", textAlign: "center" }}
       >
         <div style={{ width: 60, height: 60, borderRadius: "50%", background: YELLOW_LIGHT, border: `1px solid ${BDRY}`, display: "flex", alignItems: "center", justifyContent: "center", color: YELLOW_DARK, margin: "0 auto 22px" }}>
           <Icon.Check />
@@ -311,7 +361,8 @@ function QuoteForm() {
 
   return (
     <motion.form onSubmit={handleSubmit} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-60px" }} transition={{ duration: 0.6 }}
-      style={{ background: "#fff", border: `1px solid ${BDR}`, borderRadius: 18, padding: "40px", boxShadow: "0 20px 60px rgba(26,26,26,0.06)" }}
+      className="quote-card"
+      style={{ background: "#fff", border: `1px solid ${BDR}`, borderTop: `3px solid ${YELLOW}`, borderRadius: 18, padding: "40px", boxShadow: "0 20px 60px rgba(26,26,26,0.06)" }}
     >
       <div style={{ color: INK, fontWeight: 900, fontSize: "1.5rem", letterSpacing: "-0.01em", marginBottom: 6 }}>Demande de devis</div>
       <p style={{ color: MUT, fontSize: "0.88rem", marginBottom: 32 }}>Indiquez vos coordonnées et les articles dont vous avez besoin — un expert vous répond sous 2h.</p>
@@ -341,14 +392,17 @@ function QuoteForm() {
               gap: 10, alignItems: "center",
               background: GRAY, border: `1px solid ${BDR}`, borderRadius: 12, padding: "12px 14px",
             }}>
-              <Select ariaLabel="Catégorie" value={item.category} onChange={v => updateItem(item.id, "category", v)} options={CATEGORY_OPTIONS} />
+              <Select className="cf-item-category" ariaLabel="Catégorie" value={item.category} onChange={v => updateItem(item.id, "category", v)} options={CATEGORY_OPTIONS} />
               <input
+                className="cf-item-desc"
                 value={item.description}
                 onChange={e => updateItem(item.id, "description", e.target.value)}
                 placeholder="Référence ou description"
                 style={inputStyle}
+                onFocus={focusRing}
+                onBlur={blurRing}
               />
-              <div style={{ display: "flex", alignItems: "center", border: `1px solid ${BDR}`, borderRadius: 8, background: "#fff", height: 38, overflow: "hidden" }}>
+              <div className="cf-item-qty" style={{ display: "flex", alignItems: "center", border: `1px solid ${BDR}`, borderRadius: 8, background: "#fff", height: 38, overflow: "hidden" }}>
                 <button type="button" onClick={() => updateItem(item.id, "quantity", Math.max(1, item.quantity - 1))} style={stepperBtn} aria-label="Diminuer la quantité">
                   <Icon.Minus />
                 </button>
@@ -361,9 +415,10 @@ function QuoteForm() {
                   <Icon.Plus />
                 </button>
               </div>
-              <Select ariaLabel="Unité" value={item.unit} onChange={v => updateItem(item.id, "unit", v)} options={UNIT_OPTIONS} />
+              <Select className="cf-item-unit" ariaLabel="Unité" value={item.unit} onChange={v => updateItem(item.id, "unit", v)} options={UNIT_OPTIONS} />
               <button type="button" onClick={() => removeItem(item.id)} disabled={items.length === 1}
-                style={{ background: "none", border: "none", color: items.length === 1 ? DIM : MUT, cursor: items.length === 1 ? "default" : "pointer", display: "flex", padding: 6 }}
+                className="cf-item-remove"
+                style={{ background: "none", border: "none", color: items.length === 1 ? DIM : MUT, cursor: items.length === 1 ? "default" : "pointer", display: "flex", alignItems: "center", justifyContent: "center", padding: 6 }}
                 aria-label="Supprimer cet article"
               >
                 <Icon.Trash />
@@ -376,7 +431,11 @@ function QuoteForm() {
           marginTop: 14, display: "inline-flex", alignItems: "center", gap: 8,
           background: "none", border: `1.5px dashed ${BDRY}`, borderRadius: 9,
           padding: "10px 18px", color: YELLOW_DARK, fontWeight: 700, fontSize: "0.82rem", cursor: "pointer",
-        }}>
+          transition: "background 0.2s, border-color 0.2s",
+        }}
+          onMouseEnter={e => { e.currentTarget.style.background = YELLOW_LIGHT; e.currentTarget.style.borderColor = YELLOW_DARK; }}
+          onMouseLeave={e => { e.currentTarget.style.background = "none"; e.currentTarget.style.borderColor = BDRY; }}
+        >
           <Icon.Plus /> Ajouter un article
         </button>
       </div>
@@ -389,25 +448,31 @@ function QuoteForm() {
           placeholder="Précisez les détails de votre chantier, délais souhaités, etc."
           rows={4}
           style={{ ...inputStyle, height: "auto", padding: "12px 14px", resize: "vertical", fontFamily: "inherit" }}
+          onFocus={focusRing}
+          onBlur={blurRing}
         />
       </div>
 
       {/* Consent + submit */}
       <label style={{ display: "flex", gap: 10, alignItems: "flex-start", marginBottom: 24, cursor: "pointer" }}>
-        <input type="checkbox" checked={consent} onChange={e => setConsent(e.target.checked)} required style={{ marginTop: 3 }} />
+        <input type="checkbox" checked={consent} onChange={e => setConsent(e.target.checked)} required style={{ marginTop: 3, accentColor: YELLOW_DARK }} />
         <span style={{ color: MUT, fontSize: "0.8rem", lineHeight: 1.6 }}>
           J'accepte que Batimato me recontacte au sujet de ma demande de devis.
         </span>
       </label>
 
-      <button type="submit" disabled={submitting || !consent} style={{
+      <button type="submit" disabled={submitting || !consent} className="cf-submit" style={{
         width: "100%", height: 52, borderRadius: 10, border: "none",
-        background: submitting || !consent ? DIM : YELLOW,
+        background: submitting || !consent ? DIM : `linear-gradient(135deg, ${YELLOW} 0%, ${YELLOW_DARK} 100%)`,
         color: INK, fontWeight: 800, fontSize: "0.9rem", letterSpacing: "0.04em", textTransform: "uppercase",
         cursor: submitting || !consent ? "not-allowed" : "pointer",
-        transition: "background 0.2s",
+        transition: "transform 0.15s, box-shadow 0.15s, background 0.2s",
+        boxShadow: submitting || !consent ? "none" : "0 8px 22px rgba(245,195,0,0.35)",
         display: "flex", alignItems: "center", justifyContent: "center", gap: 10,
-      }}>
+      }}
+        onMouseEnter={e => { if (!submitting && consent) { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "0 12px 28px rgba(245,195,0,0.45)"; } }}
+        onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = submitting || !consent ? "none" : "0 8px 22px rgba(245,195,0,0.35)"; }}
+      >
         {submitting ? "Envoi en cours…" : (<>Envoyer ma demande de devis <Icon.ArrowRight /></>)}
       </button>
     </motion.form>
@@ -419,7 +484,7 @@ function QuoteForm() {
 // ═══════════════════════════════════════════════════════════════════════════
 function ContactMain() {
   return (
-    <section style={{ background: "#fff", padding: "72px 0 96px" }}>
+    <section className="contact-section" style={{ background: "#fff", padding: "72px 0 96px" }}>
       <div className="contact-grid-wrap" style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 48px", display: "grid", gridTemplateColumns: "380px 1fr", gap: 40, alignItems: "flex-start" }}>
         <ContactInfoColumn />
         <QuoteForm />
@@ -461,7 +526,7 @@ function FooterColumn({ heading, links }: FooterColumnProps) {
       <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: 16 }}>
         {links.map(l => (
           <li key={l.label}>
-            <a href={l.href} style={{ color: "#fff", textDecoration: "none", fontWeight: 800, fontSize: "1.25rem", letterSpacing: "-0.01em", lineHeight: 1.2, transition: "color 0.2s" }}
+            <a href={l.href} className="footer-link" style={{ color: "#fff", textDecoration: "none", fontWeight: 800, fontSize: "1.25rem", letterSpacing: "-0.01em", lineHeight: 1.2, transition: "color 0.2s" }}
               onMouseEnter={e => (e.currentTarget.style.color = YELLOW)}
               onMouseLeave={e => (e.currentTarget.style.color = "#fff")}
             >{l.label}</a>
@@ -474,7 +539,7 @@ function FooterColumn({ heading, links }: FooterColumnProps) {
 
 function Footer() {
   return (
-    <footer style={{ background: INK, borderRadius: 28, overflow: "hidden", maxWidth: 1360, margin: "0 auto 40px", border: `1px solid ${DIM_DARKBG}`, position: "relative" }}>
+    <footer className="site-footer" style={{ background: INK, borderRadius: 28, overflow: "hidden", maxWidth: 1360, margin: "0 auto 40px", border: `1px solid ${DIM_DARKBG}`, position: "relative" }}>
       <BgGrid />
       <div className="footer-cols" style={{ position: "relative", zIndex: 1, padding: "72px 56px 56px", display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 40 }}>
         {FOOTER_COLUMNS.map(col => <FooterColumn key={col.heading} {...col} />)}
@@ -487,12 +552,12 @@ function Footer() {
         </div>
       </div>
 
-      <div style={{ position: "relative", zIndex: 1, background: YELLOW, padding: "26px 56px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 20 }}>
+      <div className="footer-bar" style={{ position: "relative", zIndex: 1, background: YELLOW, padding: "26px 56px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 20 }}>
         {/* Logo — swap the src for your logo asset */}
         <a href="/" style={{ display: "flex", alignItems: "center" }}>
-          <img src="/logo.JPG" alt="Batimato" style={{ height: 92, width: "auto", objectFit: "contain", borderRadius:"10px" }} />
+          <img src="/logo.JPG" alt="Batimato" className="footer-logo" style={{ height: 92, width: "auto", objectFit: "contain", borderRadius: "10px" }} />
         </a>
-        <span style={{ color: "rgba(26,26,26,0.75)", fontSize: "0.83rem", fontWeight: 600 }}>
+        <span className="footer-copy" style={{ color: "rgba(26,26,26,0.75)", fontSize: "0.83rem", fontWeight: 600 }}>
           © {new Date().getFullYear()} Batimato SAS — Tous droits réservés
         </span>
         <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
@@ -517,13 +582,66 @@ export default function ContactPage() {
       <style>{`
         * { box-sizing: border-box; }
         input::placeholder, textarea::placeholder { color: rgba(26,26,26,0.35); }
+
+        /* ── Tablet ─────────────────────────────────────────────── */
         @media (max-width: 900px) {
-          .contact-grid-wrap { grid-template-columns: 1fr !important; }
-          .footer-cols { grid-template-columns: repeat(2, 1fr) !important; }
+          .contact-grid-wrap { grid-template-columns: 1fr !important; gap: 28px !important; }
+          .footer-cols { grid-template-columns: repeat(2, 1fr) !important; padding: 56px 40px 40px !important; gap: 32px !important; }
+          .hero-container { padding: 0 32px !important; }
+          .contact-grid-wrap { padding: 0 32px !important; }
         }
+
+        /* ── Mobile ─────────────────────────────────────────────── */
         @media (max-width: 640px) {
-          .cf-row2 { grid-template-columns: 1fr !important; }
-          .cf-item-row { grid-template-columns: 1fr !important; }
+          .contact-hero { padding: 56px 0 40px !important; }
+          .hero-container { padding: 0 20px !important; }
+          .hero-title { font-size: clamp(1.7rem, 8vw, 2.2rem) !important; margin-bottom: 14px !important; }
+          .hero-sub { font-size: 0.92rem !important; margin-bottom: 28px !important; }
+          .hero-chips { gap: 10px !important; }
+          .hero-chip { flex: 1 1 auto; justify-content: center; padding: 12px 14px !important; font-size: 0.82rem !important; }
+          .hero-glow { width: 380px !important; height: 380px !important; top: -15% !important; left: -20% !important; }
+
+          .contact-section { padding: 40px 0 56px !important; }
+          .contact-grid-wrap { padding: 0 16px !important; }
+
+          .info-card { padding: 22px 18px !important; border-radius: 14px !important; }
+
+          .quote-card { padding: 24px 18px !important; border-radius: 14px !important; }
+          .cf-row2 { grid-template-columns: 1fr !important; gap: 14px !important; }
+
+          .cf-item-row {
+            grid-template-columns: 1fr 1fr !important;
+            grid-template-areas:
+              "desc desc"
+              "category unit"
+              "qty remove" !important;
+            row-gap: 10px !important;
+            padding: 14px !important;
+          }
+          .cf-item-desc { grid-area: desc; }
+          .cf-item-category { grid-area: category; }
+          .cf-item-unit { grid-area: unit; }
+          .cf-item-qty { grid-area: qty; width: 100%; }
+          .cf-item-remove {
+            grid-area: remove;
+            justify-self: end;
+            border: 1px solid ${BDR} !important;
+            border-radius: 8px !important;
+            width: 38px; height: 38px;
+          }
+
+          .cf-submit { height: 50px !important; font-size: 0.85rem !important; }
+
+          .footer-cols { grid-template-columns: 1fr !important; padding: 44px 24px 32px !important; gap: 28px !important; }
+          .footer-link { font-size: 1.05rem !important; }
+          .footer-bar { padding: 22px 24px !important; flex-direction: column !important; text-align: center !important; gap: 16px !important; }
+          .footer-logo { height: 64px !important; }
+          .footer-copy { order: 3; font-size: 0.76rem !important; }
+          .site-footer { border-radius: 20px !important; margin-bottom: 24px !important; }
+        }
+
+        @media (max-width: 380px) {
+          .hero-chip { font-size: 0.78rem !important; padding: 10px 12px !important; }
         }
       `}</style>
 

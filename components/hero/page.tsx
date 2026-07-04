@@ -6,6 +6,31 @@
  * Stack: Next.js + TypeScript + Tailwind CSS + Framer Motion + Three.js
  * Place in /components/HeroSection.tsx
  * Dependencies: npm install framer-motion three @types/three
+ *
+ * MOBILE FIX NOTES (read this before removing anything):
+ * 1. Added `min-w-0` on flex children — without this, flex items refuse to
+ *    shrink below their content's natural width, which forces the whole
+ *    row (and therefore the page) wider than the viewport on small screens.
+ *    This is the most common cause of "wide blank space on the right" on mobile.
+ * 2. Added `overflow-x-hidden` in a couple more places as a safety net.
+ * 3. Rewrote ThreeScene to use ResizeObserver + IntersectionObserver instead
+ *    of a one-time width/height read at mount. On mobile, browser chrome
+ *    show/hide and layout timing mean the canvas was often sized from a
+ *    stale (sometimes 0) measurement, which is why the animation looked
+ *    blank or off-position.
+ * 4. Reduced particle count / disabled shadow maps / capped pixel ratio on
+ *    mobile for performance, and shrunk orbit radii slightly so tools don't
+ *    orbit outside the smaller canvas.
+ * 5. ALSO CHECK your root layout (app/layout.tsx) for a correct viewport
+ *    export — a missing/incorrect viewport meta tag causes mobile browsers
+ *    to render the page at desktop width and then scroll it, which produces
+ *    exactly the left-cropped / right-blank symptom you described:
+ *
+ *      export const viewport: Viewport = {
+ *        width: "device-width",
+ *        initialScale: 1,
+ *        maximumScale: 1,
+ *      };
  */
 
 import { useRef, useEffect, useState, useCallback } from "react";
@@ -19,6 +44,8 @@ import {
   animate,
   type Variants,
 } from "framer-motion";
+
+import Link from "next/link";
 import * as THREE from "three";
 import Batimatohomepage from "@/components/Batimatohomepage/page";
 import Ballpit from "@/components/Ballpit";
@@ -690,21 +717,39 @@ function ThreeScene() {
     const mount = mountRef.current;
     if (!mount) return;
 
-    const W = mount.clientWidth;
-    const H = mount.clientHeight;
+    // Bail out gracefully if the container hasn't been laid out yet
+    // (fixes "blank canvas" caused by measuring width/height as 0 on mobile).
+    if (mount.clientWidth === 0 || mount.clientHeight === 0) return;
+
+    const isMobile = window.innerWidth < 768;
+
+    let W = mount.clientWidth;
+    let H = mount.clientHeight;
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(48, W / H, 0.1, 100);
-    camera.position.set(0, 0.2, 6.5);
+    camera.position.set(0, 0.2, isMobile ? 7.6 : 6.5);
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    const renderer = new THREE.WebGLRenderer({
+      antialias: !isMobile,
+      alpha: true,
+      powerPreference: "high-performance",
+    });
     renderer.setSize(W, H);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    // Cap pixel ratio harder on mobile — uncapped DPR on high-density phone
+    // screens is the single biggest cause of janky/invisible mobile WebGL.
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1.5 : 2));
     renderer.setClearColor(0x000000, 0);
-    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.enabled = !isMobile;
     renderer.shadowMap.type    = THREE.PCFSoftShadowMap;
     renderer.toneMapping       = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1.1;
+
+    // Make sure the canvas itself never forces the mount wider than it is.
+    renderer.domElement.style.display = "block";
+    renderer.domElement.style.width = "100%";
+    renderer.domElement.style.height = "100%";
+    renderer.domElement.style.maxWidth = "100%";
     mount.appendChild(renderer.domElement);
 
     // ── Build central bucket ──────────────────────────────────────────────────
@@ -722,8 +767,8 @@ function ThreeScene() {
     breaker.scale.setScalar(0.5);
     roller.scale.setScalar(0.6);
 
-    // ── Particle field ────────────────────────────────────────────────────────
-    const N = 180;
+    // ── Particle field (fewer particles on mobile for perf) ───────────────────
+    const N = isMobile ? 90 : 180;
     const pGeo = new THREE.BufferGeometry();
     const pPos = new Float32Array(N * 3);
     for (let i = 0; i < N; i++) {
@@ -764,28 +809,46 @@ function ThreeScene() {
     rimLight.position.set(0, 0, -3);
     scene.add(rimLight);
 
-    // ── Mouse tracking ────────────────────────────────────────────────────────
+    // ── Mouse / touch tracking ─────────────────────────────────────────────────
     const onMouseMove = (e: MouseEvent) => {
       const r = mount.getBoundingClientRect();
       mouseRef.current.x = ((e.clientX - r.left) / r.width  - 0.5) * 2;
       mouseRef.current.y = -((e.clientY - r.top) / r.height - 0.5) * 2;
     };
+    const onTouchMove = (e: TouchEvent) => {
+      if (!e.touches[0]) return;
+      const r = mount.getBoundingClientRect();
+      const t = e.touches[0];
+      mouseRef.current.x = ((t.clientX - r.left) / r.width  - 0.5) * 2;
+      mouseRef.current.y = -((t.clientY - r.top) / r.height - 0.5) * 2;
+    };
     window.addEventListener("mousemove", onMouseMove);
+    window.addEventListener("touchmove", onTouchMove, { passive: true });
+
+    // ── Pause rendering when off-screen (saves battery, avoids janky re-entry) ─
+    let isVisible = true;
+    const io = new IntersectionObserver(
+      (entries) => { isVisible = entries[0]?.isIntersecting ?? true; },
+      { threshold: 0.05 }
+    );
+    io.observe(mount);
 
     // ── Render loop ───────────────────────────────────────────────────────────
     const clock = new THREE.Clock();
     let raf: number;
 
-    // Orbit configs for each tool: { obj, radius, speed, phase, yBob, yOffset, selfRotSpeed }
+    const orbitScale = isMobile ? 0.82 : 1;
     const orbiters = [
-      { obj: drill,   radius: 2.4, speed: 0.38, phase: 0,              yBob: 0.6, yOff:  0.3, sr: new THREE.Vector3(0, 0.015, 0.008) },
-      { obj: reel,    radius: 2.2, speed: 0.30, phase: Math.PI * 0.5,  yBob: 0.5, yOff: -0.2, sr: new THREE.Vector3(0.008, 0.01, 0) },
-      { obj: breaker, radius: 2.6, speed: 0.22, phase: Math.PI,        yBob: 0.7, yOff:  0.1, sr: new THREE.Vector3(0, 0.012, 0.006) },
-      { obj: roller,  radius: 2.3, speed: 0.34, phase: Math.PI * 1.5,  yBob: 0.55,yOff:  0.4, sr: new THREE.Vector3(0.006, 0.014, 0) },
+      { obj: drill,   radius: 2.4 * orbitScale, speed: 0.38, phase: 0,              yBob: 0.6, yOff:  0.3, sr: new THREE.Vector3(0, 0.015, 0.008) },
+      { obj: reel,    radius: 2.2 * orbitScale, speed: 0.30, phase: Math.PI * 0.5,  yBob: 0.5, yOff: -0.2, sr: new THREE.Vector3(0.008, 0.01, 0) },
+      { obj: breaker, radius: 2.6 * orbitScale, speed: 0.22, phase: Math.PI,        yBob: 0.7, yOff:  0.1, sr: new THREE.Vector3(0, 0.012, 0.006) },
+      { obj: roller,  radius: 2.3 * orbitScale, speed: 0.34, phase: Math.PI * 1.5,  yBob: 0.55,yOff:  0.4, sr: new THREE.Vector3(0.006, 0.014, 0) },
     ];
 
     const tick = () => {
       raf = requestAnimationFrame(tick);
+      if (!isVisible) return;
+
       const t  = clock.getElapsedTime();
       const mx = mouseRef.current.x;
       const my = mouseRef.current.y;
@@ -803,13 +866,11 @@ function ThreeScene() {
       // Orbiting tools
       orbiters.forEach(({ obj, radius, speed, phase, yBob, yOff, sr }) => {
         const a = t * speed + phase;
-        // Elliptical orbit in XZ plane, slight Y bob
         obj.position.set(
           Math.cos(a) * radius,
           yOff + Math.sin(t * 0.6 + phase) * yBob * 0.4,
           Math.sin(a) * radius * 0.45
         );
-        // Face toward center + self-rotate
         obj.rotation.y += sr.y;
         obj.rotation.x += sr.x;
         obj.rotation.z += sr.z;
@@ -832,19 +893,28 @@ function ThreeScene() {
     };
     tick();
 
-    // ── Resize ────────────────────────────────────────────────────────────────
-    const onResize = () => {
-      if (!mount) return;
-      camera.aspect = mount.clientWidth / mount.clientHeight;
+    // ── Resize via ResizeObserver — reacts to container size, not just window
+    //    resize events, which is what actually changes on mobile (address bar
+    //    show/hide, orientation change, flex layout re-flow, etc.) ─────────────
+    const ro = new ResizeObserver((entries) => {
+      const entry = entries[0];
+      if (!entry) return;
+      const cw = Math.round(entry.contentRect.width);
+      const ch = Math.round(entry.contentRect.height);
+      if (cw === 0 || ch === 0 || (cw === W && ch === H)) return;
+      W = cw; H = ch;
+      camera.aspect = W / H;
       camera.updateProjectionMatrix();
-      renderer.setSize(mount.clientWidth, mount.clientHeight);
-    };
-    window.addEventListener("resize", onResize);
+      renderer.setSize(W, H);
+    });
+    ro.observe(mount);
 
     return () => {
       cancelAnimationFrame(raf);
+      io.disconnect();
+      ro.disconnect();
       window.removeEventListener("mousemove", onMouseMove);
-      window.removeEventListener("resize", onResize);
+      window.removeEventListener("touchmove", onTouchMove);
       renderer.dispose();
       labelTex.dispose();
       bodyMat.dispose();
@@ -852,7 +922,7 @@ function ThreeScene() {
     };
   }, []);
 
-  return <div ref={mountRef} className="w-full h-full" />;
+  return <div ref={mountRef} className="w-full h-full min-w-0" />;
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -892,17 +962,14 @@ export default function HeroSection() {
   return (
     <section
       ref={heroRef}
-      className="relative w-full min-h-screen flex items-center overflow-hidden bg-[#0A0A0A]"
+      className="relative w-full min-h-screen flex items-center overflow-x-hidden overflow-y-hidden bg-[#0A0A0A]"
     >
       {/* ── Loading screen — sits above everything until assets/scene are ready ── */}
       <AnimatePresence>
         {isLoading && <Loader onComplete={() => setIsLoading(false)} />}
       </AnimatePresence>
 
-      {/* ── Layered background ──────────────────────────────────────────────────
-          1) LightPillar sits at the very back, filling the hero.
-          2) Ballpit stacks directly on top of it, transparent canvas so the
-             pillar's glow shows through behind the balls. */}
+      {/* ── Layered background ── */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         {/* Layer 1 — Light Pillar (base) */}
         {/* <div className="absolute inset-0">
@@ -938,11 +1005,11 @@ export default function HeroSection() {
       <ArchGrid />
 
       {/* Left yellow ambient glow */}
-      <div aria-hidden="true" className="absolute -top-[10%] -left-[5%] w-[55vw] h-[55vw] rounded-full pointer-events-none"
+      <div aria-hidden="true" className="absolute -top-[10%] -left-[5%] w-[55vw] h-[55vw] max-w-[600px] max-h-[600px] rounded-full pointer-events-none"
            style={{ background: "radial-gradient(circle, rgba(255,196,0,0.12) 0%, transparent 70%)", filter: "blur(50px)" }} />
 
       {/* Bottom-right cool glow */}
-      <div aria-hidden="true" className="absolute -bottom-[5%] -right-[5%] w-[40vw] h-[40vw] rounded-full pointer-events-none"
+      <div aria-hidden="true" className="absolute -bottom-[5%] -right-[5%] w-[40vw] h-[40vw] max-w-[500px] max-h-[500px] rounded-full pointer-events-none"
            style={{ background: "radial-gradient(circle, rgba(60,80,220,0.09) 0%, transparent 70%)", filter: "blur(60px)" }} />
 
       {/* Scanline texture */}
@@ -950,34 +1017,34 @@ export default function HeroSection() {
            style={{ backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.012) 2px, rgba(255,255,255,0.012) 4px)" }} />
 
       {/* ── Content ── */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 min-w-0">
         <div className="flex flex-col lg:flex-row items-center min-h-screen gap-0">
 
           {/* ════ LEFT — Copy ════ */}
-          <motion.div style={{ y: textY }} className="flex-1 flex flex-col items-start z-10 order-2 lg:order-1 py-24 lg:py-0">
-            <motion.div variants={stagger} initial="hidden" animate="visible" className="w-full">
+          <motion.div style={{ y: textY }} className="w-full lg:flex-1 min-w-0 flex flex-col items-start z-10 order-2 lg:order-1 py-16 lg:py-0">
+            <motion.div variants={stagger} initial="hidden" animate="visible" className="w-full min-w-0">
 
               {/* Eyebrow */}
-              <motion.div variants={fadeUp} className="mb-6">
-                <span className="inline-flex items-center gap-2.5 text-[#FFC400] text-[0.72rem] tracking-[0.3em] uppercase font-bold">
-                  <span className="inline-block w-7 h-px bg-gradient-to-r from-[#FFC400] to-transparent" />
+              <motion.div variants={fadeUp} className="mb-6 w-full">
+                <span className="inline-flex flex-wrap items-center gap-2 sm:gap-2.5 text-[#FFC400] text-[0.68rem] sm:text-[0.72rem] tracking-[0.18em] sm:tracking-[0.3em] uppercase font-bold max-w-full">
+                  <span className="inline-block w-7 h-px bg-gradient-to-r from-[#FFC400] to-transparent shrink-0" />
                   BATIMATO — Matériaux de construction
-                  <span className="inline-block w-7 h-px bg-gradient-to-l from-[#FFC400] to-transparent" />
+                  <span className="inline-block w-7 h-px bg-gradient-to-l from-[#FFC400] to-transparent shrink-0" />
                 </span>
               </motion.div>
 
               {/* H1 line 1 */}
-              <motion.div variants={fadeUp} className="mb-1">
-                <h1 className="text-white font-black leading-[0.93] tracking-[-0.03em]"
-                    style={{ fontSize: "clamp(2.8rem, 7vw, 6.5rem)" }}>
+              <motion.div variants={fadeUp} className="mb-1 w-full">
+                <h1 className="text-white font-black leading-[0.93] tracking-[-0.03em] break-words"
+                    style={{ fontSize: "clamp(2.4rem, 9vw, 6.5rem)" }}>
                   Donnez Vie
                 </h1>
               </motion.div>
 
               {/* H1 line 2 — outlined */}
-              <motion.div variants={fadeUp} className="mb-8">
-                <h1 className="font-black leading-[0.93] tracking-[-0.03em]"
-                    style={{ fontSize: "clamp(2.8rem, 7vw, 6.5rem)", color: "transparent", WebkitTextStroke: "2px #FFC400", textShadow: "0 0 45px rgba(255,196,0,0.4)" }}>
+              <motion.div variants={fadeUp} className="mb-8 w-full">
+                <h1 className="font-black leading-[0.93] tracking-[-0.03em] break-words"
+                    style={{ fontSize: "clamp(2.4rem, 9vw, 6.5rem)", color: "transparent", WebkitTextStroke: "2px #FFC400", textShadow: "0 0 45px rgba(255,196,0,0.4)" }}>
                   à Vos Murs
                 </h1>
               </motion.div>
@@ -990,21 +1057,39 @@ export default function HeroSection() {
               </motion.p>
 
               {/* CTAs */}
-              <motion.div variants={fadeUp} className="flex flex-wrap gap-3.5 mb-14">
-                <motion.button
-                  ref={magPrimary.ref}
-                  style={{ x: magPrimary.sx, y: magPrimary.sy }}
-                  whileHover={{ scale: 1.04 }}
-                  whileTap={{ scale: 0.97 }}
-                  className="relative inline-flex items-center gap-2.5 px-7 h-[52px] rounded-[6px] bg-[#FFC400] text-[#1A1A1A] text-[0.82rem] font-extrabold tracking-[0.08em] uppercase border-none cursor-pointer overflow-hidden group"
-                >
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <polygon points="5,3 19,12 5,21" />
-                  </svg>
-                  Explorer Maintenant
-                  <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-                        style={{ background: "linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.3) 50%, transparent 60%)" }} />
-                </motion.button>
+              <motion.div variants={fadeUp} className="flex flex-wrap gap-3.5 mb-14 w-full">
+                <Link href="/explorer">
+  <motion.button
+    ref={magPrimary.ref}
+    style={{ x: magPrimary.sx, y: magPrimary.sy }}
+    whileHover={{ scale: 1.04 }}
+    whileTap={{ scale: 0.97 }}
+    className="relative inline-flex items-center gap-2.5 px-7 h-[52px] rounded-[6px] bg-[#FFC400] text-[#1A1A1A] text-[0.82rem] font-extrabold tracking-[0.08em] uppercase border-none cursor-pointer overflow-hidden group"
+  >
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#1A1A1A"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <polygon points="5,3 19,12 5,21" />
+    </svg>
+
+    Explorer Maintenant
+
+    <span
+      className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+      style={{
+        background:
+          "linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.3) 50%, transparent 60%)",
+      }}
+    />
+  </motion.button>
+</Link>
 
                 <motion.button
                   ref={magSecondary.ref}
@@ -1021,7 +1106,7 @@ export default function HeroSection() {
               </motion.div>
 
               {/* Stats */}
-              <motion.div variants={fadeIn} className="flex items-center flex-wrap gap-7">
+              <motion.div variants={fadeIn} className="flex items-center flex-wrap gap-5 sm:gap-7 w-full">
                 {stats.map(({ n, sfx, label }, i) => (
                   <div key={i} className="flex flex-col">
                     <span className="text-[#FFC400] text-2xl font-black leading-none tabular-nums">
@@ -1045,7 +1130,7 @@ export default function HeroSection() {
           {/* ════ RIGHT — 3D Scene ════ */}
           <motion.div
             style={{ y: sceneY }}
-            className="flex-1 relative order-1 lg:order-2"
+            className="w-full lg:flex-1 min-w-0 relative order-1 lg:order-2"
             initial={{ opacity: 0, scale: 0.88 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.3, ease: "easeOut", delay: 0.15 }}
@@ -1055,44 +1140,19 @@ export default function HeroSection() {
                  style={{ background: "radial-gradient(ellipse 75% 65% at 50% 50%, rgba(255,196,0,0.15) 0%, transparent 70%)", filter: "blur(28px)" }} />
 
             {/* Canvas */}
-            <div className="relative w-full" style={{ height: "clamp(400px, 54vw, 680px)" }}>
+            <div className="relative w-full min-w-0" style={{ height: "clamp(340px, 90vw, 680px)" }}>
               <ThreeScene />
             </div>
-
-            {/* Tool legend card — bottom-left */}
-            {/* <motion.div
-              initial={{ opacity: 0, y: 20, x: -16 }}
-              animate={{ opacity: 1, y: 0, x: 0 }}
-              transition={{ delay: 1.5, duration: 0.7 }}
-              className="absolute bottom-[8%] left-0 bg-[rgba(10,10,10,0.82)] backdrop-blur-xl border border-[rgba(255,196,0,0.22)] rounded-xl px-5 py-4 min-w-[200px]"
-            >
-              <div className="flex items-center gap-2 mb-2">
-                <span className="inline-block w-2 h-2 rounded-full bg-[#FFC400]" style={{ boxShadow: "0 0 8px #FFC400", animation: "pulseDot 2s ease-in-out infinite" }} />
-                <span className="text-white/40 text-[0.65rem] tracking-[0.12em] uppercase">Gamme Complète</span>
-              </div>
-              <div className="flex flex-col gap-1">
-                {[
-                  { icon: "⚡", label: "Outillage électrique" },
-                  { icon: "🎨", label: "Peintures & Revêtements" },
-                  { icon: "🔌", label: "Équipements & Câblage" },
-                ].map(({ icon, label }) => (
-                  <div key={label} className="flex items-center gap-2">
-                    <span className="text-[0.75rem]">{icon}</span>
-                    <span className="text-white/60 text-[0.72rem]">{label}</span>
-                  </div>
-                ))}
-              </div>
-            </motion.div> */}
 
             {/* ISO badge — top-right */}
             <motion.div
               initial={{ opacity: 0, y: -16, x: 16 }}
               animate={{ opacity: 1, y: 0, x: 0 }}
               transition={{ delay: 1.7, duration: 0.7 }}
-              className="absolute top-[8%] right-0 bg-[rgba(255,196,0,0.1)] backdrop-blur-md border border-[rgba(255,196,0,0.35)] rounded-lg px-4 py-3 text-center"
+              className="absolute top-[4%] right-2 sm:right-0 bg-[rgba(255,196,0,0.1)] backdrop-blur-md border border-[rgba(255,196,0,0.35)] rounded-lg px-3.5 py-2.5 sm:px-4 sm:py-3 text-center"
             >
-              <span className="text-[#FFC400] font-black text-xl block">ISO</span>
-              <span className="text-white/55 font-semibold text-[0.68rem]">9001 Certifié</span>
+              <span className="text-[#FFC400] font-black text-lg sm:text-xl block">ISO</span>
+              <span className="text-white/55 font-semibold text-[0.62rem] sm:text-[0.68rem]">9001 Certifié</span>
             </motion.div>
 
             {/* Floating "Peinture & Électricité" label — mid-right */}
@@ -1100,7 +1160,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 2, duration: 0.7 }}
-              className="absolute top-[42%] right-0 flex flex-col items-end gap-1"
+              className="absolute top-[42%] right-2 sm:right-0 flex flex-col items-end gap-1"
             >
               <span className="text-[#FFC400] text-[0.6rem] tracking-[0.2em] uppercase font-semibold">Peinture</span>
               <div className="w-12 h-px bg-gradient-to-l from-[#FFC400] to-transparent" />

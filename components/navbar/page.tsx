@@ -23,14 +23,6 @@ type NavItem = {
 };
 
 // ─── Nav Data ─────────────────────────────────────────────────────────────────
-// Each megaColumn now also carries an `image` field (a representative product
-// photo for that column). Replace the placeholder URLs with your real images
-// (e.g. "/images/preparation/enduit.jpg").
-//
-// Each top-level item now carries an `icon` field (small picture icon shown
-// next to the label in the navbar). Replace these placeholder paths with your
-// own image files, e.g. "/icons/preparation-materiaux.png".
-
 const NAV_ITEMS: NavItem[] = [
   {
     label: "Préparation & Matériaux",
@@ -246,9 +238,6 @@ const Icon = {
 };
 
 // ─── Mega Menu (3-column link layout + product image per column) ─────────────
-// Each column = a heading + a plain list of links + a representative product
-// image, centered at the bottom of the column (matching the requested layout
-// where each sub-options group has its own photo beneath it).
 function MegaMenu({
   item,
   visible,
@@ -262,7 +251,6 @@ function MegaMenu({
 
   return (
     <>
-      {/* Backdrop — covers the viewport below the navbar (navbar itself is excluded via its own higher z-index) */}
       <div
         aria-hidden
         style={{
@@ -277,8 +265,6 @@ function MegaMenu({
         }}
       />
 
-      {/* Panel — positioned absolutely relative to the sticky nav wrapper, so it always
-          opens directly below the navbar instead of jumping to the viewport top. */}
       <div
         aria-hidden={!visible}
         style={{
@@ -296,7 +282,6 @@ function MegaMenu({
           transition: "opacity 0.2s ease, transform 0.2s ease",
         }}
       >
-        {/* Yellow top rule */}
         <div style={{ height: "3px", background: YELLOW }} />
 
         <div style={{ maxWidth: "1280px", margin: "0 auto", minHeight: hasColumns ? "300px" : "0" }}>
@@ -314,7 +299,6 @@ function MegaMenu({
                     key={col.title}
                     style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
                   >
-                    {/* Heading */}
                     <div style={{
                       fontSize: "15px",
                       fontWeight: 700,
@@ -329,7 +313,6 @@ function MegaMenu({
                       {col.title}
                     </div>
 
-                    {/* Links list */}
                     <ul style={{
                       listStyle: "none", margin: 0, padding: 0,
                       display: "flex", flexDirection: "column", gap: "13px",
@@ -360,7 +343,6 @@ function MegaMenu({
                       ))}
                     </ul>
 
-                    {/* Product image — centered below the links for this column */}
                     {col.image && (
                       <div style={{
                         marginTop: "22px",
@@ -426,7 +408,8 @@ function MobileDrawer({
         }}
       />
       <div style={{
-        position: "fixed", top: 0, left: 0, bottom: 0, width: "340px",
+        position: "fixed", top: 0, left: 0, bottom: 0,
+        width: "min(340px, 88vw)",
         background: "#FFFFFF",
         borderRight: `1px solid ${T.border}`,
         boxShadow: "8px 0 40px rgba(26,26,26,0.15)",
@@ -438,11 +421,11 @@ function MobileDrawer({
         {/* Header */}
         <div style={{
           display: "flex", alignItems: "center", justifyContent: "space-between",
-          padding: "16px 20px",
+          padding: "12px 16px",
           borderBottom: `3px solid ${YELLOW}`,
           flexShrink: 0,
         }}>
-          <Logo />
+          <Logo compact />
           <button
             onClick={onClose}
             style={{
@@ -453,6 +436,7 @@ function MobileDrawer({
               display: "flex", alignItems: "center", justifyContent: "center",
               color: T.textMuted,
               cursor: "pointer",
+              flexShrink: 0,
             }}
           >
             <Icon.Close />
@@ -581,22 +565,18 @@ function MobileDrawer({
 }
 
 // ─── Logo — replace with your own image ──────────────────────────────────────
-// Swap the <img> src with your actual logo path, e.g. src="/logo-batimato.png"
-function Logo() {
+// `compact` renders a smaller version for the mobile drawer header.
+function Logo({ compact = false }: { compact?: boolean }) {
   return (
-    <a href="/" style={{ display: "flex", alignItems: "center", textDecoration: "none", flexShrink: 0 }}>
-      {/*
-        ┌─────────────────────────────────────────────────────┐
-        │  REPLACE THIS WITH YOUR LOGO                        │
-        │  Change src="/your-logo.png" to your actual path    │
-        └─────────────────────────────────────────────────────┘
-      */}
+    <a href="/" style={{ display: "flex", alignItems: "center", textDecoration: "none", flexShrink: 0, minWidth: 0 }}>
       <img
         src="/logo.JPG"
         alt="Batimato"
+        className="site-logo"
         style={{
-          height: "100px",
+          height: compact ? "44px" : "100px",
           width: "auto",
+          maxWidth: "100%",
           display: "block",
           objectFit: "contain",
         }}
@@ -673,7 +653,6 @@ function NavButton({
         whiteSpace: "nowrap",
       }}
     >
-      {/* Icon slot — picture icon, always reserved so labels line up */}
       {item.icon && (
         <img
           src={item.icon}
@@ -734,6 +713,14 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handler);
   }, []);
 
+  // Close the inline search overlay automatically once we cross into
+  // desktop layout so it can't get stuck open with a stale fixed width.
+  useEffect(() => {
+    const onResize = () => { if (window.innerWidth > 640) setSearchOpen(false); };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
   const handleEnter = (label: string) => {
     if (timerRef.current) clearTimeout(timerRef.current);
     measureMegaTop();
@@ -747,18 +734,69 @@ export default function Navbar() {
   return (
     <>
       <style>{`
+        html, body { overflow-x: hidden; }
+        * { box-sizing: border-box; }
+        input::placeholder { color: rgba(26,26,26,0.32) !important; }
+
+        .navbar-inner {
+          max-width: 1280px;
+          margin: 0 auto;
+          padding: 0 48px;
+          display: flex;
+          align-items: center;
+          height: ${T.navH}px;
+          gap: 0;
+          width: 100%;
+        }
+        .navbar-divider {
+          width: 1px;
+          height: 28px;
+          background: ${T.border};
+          margin: 0 24px;
+          flex-shrink: 0;
+        }
+        .navbar-right {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          flex-shrink: 0;
+          margin-left: auto;
+        }
+        .contact-btn {
+          display: flex; align-items: center; gap: 7px;
+          padding: 0 16px; height: 38px;
+          background: ${YELLOW}; color: ${INK};
+          text-decoration: none; font-size: 13px; font-weight: 700;
+          border-radius: 8px; border: none;
+          transition: background 0.15s, transform 0.15s;
+          white-space: nowrap;
+          flex-shrink: 0;
+        }
+        .contact-btn:hover { background: ${YELLOW_DARK}; transform: translateY(-1px); }
+
+        .nav-desktop { display: flex; align-items: center; flex: 1; min-width: 0; }
+        .nav-hamburger { display: none; }
+
         @media (max-width: 1024px) {
           .nav-desktop { display: none !important; }
           .nav-hamburger { display: flex !important; }
           .utility-bar { display: none !important; }
-          .nav-account { display: none !important; }
+          .navbar-inner { height: 84px; padding: 0 20px; }
+          .navbar-divider { display: none; }
+          .site-logo { height: 64px !important; }
         }
-        @media (min-width: 1025px) { .nav-hamburger { display: none !important; } }
-        input::placeholder { color: rgba(26,26,26,0.32) !important; }
-        * { box-sizing: border-box; }
+
+        @media (max-width: 640px) {
+          .navbar-inner { padding: 0 16px; height: 76px; }
+          .site-logo { height: 56px !important; }
+          .navbar-right { gap: 8px; }
+          .contact-btn-label { display: none; }
+          .contact-btn { padding: 0 12px; }
+          .search-box.open { width: min(160px, 42vw) !important; }
+        }
       `}</style>
 
-      <div ref={wrapRef} style={{ position: "sticky", top: 0, zIndex: 1000 }}>
+      <div ref={wrapRef} style={{ position: "sticky", top: 0, zIndex: 1000, width: "100%" }}>
         {/* <div className="utility-bar"><UtilityBar /></div> */}
 
         <header
@@ -768,19 +806,16 @@ export default function Navbar() {
             borderBottom: scrolled ? `3px solid ${YELLOW}` : `1px solid ${T.border}`,
             boxShadow: scrolled ? "0 4px 24px rgba(26,26,26,0.09)" : "none",
             transition: "box-shadow 0.3s, border-color 0.3s",
+            width: "100%",
           }}
         >
-          <div style={{
-            maxWidth: "1280px", margin: "0 auto", padding: "0 48px",
-            display: "flex", alignItems: "center", height: T.navH, gap: 0,
-          }}>
+          <div className="navbar-inner">
             <Logo />
 
-            <div style={{ width: "1px", height: "28px", background: T.border, margin: "0 24px", flexShrink: 0 }} />
+            <div className="navbar-divider" />
 
             <nav
               className="nav-desktop"
-              style={{ display: "flex", alignItems: "center", flex: 1 }}
               onMouseLeave={handleLeave}
             >
               {NAV_ITEMS.map((item) => (
@@ -795,16 +830,20 @@ export default function Navbar() {
 
             <div style={{ flex: 1 }} className="nav-desktop" />
 
-            <div style={{ display: "flex", alignItems: "center", gap: "6px", flexShrink: 0 }}>
+            <div className="navbar-right">
               {/* Search */}
-              <div style={{
-                display: "flex", alignItems: "center",
-                background: searchOpen ? GRAY : "transparent",
-                border: `1px solid ${searchOpen ? T.borderHover : "transparent"}`,
-                borderRadius: "8px", padding: "0 10px", height: "38px",
-                width: searchOpen ? "220px" : "38px",
-                transition: "all 0.25s ease", overflow: "hidden",
-              }}>
+              <div
+                className={`search-box${searchOpen ? " open" : ""}`}
+                style={{
+                  display: "flex", alignItems: "center",
+                  background: searchOpen ? GRAY : "transparent",
+                  border: `1px solid ${searchOpen ? T.borderHover : "transparent"}`,
+                  borderRadius: "8px", padding: "0 10px", height: "38px",
+                  width: searchOpen ? "220px" : "38px",
+                  transition: "all 0.25s ease", overflow: "hidden",
+                  flexShrink: 0,
+                }}
+              >
                 <button
                   onClick={() => setSearchOpen(!searchOpen)}
                   style={{ background: "none", border: "none", color: T.textMuted, cursor: "pointer", display: "flex", alignItems: "center", padding: 0, flexShrink: 0 }}
@@ -821,33 +860,22 @@ export default function Navbar() {
                     marginLeft: searchOpen ? "8px" : "0",
                     opacity: searchOpen ? 1 : 0,
                     transition: "opacity 0.2s, margin 0.2s", flexShrink: 0,
+                    minWidth: 0,
                   }}
                 />
               </div>
 
-              {/* Contact — replaces the previous Connexion + Panier buttons */}
-              <a
-                href="http://localhost:3000/contact"
-                style={{
-                  display: "flex", alignItems: "center", gap: "7px",
-                  padding: "0 16px", height: "38px",
-                  background: YELLOW, color: INK,
-                  textDecoration: "none", fontSize: "13px", fontWeight: 700,
-                  borderRadius: "8px", border: "none",
-                  transition: "background 0.15s, transform 0.15s",
-                }}
-                onMouseEnter={e => { e.currentTarget.style.background = YELLOW_DARK; e.currentTarget.style.transform = "translateY(-1px)"; }}
-                onMouseLeave={e => { e.currentTarget.style.background = YELLOW; e.currentTarget.style.transform = "translateY(0)"; }}
-              >
+              {/* Contact */}
+              <a href="http://localhost:3000/contact" className="contact-btn">
                 <Icon.Phone />
-                <span>Contact</span>
+                <span className="contact-btn-label">Contact</span>
               </a>
 
               {/* Hamburger */}
               <button
                 className="nav-hamburger"
                 onClick={() => setMobileOpen(true)}
-                style={{ background: GRAY, border: `1px solid ${T.border}`, borderRadius: "8px", width: "40px", height: "38px", display: "flex", alignItems: "center", justifyContent: "center", color: T.textMuted, cursor: "pointer" }}
+                style={{ background: GRAY, border: `1px solid ${T.border}`, borderRadius: "8px", width: "40px", height: "38px", alignItems: "center", justifyContent: "center", color: T.textMuted, cursor: "pointer", flexShrink: 0 }}
               >
                 <Icon.Menu />
               </button>
