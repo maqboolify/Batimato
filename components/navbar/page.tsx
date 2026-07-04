@@ -871,10 +871,10 @@ export default function Navbar() {
               </div>
 
               {/* Contact */}
-              <a href="http://localhost:3000/contact" className="contact-btn">
-                <Icon.Phone />
-                <span className="contact-btn-label">Contact</span>
-              </a>
+              <Link href="/contact" className="contact-btn">
+  <Icon.Phone />
+  <span className="contact-btn-label">Contact</span>
+</Link>
 
               {/* Hamburger */}
               <button
