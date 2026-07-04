@@ -2,6 +2,26 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 
+// ─── Types ────────────────────────────────────────────────────────────────────
+type MegaLink = {
+  label: string;
+  href: string;
+};
+
+type MegaColumn = {
+  title: string;
+  image?: string;
+  links: MegaLink[];
+};
+
+type NavItem = {
+  label: string;
+  href: string;
+  icon?: string;
+  badge?: string;
+  megaColumns?: MegaColumn[];
+};
+
 // ─── Nav Data ─────────────────────────────────────────────────────────────────
 // Each megaColumn now also carries an `image` field (a representative product
 // photo for that column). Replace the placeholder URLs with your real images
@@ -11,7 +31,7 @@ import { useState, useRef, useEffect, useCallback } from "react";
 // next to the label in the navbar). Replace these placeholder paths with your
 // own image files, e.g. "/icons/preparation-materiaux.png".
 
-const NAV_ITEMS = [
+const NAV_ITEMS: NavItem[] = [
   {
     label: "Préparation & Matériaux",
     href: "/preparation-materiaux",
@@ -192,7 +212,7 @@ const Icon = {
       <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
     </svg>
   ),
-  Chevron: ({ open }) => (
+  Chevron: ({ open }: { open: boolean }) => (
     <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"
       style={{ transition: "transform 0.25s ease", transform: open ? "rotate(180deg)" : "rotate(0deg)", flexShrink: 0 }}>
       <polyline points="6 9 12 15 18 9"/>
@@ -229,8 +249,16 @@ const Icon = {
 // Each column = a heading + a plain list of links + a representative product
 // image, centered at the bottom of the column (matching the requested layout
 // where each sub-options group has its own photo beneath it).
-function MegaMenu({ item, visible, top }) {
-  const hasColumns = item.megaColumns && item.megaColumns.length > 0;
+function MegaMenu({
+  item,
+  visible,
+  top,
+}: {
+  item: NavItem;
+  visible: boolean;
+  top: number;
+}) {
+  const hasColumns = !!item.megaColumns && item.megaColumns.length > 0;
 
   return (
     <>
@@ -277,11 +305,11 @@ function MegaMenu({ item, visible, top }) {
               <div
                 style={{
                   display: "grid",
-                  gridTemplateColumns: `repeat(${item.megaColumns.length}, 1fr)`,
+                  gridTemplateColumns: `repeat(${item.megaColumns!.length}, 1fr)`,
                   gap: "40px",
                 }}
               >
-                {item.megaColumns.map((col) => (
+                {item.megaColumns!.map((col) => (
                   <div
                     key={col.title}
                     style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
@@ -375,8 +403,14 @@ function MegaMenu({ item, visible, top }) {
 }
 
 // ─── Mobile Drawer ─────────────────────────────────────────────────────────────
-function MobileDrawer({ open, onClose }) {
-  const [expanded, setExpanded] = useState(null);
+function MobileDrawer({
+  open,
+  onClose,
+}: {
+  open: boolean;
+  onClose: () => void;
+}) {
+  const [expanded, setExpanded] = useState<string | null>(null);
 
   return (
     <>
@@ -444,7 +478,7 @@ function MobileDrawer({ open, onClose }) {
         {/* Nav */}
         <nav style={{ flex: 1, padding: "8px 0" }}>
           {NAV_ITEMS.map((item) => {
-            const hasColumns = item.megaColumns && item.megaColumns.length > 0;
+            const hasColumns = !!item.megaColumns && item.megaColumns.length > 0;
             return (
               <div key={item.label} style={{ borderBottom: `1px solid ${T.border}` }}>
                 <button
@@ -487,7 +521,7 @@ function MobileDrawer({ open, onClose }) {
 
                 {hasColumns && expanded === item.label && (
                   <div style={{ paddingBottom: "12px", background: "#FAFAFA" }}>
-                    {item.megaColumns.map((col) => (
+                    {item.megaColumns!.map((col) => (
                       <div key={col.title} style={{ padding: "10px 20px 4px" }}>
                         <div style={{ color: INK, fontWeight: 700, fontSize: "12px", marginBottom: "8px" }}>
                           {col.title}
@@ -608,7 +642,15 @@ function UtilityBar() {
 }
 
 // ─── NavButton ────────────────────────────────────────────────────────────────
-function NavButton({ item, isOpen, onEnter }) {
+function NavButton({
+  item,
+  isOpen,
+  onEnter,
+}: {
+  item: NavItem;
+  isOpen: boolean;
+  onEnter: () => void;
+}) {
   return (
     <button
       onMouseEnter={onEnter}
@@ -658,16 +700,16 @@ function NavButton({ item, isOpen, onEnter }) {
 
 // ─── Main Navbar ──────────────────────────────────────────────────────────────
 export default function Navbar() {
-  const [openMenu, setOpenMenu] = useState(null);
+  const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [searchOpen, setSearchOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [megaTop, setMegaTop] = useState(T.utilH + T.navH);
 
-  const headerRef = useRef(null);
-  const wrapRef = useRef(null);
-  const searchRef = useRef(null);
-  const timerRef = useRef(null);
+  const headerRef = useRef<HTMLElement | null>(null);
+  const wrapRef = useRef<HTMLDivElement | null>(null);
+  const searchRef = useRef<HTMLInputElement | null>(null);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const measureMegaTop = useCallback(() => {
     if (headerRef.current) setMegaTop(headerRef.current.getBoundingClientRect().bottom);
@@ -683,8 +725,8 @@ export default function Navbar() {
   useEffect(() => { if (searchOpen) searchRef.current?.focus(); }, [searchOpen]);
 
   useEffect(() => {
-    const handler = (e) => {
-      if (wrapRef.current && !wrapRef.current.contains(e.target)) {
+    const handler = (e: MouseEvent) => {
+      if (wrapRef.current && !wrapRef.current.contains(e.target as Node)) {
         setOpenMenu(null); setSearchOpen(false);
       }
     };
@@ -692,8 +734,14 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handler);
   }, []);
 
-  const handleEnter = (label) => { clearTimeout(timerRef.current); measureMegaTop(); setOpenMenu(label); };
-  const handleLeave = () => { timerRef.current = setTimeout(() => setOpenMenu(null), 150); };
+  const handleEnter = (label: string) => {
+    if (timerRef.current) clearTimeout(timerRef.current);
+    measureMegaTop();
+    setOpenMenu(label);
+  };
+  const handleLeave = () => {
+    timerRef.current = setTimeout(() => setOpenMenu(null), 150);
+  };
   const currentItem = NAV_ITEMS.find(i => i.label === openMenu);
 
   return (
@@ -809,7 +857,7 @@ export default function Navbar() {
 
         {currentItem && (
           <div
-            onMouseEnter={() => clearTimeout(timerRef.current)}
+            onMouseEnter={() => { if (timerRef.current) clearTimeout(timerRef.current); }}
             onMouseLeave={handleLeave}
             style={{ position: "absolute", top: "100%", left: 0, right: 0, zIndex: 999, pointerEvents: openMenu ? "auto" : "none" }}
           >

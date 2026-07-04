@@ -3,7 +3,14 @@
 import rawProductsData from "@/data/PeinturesMates.json";
 import Navbar from "@/components/navbar/page";
 import { useRef, useState, useMemo, useEffect } from "react";
-import { motion, AnimatePresence, useMotionValue, useSpring, useInView } from "framer-motion";
+import {
+  motion,
+  AnimatePresence,
+  useMotionValue,
+  useSpring,
+  useInView,
+} from "framer-motion";
+import type { ReactNode, CSSProperties } from "react";
 
 const BG = "#0D0D0D";
 const BG2 = "#1A1A1A";
@@ -14,7 +21,7 @@ const YELLOW_DARK = "#D4A900";
 const TEXT_PRIMARY = "#FFFFFF";
 const TEXT_SECONDARY = "#A0A0A0";
 const TEXT_MUTED = "#666666";
-const ease = [0.22, 1, 0.36, 1];
+const ease: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 const fadeUp = {
   hidden: { opacity: 0, y: 22 },
@@ -22,20 +29,83 @@ const fadeUp = {
 };
 const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.04 } } };
 
-function useInViewAnim(threshold = "-60px") {
-  const ref = useRef(null);
+// Derive the margin type straight from useInView's own options,
+// instead of importing framer-motion's unexported MarginType.
+type InViewOptions = NonNullable<Parameters<typeof useInView>[1]>;
+type Margin = InViewOptions["margin"];
+
+function useInViewAnim(threshold: Margin = "-60px") {
+  const ref = useRef<HTMLElement | null>(null);
   const inView = useInView(ref, { once: true, margin: threshold });
-  return [ref, inView];
+  return [ref, inView] as const;
 }
 
-function parsePriceString(priceStr) {
+// ---------------------------------------------------------------------------
+// Raw / derived data types
+// ---------------------------------------------------------------------------
+
+interface RawProductItem {
+  title?: string;
+  description?: string;
+  image?: string;
+  price?: string;
+}
+
+interface Product {
+  id: string;
+  name: string;
+  shortDesc: string;
+  img: string;
+  price: number | null;
+  pricePerLitre: number | null;
+  fullDesc: string;
+  highlights: string[];
+  technicalProps: string[];
+  brand: string;
+  type: string;
+  aspect: string;
+  base: string;
+  applications: string[];
+  destinations: string[];
+  labels: string[];
+  pictos: string[];
+  badge: string | null;
+  sales: number;
+  erpCode: string;
+  conditioning: string[];
+  colors: string[];
+}
+
+interface FilterState {
+  type: string[];
+  brand: string[];
+  applications: string[];
+  destinations: string[];
+  labels: string[];
+  aspect: string[];
+  base: string[];
+}
+
+type FilterGroup = keyof FilterState;
+
+interface FilterCounts {
+  type: Record<string, number>;
+  brand: Record<string, number>;
+  applications: Record<string, number>;
+  destinations: Record<string, number>;
+  labels: Record<string, number>;
+  aspect: Record<string, number>;
+  base: Record<string, number>;
+}
+
+function parsePriceString(priceStr: string | undefined | null): number | null {
   if (!priceStr) return null;
   const cleaned = priceStr.replace(/\s/g, "").replace("€", "").replace(",", ".");
   const num = parseFloat(cleaned);
   return isNaN(num) ? null : num;
 }
 
-function slugify(str) {
+function slugify(str: string): string {
   return str
     .toLowerCase()
     .normalize("NFD")
@@ -44,16 +114,16 @@ function slugify(str) {
     .replace(/(^-|-$)/g, "");
 }
 
-function inferType(item) {
-  const text = (item.title + " " + item.description).toLowerCase();
+function inferType(item: RawProductItem): string {
+  const text = ((item.title || "") + " " + (item.description || "")).toLowerCase();
   if (text.includes("impression") || text.includes("primaire") || text.includes("prim") || text.includes("fixateur") || text.includes("fondur") || text.includes("sous-couche")) return "impression";
   if (text.includes("enduit") || text.includes("ragréage") || text.includes("mortier") || text.includes("crepi") || text.includes("crépi") || text.includes("revetement") || text.includes("revêtement")) return "enduit";
   if (text.includes("facade") || text.includes("façade") || text.includes("ite") || text.includes("thermique") || text.includes("imperméabilité")) return "ite";
   return "finition";
 }
 
-function inferAspect(item) {
-  const text = (item.title + " " + item.description).toLowerCase();
+function inferAspect(item: RawProductItem): string {
+  const text = ((item.title || "") + " " + (item.description || "")).toLowerCase();
   if (text.includes("brillant")) return "brillant";
   if (text.includes("mat-velours") || text.includes("mat velours") || text.includes("mate-veloutée") || text.includes("mat velouté")) return "mat-velours";
   if (text.includes("velours") || text.includes("velouté")) return "velours";
@@ -62,14 +132,14 @@ function inferAspect(item) {
   return "autre";
 }
 
-function inferBase(item) {
-  const text = (item.title + " " + item.description).toLowerCase();
+function inferBase(item: RawProductItem): string {
+  const text = ((item.title || "") + " " + (item.description || "")).toLowerCase();
   if (text.includes("solvant") || text.includes("glycérophtalique") || text.includes("alkyde") || text.includes("alkydes") || text.includes("pliolite") || text.includes("solvanté")) return "phase-solvant";
   return "phase-aqueuse";
 }
 
-function inferBrand(item) {
-  const t = item.title.toLowerCase();
+function inferBrand(item: RawProductItem): string {
+  const t = (item.title || "").toLowerCase();
   if (t.startsWith("dul") || t.startsWith("duli")) return "guittet";
   if (t.startsWith("gui") || t.startsWith("guit")) return "guittet";
   if (t.startsWith("pan") || t.startsWith("panti")) return "seigneurie";
@@ -80,9 +150,9 @@ function inferBrand(item) {
   return "guittet";
 }
 
-function inferApplications(item) {
-  const text = (item.title + " " + item.description).toLowerCase();
-  const apps = [];
+function inferApplications(item: RawProductItem): string[] {
+  const text = ((item.title || "") + " " + (item.description || "")).toLowerCase();
+  const apps: string[] = [];
   if (text.includes("rouleau")) apps.push("rouleau");
   if (text.includes("brosse")) apps.push("brosse");
   if (text.includes("pistolet")) apps.push("pistolet");
@@ -94,9 +164,9 @@ function inferApplications(item) {
   return apps;
 }
 
-function inferDestinations(item) {
-  const text = (item.title + " " + item.description).toLowerCase();
-  const dests = [];
+function inferDestinations(item: RawProductItem): string[] {
+  const text = ((item.title || "") + " " + (item.description || "")).toLowerCase();
+  const dests: string[] = [];
   if (text.includes("chambre")) dests.push("chambre", "chambre-coucher", "chambre-enfants");
   if (text.includes("cuisine")) dests.push("cuisine");
   if (text.includes("bureau")) dests.push("bureau");
@@ -106,9 +176,9 @@ function inferDestinations(item) {
   return [...new Set(dests)];
 }
 
-function inferLabels(item) {
-  const text = (item.title + " " + item.description).toLowerCase();
-  const labels = [];
+function inferLabels(item: RawProductItem): string[] {
+  const text = ((item.title || "") + " " + (item.description || "")).toLowerCase();
+  const labels: string[] = [];
   if (text.includes("nf ") || text.includes(" nf") || text.includes("nf\n")) labels.push("nf");
   if (text.includes("ecolabel") || text.includes("écolabel")) labels.push("ecolabel");
   if (text.includes("m1")) labels.push("m1");
@@ -117,9 +187,9 @@ function inferLabels(item) {
   return labels;
 }
 
-function inferPictos(item) {
-  const text = (item.title + " " + item.description).toLowerCase();
-  const pictos = [];
+function inferPictos(item: RawProductItem): string[] {
+  const text = ((item.title || "") + " " + (item.description || "")).toLowerCase();
+  const pictos: string[] = [];
   const isExterior = text.includes("facade") || text.includes("façade") || text.includes("extérieur") || text.includes("exterieur") || text.includes("ite") || text.includes("toiture");
   const isInterior = text.includes("intérieur") || text.includes("interieur") || text.includes("murs") || text.includes("plafond");
   if (isExterior && isInterior) pictos.push("INT_EXT");
@@ -130,7 +200,7 @@ function inferPictos(item) {
   return pictos;
 }
 
-const PRODUCTS = rawProductsData.map((item, index) => {
+const PRODUCTS: Product[] = (rawProductsData as RawProductItem[]).map((item, index) => {
   const priceNum = parsePriceString(item.price);
   const id = slugify(item.title || `product-${index}`);
   return {
@@ -217,7 +287,26 @@ const BASES = [
   { id: "phase-solvant", label: "Phase solvant" },
 ];
 
-function Picto({ kind, size = "sm" }) {
+type PictoKind =
+  | "INT"
+  | "EXT"
+  | "INT_EXT"
+  | "EAU"
+  | "NOT_OK"
+  | "brosse"
+  | "rouleau"
+  | "pistolet"
+  | "taloche"
+  | "spalter"
+  | "lisseuse"
+  | string;
+
+interface PictoProps {
+  kind: PictoKind;
+  size?: "sm" | "lg";
+}
+
+function Picto({ kind, size = "sm" }: PictoProps) {
   const base = "flex items-center justify-center font-bold rounded";
   const sz = size === "lg" ? "w-10 h-10 text-[11px]" : "w-7 h-7 text-[9px]";
   switch (kind) {
@@ -261,7 +350,12 @@ function Picto({ kind, size = "sm" }) {
   }
 }
 
-function PictoRow({ pictos, size }) {
+interface PictoRowProps {
+  pictos: string[];
+  size?: "sm" | "lg";
+}
+
+function PictoRow({ pictos, size }: PictoRowProps) {
   return (
     <div className="flex items-center gap-1.5 flex-wrap">
       {pictos.map((p, i) => <Picto key={i} kind={p} size={size} />)}
@@ -269,7 +363,7 @@ function PictoRow({ pictos, size }) {
   );
 }
 
-const BRAND_LABELS = {
+const BRAND_LABELS: Record<string, string> = {
   absolu: "Absolu", chromatic: "Chromatic", gauthier: "Gauthier",
   guittet: "Guittet", "ppg-light-pc": "PPG Light PC", seigneurie: "Seigneurie",
 };
@@ -282,14 +376,12 @@ const SORT_OPTIONS = [
   { id: "name-desc", label: "Z à A" },
 ];
 
-const BADGE_COLORS = {
+const BADGE_COLORS: Record<string, { bg: string; color: string }> = {
   Nouveau: { bg: "#059669", color: "#fff" },
   PROMO: { bg: "#E11D48", color: "#fff" },
   Best: { bg: YELLOW, color: "#000" },
   Certifié: { bg: "#7C3AED", color: "#fff" },
 };
-
-import type { ReactNode, CSSProperties } from "react";
 
 interface MagneticBtnProps {
   children: ReactNode;
@@ -307,12 +399,13 @@ function MagneticBtn({
   onClick,
   disabled,
 }: MagneticBtnProps) {
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const sx = useSpring(x, { stiffness: 220, damping: 22 });
   const sy = useSpring(y, { stiffness: 220, damping: 22 });
-  const handleMove = (e) => {
+  const handleMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!ref.current) return;
     const r = ref.current.getBoundingClientRect();
     x.set((e.clientX - r.left - r.width / 2) * 0.2);
     y.set((e.clientY - r.top - r.height / 2) * 0.2);
@@ -320,12 +413,18 @@ function MagneticBtn({
   const handleLeave = () => { x.set(0); y.set(0); };
   return (
     <motion.div ref={ref} style={{ x: sx, y: sy }} onMouseMove={handleMove} onMouseLeave={handleLeave} className="inline-block">
-      <button type={type} onClick={onClick} className={className} style={style}>{children}</button>
+      <button type={type} onClick={onClick} disabled={disabled} className={className} style={style}>{children}</button>
     </motion.div>
   );
 }
 
-function FilterSection({ title, children, defaultOpen = true }) {
+interface FilterSectionProps {
+  title: string;
+  children: ReactNode;
+  defaultOpen?: boolean;
+}
+
+function FilterSection({ title, children, defaultOpen = true }: FilterSectionProps) {
   const [open, setOpen] = useState(defaultOpen);
   return (
     <div className="border-b py-5" style={{ borderColor: BORDER }}>
@@ -346,7 +445,14 @@ function FilterSection({ title, children, defaultOpen = true }) {
   );
 }
 
-function CheckRow({ label, count, checked, onChange }) {
+interface CheckRowProps {
+  label: string;
+  count?: number | null;
+  checked: boolean;
+  onChange: () => void;
+}
+
+function CheckRow({ label, count, checked, onChange }: CheckRowProps) {
   return (
     <label className="flex items-center justify-between gap-3 cursor-pointer select-none">
       <span className="flex items-center gap-2.5">
@@ -360,7 +466,15 @@ function CheckRow({ label, count, checked, onChange }) {
   );
 }
 
-function FilterSidebar({ filters, toggleFilter, clearAll, counts, activeCount }) {
+interface FilterSidebarProps {
+  filters: FilterState;
+  toggleFilter: (group: FilterGroup, id: string) => void;
+  clearAll: () => void;
+  counts: FilterCounts;
+  activeCount: number;
+}
+
+function FilterSidebar({ filters, toggleFilter, clearAll, counts, activeCount }: FilterSidebarProps) {
   return (
     <div className="rounded-2xl border p-5" style={{ borderColor: BORDER, background: BG2 }}>
       <div className="flex items-center justify-between pb-4 border-b" style={{ borderColor: BORDER }}>
@@ -401,9 +515,14 @@ function FilterSidebar({ filters, toggleFilter, clearAll, counts, activeCount })
   );
 }
 
-function SortDropdown({ value, onChange }) {
+interface SortDropdownProps {
+  value: string;
+  onChange: (id: string) => void;
+}
+
+function SortDropdown({ value, onChange }: SortDropdownProps) {
   const [open, setOpen] = useState(false);
-  const current = SORT_OPTIONS.find((o) => o.id === value);
+  const current = SORT_OPTIONS.find((o) => o.id === value) ?? SORT_OPTIONS[0];
   return (
     <div className="relative">
       <button onClick={() => setOpen((o) => !o)} className="flex items-center justify-between gap-3 px-4 py-3 rounded-xl border text-sm font-medium min-w-[190px]" style={{ borderColor: BORDER, color: TEXT_PRIMARY, background: BG2 }}>
@@ -430,10 +549,16 @@ function SortDropdown({ value, onChange }) {
   );
 }
 
-function Pagination({ currentPage, totalPages, onPageChange }) {
+interface PaginationProps {
+  currentPage: number;
+  totalPages: number;
+  onPageChange: (page: number) => void;
+}
+
+function Pagination({ currentPage, totalPages, onPageChange }: PaginationProps) {
   if (totalPages <= 1) return null;
-  const getPages = () => {
-    const pages = [];
+  const getPages = (): (number | string)[] => {
+    const pages: (number | string)[] = [];
     if (totalPages <= 7) { for (let i = 1; i <= totalPages; i++) pages.push(i); }
     else {
       pages.push(1);
@@ -453,7 +578,7 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
         page === "..." ? (
           <span key={`e-${i}`} className="w-10 h-10 flex items-center justify-center text-sm" style={{ color: TEXT_MUTED }}>…</span>
         ) : (
-          <button key={page} onClick={() => onPageChange(page)} className="w-10 h-10 rounded-xl border text-sm font-semibold transition-all" style={{ borderColor: currentPage === page ? YELLOW : BORDER, background: currentPage === page ? YELLOW : BG2, color: currentPage === page ? "#000" : TEXT_PRIMARY }}>
+          <button key={page} onClick={() => onPageChange(page as number)} className="w-10 h-10 rounded-xl border text-sm font-semibold transition-all" style={{ borderColor: currentPage === page ? YELLOW : BORDER, background: currentPage === page ? YELLOW : BG2, color: currentPage === page ? "#000" : TEXT_PRIMARY }}>
             {page}
           </button>
         )
@@ -465,9 +590,15 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
   );
 }
 
-function ProductCard({ p, i, onNavigate }) {
+interface ProductCardProps {
+  p: Product;
+  i: number;
+  onNavigate: (id: string) => void;
+}
+
+function ProductCard({ p, i, onNavigate }: ProductCardProps) {
   const [hovered, setHovered] = useState(false);
-  const badge = BADGE_COLORS[p.badge];
+  const badge = p.badge ? BADGE_COLORS[p.badge] : undefined;
   return (
     <motion.div
       variants={fadeUp} custom={i} layout
@@ -489,7 +620,7 @@ function ProductCard({ p, i, onNavigate }) {
           className="w-full h-full object-contain"
           animate={{ scale: hovered ? 1.06 : 1 }}
           transition={{ duration: 0.5, ease }}
-          onError={(e) => { e.target.style.opacity = "0.15"; }}
+          onError={(e) => { (e.target as HTMLImageElement).style.opacity = "0.15"; }}
         />
       </button>
       <div className="p-5 flex flex-col flex-1">
@@ -522,16 +653,20 @@ function ProductCard({ p, i, onNavigate }) {
   );
 }
 
-const EMPTY_FILTERS = { type: [], brand: [], applications: [], destinations: [], labels: [], aspect: [], base: [] };
+const EMPTY_FILTERS: FilterState = { type: [], brand: [], applications: [], destinations: [], labels: [], aspect: [], base: [] };
 
-function ProductsPage({ onNavigate }) {
-  const [filters, setFilters] = useState(EMPTY_FILTERS);
+interface ProductsPageProps {
+  onNavigate: (id: string) => void;
+}
+
+function ProductsPage({ onNavigate }: ProductsPageProps) {
+  const [filters, setFilters] = useState<FilterState>(EMPTY_FILTERS);
   const [sort, setSort] = useState("best-sellers");
   const [currentPage, setCurrentPage] = useState(1);
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   const [ref, inView] = useInViewAnim();
 
-  const toggleFilter = (group, id) => {
+  const toggleFilter = (group: FilterGroup, id: string) => {
     setFilters((f) => {
       const has = f[group].includes(id);
       return { ...f, [group]: has ? f[group].filter((x) => x !== id) : [...f[group], id] };
@@ -566,11 +701,11 @@ function ProductsPage({ onNavigate }) {
   const totalPages = Math.ceil(sorted.length / PRODUCTS_PER_PAGE);
   const paginated = useMemo(() => sorted.slice((currentPage - 1) * PRODUCTS_PER_PAGE, currentPage * PRODUCTS_PER_PAGE), [sorted, currentPage]);
 
-  const handleSortChange = (newSort) => { setSort(newSort); setCurrentPage(1); };
-  const handlePageChange = (page) => { setCurrentPage(page); if (typeof window !== "undefined") window.scrollTo({ top: 0, behavior: "smooth" }); };
+  const handleSortChange = (newSort: string) => { setSort(newSort); setCurrentPage(1); };
+  const handlePageChange = (page: number) => { setCurrentPage(page); if (typeof window !== "undefined") window.scrollTo({ top: 0, behavior: "smooth" }); };
 
-  const counts = useMemo(() => {
-    const withoutGroup = (excludeGroup) => PRODUCTS.filter((p) => {
+  const counts: FilterCounts = useMemo(() => {
+    const withoutGroup = (excludeGroup: FilterGroup) => PRODUCTS.filter((p) => {
       if (excludeGroup !== "type" && filters.type.length && !filters.type.includes(p.type)) return false;
       if (excludeGroup !== "brand" && filters.brand.length && !filters.brand.includes(p.brand)) return false;
       if (excludeGroup !== "applications" && filters.applications.length && !filters.applications.some((a) => p.applications.includes(a))) return false;
@@ -580,9 +715,13 @@ function ProductsPage({ onNavigate }) {
       if (excludeGroup !== "base" && filters.base.length && !filters.base.includes(p.base)) return false;
       return true;
     });
-    const tally = (list, key, multi) => {
-      const out = {};
-      list.forEach((p) => { const vals = multi ? p[key] : [p[key]]; vals.forEach((v) => { if (v) out[v] = (out[v] || 0) + 1; }); });
+    const tally = (list: Product[], key: keyof Product, multi: boolean): Record<string, number> => {
+      const out: Record<string, number> = {};
+      list.forEach((p) => {
+        const raw = p[key];
+        const vals: string[] = multi ? (raw as string[]) : [raw as string];
+        vals.forEach((v) => { if (v) out[v] = (out[v] || 0) + 1; });
+      });
       return out;
     };
     return {
@@ -602,11 +741,6 @@ function ProductsPage({ onNavigate }) {
 
       <section className="pt-12 pb-10 lg:pt-16" style={{ background: BG }}>
               <div className="max-w-7xl mx-auto px-6 lg:px-20">
-                {/* <motion.nav initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} className="flex items-center gap-2 text-xs font-medium mb-6" style={{ color: TEXT_MUTED }}>
-                  <span>Accueil</span>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18l6-6-6-6" /></svg>
-                  <span style={{ color: YELLOW }} className="font-semibold">Peintures</span>
-                </motion.nav> */}
                 <motion.h1 initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease }} className="font-black tracking-[-0.03em]" style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", color: TEXT_PRIMARY }}>
                   Peintures Mates
                 </motion.h1>
@@ -633,7 +767,7 @@ function ProductsPage({ onNavigate }) {
         </div>
       </section>
 
-      <section ref={ref} className="py-12">
+      <section ref={ref as React.RefObject<HTMLElement>} className="py-12">
         <div className="max-w-7xl mx-auto px-6 lg:px-20 grid lg:grid-cols-[280px_1fr] gap-8">
           <aside className="hidden lg:block">
             <div className="sticky top-28">
@@ -691,7 +825,12 @@ function ProductsPage({ onNavigate }) {
   );
 }
 
-function ProductDetailPage({ productId, onBack }) {
+interface ProductDetailPageProps {
+  productId: string;
+  onBack: (id?: string) => void;
+}
+
+function ProductDetailPage({ productId, onBack }: ProductDetailPageProps) {
   const p = PRODUCTS.find((x) => x.id === productId);
   const [qty, setQty] = useState(1);
   const [selectedColor, setSelectedColor] = useState(p?.colors?.[0] || "BLANC");
@@ -702,12 +841,12 @@ function ProductDetailPage({ productId, onBack }) {
     <div className="flex items-center justify-center h-screen" style={{ background: BG }}>
       <div className="text-center">
         <p className="text-lg font-bold" style={{ color: TEXT_PRIMARY }}>Produit introuvable</p>
-        <button onClick={onBack} className="mt-4 text-sm font-semibold" style={{ color: YELLOW }}>← Retour aux produits</button>
+        <button onClick={() => onBack()} className="mt-4 text-sm font-semibold" style={{ color: YELLOW }}>← Retour aux produits</button>
       </div>
     </div>
   );
 
-  const badge = BADGE_COLORS[p.badge];
+  const badge = p.badge ? BADGE_COLORS[p.badge] : undefined;
   const brandLabel = BRAND_LABELS[p.brand] || p.brand;
   const typeLabel = PRODUCT_TYPES.find((t) => t.id === p.type)?.label || p.type;
   const breadcrumbPieces = ["Accueil", "Peintures", typeLabel + "s", p.name];
@@ -720,11 +859,11 @@ function ProductDetailPage({ productId, onBack }) {
       <div className="border-b" style={{ borderColor: BORDER, background: BG2 }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-20 py-4 flex items-center justify-between gap-4 flex-wrap">
           <nav className="flex items-center gap-1.5 text-xs font-medium flex-wrap" style={{ color: TEXT_MUTED }}>
-            <button onClick={onBack} className="hover:text-white transition-colors">Accueil</button>
+            <button onClick={() => onBack()} className="hover:text-white transition-colors">Accueil</button>
             {breadcrumbPieces.slice(1, -1).map((piece, i) => (
               <span key={i} className="flex items-center gap-1.5">
                 <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18l6-6-6-6" /></svg>
-                <button onClick={i === 0 ? onBack : undefined} className={i === 0 ? "hover:text-white transition-colors" : ""}>{piece}</button>
+                <button onClick={i === 0 ? () => onBack() : undefined} className={i === 0 ? "hover:text-white transition-colors" : ""}>{piece}</button>
               </span>
             ))}
             <span className="flex items-center gap-1.5">
@@ -758,7 +897,7 @@ function ProductDetailPage({ productId, onBack }) {
 
           <div className="grid lg:grid-cols-[380px_1fr] gap-10 xl:gap-16">
             <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, ease }} className="rounded-3xl overflow-hidden flex items-center justify-center p-10 lg:p-14" style={{ background: BG2, border: `1px solid ${BORDER}`, minHeight: 380 }}>
-              <motion.img key={p.img} initial={{ scale: 0.92, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 0.5 }} src={p.img} alt={p.name} className="w-full max-w-[280px] h-auto object-contain drop-shadow-2xl" onError={(e) => { e.target.style.opacity = "0.15"; }} />
+              <motion.img key={p.img} initial={{ scale: 0.92, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 0.5 }} src={p.img} alt={p.name} className="w-full max-w-[280px] h-auto object-contain drop-shadow-2xl" onError={(e) => { (e.target as HTMLImageElement).style.opacity = "0.15"; }} />
             </motion.div>
 
             <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.08, ease }}>
@@ -904,7 +1043,7 @@ function ProductDetailPage({ productId, onBack }) {
               {relatedProducts.map((rp, i) => (
                 <motion.button key={rp.id} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.07, duration: 0.4 }} onClick={() => onBack(rp.id)} className="rounded-2xl border overflow-hidden text-left transition-all duration-300" style={{ borderColor: BORDER, background: BG3 }} whileHover={{ y: -4, borderColor: YELLOW, boxShadow: "0 16px 32px -12px rgba(0,0,0,0.5)" }}>
                   <div className="aspect-square flex items-center justify-center p-8" style={{ background: BG2 }}>
-                    <img src={rp.img} alt={rp.name} className="w-full h-full object-contain" onError={(e) => { e.target.style.opacity = "0.15"; }} />
+                    <img src={rp.img} alt={rp.name} className="w-full h-full object-contain" onError={(e) => { (e.target as HTMLImageElement).style.opacity = "0.15"; }} />
                   </div>
                   <div className="p-4">
                     <div className="font-bold text-sm" style={{ color: TEXT_PRIMARY }}>{rp.name}</div>
@@ -928,7 +1067,7 @@ export default function App() {
     const productId = typeof window !== "undefined" ? (window.history.state?.productId ?? null) : null;
     setCurrentProductId(productId);
     const onPopState = (e: PopStateEvent) => {
-      setCurrentProductId(e.state?.productId ?? null);
+      setCurrentProductId((e.state as any)?.productId ?? null);
       if (typeof window !== "undefined") window.scrollTo({ top: 0, behavior: "smooth" });
     };
     window.addEventListener("popstate", onPopState);

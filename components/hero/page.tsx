@@ -17,6 +17,7 @@ import {
   useSpring,
   useMotionValue,
   animate,
+  type Variants,
 } from "framer-motion";
 import * as THREE from "three";
 import Batimatohomepage from "@/components/Batimatohomepage/page";
@@ -869,15 +870,15 @@ export default function HeroSection() {
   const magPrimary   = useMagnetic(0.4);
   const magSecondary = useMagnetic(0.3);
 
-  const stagger = {
+  const stagger: Variants = {
     hidden: {},
     visible: { transition: { staggerChildren: 0.13, delayChildren: 0.35 } },
   };
-  const fadeUp = {
+  const fadeUp: Variants = {
     hidden:   { opacity: 0, y: 38 },
     visible:  { opacity: 1, y: 0, transition: { duration: 0.85, ease: [0.25, 0.46, 0.45, 0.94] } },
   };
-  const fadeIn = {
+  const fadeIn: Variants = {
     hidden:  { opacity: 0 },
     visible: { opacity: 1, transition: { duration: 0.95 } },
   };

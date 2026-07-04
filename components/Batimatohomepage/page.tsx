@@ -19,6 +19,7 @@
 
 import { useRef, useEffect, useState, useCallback } from "react";
 import { motion, useInView, animate } from "framer-motion";
+import type { Variants } from "framer-motion";
 
 // ─── Tokens ───────────────────────────────────────────────────────────────────
 const Y    = "#FFC400";
@@ -56,11 +57,11 @@ const PHOTOS = {
 };
 
 // ─── Shared animation variants ─────────────────────────────────────────────
-const fadeUp = {
+const fadeUp: Variants = {
   hidden:  { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] } },
 };
-const stagger = {
+const stagger: Variants = {
   hidden:  {},
   visible: { transition: { staggerChildren: 0.1, delayChildren: 0.05 } },
 };

@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
+import type { UseInViewOptions } from "framer-motion";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 // Mirrors BATIMATO's existing visual language (gold #FFC400 on near-black),
@@ -180,7 +181,7 @@ const PRODUCT_UNIVERSE = [
 
 // ─── Utilities (consistent with the rest of BATIMATO) ─────────────────────────
 
-const ease = [0.22, 1, 0.36, 1];
+const ease: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -196,13 +197,13 @@ const stagger = {
   show: { transition: { staggerChildren: 0.1 } },
 };
 
-function useInViewAnim(threshold = "-80px") {
+function useInViewAnim(threshold: UseInViewOptions["margin"] = "-80px") {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: threshold });
-  return [ref, inView];
+  return [ref, inView] as const;
 }
 
-function Badge({ children, color }) {
+function Badge({ children, color }: { children: React.ReactNode; color: string }) {
   return (
     <span
       style={{ background: color + "18", color, border: `1px solid ${color}40` }}
@@ -214,7 +215,7 @@ function Badge({ children, color }) {
   );
 }
 
-function SectionLabel({ children }) {
+function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex items-center gap-3 mb-4">
       <div className="w-8 h-px bg-[#FFC400]" />
@@ -225,7 +226,7 @@ function SectionLabel({ children }) {
 
 // ─── Universe Hero ──────────────────────────────────────────────────────────────
 
-function UniverseHero({ activeLabel }) {
+function UniverseHero({ activeLabel }: { activeLabel: string }) {
   return (
     <section className="relative w-full min-h-[480px] bg-[#0A0A0A] overflow-hidden flex flex-col">
       {/* BACKGROUND VIDEO — replace src with your own asset */}
@@ -294,7 +295,13 @@ function UniverseHero({ activeLabel }) {
 
 // ─── Category Tabs ──────────────────────────────────────────────────────────────
 
-function CategoryTabs({ active, onSelect }) {
+function CategoryTabs({
+  active,
+  onSelect,
+}: {
+  active: string;
+  onSelect: (key: string) => void;
+}) {
   return (
     <section className="bg-[#0F0F0F] border-b border-white/[0.06]">
       <div className="max-w-7xl mx-auto px-6 lg:px-20">
@@ -345,9 +352,9 @@ function CategoryTabs({ active, onSelect }) {
 
 // ─── Sub-Grid ────────────────────────────────────────────────────────────────────
 
-function SubGrid({ category }) {
+function SubGrid({ category }: { category: (typeof PRODUCT_UNIVERSE)[number] }) {
   const [ref, inView] = useInViewAnim();
-  const [hovered, setHovered] = useState(null);
+  const [hovered, setHovered] = useState<number | null>(null);
 
   return (
     <section ref={ref} className="py-24 bg-[#0A0A0A]">
@@ -428,7 +435,7 @@ function SubGrid({ category }) {
 
 export default function ProduitsPage() {
   const [activeKey, setActiveKey] = useState(PRODUCT_UNIVERSE[0].key);
-  const activeCategory = PRODUCT_UNIVERSE.find((c) => c.key === activeKey);
+  const activeCategory = PRODUCT_UNIVERSE.find((c) => c.key === activeKey)!;
 
   return (
     <main className="bg-[#0A0A0A] overflow-x-hidden">

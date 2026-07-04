@@ -19,6 +19,7 @@
  */
 
 import { useState } from "react";
+import type { ReactNode, ComponentType } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/navbar/page";
 
@@ -51,8 +52,16 @@ const CATEGORY_OPTIONS = [
 ];
 const UNIT_OPTIONS = ["pièce(s)", "m²", "litre(s)", "kg", "sac(s)", "rouleau(x)"];
 
+type QuoteItem = {
+  id: number;
+  category: string;
+  description: string;
+  quantity: number;
+  unit: string;
+};
+
 let itemUid = 1;
-const makeItem = () => ({
+const makeItem = (): QuoteItem => ({
   id: itemUid++,
   category: CATEGORY_OPTIONS[0],
   description: "",
@@ -151,7 +160,14 @@ function ContactHero() {
 // ═══════════════════════════════════════════════════════════════════════════
 // LEFT COLUMN — coordinates + showroom card + socials
 // ═══════════════════════════════════════════════════════════════════════════
-function InfoRow({ icon: IconComp, label, value, href }) {
+type InfoRowProps = {
+  icon: ComponentType;
+  label: string;
+  value: ReactNode;
+  href?: string;
+};
+
+function InfoRow({ icon: IconComp, label, value, href }: InfoRowProps) {
   const content = (
     <div style={{ display: "flex", gap: 14, alignItems: "flex-start" }}>
       <div style={{ width: 38, height: 38, borderRadius: 9, background: YELLOW_LIGHT, border: `1px solid ${BDRY}`, display: "flex", alignItems: "center", justifyContent: "center", color: YELLOW_DARK, flexShrink: 0 }}>
@@ -207,7 +223,16 @@ function ContactInfoColumn() {
 // ═══════════════════════════════════════════════════════════════════════════
 // RIGHT COLUMN — dynamic quote form
 // ═══════════════════════════════════════════════════════════════════════════
-function Field({ label, value, onChange, placeholder, type = "text", required = false }) {
+type FieldProps = {
+  label: string;
+  value: string;
+  onChange: (value: string) => void;
+  placeholder?: string;
+  type?: string;
+  required?: boolean;
+};
+
+function Field({ label, value, onChange, placeholder, type = "text", required = false }: FieldProps) {
   return (
     <div>
       <label style={labelStyle}>{label}{required && <span style={{ color: YELLOW_DARK }}> *</span>}</label>
@@ -221,7 +246,14 @@ function Field({ label, value, onChange, placeholder, type = "text", required = 
   );
 }
 
-function Select({ value, onChange, options, ariaLabel }) {
+type SelectProps = {
+  value: string;
+  onChange: (value: string) => void;
+  options: string[];
+  ariaLabel?: string;
+};
+
+function Select({ value, onChange, options, ariaLabel }: SelectProps) {
   return (
     <select aria-label={ariaLabel} value={value} onChange={e => onChange(e.target.value)} style={{ ...inputStyle, cursor: "pointer" }}>
       {options.map(o => <option key={o} value={o}>{o}</option>)}
@@ -231,17 +263,18 @@ function Select({ value, onChange, options, ariaLabel }) {
 
 function QuoteForm() {
   const [form, setForm] = useState({ firstName: "", lastName: "", company: "", email: "", phone: "" });
-  const [items, setItems] = useState([makeItem()]);
+  const [items, setItems] = useState<QuoteItem[]>([makeItem()]);
   const [message, setMessage] = useState("");
   const [consent, setConsent] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const updateItem = (id, field, value) => setItems(prev => prev.map(it => (it.id === id ? { ...it, [field]: value } : it)));
+  const updateItem = (id: number, field: keyof QuoteItem, value: string | number) =>
+    setItems(prev => prev.map(it => (it.id === id ? { ...it, [field]: value } : it)));
   const addItem = () => setItems(prev => [...prev, makeItem()]);
-  const removeItem = (id) => setItems(prev => (prev.length > 1 ? prev.filter(it => it.id !== id) : prev));
+  const removeItem = (id: number) => setItems(prev => (prev.length > 1 ? prev.filter(it => it.id !== id) : prev));
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!consent) return;
     setSubmitting(true);
@@ -416,7 +449,12 @@ const FOOTER_COLUMNS = [
   ] },
 ];
 
-function FooterColumn({ heading, links }) {
+type FooterColumnProps = {
+  heading: string;
+  links: { label: string; href: string }[];
+};
+
+function FooterColumn({ heading, links }: FooterColumnProps) {
   return (
     <div>
       <div style={{ color: MUT_DARKBG, fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", marginBottom: 24 }}>{heading}</div>
