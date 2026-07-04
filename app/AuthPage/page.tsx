@@ -2,7 +2,16 @@
 
 import { useRef, useState, useEffect } from "react";
 import { motion, AnimatePresence, useMotionValue, useSpring } from "framer-motion";
+import type { ReactNode, CSSProperties } from "react";
 
+interface MagneticBtnProps {
+  children: ReactNode;
+  className?: string;
+  style?: CSSProperties;
+  type?: "button" | "submit" | "reset";
+  onClick?: () => void;
+  disabled?: boolean;
+}
 // ─── Tokens (identical to homepage) ───────────────────────────────────────────
 const INK = "#0B1C32";
 const BLUE = "#2A6DD9";
@@ -37,7 +46,14 @@ const PALETTE = [
 
 // ─── Magnetic Button (reused pattern from homepage) ───────────────────────────
 
-function MagneticBtn({ children, className, style, type = "button", onClick, disabled }) {
+function MagneticBtn({
+  children,
+  className,
+  style,
+  type = "button",
+  onClick,
+  disabled,
+}: MagneticBtnProps) {
   const ref = useRef(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
