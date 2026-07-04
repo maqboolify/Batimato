@@ -548,7 +548,7 @@ function MobileDrawer({
 
         <div style={{ padding: "16px 20px", borderTop: `1px solid ${T.border}` }}>
           <a
-            href="http://localhost:3000/contact"
+            href="/contact"
             style={{
               display: "block",
               textAlign: "center", padding: "11px",
