@@ -288,8 +288,24 @@ const BADGE_COLORS = {
   Best: { bg: YELLOW, color: "#000" },
   Certifié: { bg: "#7C3AED", color: "#fff" },
 };
+import type { ReactNode, CSSProperties } from "react";
 
-function MagneticBtn({ children, className, style, type = "button", onClick }) {
+interface MagneticBtnProps {
+  children: ReactNode;
+  className?: string;
+  style?: CSSProperties;
+  type?: "button" | "submit" | "reset";
+  onClick?: () => void;
+  disabled?: boolean;
+}
+function MagneticBtn({
+  children,
+  className,
+  style,
+  type = "button",
+  onClick,
+  disabled,
+}: MagneticBtnProps) {
   const ref = useRef(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);

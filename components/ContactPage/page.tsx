@@ -129,7 +129,24 @@ function SectionLabel({ children, color = BLUE_DEEP }) {
 
 // ─── Magnetic Button (same as homepage/login) ─────────────────────────────────
 
-function MagneticBtn({ children, className, style, type = "button", onClick, disabled, href }) {
+import type { ReactNode, CSSProperties } from "react";
+
+interface MagneticBtnProps {
+  children: ReactNode;
+  className?: string;
+  style?: CSSProperties;
+  type?: "button" | "submit" | "reset";
+  onClick?: () => void;
+  disabled?: boolean;
+}
+function MagneticBtn({
+  children,
+  className,
+  style,
+  type = "button",
+  onClick,
+  disabled,
+}: MagneticBtnProps) {
   const ref = useRef(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
