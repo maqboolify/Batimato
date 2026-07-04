@@ -22,9 +22,9 @@ const fadeUp = {
 };
 const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.04 } } };
 
-function useInViewAnim(threshold = "-60px") {
+function useInViewAnim(threshold: string = "-60px") {
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: threshold });
+  const inView = useInView(ref, { once: true, margin: threshold as any });
   return [ref, inView];
 }
 
