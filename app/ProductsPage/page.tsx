@@ -1,6 +1,6 @@
 "use client";
 
-import rawProductsData from "@/data/products.json";
+import rawData from "@/data/products.json";
 import Navbar from "@/components/navbar/page";
 import { useRef, useState, useMemo, useEffect } from "react";
 import { motion, AnimatePresence, useMotionValue, useSpring, useInView } from "framer-motion";
@@ -30,13 +30,13 @@ function useInViewAnim(threshold = "-60px") {
 
 function parsePriceString(priceStr) {
   if (!priceStr) return null;
-  const cleaned = priceStr.replace(/\s/g, "").replace("€", "").replace(",", ".");
+  const cleaned = String(priceStr).replace(/\s/g, "").replace("€", "").replace(",", ".");
   const num = parseFloat(cleaned);
   return isNaN(num) ? null : num;
 }
 
 function slugify(str) {
-  return str
+  return String(str)
     .toLowerCase()
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
@@ -45,7 +45,7 @@ function slugify(str) {
 }
 
 function inferType(item) {
-  const text = (item.title + " " + item.description).toLowerCase();
+  const text = ((item.title || "") + " " + (item.description || "")).toLowerCase();
   if (text.includes("impression") || text.includes("primaire") || text.includes("prim") || text.includes("fixateur") || text.includes("fondur") || text.includes("sous-couche")) return "impression";
   if (text.includes("enduit") || text.includes("ragréage") || text.includes("mortier") || text.includes("crepi") || text.includes("crépi") || text.includes("revetement") || text.includes("revêtement")) return "enduit";
   if (text.includes("facade") || text.includes("façade") || text.includes("ite") || text.includes("thermique") || text.includes("imperméabilité")) return "ite";
@@ -53,7 +53,7 @@ function inferType(item) {
 }
 
 function inferAspect(item) {
-  const text = (item.title + " " + item.description).toLowerCase();
+  const text = ((item.title || "") + " " + (item.description || "")).toLowerCase();
   if (text.includes("brillant")) return "brillant";
   if (text.includes("mat-velours") || text.includes("mat velours") || text.includes("mate-veloutée") || text.includes("mat velouté")) return "mat-velours";
   if (text.includes("velours") || text.includes("velouté")) return "velours";
@@ -63,13 +63,19 @@ function inferAspect(item) {
 }
 
 function inferBase(item) {
-  const text = (item.title + " " + item.description).toLowerCase();
+  const text = ((item.title || "") + " " + (item.description || "")).toLowerCase();
   if (text.includes("solvant") || text.includes("glycérophtalique") || text.includes("alkyde") || text.includes("alkydes") || text.includes("pliolite") || text.includes("solvanté")) return "phase-solvant";
   return "phase-aqueuse";
 }
 
-function inferBrand(item) {
-  const t = item.title.toLowerCase();
+function inferBrand(item, brandIdSet) {
+  // If the item already carries a brand field, prefer matching it to a known brand id
+  if (item.brand) {
+    const guess = slugify(item.brand);
+    if (brandIdSet && brandIdSet.has(guess)) return guess;
+    return guess;
+  }
+  const t = (item.title || "").toLowerCase();
   if (t.startsWith("dul") || t.startsWith("duli")) return "guittet";
   if (t.startsWith("gui") || t.startsWith("guit")) return "guittet";
   if (t.startsWith("pan") || t.startsWith("panti")) return "seigneurie";
@@ -81,7 +87,7 @@ function inferBrand(item) {
 }
 
 function inferApplications(item) {
-  const text = (item.title + " " + item.description).toLowerCase();
+  const text = ((item.title || "") + " " + (item.description || "")).toLowerCase();
   const apps = [];
   if (text.includes("rouleau")) apps.push("rouleau");
   if (text.includes("brosse")) apps.push("brosse");
@@ -95,7 +101,7 @@ function inferApplications(item) {
 }
 
 function inferDestinations(item) {
-  const text = (item.title + " " + item.description).toLowerCase();
+  const text = ((item.title || "") + " " + (item.description || "")).toLowerCase();
   const dests = [];
   if (text.includes("chambre")) dests.push("chambre", "chambre-coucher", "chambre-enfants");
   if (text.includes("cuisine")) dests.push("cuisine");
@@ -107,7 +113,7 @@ function inferDestinations(item) {
 }
 
 function inferLabels(item) {
-  const text = (item.title + " " + item.description).toLowerCase();
+  const text = ((item.title || "") + " " + (item.description || "")).toLowerCase();
   const labels = [];
   if (text.includes("nf ") || text.includes(" nf") || text.includes("nf\n")) labels.push("nf");
   if (text.includes("ecolabel") || text.includes("écolabel")) labels.push("ecolabel");
@@ -118,7 +124,7 @@ function inferLabels(item) {
 }
 
 function inferPictos(item) {
-  const text = (item.title + " " + item.description).toLowerCase();
+  const text = ((item.title || "") + " " + (item.description || "")).toLowerCase();
   const pictos = [];
   const isExterior = text.includes("facade") || text.includes("façade") || text.includes("extérieur") || text.includes("exterieur") || text.includes("ite") || text.includes("toiture");
   const isInterior = text.includes("intérieur") || text.includes("interieur") || text.includes("murs") || text.includes("plafond");
@@ -130,20 +136,64 @@ function inferPictos(item) {
   return pictos;
 }
 
+/* -------------------------------------------------------------------------
+   Normalize the raw JSON. The file's actual top-level shape is:
+   {
+     category: { slug, parentLabel, parentHref, name, tagline, description, stats },
+     brands: [{ name, count }, ...],
+     products: [...]   <-- may or may not be present; guarded below
+   }
+   Rather than assuming a bare array (which caused the original crash),
+   we defensively look for the array wherever it actually lives.
+------------------------------------------------------------------------- */
+function extractProductsArray(data) {
+  if (Array.isArray(data)) return data;
+  if (!data || typeof data !== "object") return [];
+  const candidateKeys = ["products", "items", "results", "data", "list"];
+  for (const key of candidateKeys) {
+    if (Array.isArray(data[key])) return data[key];
+  }
+  // Last resort: find the first array value anywhere on the object
+  for (const value of Object.values(data)) {
+    if (Array.isArray(value)) return value;
+  }
+  return [];
+}
+
+const rawProductsData = extractProductsArray(rawData);
+const CATEGORY_META = (rawData && typeof rawData === "object" && rawData.category) || null;
+const RAW_BRANDS = (rawData && typeof rawData === "object" && Array.isArray(rawData.brands)) ? rawData.brands : [];
+
+// Build BRANDS from the JSON's brand list (falls back to hardcoded list if empty)
+const DEFAULT_BRANDS = [
+  { id: "absolu", label: "Absolu" },
+  { id: "chromatic", label: "Chromatic" },
+  { id: "gauthier", label: "Gauthier" },
+  { id: "guittet", label: "Guittet" },
+  { id: "ppg-light-pc", label: "PPG Light PC" },
+  { id: "seigneurie", label: "Seigneurie" },
+];
+
+const BRANDS = RAW_BRANDS.length
+  ? RAW_BRANDS.map((b) => ({ id: slugify(b.name), label: b.name, count: b.count }))
+  : DEFAULT_BRANDS;
+
+const BRAND_ID_SET = new Set(BRANDS.map((b) => b.id));
+
 const PRODUCTS = rawProductsData.map((item, index) => {
   const priceNum = parsePriceString(item.price);
-  const id = slugify(item.title || `product-${index}`);
+  const id = slugify(item.title || item.name || `product-${index}`);
   return {
     id,
-    name: item.title || "Produit sans nom",
+    name: item.title || item.name || "Produit sans nom",
     shortDesc: item.description || "",
-    img: item.image || "",
+    img: item.image || item.img || "",
     price: priceNum,
     pricePerLitre: priceNum ? parseFloat((priceNum / 3).toFixed(2)) : null,
     fullDesc: item.description || "",
     highlights: [],
     technicalProps: [],
-    brand: inferBrand(item),
+    brand: inferBrand(item, BRAND_ID_SET),
     type: inferType(item),
     aspect: inferAspect(item),
     base: inferBase(item),
@@ -160,20 +210,24 @@ const PRODUCTS = rawProductsData.map((item, index) => {
 });
 
 const PRODUCTS_PER_PAGE = 9;
-const CATEGORIES = [{ id: "peintures", label: "Peintures", count: PRODUCTS.length }];
+
+// Prefer real category metadata from the JSON when available
+const CATEGORIES = [
+  {
+    id: CATEGORY_META?.slug || "peintures",
+    label: CATEGORY_META?.name || "Peintures",
+    count: CATEGORY_META?.stats?.products ?? PRODUCTS.length,
+  },
+];
+
+const PAGE_TITLE = CATEGORY_META?.name || "PEINTURES";
+const PAGE_TAGLINE = CATEGORY_META?.tagline || null;
+
 const PRODUCT_TYPES = [
   { id: "enduit", label: "Enduit" },
   { id: "finition", label: "Finition" },
   { id: "ite", label: "ITE" },
   { id: "impression", label: "Impression" },
-];
-const BRANDS = [
-  { id: "absolu", label: "Absolu" },
-  { id: "chromatic", label: "Chromatic" },
-  { id: "gauthier", label: "Gauthier" },
-  { id: "guittet", label: "Guittet" },
-  { id: "ppg-light-pc", label: "PPG Light PC" },
-  { id: "seigneurie", label: "Seigneurie" },
 ];
 const APPLICATIONS = [
   { id: "brosse", label: "Brosse" },
@@ -269,10 +323,10 @@ function PictoRow({ pictos, size }) {
   );
 }
 
-const BRAND_LABELS = {
-  absolu: "Absolu", chromatic: "Chromatic", gauthier: "Gauthier",
-  guittet: "Guittet", "ppg-light-pc": "PPG Light PC", seigneurie: "Seigneurie",
-};
+const BRAND_LABELS = BRANDS.reduce((acc, b) => {
+  acc[b.id] = b.label;
+  return acc;
+}, {});
 
 const SORT_OPTIONS = [
   { id: "best-sellers", label: "Les plus vendus" },
@@ -602,14 +656,14 @@ function ProductsPage({ onNavigate }) {
 
       <section className="pt-12 pb-10 lg:pt-16" style={{ background: BG }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-20">
-          {/* <motion.nav initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} className="flex items-center gap-2 text-xs font-medium mb-6" style={{ color: TEXT_MUTED }}>
-            <span>Accueil</span>
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18l6-6-6-6" /></svg>
-            <span style={{ color: YELLOW }} className="font-semibold">Peintures</span>
-          </motion.nav> */}
           <motion.h1 initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease }} className="font-black tracking-[-0.03em]" style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", color: TEXT_PRIMARY }}>
-            PEINTURES
+            {PAGE_TITLE.toUpperCase()}
           </motion.h1>
+          {PAGE_TAGLINE && (
+            <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.15 }} className="text-sm font-semibold mt-3" style={{ color: YELLOW }}>
+              {PAGE_TAGLINE}
+            </motion.p>
+          )}
           <motion.div initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 0.5, delay: 0.3 }} style={{ height: 3, background: YELLOW, width: 80, originX: 0, marginTop: 12 }} />
         </div>
       </section>
