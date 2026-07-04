@@ -28,14 +28,14 @@ function useInViewAnim(threshold: string = "-60px") {
   return [ref, inView];
 }
 
-function parsePriceString(priceStr) {
+function parsePriceString(priceStr: any) {
   if (!priceStr) return null;
   const cleaned = String(priceStr).replace(/\s/g, "").replace("€", "").replace(",", ".");
   const num = parseFloat(cleaned);
   return isNaN(num) ? null : num;
 }
 
-function slugify(str) {
+function slugify(str: any) {
   return String(str)
     .toLowerCase()
     .normalize("NFD")
@@ -44,7 +44,7 @@ function slugify(str) {
     .replace(/(^-|-$)/g, "");
 }
 
-function inferType(item) {
+function inferType(item: any) {
   const text = ((item.title || "") + " " + (item.description || "")).toLowerCase();
   if (text.includes("impression") || text.includes("primaire") || text.includes("prim") || text.includes("fixateur") || text.includes("fondur") || text.includes("sous-couche")) return "impression";
   if (text.includes("enduit") || text.includes("ragréage") || text.includes("mortier") || text.includes("crepi") || text.includes("crépi") || text.includes("revetement") || text.includes("revêtement")) return "enduit";
@@ -52,7 +52,7 @@ function inferType(item) {
   return "finition";
 }
 
-function inferAspect(item) {
+function inferAspect(item: any) {
   const text = ((item.title || "") + " " + (item.description || "")).toLowerCase();
   if (text.includes("brillant")) return "brillant";
   if (text.includes("mat-velours") || text.includes("mat velours") || text.includes("mate-veloutée") || text.includes("mat velouté")) return "mat-velours";
@@ -62,13 +62,13 @@ function inferAspect(item) {
   return "autre";
 }
 
-function inferBase(item) {
+function inferBase(item: any) {
   const text = ((item.title || "") + " " + (item.description || "")).toLowerCase();
   if (text.includes("solvant") || text.includes("glycérophtalique") || text.includes("alkyde") || text.includes("alkydes") || text.includes("pliolite") || text.includes("solvanté")) return "phase-solvant";
   return "phase-aqueuse";
 }
 
-function inferBrand(item, brandIdSet) {
+function inferBrand(item: any, brandIdSet: any) {
   // If the item already carries a brand field, prefer matching it to a known brand id
   if (item.brand) {
     const guess = slugify(item.brand);
@@ -86,7 +86,7 @@ function inferBrand(item, brandIdSet) {
   return "guittet";
 }
 
-function inferApplications(item) {
+function inferApplications(item: any) {
   const text = ((item.title || "") + " " + (item.description || "")).toLowerCase();
   const apps = [];
   if (text.includes("rouleau")) apps.push("rouleau");
@@ -100,7 +100,7 @@ function inferApplications(item) {
   return apps;
 }
 
-function inferDestinations(item) {
+function inferDestinations(item: any) {
   const text = ((item.title || "") + " " + (item.description || "")).toLowerCase();
   const dests = [];
   if (text.includes("chambre")) dests.push("chambre", "chambre-coucher", "chambre-enfants");
@@ -112,7 +112,7 @@ function inferDestinations(item) {
   return [...new Set(dests)];
 }
 
-function inferLabels(item) {
+function inferLabels(item: any) {
   const text = ((item.title || "") + " " + (item.description || "")).toLowerCase();
   const labels = [];
   if (text.includes("nf ") || text.includes(" nf") || text.includes("nf\n")) labels.push("nf");
@@ -123,7 +123,7 @@ function inferLabels(item) {
   return labels;
 }
 
-function inferPictos(item) {
+function inferPictos(item: any) {
   const text = ((item.title || "") + " " + (item.description || "")).toLowerCase();
   const pictos = [];
   const isExterior = text.includes("facade") || text.includes("façade") || text.includes("extérieur") || text.includes("exterieur") || text.includes("ite") || text.includes("toiture");
@@ -146,7 +146,7 @@ function inferPictos(item) {
    Rather than assuming a bare array (which caused the original crash),
    we defensively look for the array wherever it actually lives.
 ------------------------------------------------------------------------- */
-function extractProductsArray(data) {
+function extractProductsArray(data: any) {
   if (Array.isArray(data)) return data;
   if (!data || typeof data !== "object") return [];
   const candidateKeys = ["products", "items", "results", "data", "list"];
@@ -271,7 +271,7 @@ const BASES = [
   { id: "phase-solvant", label: "Phase solvant" },
 ];
 
-function Picto({ kind, size = "sm" }) {
+function Picto({ kind, size = "sm" }: { kind: any; size?: any }) {
   const base = "flex items-center justify-center font-bold rounded";
   const sz = size === "lg" ? "w-10 h-10 text-[11px]" : "w-7 h-7 text-[9px]";
   switch (kind) {
@@ -315,7 +315,7 @@ function Picto({ kind, size = "sm" }) {
   }
 }
 
-function PictoRow({ pictos, size }) {
+function PictoRow({ pictos, size }: { pictos: any; size?: any }) {
   return (
     <div className="flex items-center gap-1.5 flex-wrap">
       {pictos.map((p, i) => <Picto key={i} kind={p} size={size} />)}
@@ -366,7 +366,7 @@ function MagneticBtn({
   const y = useMotionValue(0);
   const sx = useSpring(x, { stiffness: 220, damping: 22 });
   const sy = useSpring(y, { stiffness: 220, damping: 22 });
-  const handleMove = (e) => {
+  const handleMove = (e: any) => {
     const r = ref.current.getBoundingClientRect();
     x.set((e.clientX - r.left - r.width / 2) * 0.2);
     y.set((e.clientY - r.top - r.height / 2) * 0.2);
@@ -379,7 +379,7 @@ function MagneticBtn({
   );
 }
 
-function FilterSection({ title, children, defaultOpen = true }) {
+function FilterSection({ title, children, defaultOpen = true }: { title: any; children: any; defaultOpen?: boolean }) {
   const [open, setOpen] = useState(defaultOpen);
   return (
     <div className="border-b py-5" style={{ borderColor: BORDER }}>
@@ -400,7 +400,7 @@ function FilterSection({ title, children, defaultOpen = true }) {
   );
 }
 
-function CheckRow({ label, count, checked, onChange }) {
+function CheckRow({ label, count, checked, onChange }: { label: any; count?: any; checked: any; onChange: any }) {
   return (
     <label className="flex items-center justify-between gap-3 cursor-pointer select-none">
       <span className="flex items-center gap-2.5">
@@ -414,7 +414,7 @@ function CheckRow({ label, count, checked, onChange }) {
   );
 }
 
-function FilterSidebar({ filters, toggleFilter, clearAll, counts, activeCount }) {
+function FilterSidebar({ filters, toggleFilter, clearAll, counts, activeCount }: { filters: any; toggleFilter: any; clearAll: any; counts: any; activeCount: any }) {
   return (
     <div className="rounded-2xl border p-5" style={{ borderColor: BORDER, background: BG2 }}>
       <div className="flex items-center justify-between pb-4 border-b" style={{ borderColor: BORDER }}>
@@ -455,7 +455,7 @@ function FilterSidebar({ filters, toggleFilter, clearAll, counts, activeCount })
   );
 }
 
-function SortDropdown({ value, onChange }) {
+function SortDropdown({ value, onChange }: { value: any; onChange: any }) {
   const [open, setOpen] = useState(false);
   const current = SORT_OPTIONS.find((o) => o.id === value);
   return (
@@ -484,7 +484,7 @@ function SortDropdown({ value, onChange }) {
   );
 }
 
-function Pagination({ currentPage, totalPages, onPageChange }) {
+function Pagination({ currentPage, totalPages, onPageChange }: { currentPage: any; totalPages: any; onPageChange: any }) {
   if (totalPages <= 1) return null;
   const getPages = () => {
     const pages = [];
@@ -519,7 +519,7 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
   );
 }
 
-function ProductCard({ p, i, onNavigate }) {
+function ProductCard({ p, i, onNavigate }: { p: any; i: any; onNavigate: any }) {
   const [hovered, setHovered] = useState(false);
   const badge = BADGE_COLORS[p.badge];
   return (
@@ -578,14 +578,14 @@ function ProductCard({ p, i, onNavigate }) {
 
 const EMPTY_FILTERS = { type: [], brand: [], applications: [], destinations: [], labels: [], aspect: [], base: [] };
 
-function ProductsPage({ onNavigate }) {
+function ProductsPage({ onNavigate }: { onNavigate: any }) {
   const [filters, setFilters] = useState(EMPTY_FILTERS);
   const [sort, setSort] = useState("best-sellers");
   const [currentPage, setCurrentPage] = useState(1);
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   const [ref, inView] = useInViewAnim();
 
-  const toggleFilter = (group, id) => {
+  const toggleFilter = (group: any, id: any) => {
     setFilters((f) => {
       const has = f[group].includes(id);
       return { ...f, [group]: has ? f[group].filter((x) => x !== id) : [...f[group], id] };
@@ -620,11 +620,11 @@ function ProductsPage({ onNavigate }) {
   const totalPages = Math.ceil(sorted.length / PRODUCTS_PER_PAGE);
   const paginated = useMemo(() => sorted.slice((currentPage - 1) * PRODUCTS_PER_PAGE, currentPage * PRODUCTS_PER_PAGE), [sorted, currentPage]);
 
-  const handleSortChange = (newSort) => { setSort(newSort); setCurrentPage(1); };
-  const handlePageChange = (page) => { setCurrentPage(page); if (typeof window !== "undefined") window.scrollTo({ top: 0, behavior: "smooth" }); };
+  const handleSortChange = (newSort: any) => { setSort(newSort); setCurrentPage(1); };
+  const handlePageChange = (page: any) => { setCurrentPage(page); if (typeof window !== "undefined") window.scrollTo({ top: 0, behavior: "smooth" }); };
 
   const counts = useMemo(() => {
-    const withoutGroup = (excludeGroup) => PRODUCTS.filter((p) => {
+    const withoutGroup = (excludeGroup: any) => PRODUCTS.filter((p) => {
       if (excludeGroup !== "type" && filters.type.length && !filters.type.includes(p.type)) return false;
       if (excludeGroup !== "brand" && filters.brand.length && !filters.brand.includes(p.brand)) return false;
       if (excludeGroup !== "applications" && filters.applications.length && !filters.applications.some((a) => p.applications.includes(a))) return false;
@@ -634,9 +634,9 @@ function ProductsPage({ onNavigate }) {
       if (excludeGroup !== "base" && filters.base.length && !filters.base.includes(p.base)) return false;
       return true;
     });
-    const tally = (list, key, multi) => {
-      const out = {};
-      list.forEach((p) => { const vals = multi ? p[key] : [p[key]]; vals.forEach((v) => { if (v) out[v] = (out[v] || 0) + 1; }); });
+    const tally = (list: any, key: any, multi: any) => {
+      const out: Record<string, number> = {};
+      list.forEach((p: any) => { const vals = multi ? p[key] : [p[key]]; vals.forEach((v: any) => { if (v) out[v] = (out[v] || 0) + 1; }); });
       return out;
     };
     return {
@@ -745,7 +745,7 @@ function ProductsPage({ onNavigate }) {
   );
 }
 
-function ProductDetailPage({ productId, onBack }) {
+function ProductDetailPage({ productId, onBack }: { productId: any; onBack: any }) {
   const p = PRODUCTS.find((x) => x.id === productId);
   const [qty, setQty] = useState(1);
   const [selectedColor, setSelectedColor] = useState(p?.colors?.[0] || "BLANC");
