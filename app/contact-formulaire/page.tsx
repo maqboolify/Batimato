@@ -88,10 +88,7 @@ function MagneticBtn({
   x.set((e.clientX - r.left - r.width / 2) * 0.35);
   y.set((e.clientY - r.top - r.height / 2) * 0.35);
 };
-    const r = ref.current.getBoundingClientRect();
-    x.set((e.clientX - r.left - r.width / 2) * 0.35);
-    y.set((e.clientY - r.top - r.height / 2) * 0.35);
-  };
+    
   const handleLeave = () => { x.set(0); y.set(0); };
 
   const Tag = href ? "a" : "button";
