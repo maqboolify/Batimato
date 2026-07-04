@@ -22,7 +22,7 @@
  * NOTE: adjust the Navbar import path below to match your project
  * structure (e.g. "@/components/Navbar").
  */
-
+import Link from "next/link";
 import { useState } from "react";
 import type { ReactNode, ComponentType } from "react";
 import { motion } from "framer-motion";

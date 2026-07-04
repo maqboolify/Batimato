@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
-
+import Link from "next/link";
 // ─── Types ────────────────────────────────────────────────────────────────────
 type MegaLink = {
   label: string;
@@ -547,18 +547,23 @@ function MobileDrawer({
         </nav>
 
         <div style={{ padding: "16px 20px", borderTop: `1px solid ${T.border}` }}>
-          <a
-            href="/contact"
-            style={{
-              display: "block",
-              textAlign: "center", padding: "11px",
-              background: YELLOW, borderRadius: "8px",
-              color: INK, fontSize: "13px", fontWeight: 700, textDecoration: "none",
-            }}
-          >
-            Contact
-          </a>
-        </div>
+  <Link
+    href="/contact"
+    style={{
+      display: "block",
+      textAlign: "center",
+      padding: "11px",
+      background: YELLOW,
+      borderRadius: "8px",
+      color: INK,
+      fontSize: "13px",
+      fontWeight: 700,
+      textDecoration: "none",
+    }}
+  >
+    Contact
+  </Link>
+</div>
       </div>
     </>
   );
