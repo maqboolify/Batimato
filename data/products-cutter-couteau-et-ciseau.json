@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "cutter-couteau-et-ciseau",
+    "parentLabel": "Outillage et outil à main",
+    "parentHref": "/outillage/outillage-et-outil-a-main",
+    "name": "Cutter, couteau et ciseau",
+    "tagline": "coupe nette pour chaque matériau",
+    "description": "Cutters, couteaux et ciseaux professionnels pour découper papier peint, bâches, moquette et carton avec précision.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Stanley",
+      "count": 2
+    },
+    {
+      "name": "OLFA",
+      "count": 2
+    },
+    {
+      "name": "Facom",
+      "count": 2
+    },
+    {
+      "name": "Irwin",
+      "count": 2
+    },
+    {
+      "name": "Presto",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Papier peint",
+      "count": 2
+    },
+    {
+      "name": "Bâche",
+      "count": 2
+    },
+    {
+      "name": "Moquette",
+      "count": 2
+    },
+    {
+      "name": "Carton",
+      "count": 2
+    },
+    {
+      "name": "Multi-usages",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "cutter-couteau-et-ciseau-01",
+      "sku": "STA-CUTT-001",
+      "brand": "Stanley",
+      "name": "Stanley Cutter / couteau Pro - Unité",
+      "image": "/products/cutter-couteau-et-ciseau/1.jpg",
+      "tags": [
+        "Papier peint",
+        "Unité"
+      ],
+      "price": 86.95,
+      "compareAtPrice": 104.34,
+      "unitPrice": "86.95 € / unité",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "cutter-couteau-et-ciseau-02",
+      "sku": "OLF-CUTT-002",
+      "brand": "OLFA",
+      "name": "OLFA Cutter / couteau Renforcé - Lot de 2",
+      "image": "/products/cutter-couteau-et-ciseau/2.jpg",
+      "tags": [
+        "Bâche",
+        "Lot de 2"
+      ],
+      "price": 60.89,
+      "compareAtPrice": null,
+      "unitPrice": "60.89 € / lot de 2",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "cutter-couteau-et-ciseau-03",
+      "sku": "FAC-CUTT-003",
+      "brand": "Facom",
+      "name": "Facom Cutter / couteau Ergonomique - Lot de 3",
+      "image": "/products/cutter-couteau-et-ciseau/3.jpg",
+      "tags": [
+        "Moquette",
+        "Lot de 3"
+      ],
+      "price": 50.39,
+      "compareAtPrice": null,
+      "unitPrice": "50.39 € / lot de 3",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "cutter-couteau-et-ciseau-04",
+      "sku": "IRW-CUTT-004",
+      "brand": "Irwin",
+      "name": "Irwin Cutter / couteau Robuste - Coffret complet",
+      "image": "/products/cutter-couteau-et-ciseau/4.jpg",
+      "tags": [
+        "Carton",
+        "Coffret complet"
+      ],
+      "price": 37.26,
+      "compareAtPrice": 44.71,
+      "unitPrice": "37.26 € / coffret complet",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "cutter-couteau-et-ciseau-05",
+      "sku": "PRE-CUTT-005",
+      "brand": "Presto",
+      "name": "Presto Cutter / couteau Compact - Set pro",
+      "image": "/products/cutter-couteau-et-ciseau/5.jpg",
+      "tags": [
+        "Multi-usages",
+        "Set pro"
+      ],
+      "price": 38.79,
+      "compareAtPrice": null,
+      "unitPrice": "38.79 € / set pro",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "cutter-couteau-et-ciseau-06",
+      "sku": "STA-CUTT-006",
+      "brand": "Stanley",
+      "name": "Stanley Cutter / couteau Expert - Format XL",
+      "image": "/products/cutter-couteau-et-ciseau/6.jpg",
+      "tags": [
+        "Papier peint",
+        "Format XL"
+      ],
+      "price": 65.74,
+      "compareAtPrice": null,
+      "unitPrice": "65.74 € / format xl",
+      "badge": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "cutter-couteau-et-ciseau-07",
+      "sku": "OLF-CUTT-007",
+      "brand": "OLFA",
+      "name": "OLFA Cutter / couteau Chantier - Format compact",
+      "image": "/products/cutter-couteau-et-ciseau/7.jpg",
+      "tags": [
+        "Bâche",
+        "Format compact"
+      ],
+      "price": 40.78,
+      "compareAtPrice": 48.94,
+      "unitPrice": "40.78 € / format compact",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "cutter-couteau-et-ciseau-08",
+      "sku": "FAC-CUTT-008",
+      "brand": "Facom",
+      "name": "Facom Cutter / couteau Standard - Unité",
+      "image": "/products/cutter-couteau-et-ciseau/8.jpg",
+      "tags": [
+        "Moquette",
+        "Unité"
+      ],
+      "price": 49.84,
+      "compareAtPrice": null,
+      "unitPrice": "49.84 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "cutter-couteau-et-ciseau-09",
+      "sku": "IRW-CUTT-009",
+      "brand": "Irwin",
+      "name": "Irwin Cutter / couteau Confort - Lot de 2",
+      "image": "/products/cutter-couteau-et-ciseau/9.jpg",
+      "tags": [
+        "Carton",
+        "Lot de 2"
+      ],
+      "price": 58.16,
+      "compareAtPrice": null,
+      "unitPrice": "58.16 € / lot de 2",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

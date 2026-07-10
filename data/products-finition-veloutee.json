@@ -1,0 +1,178 @@
+{
+  "category": {
+    "slug": "finition-veloutee",
+    "parentLabel": "Peinture",
+    "parentHref": "/peinture",
+    "name": "Finition Veloutée",
+    "tagline": "Douceur Mate & Léger Reflet",
+    "description": "Peintures veloutées au toucher doux et au reflet subtil, un compromis entre mat et satin pour un rendu chaleureux sur murs et plafonds.",
+    "stats": {
+      "products": 21,
+      "brands": 6,
+      "delivery": "J+1"
+    }
+  },
+  "brands": [
+    {
+      "name": "Tollens",
+      "count": 6
+    },
+    {
+      "name": "Dulux Valentine",
+      "count": 4
+    },
+    {
+      "name": "Ripolin",
+      "count": 4
+    },
+    {
+      "name": "Luxens",
+      "count": 3
+    },
+    {
+      "name": "Seigneurie",
+      "count": 2
+    },
+    {
+      "name": "V33",
+      "count": 2
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Mur intérieur",
+      "count": 14
+    },
+    {
+      "name": "Plafond",
+      "count": 7
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 130,
+    "currentMin": 0,
+    "currentMax": 80
+  },
+  "activeFilters": [],
+  "totalCount": 21,
+  "page": 1,
+  "totalPages": 3,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés",
+    "Meilleures ventes"
+  ],
+  "products": [
+    {
+      "id": "TLN-VEL-BLC-10L",
+      "sku": "TLN-VEL-BLC-10L",
+      "brand": "Tollens",
+      "name": "Peinture Veloutée Murs & Plafonds Blanc 10L",
+      "image": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "10 L",
+        "VELOURS",
+        "MUR INTÉRIEUR"
+      ],
+      "price": 46.9,
+      "compareAtPrice": 53.9,
+      "unitPrice": "4,69 €/L",
+      "stock": "in_stock",
+      "badge": {
+        "label": "PRO",
+        "tone": "dark"
+      },
+      "discount": "-13%"
+    },
+    {
+      "id": "DLX-VEL-BLC-2L5",
+      "sku": "DLX-VEL-BLC-2L5",
+      "brand": "Dulux Valentine",
+      "name": "Peinture Veloutée Extra-Blanche 2,5L",
+      "image": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "2.5 L",
+        "VELOURS",
+        "PLAFOND"
+      ],
+      "price": 25.9,
+      "compareAtPrice": null,
+      "unitPrice": "10,36 €/L",
+      "stock": "in_stock",
+      "badge": {
+        "label": "NOUVEAU",
+        "tone": "stock"
+      }
+    },
+    {
+      "id": "RIP-VEL-GRI-2L5",
+      "sku": "RIP-VEL-GRI-2L5",
+      "brand": "Ripolin",
+      "name": "Peinture Velours Gris Perle 2,5L",
+      "image": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "2.5 L",
+        "VELOURS",
+        "MUR INTÉRIEUR"
+      ],
+      "price": 28.9,
+      "compareAtPrice": 32.9,
+      "unitPrice": "11,56 €/L",
+      "stock": "low_stock",
+      "cornerBadge": "A+"
+    },
+    {
+      "id": "LUX-VEL-BLC-2L5",
+      "sku": "LUX-VEL-BLC-2L5",
+      "brand": "Luxens",
+      "name": "Peinture Veloutée Douce Blanc 2,5L",
+      "image": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "2.5 L",
+        "VELOURS",
+        "MUR INTÉRIEUR"
+      ],
+      "price": 26.9,
+      "compareAtPrice": null,
+      "unitPrice": "10,76 €/L",
+      "stock": "in_stock",
+      "ribbon": "STOCK"
+    },
+    {
+      "id": "SGN-VEL-BLC-10L",
+      "sku": "SGN-VEL-BLC-10L",
+      "brand": "Seigneurie",
+      "name": "Peinture Veloutée Professionnelle Blanc 10L",
+      "image": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "10 L",
+        "VELOURS",
+        "PLAFOND"
+      ],
+      "price": 44.9,
+      "compareAtPrice": null,
+      "unitPrice": "4,49 €/L",
+      "stock": "in_stock"
+    },
+    {
+      "id": "V33-VEL-BLC-2L5",
+      "sku": "V33-VEL-BLC-2L5",
+      "brand": "V33",
+      "name": "Peinture Veloutée Anti-Taches Blanc 2,5L",
+      "image": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "2.5 L",
+        "VELOURS",
+        "MUR INTÉRIEUR"
+      ],
+      "price": 27.9,
+      "compareAtPrice": null,
+      "unitPrice": "11,16 €/L",
+      "stock": "out_of_stock",
+      "ribbon": "RUPTURE"
+    }
+  ]
+}

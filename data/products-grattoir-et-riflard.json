@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "grattoir-et-riflard",
+    "parentLabel": "Outillage et outil à main",
+    "parentHref": "/outillage/outillage-et-outil-a-main",
+    "name": "Grattoir et Riflard",
+    "tagline": "décapez avant de repartir à neuf",
+    "description": "Grattoirs et riflards pour décaper peinture écaillée, enduit et papier peint, ainsi que pour nettoyer vitres et façades.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Stanley",
+      "count": 2
+    },
+    {
+      "name": "Storch",
+      "count": 2
+    },
+    {
+      "name": "Facom",
+      "count": 2
+    },
+    {
+      "name": "Anza",
+      "count": 2
+    },
+    {
+      "name": "Presto",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Peinture écaillée",
+      "count": 2
+    },
+    {
+      "name": "Enduit",
+      "count": 2
+    },
+    {
+      "name": "Papier peint",
+      "count": 2
+    },
+    {
+      "name": "Vitre",
+      "count": 2
+    },
+    {
+      "name": "Façade",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "grattoir-et-riflard-01",
+      "sku": "STA-GRAT-001",
+      "brand": "Stanley",
+      "name": "Stanley Grattoir / riflard Pro - Unité",
+      "image": "/products/grattoir-et-riflard/1.jpg",
+      "tags": [
+        "Peinture écaillée",
+        "Unité"
+      ],
+      "price": 58.3,
+      "compareAtPrice": 69.96,
+      "unitPrice": "58.3 € / unité",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "grattoir-et-riflard-02",
+      "sku": "STO-GRAT-002",
+      "brand": "Storch",
+      "name": "Storch Grattoir / riflard Renforcé - Lot de 2",
+      "image": "/products/grattoir-et-riflard/2.jpg",
+      "tags": [
+        "Enduit",
+        "Lot de 2"
+      ],
+      "price": 7.43,
+      "compareAtPrice": null,
+      "unitPrice": "7.43 € / lot de 2",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "grattoir-et-riflard-03",
+      "sku": "FAC-GRAT-003",
+      "brand": "Facom",
+      "name": "Facom Grattoir / riflard Ergonomique - Lot de 3",
+      "image": "/products/grattoir-et-riflard/3.jpg",
+      "tags": [
+        "Papier peint",
+        "Lot de 3"
+      ],
+      "price": 23.73,
+      "compareAtPrice": null,
+      "unitPrice": "23.73 € / lot de 3",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "grattoir-et-riflard-04",
+      "sku": "ANZ-GRAT-004",
+      "brand": "Anza",
+      "name": "Anza Grattoir / riflard Robuste - Coffret complet",
+      "image": "/products/grattoir-et-riflard/4.jpg",
+      "tags": [
+        "Vitre",
+        "Coffret complet"
+      ],
+      "price": 64.6,
+      "compareAtPrice": 77.52,
+      "unitPrice": "64.6 € / coffret complet",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "grattoir-et-riflard-05",
+      "sku": "PRE-GRAT-005",
+      "brand": "Presto",
+      "name": "Presto Grattoir / riflard Compact - Set pro",
+      "image": "/products/grattoir-et-riflard/5.jpg",
+      "tags": [
+        "Façade",
+        "Set pro"
+      ],
+      "price": 52.95,
+      "compareAtPrice": null,
+      "unitPrice": "52.95 € / set pro",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "grattoir-et-riflard-06",
+      "sku": "STA-GRAT-006",
+      "brand": "Stanley",
+      "name": "Stanley Grattoir / riflard Expert - Format XL",
+      "image": "/products/grattoir-et-riflard/6.jpg",
+      "tags": [
+        "Peinture écaillée",
+        "Format XL"
+      ],
+      "price": 75.96,
+      "compareAtPrice": null,
+      "unitPrice": "75.96 € / format xl",
+      "badge": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "grattoir-et-riflard-07",
+      "sku": "STO-GRAT-007",
+      "brand": "Storch",
+      "name": "Storch Grattoir / riflard Chantier - Format compact",
+      "image": "/products/grattoir-et-riflard/7.jpg",
+      "tags": [
+        "Enduit",
+        "Format compact"
+      ],
+      "price": 8.41,
+      "compareAtPrice": 10.09,
+      "unitPrice": "8.41 € / format compact",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "grattoir-et-riflard-08",
+      "sku": "FAC-GRAT-008",
+      "brand": "Facom",
+      "name": "Facom Grattoir / riflard Standard - Unité",
+      "image": "/products/grattoir-et-riflard/8.jpg",
+      "tags": [
+        "Papier peint",
+        "Unité"
+      ],
+      "price": 23.83,
+      "compareAtPrice": null,
+      "unitPrice": "23.83 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "grattoir-et-riflard-09",
+      "sku": "ANZ-GRAT-009",
+      "brand": "Anza",
+      "name": "Anza Grattoir / riflard Confort - Lot de 2",
+      "image": "/products/grattoir-et-riflard/9.jpg",
+      "tags": [
+        "Vitre",
+        "Lot de 2"
+      ],
+      "price": 47.07,
+      "compareAtPrice": null,
+      "unitPrice": "47.07 € / lot de 2",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

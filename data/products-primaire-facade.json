@@ -1,0 +1,179 @@
+{
+  "category": {
+    "slug": "primaire-facade",
+    "parentLabel": "Peinture Extérieure",
+    "parentHref": "/peintures",
+    "name": "Primaire Façade",
+    "tagline": "Accroche & Uniformisation",
+    "description": "Primaires d'impression pour façades extérieures, pour fixer les fonds pulvérulents, uniformiser l'absorption et garantir l'adhérence de la finition.",
+    "stats": {
+      "products": 24,
+      "brands": 6,
+      "delivery": "J+1"
+    }
+  },
+  "brands": [
+    {
+      "name": "Tollens",
+      "count": 6
+    },
+    {
+      "name": "Seigneurie",
+      "count": 5
+    },
+    {
+      "name": "V33",
+      "count": 5
+    },
+    {
+      "name": "Zolpan",
+      "count": 4
+    },
+    {
+      "name": "Ripolin",
+      "count": 2
+    },
+    {
+      "name": "Julien",
+      "count": 2
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Façade",
+      "count": 15
+    },
+    {
+      "name": "Béton",
+      "count": 10
+    },
+    {
+      "name": "Enduit",
+      "count": 8
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 120,
+    "currentMin": 0,
+    "currentMax": 75
+  },
+  "activeFilters": [],
+  "totalCount": 24,
+  "page": 1,
+  "totalPages": 3,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés",
+    "Meilleures ventes"
+  ],
+  "products": [
+    {
+      "id": "TLN-PRF-BLC-15L",
+      "sku": "TLN-PRF-BLC-15L",
+      "brand": "Tollens",
+      "name": "Primaire Façade Fixateur Blanc 15L",
+      "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "15 L",
+        "FAÇADE",
+        "ENDUIT"
+      ],
+      "price": 54.9,
+      "compareAtPrice": 62.9,
+      "unitPrice": "3,66 €/L",
+      "stock": "in_stock",
+      "badge": {
+        "label": "PRO",
+        "tone": "dark"
+      },
+      "discount": "-13%"
+    },
+    {
+      "id": "SGN-PRF-INC-10L",
+      "sku": "SGN-PRF-INC-10L",
+      "brand": "Seigneurie",
+      "name": "Primaire d'Impression Façade Incolore 10L",
+      "image": "https://images.unsplash.com/photo-1580983230786-cc02fe968de1?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "10 L",
+        "FAÇADE",
+        "BÉTON"
+      ],
+      "price": 44.9,
+      "compareAtPrice": null,
+      "unitPrice": "4,49 €/L",
+      "stock": "in_stock",
+      "badge": {
+        "label": "NOUVEAU",
+        "tone": "stock"
+      }
+    },
+    {
+      "id": "V33-PRF-BLC-5L",
+      "sku": "V33-PRF-BLC-5L",
+      "brand": "V33",
+      "name": "Primaire Fixateur Murs Extérieurs Blanc 5L",
+      "image": "https://images.unsplash.com/photo-1580983230786-cc02fe968de1?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "5 L",
+        "ENDUIT"
+      ],
+      "price": 27.9,
+      "compareAtPrice": null,
+      "unitPrice": "5,58 €/L",
+      "stock": "in_stock",
+      "ribbon": "STOCK"
+    },
+    {
+      "id": "ZLP-PRF-BLC-15L",
+      "sku": "ZLP-PRF-BLC-15L",
+      "brand": "Zolpan",
+      "name": "Primaire Façade Chantier Blanc 15L",
+      "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "15 L",
+        "FAÇADE",
+        "BÉTON"
+      ],
+      "price": 59.9,
+      "compareAtPrice": 67.9,
+      "unitPrice": "3,99 €/L",
+      "stock": "low_stock",
+      "cornerBadge": "A+"
+    },
+    {
+      "id": "RIP-PRF-INC-5L",
+      "sku": "RIP-PRF-INC-5L",
+      "brand": "Ripolin",
+      "name": "Fixateur de Fond Incolore 5L",
+      "image": "https://images.unsplash.com/photo-1580983230786-cc02fe968de1?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "5 L",
+        "ENDUIT"
+      ],
+      "price": 24.9,
+      "compareAtPrice": null,
+      "unitPrice": "4,98 €/L",
+      "stock": "in_stock"
+    },
+    {
+      "id": "JUL-PRF-BLC-10L",
+      "sku": "JUL-PRF-BLC-10L",
+      "brand": "Julien",
+      "name": "Primaire Façade Universel Blanc 10L",
+      "image": "https://images.unsplash.com/photo-1580983230786-cc02fe968de1?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "10 L",
+        "FAÇADE"
+      ],
+      "price": 39.9,
+      "compareAtPrice": null,
+      "unitPrice": "3,99 €/L",
+      "stock": "out_of_stock",
+      "ribbon": "RUPTURE"
+    }
+  ]
+}

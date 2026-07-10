@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "primaire-microporeux",
+    "parentLabel": "Sous-couche & Primaire",
+    "parentHref": "/peintures/sous-couche-primaire",
+    "name": "Primaire microporeux",
+    "tagline": "l'accroche parfaite avant finition",
+    "description": "Primaires microporeux laissant respirer le support tout en garantissant une accroche optimale des couches de finition, intérieur comme extérieur.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "V33",
+      "count": 2
+    },
+    {
+      "name": "Zolpan",
+      "count": 2
+    },
+    {
+      "name": "Tollens",
+      "count": 2
+    },
+    {
+      "name": "Syntilor",
+      "count": 2
+    },
+    {
+      "name": "Blanchon",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Bois extérieur",
+      "count": 2
+    },
+    {
+      "name": "Bois intérieur",
+      "count": 2
+    },
+    {
+      "name": "Enduit",
+      "count": 2
+    },
+    {
+      "name": "Plâtre",
+      "count": 2
+    },
+    {
+      "name": "Béton",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "primaire-microporeux-01",
+      "sku": "V33-PRIM-001",
+      "brand": "V33",
+      "name": "V33 Primaire microporeux Pro 0.5L",
+      "image": "/products/primaire-microporeux/1.jpg",
+      "tags": [
+        "Bois extérieur",
+        "0.5L"
+      ],
+      "price": 61.05,
+      "compareAtPrice": 73.26,
+      "unitPrice": "122.1 €/L",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "primaire-microporeux-02",
+      "sku": "ZOL-PRIM-002",
+      "brand": "Zolpan",
+      "name": "Zolpan Primaire microporeux Premium 0.75L",
+      "image": "/products/primaire-microporeux/2.jpg",
+      "tags": [
+        "Bois intérieur",
+        "0.75L"
+      ],
+      "price": 11.9,
+      "compareAtPrice": null,
+      "unitPrice": "15.87 €/L",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "primaire-microporeux-03",
+      "sku": "TOL-PRIM-003",
+      "brand": "Tollens",
+      "name": "Tollens Primaire microporeux Extra 1L",
+      "image": "/products/primaire-microporeux/3.jpg",
+      "tags": [
+        "Enduit",
+        "1L"
+      ],
+      "price": 31.9,
+      "compareAtPrice": null,
+      "unitPrice": "31.9 €/L",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "primaire-microporeux-04",
+      "sku": "SYN-PRIM-004",
+      "brand": "Syntilor",
+      "name": "Syntilor Primaire microporeux Confort 2.5L",
+      "image": "/products/primaire-microporeux/4.jpg",
+      "tags": [
+        "Plâtre",
+        "2.5L"
+      ],
+      "price": 27.76,
+      "compareAtPrice": 33.31,
+      "unitPrice": "11.1 €/L",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "primaire-microporeux-05",
+      "sku": "BLA-PRIM-005",
+      "brand": "Blanchon",
+      "name": "Blanchon Primaire microporeux Longue Durée 3L",
+      "image": "/products/primaire-microporeux/5.jpg",
+      "tags": [
+        "Béton",
+        "3L"
+      ],
+      "price": 68.82,
+      "compareAtPrice": null,
+      "unitPrice": "22.94 €/L",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "primaire-microporeux-06",
+      "sku": "V33-PRIM-006",
+      "brand": "V33",
+      "name": "V33 Primaire microporeux Multi-supports 5L",
+      "image": "/products/primaire-microporeux/6.jpg",
+      "tags": [
+        "Bois extérieur",
+        "5L"
+      ],
+      "price": 64.04,
+      "compareAtPrice": null,
+      "unitPrice": "12.81 €/L",
+      "badge": {
+        "label": "Eco-responsable",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "primaire-microporeux-07",
+      "sku": "ZOL-PRIM-007",
+      "brand": "Zolpan",
+      "name": "Zolpan Primaire microporeux Expert 10L",
+      "image": "/products/primaire-microporeux/7.jpg",
+      "tags": [
+        "Bois intérieur",
+        "10L"
+      ],
+      "price": 81.27,
+      "compareAtPrice": 97.52,
+      "unitPrice": "8.13 €/L",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "primaire-microporeux-08",
+      "sku": "TOL-PRIM-008",
+      "brand": "Tollens",
+      "name": "Tollens Primaire microporeux Classic 0.5L",
+      "image": "/products/primaire-microporeux/8.jpg",
+      "tags": [
+        "Enduit",
+        "0.5L"
+      ],
+      "price": 16.86,
+      "compareAtPrice": null,
+      "unitPrice": "33.72 €/L",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "primaire-microporeux-09",
+      "sku": "SYN-PRIM-009",
+      "brand": "Syntilor",
+      "name": "Syntilor Primaire microporeux Renov 0.75L",
+      "image": "/products/primaire-microporeux/9.jpg",
+      "tags": [
+        "Plâtre",
+        "0.75L"
+      ],
+      "price": 43.65,
+      "compareAtPrice": null,
+      "unitPrice": "58.2 €/L",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

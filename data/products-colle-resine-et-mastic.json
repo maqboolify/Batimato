@@ -2,157 +2,257 @@
   "category": {
     "slug": "colle-resine-et-mastic",
     "parentLabel": "Quincaillerie",
-    "parentHref": "/preparation-materiaux",
-    "name": "Colle, Résine & Mastic",
-    "tagline": "Fixation & Étanchéité Pro",
-    "description": "Colles, résines époxy et mastics d'étanchéité pour tous vos travaux de fixation, réparation et finition.",
-    "stats": { "products": 47, "brands": 8, "delivery": "J+1" }
+    "parentHref": "/preparation-materiaux/quincaillerie",
+    "name": "Colle, résine et mastic",
+    "tagline": "fixation et étanchéité durables",
+    "description": "Colles, résines et mastics pour tous supports : assemblage, rebouchage et étanchéité avec une tenue longue durée, intérieur comme extérieur.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
   },
   "brands": [
-    { "name": "Sika", "count": 13 },
-    { "name": "Soudal", "count": 11 },
-    { "name": "Pattex", "count": 9 },
-    { "name": "Tollens", "count": 6 },
-    { "name": "Julien", "count": 4 },
-    { "name": "Rubson", "count": 3 },
-    { "name": "Decapfix", "count": 1 }
+    {
+      "name": "Sika",
+      "count": 2
+    },
+    {
+      "name": "Soudal",
+      "count": 2
+    },
+    {
+      "name": "Pattex",
+      "count": 2
+    },
+    {
+      "name": "Bostik",
+      "count": 2
+    },
+    {
+      "name": "Ottoseal",
+      "count": 1
+    }
   ],
   "surfaceTypes": [
-    { "name": "Bois", "count": 16 },
-    { "name": "Métal", "count": 14 },
-    { "name": "Peinture", "count": 5 },
-    { "name": "Béton", "count": 11 },
-    { "name": "Carrelage", "count": 13 },
-    { "name": "Vernis", "count": 2 }
+    {
+      "name": "Bois",
+      "count": 2
+    },
+    {
+      "name": "Métal",
+      "count": 2
+    },
+    {
+      "name": "Carrelage",
+      "count": 2
+    },
+    {
+      "name": "Joint sanitaire",
+      "count": 2
+    },
+    {
+      "name": "Multi-matériaux",
+      "count": 1
+    }
   ],
-  "priceRange": { "min": 0, "max": 120, "currentMin": 0, "currentMax": 100 },
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
   "activeFilters": [],
-  "totalCount": 47,
+  "totalCount": 9,
   "page": 1,
-  "totalPages": 6,
-  "sortOptions": ["Pertinence", "Prix croissant", "Prix décroissant", "Nouveautés", "Meilleures ventes"],
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
   "products": [
     {
-      "id": "SIK-MS-290",
-      "sku": "SIK-MS-290",
+      "id": "colle-resine-et-mastic-01",
+      "sku": "SIK-COLL-001",
       "brand": "Sika",
-      "name": "Mastic Colle MS Polymère 290ml",
-      "image": "https://images.unsplash.com/photo-1632478081312-3d6cdbb12cc7?w=600&q=80&auto=format&fit=crop",
-      "tags": ["290 ML", "BOIS", "MÉTAL"],
-      "price": 11.90,
-      "compareAtPrice": 13.90,
-      "unitPrice": "41,03 €/L",
-      "badge": { "label": "PRO", "tone": "dark" },
-      "discount": "-14%",
+      "name": "Sika Mastic colle Pro 100ml",
+      "image": "/products/colle-resine-et-mastic/1.jpg",
+      "tags": [
+        "Bois",
+        "100ml"
+      ],
+      "price": 28.52,
+      "compareAtPrice": 34.22,
+      "unitPrice": "285.2 €/L",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
       "stock": "in_stock"
     },
     {
-      "id": "SOU-FIX-ALL",
-      "sku": "SOU-FIX-ALL",
+      "id": "colle-resine-et-mastic-02",
+      "sku": "SOU-COLL-002",
       "brand": "Soudal",
-      "name": "Fix All Colle Mastic Universelle",
-      "image": "https://images.unsplash.com/photo-1604782206219-3b9576575203?w=600&q=80&auto=format&fit=crop",
-      "tags": ["290 ML", "UNIVERSEL"],
-      "price": 13.50,
+      "name": "Soudal Mastic colle Premium 250ml",
+      "image": "/products/colle-resine-et-mastic/2.jpg",
+      "tags": [
+        "Métal",
+        "250ml"
+      ],
+      "price": 8.37,
       "compareAtPrice": null,
-      "unitPrice": "46,55 €/L",
-      "badge": { "label": "NOUVEAU", "tone": "stock" },
-      "ribbon": "STOCK",
+      "unitPrice": "33.48 €/L",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
       "stock": "in_stock"
     },
     {
-      "id": "PAT-EPO-25",
-      "sku": "PAT-EPO-25",
+      "id": "colle-resine-et-mastic-03",
+      "sku": "PAT-COLL-003",
       "brand": "Pattex",
-      "name": "Résine Époxy Rapide Bi-Composant 25ml",
-      "image": "https://images.unsplash.com/photo-1591588582259-30ce8a8a1cf3?w=600&q=80&auto=format&fit=crop",
-      "tags": ["25 ML", "MÉTAL", "BOIS"],
-      "price": 6.90,
-      "compareAtPrice": 8.20,
-      "unitPrice": "276,00 €/L",
-      "badge": { "label": "PRO", "tone": "dark" },
+      "name": "Pattex Mastic colle Confort 0.5L",
+      "image": "/products/colle-resine-et-mastic/3.jpg",
+      "tags": [
+        "Carrelage",
+        "0.5L"
+      ],
+      "price": 9.53,
+      "compareAtPrice": null,
+      "unitPrice": "19.06 €/L",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
       "stock": "in_stock"
     },
     {
-      "id": "TOL-SIL-SAN",
-      "sku": "TOL-SIL-SAN",
-      "brand": "Tollens",
-      "name": "Mastic Silicone Sanitaire Anti-Moisissure",
-      "image": "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=600&q=80&auto=format&fit=crop",
-      "tags": ["300 ML", "CARRELAGE"],
-      "price": 7.40,
-      "compareAtPrice": null,
-      "unitPrice": "24,67 €/L",
-      "badge": { "label": "NOUVEAU", "tone": "stock" },
-      "cornerBadge": "A+",
+      "id": "colle-resine-et-mastic-04",
+      "sku": "BOS-COLL-004",
+      "brand": "Bostik",
+      "name": "Bostik Mastic colle Longue Durée 1L",
+      "image": "/products/colle-resine-et-mastic/4.jpg",
+      "tags": [
+        "Joint sanitaire",
+        "1L"
+      ],
+      "price": 28.02,
+      "compareAtPrice": 33.62,
+      "unitPrice": "28.02 €/L",
+      "discount": "-17%",
       "stock": "low_stock"
     },
     {
-      "id": "JUL-COL-CAR",
-      "sku": "JUL-COL-CAR",
-      "brand": "Julien",
-      "name": "Colle à Carrelage Flex C2 5kg",
-      "image": "https://images.unsplash.com/photo-1620626011761-996317b8d101?w=600&q=80&auto=format&fit=crop",
-      "tags": ["5 KG", "CARRELAGE", "BÉTON"],
-      "price": 19.90,
-      "compareAtPrice": 22.50,
-      "unitPrice": "3,98 €/KG",
-      "badge": { "label": "PRO", "tone": "dark" },
-      "discount": "-12%",
-      "stock": "in_stock"
-    },
-    {
-      "id": "RUB-MAS-BAT",
-      "sku": "RUB-MAS-BAT",
-      "brand": "Rubson",
-      "name": "Mastic Bâtiment Polyuréthane 300ml",
-      "image": "https://images.unsplash.com/photo-1620641622099-a14eb9d35f9d?w=600&q=80&auto=format&fit=crop",
-      "tags": ["300 ML", "BÉTON", "EXTÉRIEUR"],
-      "price": 9.60,
+      "id": "colle-resine-et-mastic-05",
+      "sku": "OTT-COLL-005",
+      "brand": "Ottoseal",
+      "name": "Ottoseal Mastic colle Multi-supports 2.5L",
+      "image": "/products/colle-resine-et-mastic/5.jpg",
+      "tags": [
+        "Multi-matériaux",
+        "2.5L"
+      ],
+      "price": 50.31,
       "compareAtPrice": null,
-      "unitPrice": "32,00 €/L",
-      "ribbon": "STOCK",
-      "stock": "in_stock"
-    },
-    {
-      "id": "DCF-COL-NEO",
-      "sku": "DCF-COL-NEO",
-      "brand": "Decapfix",
-      "name": "Colle Néoprène Contact Forte 1L",
-      "image": "https://images.unsplash.com/photo-1607400201889-565b1ee75f8e?w=600&q=80&auto=format&fit=crop",
-      "tags": ["1 L", "BOIS", "MÉTAL"],
-      "price": 15.90,
-      "compareAtPrice": null,
-      "unitPrice": "15,90 €/L",
-      "badge": { "label": "PRO", "tone": "dark" },
-      "stock": "in_stock"
-    },
-    {
-      "id": "SIK-PIS-EXT",
-      "sku": "SIK-PIS-EXT",
-      "brand": "Sika",
-      "name": "Pistolet Extrudeur Cartouche Pro",
-      "image": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=600&q=80&auto=format&fit=crop",
-      "tags": ["UNIVERSEL"],
-      "price": 12.50,
-      "compareAtPrice": null,
-      "unitPrice": "12,50 €/u",
+      "unitPrice": "20.12 €/L",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
       "ribbon": "RUPTURE",
       "stock": "out_of_stock"
     },
     {
-      "id": "SOU-MAS-VIT",
-      "sku": "SOU-MAS-VIT",
-      "brand": "Soudal",
-      "name": "Mastic Vitrier Souple 310ml",
-      "image": "https://images.unsplash.com/photo-1597844760930-e7115bc1a4ec?w=600&q=80&auto=format&fit=crop",
-      "tags": ["310 ML", "BOIS", "MÉTAL"],
-      "price": 8.20,
+      "id": "colle-resine-et-mastic-06",
+      "sku": "SIK-COLL-006",
+      "brand": "Sika",
+      "name": "Sika Mastic colle Expert 5L",
+      "image": "/products/colle-resine-et-mastic/6.jpg",
+      "tags": [
+        "Bois",
+        "5L"
+      ],
+      "price": 11.36,
       "compareAtPrice": null,
-      "unitPrice": "26,45 €/L",
-      "badge": { "label": "PRO", "tone": "dark" },
-      "badge2": { "label": "NOUVEAU", "tone": "stock" },
+      "unitPrice": "2.27 €/L",
+      "badge": {
+        "label": "Eco-responsable",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
       "stock": "in_stock"
+    },
+    {
+      "id": "colle-resine-et-mastic-07",
+      "sku": "SOU-COLL-007",
+      "brand": "Soudal",
+      "name": "Soudal Mastic colle Classic Boîte",
+      "image": "/products/colle-resine-et-mastic/7.jpg",
+      "tags": [
+        "Métal",
+        "Boîte"
+      ],
+      "price": 16.87,
+      "compareAtPrice": 20.24,
+      "unitPrice": "-",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "colle-resine-et-mastic-08",
+      "sku": "PAT-COLL-008",
+      "brand": "Pattex",
+      "name": "Pattex Mastic colle Renov 100ml",
+      "image": "/products/colle-resine-et-mastic/8.jpg",
+      "tags": [
+        "Carrelage",
+        "100ml"
+      ],
+      "price": 39.26,
+      "compareAtPrice": null,
+      "unitPrice": "392.6 €/L",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "colle-resine-et-mastic-09",
+      "sku": "BOS-COLL-009",
+      "brand": "Bostik",
+      "name": "Bostik Mastic colle Chantier 250ml",
+      "image": "/products/colle-resine-et-mastic/9.jpg",
+      "tags": [
+        "Joint sanitaire",
+        "250ml"
+      ],
+      "price": 57.0,
+      "compareAtPrice": null,
+      "unitPrice": "228.0 €/L",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
     }
   ]
 }

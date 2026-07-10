@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "ventouse-de-levage",
+    "parentLabel": "Outillage et outil à main",
+    "parentHref": "/outillage/outillage-et-outil-a-main",
+    "name": "Ventouse de levage",
+    "tagline": "manipulez vitres et plaques en sécurité",
+    "description": "Ventouses de levage pour porter et positionner verre, carrelage et plaques lourdes sans risque de glissement.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Facom",
+      "count": 2
+    },
+    {
+      "name": "Stanley",
+      "count": 2
+    },
+    {
+      "name": "Wolfcraft",
+      "count": 2
+    },
+    {
+      "name": "Bessey",
+      "count": 2
+    },
+    {
+      "name": "Woods",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Verre",
+      "count": 2
+    },
+    {
+      "name": "Carrelage",
+      "count": 2
+    },
+    {
+      "name": "Plaque",
+      "count": 2
+    },
+    {
+      "name": "Manutention",
+      "count": 2
+    },
+    {
+      "name": "Vitrage",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "ventouse-de-levage-01",
+      "sku": "FAC-VENT-001",
+      "brand": "Facom",
+      "name": "Facom Ventouse de levage Pro - Unité",
+      "image": "/products/ventouse-de-levage/1.jpg",
+      "tags": [
+        "Verre",
+        "Unité"
+      ],
+      "price": 14.63,
+      "compareAtPrice": 17.56,
+      "unitPrice": "14.63 € / unité",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "ventouse-de-levage-02",
+      "sku": "STA-VENT-002",
+      "brand": "Stanley",
+      "name": "Stanley Ventouse de levage Renforcé - Lot de 2",
+      "image": "/products/ventouse-de-levage/2.jpg",
+      "tags": [
+        "Carrelage",
+        "Lot de 2"
+      ],
+      "price": 23.21,
+      "compareAtPrice": null,
+      "unitPrice": "23.21 € / lot de 2",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "ventouse-de-levage-03",
+      "sku": "WOL-VENT-003",
+      "brand": "Wolfcraft",
+      "name": "Wolfcraft Ventouse de levage Ergonomique - Lot de 3",
+      "image": "/products/ventouse-de-levage/3.jpg",
+      "tags": [
+        "Plaque",
+        "Lot de 3"
+      ],
+      "price": 51.99,
+      "compareAtPrice": null,
+      "unitPrice": "51.99 € / lot de 3",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "ventouse-de-levage-04",
+      "sku": "BES-VENT-004",
+      "brand": "Bessey",
+      "name": "Bessey Ventouse de levage Robuste - Coffret complet",
+      "image": "/products/ventouse-de-levage/4.jpg",
+      "tags": [
+        "Manutention",
+        "Coffret complet"
+      ],
+      "price": 44.53,
+      "compareAtPrice": 53.44,
+      "unitPrice": "44.53 € / coffret complet",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "ventouse-de-levage-05",
+      "sku": "WOO-VENT-005",
+      "brand": "Woods",
+      "name": "Woods Ventouse de levage Compact - Set pro",
+      "image": "/products/ventouse-de-levage/5.jpg",
+      "tags": [
+        "Vitrage",
+        "Set pro"
+      ],
+      "price": 18.9,
+      "compareAtPrice": null,
+      "unitPrice": "18.9 € / set pro",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "ventouse-de-levage-06",
+      "sku": "FAC-VENT-006",
+      "brand": "Facom",
+      "name": "Facom Ventouse de levage Expert - Format XL",
+      "image": "/products/ventouse-de-levage/6.jpg",
+      "tags": [
+        "Verre",
+        "Format XL"
+      ],
+      "price": 27.7,
+      "compareAtPrice": null,
+      "unitPrice": "27.7 € / format xl",
+      "badge": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "ventouse-de-levage-07",
+      "sku": "STA-VENT-007",
+      "brand": "Stanley",
+      "name": "Stanley Ventouse de levage Chantier - Format compact",
+      "image": "/products/ventouse-de-levage/7.jpg",
+      "tags": [
+        "Carrelage",
+        "Format compact"
+      ],
+      "price": 88.1,
+      "compareAtPrice": 105.72,
+      "unitPrice": "88.1 € / format compact",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "ventouse-de-levage-08",
+      "sku": "WOL-VENT-008",
+      "brand": "Wolfcraft",
+      "name": "Wolfcraft Ventouse de levage Standard - Unité",
+      "image": "/products/ventouse-de-levage/8.jpg",
+      "tags": [
+        "Plaque",
+        "Unité"
+      ],
+      "price": 72.62,
+      "compareAtPrice": null,
+      "unitPrice": "72.62 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "ventouse-de-levage-09",
+      "sku": "BES-VENT-009",
+      "brand": "Bessey",
+      "name": "Bessey Ventouse de levage Confort - Lot de 2",
+      "image": "/products/ventouse-de-levage/9.jpg",
+      "tags": [
+        "Manutention",
+        "Lot de 2"
+      ],
+      "price": 66.42,
+      "compareAtPrice": null,
+      "unitPrice": "66.42 € / lot de 2",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

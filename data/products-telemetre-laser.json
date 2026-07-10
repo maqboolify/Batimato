@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "telemetre-laser",
+    "parentLabel": "Outillage électroportatif",
+    "parentHref": "/outillage/outillage-electroportatif",
+    "name": "Télémètre laser",
+    "tagline": "des mesures précises en un instant",
+    "description": "Télémètres laser pour relevés de distance, surface et volume rapides et précis, en intérieur comme sur chantier extérieur.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Bosch Professional",
+      "count": 2
+    },
+    {
+      "name": "Leica",
+      "count": 2
+    },
+    {
+      "name": "Makita",
+      "count": 2
+    },
+    {
+      "name": "DeWalt",
+      "count": 2
+    },
+    {
+      "name": "Hilti",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Intérieur",
+      "count": 2
+    },
+    {
+      "name": "Extérieur",
+      "count": 2
+    },
+    {
+      "name": "Chantier",
+      "count": 2
+    },
+    {
+      "name": "Bâtiment",
+      "count": 2
+    },
+    {
+      "name": "Topographie",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 500,
+    "currentMin": 0,
+    "currentMax": 500
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "telemetre-laser-01",
+      "sku": "BOS-TELE-001",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Télémètre laser Pro - Solo (nu)",
+      "image": "/products/telemetre-laser/1.jpg",
+      "tags": [
+        "Intérieur",
+        "Solo (nu)"
+      ],
+      "price": 88.49,
+      "compareAtPrice": 106.19,
+      "unitPrice": "88.49 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "telemetre-laser-02",
+      "sku": "LEI-TELE-002",
+      "brand": "Leica",
+      "name": "Leica Télémètre laser Brushless - 1 batterie 4Ah",
+      "image": "/products/telemetre-laser/2.jpg",
+      "tags": [
+        "Extérieur",
+        "1 batterie 4Ah"
+      ],
+      "price": 107.36,
+      "compareAtPrice": null,
+      "unitPrice": "107.36 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "telemetre-laser-03",
+      "sku": "MAK-TELE-003",
+      "brand": "Makita",
+      "name": "Makita Télémètre laser Robuste - 2 batteries 5Ah",
+      "image": "/products/telemetre-laser/3.jpg",
+      "tags": [
+        "Chantier",
+        "2 batteries 5Ah"
+      ],
+      "price": 119.55,
+      "compareAtPrice": null,
+      "unitPrice": "119.55 € / unité",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "telemetre-laser-04",
+      "sku": "DEW-TELE-004",
+      "brand": "DeWalt",
+      "name": "DeWalt Télémètre laser Compact - Coffret complet",
+      "image": "/products/telemetre-laser/4.jpg",
+      "tags": [
+        "Bâtiment",
+        "Coffret complet"
+      ],
+      "price": 120.96,
+      "compareAtPrice": 145.15,
+      "unitPrice": "120.96 € / unité",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "telemetre-laser-05",
+      "sku": "HIL-TELE-005",
+      "brand": "Hilti",
+      "name": "Hilti Télémètre laser Longue Durée - Filaire secteur",
+      "image": "/products/telemetre-laser/5.jpg",
+      "tags": [
+        "Topographie",
+        "Filaire secteur"
+      ],
+      "price": 108.1,
+      "compareAtPrice": null,
+      "unitPrice": "108.1 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "telemetre-laser-06",
+      "sku": "BOS-TELE-006",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Télémètre laser XR - Kit chargeur",
+      "image": "/products/telemetre-laser/6.jpg",
+      "tags": [
+        "Intérieur",
+        "Kit chargeur"
+      ],
+      "price": 132.93,
+      "compareAtPrice": null,
+      "unitPrice": "132.93 € / unité",
+      "badge": {
+        "label": "Garantie 3 ans",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "telemetre-laser-07",
+      "sku": "LEI-TELE-007",
+      "brand": "Leica",
+      "name": "Leica Télémètre laser Expert - Machine seule",
+      "image": "/products/telemetre-laser/7.jpg",
+      "tags": [
+        "Extérieur",
+        "Machine seule"
+      ],
+      "price": 274.29,
+      "compareAtPrice": 329.15,
+      "unitPrice": "274.29 € / unité",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "telemetre-laser-08",
+      "sku": "MAK-TELE-008",
+      "brand": "Makita",
+      "name": "Makita Télémètre laser Chantier - Solo (nu)",
+      "image": "/products/telemetre-laser/8.jpg",
+      "tags": [
+        "Chantier",
+        "Solo (nu)"
+      ],
+      "price": 358.13,
+      "compareAtPrice": null,
+      "unitPrice": "358.13 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "telemetre-laser-09",
+      "sku": "DEW-TELE-009",
+      "brand": "DeWalt",
+      "name": "DeWalt Télémètre laser Performance - 1 batterie 4Ah",
+      "image": "/products/telemetre-laser/9.jpg",
+      "tags": [
+        "Bâtiment",
+        "1 batterie 4Ah"
+      ],
+      "price": 369.09,
+      "compareAtPrice": null,
+      "unitPrice": "369.09 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import Navbar from "@/components/navbar/page";
 // ─── Tokens (matches Navbar.tsx / homepage) ──────────────────────────────────
 const YELLOW = "#F5C300";
@@ -11,7 +11,6 @@ const MUT = "rgba(26,26,26,0.52)";
 const DIM = "rgba(26,26,26,0.36)";
 const GRAY = "#F7F7F7";
 
-type Badge = { label: string; tone: "dark" | "stock" };
 type Product = {
   id: string;
   sku: string;
@@ -22,11 +21,6 @@ type Product = {
   price: number;
   compareAtPrice: number | null;
   unitPrice: string;
-  badge?: Badge;
-  badge2?: Badge;
-  ribbon?: string;
-  cornerBadge?: string;
-  discount?: string;
   stock: "in_stock" | "low_stock" | "out_of_stock";
 };
 
@@ -63,18 +57,6 @@ function fmtPrice(n: number) {
 
 // ─── Icons ────────────────────────────────────────────────────────────────────
 const Icon = {
-  Filter: () => (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <line x1="4" y1="6" x2="20" y2="6" /><line x1="4" y1="12" x2="20" y2="12" /><line x1="4" y1="18" x2="20" y2="18" />
-      <circle cx="9" cy="6" r="2" fill={INK} /><circle cx="15" cy="12" r="2" fill={INK} /><circle cx="9" cy="18" r="2" fill={INK} />
-    </svg>
-  ),
-  Chevron: ({ open }: { open: boolean }) => (
-    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"
-      style={{ transition: "transform 0.2s", transform: open ? "rotate(180deg)" : "rotate(0deg)" }}>
-      <polyline points="6 9 12 15 18 9" />
-    </svg>
-  ),
   Grid: () => (
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" /><rect x="3" y="14" width="7" height="7" /><rect x="14" y="14" width="7" height="7" />
@@ -83,11 +65,6 @@ const Icon = {
   List: () => (
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="18" x2="21" y2="18" />
-    </svg>
-  ),
-  X: () => (
-    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-      <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
     </svg>
   ),
   Cart: () => (
@@ -101,59 +78,7 @@ const Icon = {
       <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" /><path d="M13.73 21a2 2 0 0 1-3.46 0" />
     </svg>
   ),
-  Check: () => (
-    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke={INK} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-      <polyline points="20 6 9 17 4 12" />
-    </svg>
-  ),
 };
-
-// ─── Filter section (collapsible) ─────────────────────────────────────────────
-function FilterSection({
-  title, children, defaultOpen = true,
-}: { title: string; children: React.ReactNode; defaultOpen?: boolean }) {
-  const [open, setOpen] = useState(defaultOpen);
-  return (
-    <div style={{ borderBottom: `1px solid ${BORDER}`, padding: "16px 0" }}>
-      <button
-        onClick={() => setOpen(!open)}
-        style={{
-          display: "flex", alignItems: "center", justifyContent: "space-between",
-          width: "100%", background: "none", border: "none", cursor: "pointer",
-          padding: 0, color: INK, fontSize: "11.5px", fontWeight: 800,
-          letterSpacing: "0.08em", textTransform: "uppercase",
-        }}
-      >
-        {title}
-        <Icon.Chevron open={open} />
-      </button>
-      {open && <div style={{ marginTop: "14px" }}>{children}</div>}
-    </div>
-  );
-}
-
-function CheckRow({
-  label, count, checked, onChange,
-}: { label: string; count: number; checked: boolean; onChange: () => void }) {
-  return (
-    <label style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "8px", cursor: "pointer", padding: "5px 0" }}>
-      <span style={{ display: "flex", alignItems: "center", gap: "9px" }}>
-        <span
-          onClick={(e) => { e.preventDefault(); onChange(); }}
-          style={{
-            width: "16px", height: "16px", borderRadius: "4px", flexShrink: 0,
-            background: checked ? YELLOW : "#fff", border: `1.5px solid ${checked ? YELLOW_DARK : BORDER}`,
-            display: "flex", alignItems: "center", justifyContent: "center", transition: "all .15s",
-          }}
-        >
-          {checked && <Icon.Check />}
-        </span>
-        <span style={{ fontSize: "13px", color: checked ? INK : MUT, fontWeight: checked ? 600 : 400 }}>{label}</span>
-      </span>
-      <span style={{ fontSize: "11.5px", color: DIM }}>{count}</span>
-    </label>
-  );
-}
 
 function ProductCard({ p }: { p: Product }) {
   const [hover, setHover] = useState(false);
@@ -184,33 +109,6 @@ function ProductCard({ p }: { p: Product }) {
             transform: hover ? "scale(1.05)" : "scale(1)", transition: "transform .5s ease",
           }}
         />
-        {/* Top-left badges */}
-        <div style={{ position: "absolute", top: "10px", left: "10px", display: "flex", flexDirection: "column", gap: "5px", alignItems: "flex-start" }}>
-          {p.badge && <BadgePill badge={p.badge} />}
-          {p.badge2 && <BadgePill badge={p.badge2} />}
-        </div>
-        {/* Top-right corner / ribbon */}
-        <div style={{ position: "absolute", top: "10px", right: "10px", display: "flex", flexDirection: "column", gap: "5px", alignItems: "flex-end" }}>
-          {p.discount && (
-            <span style={{ background: INK, color: "#fff", fontSize: "10.5px", fontWeight: 800, padding: "3px 7px", borderRadius: "5px" }}>
-              {p.discount}
-            </span>
-          )}
-          {p.cornerBadge && (
-            <span style={{ background: YELLOW, color: INK, fontSize: "10.5px", fontWeight: 800, padding: "3px 7px", borderRadius: "5px" }}>
-              {p.cornerBadge}
-            </span>
-          )}
-          {p.ribbon && (
-            <span style={{
-              background: p.ribbon === "RUPTURE" ? "#EF4444" : "#22C55E",
-              color: "#fff", fontSize: "10px", fontWeight: 800, letterSpacing: "0.05em",
-              padding: "3px 8px", borderRadius: "5px",
-            }}>
-              {p.ribbon}
-            </span>
-          )}
-        </div>
       </div>
 
       {/* Info */}
@@ -268,21 +166,9 @@ function ProductCard({ p }: { p: Product }) {
   );
 }
 
-function BadgePill({ badge }: { badge: Badge }) {
-  return (
-    <span style={{
-      background: badge.tone === "dark" ? INK : "#22C55E",
-      color: "#fff", fontSize: "10px", fontWeight: 800, letterSpacing: "0.05em",
-      padding: "3px 8px", borderRadius: "5px", textTransform: "uppercase",
-    }}>
-      {badge.label}
-    </span>
-  );
-}
-
 // ─── Main exported component ─────────────────────────────────────────────────
 export default function ProductListingPage({ data }: { data: CategoryData }) {
-  if (!data || !data.priceRange || !data.category) {
+  if (!data || !data.category) {
     return (
       <div style={{ padding: "80px 48px", textAlign: "center", color: "#999", fontSize: "14px" }}>
         Données produit indisponibles. Vérifiez que <code>data/products.json</code> est bien lu et transmis en tant que prop <code>data</code> à <code>ProductListingPage</code>.
@@ -290,45 +176,12 @@ export default function ProductListingPage({ data }: { data: CategoryData }) {
     );
   }
 
-  const { category, brands, surfaceTypes, priceRange, sortOptions, products, totalCount, page, totalPages } = data;
+  const { category, sortOptions, products, totalCount, page, totalPages } = data;
 
-  // Only pre-check an activeFilter if it actually exists as a brand or surface
-  // option *for this category* — otherwise every product gets filtered out
-  // and the grid renders blank on categories that don't have that option.
-  const brandNames = useMemo(() => new Set(brands.map((b) => b.name)), [brands]);
-  const surfaceNames = useMemo(() => new Set(surfaceTypes.map((s) => s.name)), [surfaceTypes]);
-  const initialBrandFilter = useMemo(
-    () => new Set((data.activeFilters || []).filter((f) => brandNames.has(f))),
-    [data.activeFilters, brandNames]
-  );
-  const initialSurfaceFilter = useMemo(
-    () => new Set((data.activeFilters || []).filter((f) => surfaceNames.has(f))),
-    [data.activeFilters, surfaceNames]
-  );
-
-  const [brandFilter, setBrandFilter] = useState<Set<string>>(initialBrandFilter);
-  const [surfaceFilter, setSurfaceFilter] = useState<Set<string>>(initialSurfaceFilter);
-  const [maxPrice, setMaxPrice] = useState(priceRange.currentMax);
   const [sort, setSort] = useState(sortOptions[0]);
   const [view, setView] = useState<"grid" | "list">("grid");
 
-  const toggle = (set: Set<string>, setter: (s: Set<string>) => void, val: string) => {
-    const next = new Set(set);
-    next.has(val) ? next.delete(val) : next.add(val);
-    setter(next);
-  };
-
-  const activeFilters = useMemo(() => [...brandFilter, ...surfaceFilter], [brandFilter, surfaceFilter]);
-
-  const filtered = useMemo(() => {
-    return products.filter((p) => {
-      if (brandFilter.size && !brandFilter.has(p.brand)) return false;
-      if (p.price > maxPrice) return false;
-      return true;
-    });
-  }, [products, brandFilter, maxPrice]);
-
-  return ( <> 
+  return ( <>
 
     <Navbar/>
     <div style={{ background: "#fff", minHeight: "100vh" }}>
@@ -378,153 +231,61 @@ export default function ProductListingPage({ data }: { data: CategoryData }) {
         </div>
       </div>
 
-      {/* Body */}
-      <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "32px 48px 64px", display: "grid", gridTemplateColumns: "260px 1fr", gap: "32px" }}>
-        {/* Sidebar */}
-        <aside>
-          <div style={{ border: `1px solid ${BORDER}`, borderRadius: "10px", overflow: "hidden" }}>
-            <div style={{ background: INK, padding: "13px 16px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-              <span style={{ display: "flex", alignItems: "center", gap: "7px", color: "#fff", fontSize: "11.5px", fontWeight: 800, letterSpacing: "0.08em" }}>
-                <Icon.Filter /> FILTRES
-              </span>
-              <button
-                onClick={() => { setBrandFilter(new Set()); setSurfaceFilter(new Set()); setMaxPrice(priceRange.max); }}
-                style={{ background: "none", border: "none", color: YELLOW, fontSize: "10.5px", fontWeight: 700, letterSpacing: "0.06em", cursor: "pointer" }}
-              >
-                RÉINITIALISER
+      {/* Body (no sidebar) */}
+      <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "32px 48px 64px" }}>
+        {/* Toolbar */}
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "16px", flexWrap: "wrap", marginBottom: "20px" }}>
+          <div style={{ fontSize: "13.5px", color: INK }}>
+            <strong>{totalCount}</strong> produits trouvés <span style={{ color: DIM }}>dans {category.name}</span>
+          </div>
+          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            <span style={{ fontSize: "11px", color: DIM, fontWeight: 700, letterSpacing: "0.06em" }}>TRIER :</span>
+            <select
+              value={sort}
+              onChange={(e) => setSort(e.target.value)}
+              style={{ border: `1px solid ${BORDER}`, borderRadius: "7px", padding: "8px 12px", fontSize: "12.5px", color: INK, fontWeight: 600, outline: "none", background: "#fff" }}
+            >
+              {sortOptions.map((o) => <option key={o} value={o}>{o.toUpperCase()}</option>)}
+            </select>
+            <div style={{ display: "flex", border: `1px solid ${BORDER}`, borderRadius: "7px", overflow: "hidden" }}>
+              <button onClick={() => setView("grid")} style={{ width: "34px", height: "34px", display: "flex", alignItems: "center", justifyContent: "center", border: "none", cursor: "pointer", background: view === "grid" ? INK : "#fff", color: view === "grid" ? YELLOW : MUT }}>
+                <Icon.Grid />
               </button>
-            </div>
-
-            <div style={{ padding: "16px" }}>
-              {activeFilters.length > 0 && (
-                <div style={{ marginBottom: "8px", paddingBottom: "14px", borderBottom: `1px solid ${BORDER}` }}>
-                  <div style={{ fontSize: "11px", fontWeight: 800, letterSpacing: "0.06em", color: DIM, marginBottom: "10px", textTransform: "uppercase" }}>Filtres actifs</div>
-                  <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
-                    {activeFilters.map((f) => (
-                      <span key={f} style={{
-                        display: "flex", alignItems: "center", gap: "6px",
-                        background: YELLOW, color: INK, fontSize: "11px", fontWeight: 700,
-                        padding: "4px 9px", borderRadius: "5px",
-                      }}>
-                        {f.toUpperCase()}
-                        <span
-                          onClick={() => { toggle(brandFilter, setBrandFilter, f); toggle(surfaceFilter, setSurfaceFilter, f); }}
-                          style={{ cursor: "pointer", display: "flex" }}
-                        ><Icon.X /></span>
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              <FilterSection title="Prix (HT)">
-                <div style={{ display: "flex", justifyContent: "space-between", fontSize: "12px", color: MUT, marginBottom: "8px" }}>
-                  <span style={{ color: YELLOW_DARK, fontWeight: 700 }}>{priceRange.min} €</span>
-                  <span>{maxPrice} €</span>
-                  <span>{priceRange.max} €+</span>
-                </div>
-                <input
-                  type="range" min={priceRange.min} max={priceRange.max} value={maxPrice}
-                  onChange={(e) => setMaxPrice(Number(e.target.value))}
-                  style={{ width: "100%", accentColor: YELLOW }}
-                />
-                <div style={{ display: "flex", gap: "8px", marginTop: "10px" }}>
-                  <input placeholder="Min €" style={{ width: "50%", border: `1px solid ${BORDER}`, borderRadius: "6px", padding: "7px 9px", fontSize: "12px", outline: "none" }} />
-                  <input placeholder="Max €" defaultValue={maxPrice} style={{ width: "50%", border: `1px solid ${BORDER}`, borderRadius: "6px", padding: "7px 9px", fontSize: "12px", outline: "none" }} />
-                </div>
-              </FilterSection>
-
-              <FilterSection title="Marque">
-                {brands.map((b) => (
-                  <CheckRow key={b.name} label={b.name} count={b.count} checked={brandFilter.has(b.name)} onChange={() => toggle(brandFilter, setBrandFilter, b.name)} />
-                ))}
-              </FilterSection>
-
-              <FilterSection title="Type de surface">
-                {surfaceTypes.map((s) => (
-                  <CheckRow key={s.name} label={s.name} count={s.count} checked={surfaceFilter.has(s.name)} onChange={() => toggle(surfaceFilter, setSurfaceFilter, s.name)} />
-                ))}
-              </FilterSection>
-
-              <FilterSection title="Conditionnement" defaultOpen={false}>
-                <div style={{ fontSize: "12px", color: DIM }}>Aucune option</div>
-              </FilterSection>
-
-              <FilterSection title="Classe COV" defaultOpen={false}>
-                <div style={{ fontSize: "12px", color: DIM }}>Aucune option</div>
-              </FilterSection>
-
-              <button style={{
-                width: "100%", marginTop: "8px", background: YELLOW, color: INK,
-                border: "none", borderRadius: "8px", padding: "12px", fontSize: "12.5px",
-                fontWeight: 800, letterSpacing: "0.05em", cursor: "pointer", textTransform: "uppercase",
-                transition: "background .15s",
-              }}
-                onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.background = YELLOW_DARK)}
-                onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.background = YELLOW)}
-              >
-                Appliquer les filtres
+              <button onClick={() => setView("list")} style={{ width: "34px", height: "34px", display: "flex", alignItems: "center", justifyContent: "center", border: "none", cursor: "pointer", background: view === "list" ? INK : "#fff", color: view === "list" ? YELLOW : MUT }}>
+                <Icon.List />
               </button>
             </div>
           </div>
-        </aside>
+        </div>
 
-        {/* Results */}
-        <div>
-          {/* Toolbar */}
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "16px", flexWrap: "wrap", marginBottom: "20px" }}>
-            <div style={{ fontSize: "13.5px", color: INK }}>
-              <strong>{filtered.length}</strong> produits trouvés <span style={{ color: DIM }}>dans {category.name}</span>
-            </div>
-            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-              <span style={{ fontSize: "11px", color: DIM, fontWeight: 700, letterSpacing: "0.06em" }}>TRIER :</span>
-              <select
-                value={sort}
-                onChange={(e) => setSort(e.target.value)}
-                style={{ border: `1px solid ${BORDER}`, borderRadius: "7px", padding: "8px 12px", fontSize: "12.5px", color: INK, fontWeight: 600, outline: "none", background: "#fff" }}
-              >
-                {sortOptions.map((o) => <option key={o} value={o}>{o.toUpperCase()}</option>)}
-              </select>
-              <div style={{ display: "flex", border: `1px solid ${BORDER}`, borderRadius: "7px", overflow: "hidden" }}>
-                <button onClick={() => setView("grid")} style={{ width: "34px", height: "34px", display: "flex", alignItems: "center", justifyContent: "center", border: "none", cursor: "pointer", background: view === "grid" ? INK : "#fff", color: view === "grid" ? YELLOW : MUT }}>
-                  <Icon.Grid />
-                </button>
-                <button onClick={() => setView("list")} style={{ width: "34px", height: "34px", display: "flex", alignItems: "center", justifyContent: "center", border: "none", cursor: "pointer", background: view === "list" ? INK : "#fff", color: view === "list" ? YELLOW : MUT }}>
-                  <Icon.List />
-                </button>
-              </div>
-            </div>
+        {/* Grid */}
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: view === "grid" ? "repeat(4, 1fr)" : "1fr",
+          gap: "16px",
+        }}>
+          {products.map((p) => <ProductCard key={p.id} p={p} />)}
+        </div>
+
+        {products.length === 0 && (
+          <div style={{ textAlign: "center", padding: "60px 0", color: DIM, fontSize: "13.5px" }}>
+            Aucun produit disponible.
           </div>
+        )}
 
-          {/* Grid */}
-          <div style={{
-            display: "grid",
-            gridTemplateColumns: view === "grid" ? "repeat(3, 1fr)" : "1fr",
-            gap: "16px",
-          }}>
-            {filtered.map((p) => <ProductCard key={p.id} p={p} />)}
-          </div>
-
-          {filtered.length === 0 && (
-            <div style={{ textAlign: "center", padding: "60px 0", color: DIM, fontSize: "13.5px" }}>
-              Aucun produit ne correspond à vos filtres.
-            </div>
-          )}
-
-          {/* Pagination */}
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: "32px", flexWrap: "wrap", gap: "16px" }}>
-            <span style={{ fontSize: "12.5px", color: DIM }}>
-              Affichage 1–{Math.min(9, totalCount)} de <strong style={{ color: INK }}>{totalCount}</strong> produits
-            </span>
-            <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-              <button style={pagerBtn(false)}>‹</button>
-              {Array.from({ length: Math.min(3, totalPages) }, (_, i) => i + 1).map((n) => (
-                <button key={n} style={pagerBtn(n === page)}>{n}</button>
-              ))}
-              {totalPages > 4 && <span style={{ color: DIM, padding: "0 4px" }}>…</span>}
-              {totalPages > 3 && <button style={pagerBtn(false)}>{totalPages}</button>}
-              <button style={pagerBtn(false)}>›</button>
-            </div>
+        {/* Pagination */}
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: "32px", flexWrap: "wrap", gap: "16px" }}>
+          <span style={{ fontSize: "12.5px", color: DIM }}>
+            Affichage 1–{Math.min(9, totalCount)} de <strong style={{ color: INK }}>{totalCount}</strong> produits
+          </span>
+          <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+            <button style={pagerBtn(false)}>‹</button>
+            {Array.from({ length: Math.min(3, totalPages) }, (_, i) => i + 1).map((n) => (
+              <button key={n} style={pagerBtn(n === page)}>{n}</button>
+            ))}
+            {totalPages > 4 && <span style={{ color: DIM, padding: "0 4px" }}>…</span>}
+            {totalPages > 3 && <button style={pagerBtn(false)}>{totalPages}</button>}
+            <button style={pagerBtn(false)}>›</button>
           </div>
         </div>
       </div>

@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "bache-et-polyane",
+    "parentLabel": "Protection sol & EPI",
+    "parentHref": "/preparation-materiaux/protection-sol-epi",
+    "name": "Bâche et polyane",
+    "tagline": "protégez sols et mobilier pendant les travaux",
+    "description": "Bâches de protection et films polyane pour préserver sols, meubles et surfaces des projections de peinture et des salissures de chantier.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Presto",
+      "count": 2
+    },
+    {
+      "name": "SPI",
+      "count": 2
+    },
+    {
+      "name": "Storch",
+      "count": 2
+    },
+    {
+      "name": "OCAI",
+      "count": 2
+    },
+    {
+      "name": "Anza",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Sol",
+      "count": 2
+    },
+    {
+      "name": "Mobilier",
+      "count": 2
+    },
+    {
+      "name": "Escalier",
+      "count": 2
+    },
+    {
+      "name": "Sol carrelé",
+      "count": 2
+    },
+    {
+      "name": "Parquet",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "bache-et-polyane-01",
+      "sku": "PRE-BACH-001",
+      "brand": "Presto",
+      "name": "Presto Bâche de protection Pro Boîte 50",
+      "image": "/products/bache-et-polyane/1.jpg",
+      "tags": [
+        "Sol",
+        "Boîte 50"
+      ],
+      "price": 10.65,
+      "compareAtPrice": 12.78,
+      "unitPrice": "10.65 € / boîte 50",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "bache-et-polyane-02",
+      "sku": "SPI-BACH-002",
+      "brand": "SPI",
+      "name": "SPI Bâche de protection Premium Rouleau",
+      "image": "/products/bache-et-polyane/2.jpg",
+      "tags": [
+        "Mobilier",
+        "Rouleau"
+      ],
+      "price": 35.32,
+      "compareAtPrice": null,
+      "unitPrice": "35.32 € / rouleau",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "bache-et-polyane-03",
+      "sku": "STO-BACH-003",
+      "brand": "Storch",
+      "name": "Storch Bâche de protection Confort Lot de 5",
+      "image": "/products/bache-et-polyane/3.jpg",
+      "tags": [
+        "Escalier",
+        "Lot de 5"
+      ],
+      "price": 32.74,
+      "compareAtPrice": null,
+      "unitPrice": "32.74 € / lot de 5",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "bache-et-polyane-04",
+      "sku": "OCA-BACH-004",
+      "brand": "OCAI",
+      "name": "OCAI Bâche de protection Longue Durée Taille unique",
+      "image": "/products/bache-et-polyane/4.jpg",
+      "tags": [
+        "Sol carrelé",
+        "Taille unique"
+      ],
+      "price": 25.42,
+      "compareAtPrice": 30.5,
+      "unitPrice": "25.42 € / taille unique",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "bache-et-polyane-05",
+      "sku": "ANZ-BACH-005",
+      "brand": "Anza",
+      "name": "Anza Bâche de protection Multi-usages Lot de 10",
+      "image": "/products/bache-et-polyane/5.jpg",
+      "tags": [
+        "Parquet",
+        "Lot de 10"
+      ],
+      "price": 13.05,
+      "compareAtPrice": null,
+      "unitPrice": "13.05 € / lot de 10",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "bache-et-polyane-06",
+      "sku": "PRE-BACH-006",
+      "brand": "Presto",
+      "name": "Presto Bâche de protection Expert Pack pro",
+      "image": "/products/bache-et-polyane/6.jpg",
+      "tags": [
+        "Sol",
+        "Pack pro"
+      ],
+      "price": 40.15,
+      "compareAtPrice": null,
+      "unitPrice": "40.15 € / pack pro",
+      "badge": {
+        "label": "Certifié CE",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "bache-et-polyane-07",
+      "sku": "SPI-BACH-007",
+      "brand": "SPI",
+      "name": "SPI Bâche de protection Classic Unité",
+      "image": "/products/bache-et-polyane/7.jpg",
+      "tags": [
+        "Mobilier",
+        "Unité"
+      ],
+      "price": 40.87,
+      "compareAtPrice": 49.04,
+      "unitPrice": "40.87 € / unité",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "bache-et-polyane-08",
+      "sku": "STO-BACH-008",
+      "brand": "Storch",
+      "name": "Storch Bâche de protection Chantier Boîte 50",
+      "image": "/products/bache-et-polyane/8.jpg",
+      "tags": [
+        "Escalier",
+        "Boîte 50"
+      ],
+      "price": 26.99,
+      "compareAtPrice": null,
+      "unitPrice": "26.99 € / boîte 50",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "bache-et-polyane-09",
+      "sku": "OCA-BACH-009",
+      "brand": "OCAI",
+      "name": "OCAI Bâche de protection Renfort Rouleau",
+      "image": "/products/bache-et-polyane/9.jpg",
+      "tags": [
+        "Sol carrelé",
+        "Rouleau"
+      ],
+      "price": 26.64,
+      "compareAtPrice": null,
+      "unitPrice": "26.64 € / rouleau",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

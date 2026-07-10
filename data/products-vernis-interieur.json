@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "vernis-interieur",
+    "parentLabel": "Sous-couche & Primaire",
+    "parentHref": "/peintures/sous-couche-primaire",
+    "name": "Vernis intérieur",
+    "tagline": "une finition durable pour vos boiseries",
+    "description": "Vernis intérieurs résistants aux chocs et à l'usure quotidienne, pour parquets, escaliers, mobilier et boiseries.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "V33",
+      "count": 2
+    },
+    {
+      "name": "Ripolin",
+      "count": 2
+    },
+    {
+      "name": "Tollens",
+      "count": 2
+    },
+    {
+      "name": "Blanchon",
+      "count": 2
+    },
+    {
+      "name": "Julien",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Parquet",
+      "count": 2
+    },
+    {
+      "name": "Mobilier",
+      "count": 2
+    },
+    {
+      "name": "Escalier",
+      "count": 2
+    },
+    {
+      "name": "Boiseries",
+      "count": 2
+    },
+    {
+      "name": "Porte",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "vernis-interieur-01",
+      "sku": "V33-VERN-001",
+      "brand": "V33",
+      "name": "V33 Vernis intérieur Pro 0.5L",
+      "image": "/products/vernis-interieur/1.jpg",
+      "tags": [
+        "Parquet",
+        "0.5L"
+      ],
+      "price": 74.65,
+      "compareAtPrice": 89.58,
+      "unitPrice": "149.3 €/L",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "vernis-interieur-02",
+      "sku": "RIP-VERN-002",
+      "brand": "Ripolin",
+      "name": "Ripolin Vernis intérieur Premium 0.75L",
+      "image": "/products/vernis-interieur/2.jpg",
+      "tags": [
+        "Mobilier",
+        "0.75L"
+      ],
+      "price": 10.42,
+      "compareAtPrice": null,
+      "unitPrice": "13.89 €/L",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "vernis-interieur-03",
+      "sku": "TOL-VERN-003",
+      "brand": "Tollens",
+      "name": "Tollens Vernis intérieur Extra 1L",
+      "image": "/products/vernis-interieur/3.jpg",
+      "tags": [
+        "Escalier",
+        "1L"
+      ],
+      "price": 74.37,
+      "compareAtPrice": null,
+      "unitPrice": "74.37 €/L",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "vernis-interieur-04",
+      "sku": "BLA-VERN-004",
+      "brand": "Blanchon",
+      "name": "Blanchon Vernis intérieur Confort 2.5L",
+      "image": "/products/vernis-interieur/4.jpg",
+      "tags": [
+        "Boiseries",
+        "2.5L"
+      ],
+      "price": 65.75,
+      "compareAtPrice": 78.9,
+      "unitPrice": "26.3 €/L",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "vernis-interieur-05",
+      "sku": "JUL-VERN-005",
+      "brand": "Julien",
+      "name": "Julien Vernis intérieur Longue Durée 3L",
+      "image": "/products/vernis-interieur/5.jpg",
+      "tags": [
+        "Porte",
+        "3L"
+      ],
+      "price": 37.12,
+      "compareAtPrice": null,
+      "unitPrice": "12.37 €/L",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "vernis-interieur-06",
+      "sku": "V33-VERN-006",
+      "brand": "V33",
+      "name": "V33 Vernis intérieur Multi-supports 5L",
+      "image": "/products/vernis-interieur/6.jpg",
+      "tags": [
+        "Parquet",
+        "5L"
+      ],
+      "price": 22.34,
+      "compareAtPrice": null,
+      "unitPrice": "4.47 €/L",
+      "badge": {
+        "label": "Eco-responsable",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "vernis-interieur-07",
+      "sku": "RIP-VERN-007",
+      "brand": "Ripolin",
+      "name": "Ripolin Vernis intérieur Expert 10L",
+      "image": "/products/vernis-interieur/7.jpg",
+      "tags": [
+        "Mobilier",
+        "10L"
+      ],
+      "price": 86.48,
+      "compareAtPrice": 103.78,
+      "unitPrice": "8.65 €/L",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "vernis-interieur-08",
+      "sku": "TOL-VERN-008",
+      "brand": "Tollens",
+      "name": "Tollens Vernis intérieur Classic 0.5L",
+      "image": "/products/vernis-interieur/8.jpg",
+      "tags": [
+        "Escalier",
+        "0.5L"
+      ],
+      "price": 36.83,
+      "compareAtPrice": null,
+      "unitPrice": "73.66 €/L",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "vernis-interieur-09",
+      "sku": "BLA-VERN-009",
+      "brand": "Blanchon",
+      "name": "Blanchon Vernis intérieur Renov 0.75L",
+      "image": "/products/vernis-interieur/9.jpg",
+      "tags": [
+        "Boiseries",
+        "0.75L"
+      ],
+      "price": 17.32,
+      "compareAtPrice": null,
+      "unitPrice": "23.09 €/L",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

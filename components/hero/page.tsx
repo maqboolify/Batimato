@@ -31,9 +31,23 @@
  *        initialScale: 1,
  *        maximumScale: 1,
  *      };
+ *
+ * LOADER FIX NOTES:
+ * 6. The intro Loader now only plays once per browser session. We use
+ *    sessionStorage + useLayoutEffect so that navigating away and back to
+ *    the home page (or refreshing) does NOT replay the loading animation.
+ *    - useLayoutEffect runs synchronously before paint, so if the loader
+ *      already ran this session, it's hidden before it's ever visible
+ *      (no flicker).
+ *    - The "already loaded" flag is only written once the Loader itself
+ *      reports completion (onComplete), so a genuine first visit still
+ *      gets the full animation.
+ *    - sessionStorage clears when the tab/browser closes. If you want the
+ *      loader to show only once ever (until the user clears site data),
+ *      swap sessionStorage for localStorage in both places below.
  */
 
-import { useRef, useEffect, useState, useCallback } from "react";
+import { useRef, useEffect, useLayoutEffect, useState, useCallback } from "react";
 import {
   motion,
   AnimatePresence,
@@ -51,6 +65,9 @@ import Batimatohomepage from "@/components/Batimatohomepage/page";
 import Ballpit from "@/components/Ballpit";
 import LightPillar from "@/components/LightPillar";
 import Loader from "@/components/Loader/page";
+
+// Key used to remember, for this browser session, that the loader already played.
+const HERO_LOADER_SESSION_KEY = "batimato-hero-loaded";
 
 // ─── Magnetic button hook ─────────────────────────────────────────────────────
 function useMagnetic(strength = 0.35) {
@@ -930,7 +947,38 @@ function ThreeScene() {
 // ═══════════════════════════════════════════════════════════════════════════════
 export default function HeroSection() {
   const heroRef = useRef<HTMLElement>(null);
+
+  // Loader visibility. Starts true so SSR / first client render match
+  // (avoids a hydration mismatch warning). If the loader already played
+  // this session, useLayoutEffect below flips it to false before paint.
   const [isLoading, setIsLoading] = useState(true);
+
+  // Runs synchronously before the browser paints — so if we've already
+  // shown the loader this session, it's hidden instantly with no flicker,
+  // instead of flashing on screen for a frame and then disappearing.
+  useLayoutEffect(() => {
+    try {
+      const alreadyLoaded = sessionStorage.getItem(HERO_LOADER_SESSION_KEY) === "true";
+      if (alreadyLoaded) {
+        setIsLoading(false);
+      }
+    } catch {
+      // sessionStorage can throw in some privacy modes / SSR edge cases —
+      // fail safe by just letting the loader play as normal.
+    }
+  }, []);
+
+  // Called by <Loader /> once its own animation/asset-loading is done.
+  // We persist the flag here (not before) so a genuine first visit still
+  // gets the full loading animation.
+  const handleLoaderComplete = useCallback(() => {
+    try {
+      sessionStorage.setItem(HERO_LOADER_SESSION_KEY, "true");
+    } catch {
+      // ignore storage errors — worst case the loader replays next time
+    }
+    setIsLoading(false);
+  }, []);
 
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
   const textY      = useTransform(scrollYProgress, [0, 1], ["0%", "28%"]);
@@ -964,9 +1012,9 @@ export default function HeroSection() {
       ref={heroRef}
       className="relative w-full min-h-screen flex items-center overflow-x-hidden overflow-y-hidden bg-[#0A0A0A]"
     >
-      {/* ── Loading screen — sits above everything until assets/scene are ready ── */}
+      {/* ── Loading screen — plays only once per session (see notes at top) ── */}
       <AnimatePresence>
-        {isLoading && <Loader onComplete={() => setIsLoading(false)} />}
+        {isLoading && <Loader onComplete={handleLoaderComplete} />}
       </AnimatePresence>
 
       {/* ── Layered background ── */}

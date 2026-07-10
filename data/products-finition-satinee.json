@@ -1,0 +1,186 @@
+{
+  "category": {
+    "slug": "finition-satinee",
+    "parentLabel": "Peinture",
+    "parentHref": "/peinture",
+    "name": "Finition Satinée",
+    "tagline": "Éclat Doux & Lessivable",
+    "description": "Peintures satinées offrant un léger reflet et une bonne résistance au lessivage, idéales pour les pièces de vie et zones de passage.",
+    "stats": {
+      "products": 30,
+      "brands": 7,
+      "delivery": "J+1"
+    }
+  },
+  "brands": [
+    {
+      "name": "Tollens",
+      "count": 8
+    },
+    {
+      "name": "Dulux Valentine",
+      "count": 7
+    },
+    {
+      "name": "Luxens",
+      "count": 5
+    },
+    {
+      "name": "Ripolin",
+      "count": 4
+    },
+    {
+      "name": "Seigneurie",
+      "count": 3
+    },
+    {
+      "name": "V33",
+      "count": 2
+    },
+    {
+      "name": "Zolpan",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Mur intérieur",
+      "count": 18
+    },
+    {
+      "name": "Plafond",
+      "count": 8
+    },
+    {
+      "name": "Mur humide",
+      "count": 9
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 140,
+    "currentMin": 0,
+    "currentMax": 85
+  },
+  "activeFilters": [],
+  "totalCount": 30,
+  "page": 1,
+  "totalPages": 4,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés",
+    "Meilleures ventes"
+  ],
+  "products": [
+    {
+      "id": "TLN-SAT-BLC-10L",
+      "sku": "TLN-SAT-BLC-10L",
+      "brand": "Tollens",
+      "name": "Peinture Satinée Lessivable Blanc 10L",
+      "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "10 L",
+        "SATIN",
+        "MUR INTÉRIEUR"
+      ],
+      "price": 47.9,
+      "compareAtPrice": 54.9,
+      "unitPrice": "4,79 €/L",
+      "stock": "in_stock",
+      "badge": {
+        "label": "PRO",
+        "tone": "dark"
+      },
+      "discount": "-13%"
+    },
+    {
+      "id": "DLX-SAT-BLC-2L5",
+      "sku": "DLX-SAT-BLC-2L5",
+      "brand": "Dulux Valentine",
+      "name": "Peinture Satinée Multi-Supports Blanc 2,5L",
+      "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "2.5 L",
+        "SATIN",
+        "MUR HUMIDE"
+      ],
+      "price": 22.5,
+      "compareAtPrice": null,
+      "unitPrice": "9,00 €/L",
+      "stock": "in_stock",
+      "badge": {
+        "label": "NOUVEAU",
+        "tone": "stock"
+      }
+    },
+    {
+      "id": "LUX-SAT-GRI-2L5",
+      "sku": "LUX-SAT-GRI-2L5",
+      "brand": "Luxens",
+      "name": "Peinture Satinée Gris Perle 2,5L",
+      "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "2.5 L",
+        "SATIN",
+        "MUR INTÉRIEUR"
+      ],
+      "price": 28.9,
+      "compareAtPrice": null,
+      "unitPrice": "11,56 €/L",
+      "stock": "in_stock",
+      "ribbon": "STOCK"
+    },
+    {
+      "id": "RIP-SAT-BLC-10L",
+      "sku": "RIP-SAT-BLC-10L",
+      "brand": "Ripolin",
+      "name": "Peinture Satinée Professionnelle Blanc 10L",
+      "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "10 L",
+        "SATIN",
+        "PLAFOND"
+      ],
+      "price": 42.9,
+      "compareAtPrice": 47.9,
+      "unitPrice": "4,29 €/L",
+      "stock": "low_stock",
+      "cornerBadge": "A+"
+    },
+    {
+      "id": "SGN-SAT-BLC-15L",
+      "sku": "SGN-SAT-BLC-15L",
+      "brand": "Seigneurie",
+      "name": "Peinture Satin Chantier Blanc 15L",
+      "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "15 L",
+        "SATIN",
+        "MUR INTÉRIEUR"
+      ],
+      "price": 62.9,
+      "compareAtPrice": null,
+      "unitPrice": "4,19 €/L",
+      "stock": "in_stock"
+    },
+    {
+      "id": "V33-SAT-BLC-2L5",
+      "sku": "V33-SAT-BLC-2L5",
+      "brand": "V33",
+      "name": "Peinture Satinée Anti-Traces Blanc 2,5L",
+      "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "2.5 L",
+        "SATIN",
+        "MUR HUMIDE"
+      ],
+      "price": 29.9,
+      "compareAtPrice": null,
+      "unitPrice": "11,96 €/L",
+      "stock": "out_of_stock",
+      "ribbon": "RUPTURE"
+    }
+  ]
+}

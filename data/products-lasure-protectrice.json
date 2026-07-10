@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "lasure-protectrice",
+    "parentLabel": "Sous-couche & Primaire",
+    "parentHref": "/peintures/sous-couche-primaire",
+    "name": "Lasure protectrice",
+    "tagline": "protège et sublime vos bois extérieurs",
+    "description": "Lasures haute protection contre UV, pluie et champignons, pour bardages, clôtures, volets et charpentes exposées aux intempéries.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "V33",
+      "count": 2
+    },
+    {
+      "name": "Blanchon",
+      "count": 2
+    },
+    {
+      "name": "Syntilor",
+      "count": 2
+    },
+    {
+      "name": "Bondex",
+      "count": 2
+    },
+    {
+      "name": "Seigneurie",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Bois exotique",
+      "count": 2
+    },
+    {
+      "name": "Bois résineux",
+      "count": 2
+    },
+    {
+      "name": "Bardage",
+      "count": 2
+    },
+    {
+      "name": "Clôture",
+      "count": 2
+    },
+    {
+      "name": "Volets",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "lasure-protectrice-01",
+      "sku": "V33-LASU-001",
+      "brand": "V33",
+      "name": "V33 Lasure protectrice Pro 0.5L",
+      "image": "/products/lasure-protectrice/1.jpg",
+      "tags": [
+        "Bois exotique",
+        "0.5L"
+      ],
+      "price": 12.28,
+      "compareAtPrice": 14.74,
+      "unitPrice": "24.56 €/L",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "lasure-protectrice-02",
+      "sku": "BLA-LASU-002",
+      "brand": "Blanchon",
+      "name": "Blanchon Lasure protectrice Premium 0.75L",
+      "image": "/products/lasure-protectrice/2.jpg",
+      "tags": [
+        "Bois résineux",
+        "0.75L"
+      ],
+      "price": 27.39,
+      "compareAtPrice": null,
+      "unitPrice": "36.52 €/L",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "lasure-protectrice-03",
+      "sku": "SYN-LASU-003",
+      "brand": "Syntilor",
+      "name": "Syntilor Lasure protectrice Extra 1L",
+      "image": "/products/lasure-protectrice/3.jpg",
+      "tags": [
+        "Bardage",
+        "1L"
+      ],
+      "price": 50.33,
+      "compareAtPrice": null,
+      "unitPrice": "50.33 €/L",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "lasure-protectrice-04",
+      "sku": "BON-LASU-004",
+      "brand": "Bondex",
+      "name": "Bondex Lasure protectrice Confort 2.5L",
+      "image": "/products/lasure-protectrice/4.jpg",
+      "tags": [
+        "Clôture",
+        "2.5L"
+      ],
+      "price": 12.02,
+      "compareAtPrice": 14.42,
+      "unitPrice": "4.81 €/L",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "lasure-protectrice-05",
+      "sku": "SEI-LASU-005",
+      "brand": "Seigneurie",
+      "name": "Seigneurie Lasure protectrice Longue Durée 3L",
+      "image": "/products/lasure-protectrice/5.jpg",
+      "tags": [
+        "Volets",
+        "3L"
+      ],
+      "price": 25.81,
+      "compareAtPrice": null,
+      "unitPrice": "8.6 €/L",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "lasure-protectrice-06",
+      "sku": "V33-LASU-006",
+      "brand": "V33",
+      "name": "V33 Lasure protectrice Multi-supports 5L",
+      "image": "/products/lasure-protectrice/6.jpg",
+      "tags": [
+        "Bois exotique",
+        "5L"
+      ],
+      "price": 61.89,
+      "compareAtPrice": null,
+      "unitPrice": "12.38 €/L",
+      "badge": {
+        "label": "Eco-responsable",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "lasure-protectrice-07",
+      "sku": "BLA-LASU-007",
+      "brand": "Blanchon",
+      "name": "Blanchon Lasure protectrice Expert 10L",
+      "image": "/products/lasure-protectrice/7.jpg",
+      "tags": [
+        "Bois résineux",
+        "10L"
+      ],
+      "price": 53.5,
+      "compareAtPrice": 64.2,
+      "unitPrice": "5.35 €/L",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "lasure-protectrice-08",
+      "sku": "SYN-LASU-008",
+      "brand": "Syntilor",
+      "name": "Syntilor Lasure protectrice Classic 0.5L",
+      "image": "/products/lasure-protectrice/8.jpg",
+      "tags": [
+        "Bardage",
+        "0.5L"
+      ],
+      "price": 27.54,
+      "compareAtPrice": null,
+      "unitPrice": "55.08 €/L",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "lasure-protectrice-09",
+      "sku": "BON-LASU-009",
+      "brand": "Bondex",
+      "name": "Bondex Lasure protectrice Renov 0.75L",
+      "image": "/products/lasure-protectrice/9.jpg",
+      "tags": [
+        "Clôture",
+        "0.75L"
+      ],
+      "price": 57.04,
+      "compareAtPrice": null,
+      "unitPrice": "76.05 €/L",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

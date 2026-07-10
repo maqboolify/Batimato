@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "scies-circulaires-et-decoupe",
+    "parentLabel": "Outillage électroportatif",
+    "parentHref": "/outillage/outillage-electroportatif",
+    "name": "Scies circulaires et découpe",
+    "tagline": "des coupes longues et rectilignes",
+    "description": "Scies circulaires pour coupes rectilignes rapides et précises dans le bois, les panneaux, le stratifié et l'aluminium.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Makita",
+      "count": 2
+    },
+    {
+      "name": "Bosch Professional",
+      "count": 2
+    },
+    {
+      "name": "DeWalt",
+      "count": 2
+    },
+    {
+      "name": "Milwaukee",
+      "count": 2
+    },
+    {
+      "name": "Festool",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Bois",
+      "count": 2
+    },
+    {
+      "name": "Panneau",
+      "count": 2
+    },
+    {
+      "name": "Stratifié",
+      "count": 2
+    },
+    {
+      "name": "Aluminium",
+      "count": 2
+    },
+    {
+      "name": "Multi-matériaux",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 500,
+    "currentMin": 0,
+    "currentMax": 500
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "scies-circulaires-et-decoupe-01",
+      "sku": "MAK-SCIE-001",
+      "brand": "Makita",
+      "name": "Makita Scie circulaire Pro - Solo (nu)",
+      "image": "/products/scies-circulaires-et-decoupe/1.jpg",
+      "tags": [
+        "Bois",
+        "Solo (nu)"
+      ],
+      "price": 64.72,
+      "compareAtPrice": 77.66,
+      "unitPrice": "64.72 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "scies-circulaires-et-decoupe-02",
+      "sku": "BOS-SCIE-002",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Scie circulaire Brushless - 1 batterie 4Ah",
+      "image": "/products/scies-circulaires-et-decoupe/2.jpg",
+      "tags": [
+        "Panneau",
+        "1 batterie 4Ah"
+      ],
+      "price": 59.22,
+      "compareAtPrice": null,
+      "unitPrice": "59.22 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "scies-circulaires-et-decoupe-03",
+      "sku": "DEW-SCIE-003",
+      "brand": "DeWalt",
+      "name": "DeWalt Scie circulaire Robuste - 2 batteries 5Ah",
+      "image": "/products/scies-circulaires-et-decoupe/3.jpg",
+      "tags": [
+        "Stratifié",
+        "2 batteries 5Ah"
+      ],
+      "price": 239.39,
+      "compareAtPrice": null,
+      "unitPrice": "239.39 € / unité",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "scies-circulaires-et-decoupe-04",
+      "sku": "MIL-SCIE-004",
+      "brand": "Milwaukee",
+      "name": "Milwaukee Scie circulaire Compact - Coffret complet",
+      "image": "/products/scies-circulaires-et-decoupe/4.jpg",
+      "tags": [
+        "Aluminium",
+        "Coffret complet"
+      ],
+      "price": 377.77,
+      "compareAtPrice": 453.32,
+      "unitPrice": "377.77 € / unité",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "scies-circulaires-et-decoupe-05",
+      "sku": "FES-SCIE-005",
+      "brand": "Festool",
+      "name": "Festool Scie circulaire Longue Durée - Filaire secteur",
+      "image": "/products/scies-circulaires-et-decoupe/5.jpg",
+      "tags": [
+        "Multi-matériaux",
+        "Filaire secteur"
+      ],
+      "price": 82.36,
+      "compareAtPrice": null,
+      "unitPrice": "82.36 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "scies-circulaires-et-decoupe-06",
+      "sku": "MAK-SCIE-006",
+      "brand": "Makita",
+      "name": "Makita Scie circulaire XR - Kit chargeur",
+      "image": "/products/scies-circulaires-et-decoupe/6.jpg",
+      "tags": [
+        "Bois",
+        "Kit chargeur"
+      ],
+      "price": 220.07,
+      "compareAtPrice": null,
+      "unitPrice": "220.07 € / unité",
+      "badge": {
+        "label": "Garantie 3 ans",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "scies-circulaires-et-decoupe-07",
+      "sku": "BOS-SCIE-007",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Scie circulaire Expert - Machine seule",
+      "image": "/products/scies-circulaires-et-decoupe/7.jpg",
+      "tags": [
+        "Panneau",
+        "Machine seule"
+      ],
+      "price": 84.31,
+      "compareAtPrice": 101.17,
+      "unitPrice": "84.31 € / unité",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "scies-circulaires-et-decoupe-08",
+      "sku": "DEW-SCIE-008",
+      "brand": "DeWalt",
+      "name": "DeWalt Scie circulaire Chantier - Solo (nu)",
+      "image": "/products/scies-circulaires-et-decoupe/8.jpg",
+      "tags": [
+        "Stratifié",
+        "Solo (nu)"
+      ],
+      "price": 173.82,
+      "compareAtPrice": null,
+      "unitPrice": "173.82 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "scies-circulaires-et-decoupe-09",
+      "sku": "MIL-SCIE-009",
+      "brand": "Milwaukee",
+      "name": "Milwaukee Scie circulaire Performance - 1 batterie 4Ah",
+      "image": "/products/scies-circulaires-et-decoupe/9.jpg",
+      "tags": [
+        "Aluminium",
+        "1 batterie 4Ah"
+      ],
+      "price": 52.17,
+      "compareAtPrice": null,
+      "unitPrice": "52.17 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "perforateurs-et-burineurs",
+    "parentLabel": "Outillage électroportatif",
+    "parentHref": "/outillage/outillage-electroportatif",
+    "name": "Perforateurs et burineurs",
+    "tagline": "puissance de frappe pour la maçonnerie",
+    "description": "Perforateurs SDS-plus et SDS-max et burineurs pour percer et démolir béton, pierre et maçonnerie avec une puissance de frappe professionnelle.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Bosch Professional",
+      "count": 2
+    },
+    {
+      "name": "Makita",
+      "count": 2
+    },
+    {
+      "name": "DeWalt",
+      "count": 2
+    },
+    {
+      "name": "Hikoki",
+      "count": 2
+    },
+    {
+      "name": "Milwaukee",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Béton",
+      "count": 2
+    },
+    {
+      "name": "Maçonnerie",
+      "count": 2
+    },
+    {
+      "name": "Pierre",
+      "count": 2
+    },
+    {
+      "name": "Carrelage",
+      "count": 2
+    },
+    {
+      "name": "Acier",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 500,
+    "currentMin": 0,
+    "currentMax": 500
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "perforateurs-et-burineurs-01",
+      "sku": "BOS-PERF-001",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Perforateur Pro - Solo (nu)",
+      "image": "/products/perforateurs-et-burineurs/1.jpg",
+      "tags": [
+        "Béton",
+        "Solo (nu)"
+      ],
+      "price": 425.25,
+      "compareAtPrice": 510.3,
+      "unitPrice": "425.25 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "perforateurs-et-burineurs-02",
+      "sku": "MAK-PERF-002",
+      "brand": "Makita",
+      "name": "Makita Perforateur Brushless - 1 batterie 4Ah",
+      "image": "/products/perforateurs-et-burineurs/2.jpg",
+      "tags": [
+        "Maçonnerie",
+        "1 batterie 4Ah"
+      ],
+      "price": 245.61,
+      "compareAtPrice": null,
+      "unitPrice": "245.61 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "perforateurs-et-burineurs-03",
+      "sku": "DEW-PERF-003",
+      "brand": "DeWalt",
+      "name": "DeWalt Perforateur Robuste - 2 batteries 5Ah",
+      "image": "/products/perforateurs-et-burineurs/3.jpg",
+      "tags": [
+        "Pierre",
+        "2 batteries 5Ah"
+      ],
+      "price": 218.56,
+      "compareAtPrice": null,
+      "unitPrice": "218.56 € / unité",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "perforateurs-et-burineurs-04",
+      "sku": "HIK-PERF-004",
+      "brand": "Hikoki",
+      "name": "Hikoki Perforateur Compact - Coffret complet",
+      "image": "/products/perforateurs-et-burineurs/4.jpg",
+      "tags": [
+        "Carrelage",
+        "Coffret complet"
+      ],
+      "price": 295.19,
+      "compareAtPrice": 354.23,
+      "unitPrice": "295.19 € / unité",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "perforateurs-et-burineurs-05",
+      "sku": "MIL-PERF-005",
+      "brand": "Milwaukee",
+      "name": "Milwaukee Perforateur Longue Durée - Filaire secteur",
+      "image": "/products/perforateurs-et-burineurs/5.jpg",
+      "tags": [
+        "Acier",
+        "Filaire secteur"
+      ],
+      "price": 136.58,
+      "compareAtPrice": null,
+      "unitPrice": "136.58 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "perforateurs-et-burineurs-06",
+      "sku": "BOS-PERF-006",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Perforateur XR - Kit chargeur",
+      "image": "/products/perforateurs-et-burineurs/6.jpg",
+      "tags": [
+        "Béton",
+        "Kit chargeur"
+      ],
+      "price": 410.7,
+      "compareAtPrice": null,
+      "unitPrice": "410.7 € / unité",
+      "badge": {
+        "label": "Garantie 3 ans",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "perforateurs-et-burineurs-07",
+      "sku": "MAK-PERF-007",
+      "brand": "Makita",
+      "name": "Makita Perforateur Expert - Machine seule",
+      "image": "/products/perforateurs-et-burineurs/7.jpg",
+      "tags": [
+        "Maçonnerie",
+        "Machine seule"
+      ],
+      "price": 199.49,
+      "compareAtPrice": 239.39,
+      "unitPrice": "199.49 € / unité",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "perforateurs-et-burineurs-08",
+      "sku": "DEW-PERF-008",
+      "brand": "DeWalt",
+      "name": "DeWalt Perforateur Chantier - Solo (nu)",
+      "image": "/products/perforateurs-et-burineurs/8.jpg",
+      "tags": [
+        "Pierre",
+        "Solo (nu)"
+      ],
+      "price": 205.14,
+      "compareAtPrice": null,
+      "unitPrice": "205.14 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "perforateurs-et-burineurs-09",
+      "sku": "HIK-PERF-009",
+      "brand": "Hikoki",
+      "name": "Hikoki Perforateur Performance - 1 batterie 4Ah",
+      "image": "/products/perforateurs-et-burineurs/9.jpg",
+      "tags": [
+        "Carrelage",
+        "1 batterie 4Ah"
+      ],
+      "price": 322.85,
+      "compareAtPrice": null,
+      "unitPrice": "322.85 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

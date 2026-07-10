@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "marteau",
+    "parentLabel": "Outillage et outil à main",
+    "parentHref": "/outillage/outillage-et-outil-a-main",
+    "name": "Marteau",
+    "tagline": "frappe précise, prise en main confortable",
+    "description": "Marteaux de charpentier, menuisier et maçon aux têtes et manches adaptés à chaque usage, du bricolage au chantier intensif.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Stanley",
+      "count": 2
+    },
+    {
+      "name": "Facom",
+      "count": 2
+    },
+    {
+      "name": "Picard",
+      "count": 2
+    },
+    {
+      "name": "Irwin",
+      "count": 2
+    },
+    {
+      "name": "DeWalt",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Bois",
+      "count": 2
+    },
+    {
+      "name": "Métal",
+      "count": 2
+    },
+    {
+      "name": "Maçonnerie",
+      "count": 2
+    },
+    {
+      "name": "Menuiserie",
+      "count": 2
+    },
+    {
+      "name": "Démolition",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "marteau-01",
+      "sku": "STA-MART-001",
+      "brand": "Stanley",
+      "name": "Stanley Marteau Pro - Unité",
+      "image": "/products/marteau/1.jpg",
+      "tags": [
+        "Bois",
+        "Unité"
+      ],
+      "price": 63.92,
+      "compareAtPrice": 76.7,
+      "unitPrice": "63.92 € / unité",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "marteau-02",
+      "sku": "FAC-MART-002",
+      "brand": "Facom",
+      "name": "Facom Marteau Renforcé - Lot de 2",
+      "image": "/products/marteau/2.jpg",
+      "tags": [
+        "Métal",
+        "Lot de 2"
+      ],
+      "price": 39.6,
+      "compareAtPrice": null,
+      "unitPrice": "39.6 € / lot de 2",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "marteau-03",
+      "sku": "PIC-MART-003",
+      "brand": "Picard",
+      "name": "Picard Marteau Ergonomique - Lot de 3",
+      "image": "/products/marteau/3.jpg",
+      "tags": [
+        "Maçonnerie",
+        "Lot de 3"
+      ],
+      "price": 44.29,
+      "compareAtPrice": null,
+      "unitPrice": "44.29 € / lot de 3",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "marteau-04",
+      "sku": "IRW-MART-004",
+      "brand": "Irwin",
+      "name": "Irwin Marteau Robuste - Coffret complet",
+      "image": "/products/marteau/4.jpg",
+      "tags": [
+        "Menuiserie",
+        "Coffret complet"
+      ],
+      "price": 55.73,
+      "compareAtPrice": 66.88,
+      "unitPrice": "55.73 € / coffret complet",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "marteau-05",
+      "sku": "DEW-MART-005",
+      "brand": "DeWalt",
+      "name": "DeWalt Marteau Compact - Set pro",
+      "image": "/products/marteau/5.jpg",
+      "tags": [
+        "Démolition",
+        "Set pro"
+      ],
+      "price": 13.1,
+      "compareAtPrice": null,
+      "unitPrice": "13.1 € / set pro",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "marteau-06",
+      "sku": "STA-MART-006",
+      "brand": "Stanley",
+      "name": "Stanley Marteau Expert - Format XL",
+      "image": "/products/marteau/6.jpg",
+      "tags": [
+        "Bois",
+        "Format XL"
+      ],
+      "price": 74.22,
+      "compareAtPrice": null,
+      "unitPrice": "74.22 € / format xl",
+      "badge": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "marteau-07",
+      "sku": "FAC-MART-007",
+      "brand": "Facom",
+      "name": "Facom Marteau Chantier - Format compact",
+      "image": "/products/marteau/7.jpg",
+      "tags": [
+        "Métal",
+        "Format compact"
+      ],
+      "price": 80.51,
+      "compareAtPrice": 96.61,
+      "unitPrice": "80.51 € / format compact",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "marteau-08",
+      "sku": "PIC-MART-008",
+      "brand": "Picard",
+      "name": "Picard Marteau Standard - Unité",
+      "image": "/products/marteau/8.jpg",
+      "tags": [
+        "Maçonnerie",
+        "Unité"
+      ],
+      "price": 25.77,
+      "compareAtPrice": null,
+      "unitPrice": "25.77 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "marteau-09",
+      "sku": "IRW-MART-009",
+      "brand": "Irwin",
+      "name": "Irwin Marteau Confort - Lot de 2",
+      "image": "/products/marteau/9.jpg",
+      "tags": [
+        "Menuiserie",
+        "Lot de 2"
+      ],
+      "price": 74.08,
+      "compareAtPrice": null,
+      "unitPrice": "74.08 € / lot de 2",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

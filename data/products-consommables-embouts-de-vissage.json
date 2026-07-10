@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "consommables-embouts-de-vissage",
+    "parentLabel": "Consommables",
+    "parentHref": "/outillage/consommables",
+    "name": "Embouts de vissage",
+    "tagline": "un vissage précis sans dérapage",
+    "description": "Embouts de vissage haute résistance pour visseuses et perceuses-visseuses, compatibles avec la plupart des empreintes du marché.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Bosch Professional",
+      "count": 2
+    },
+    {
+      "name": "Wera",
+      "count": 2
+    },
+    {
+      "name": "Makita",
+      "count": 2
+    },
+    {
+      "name": "DeWalt",
+      "count": 2
+    },
+    {
+      "name": "Facom",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Bois",
+      "count": 2
+    },
+    {
+      "name": "Métal",
+      "count": 2
+    },
+    {
+      "name": "Placo",
+      "count": 2
+    },
+    {
+      "name": "Multi-matériaux",
+      "count": 2
+    },
+    {
+      "name": "Meuble",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "consommables-embouts-de-vissage-01",
+      "sku": "BOS-CONS-001",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Embout de vissage Pro - Lot de 5",
+      "image": "/products/consommables-embouts-de-vissage/1.jpg",
+      "tags": [
+        "Bois",
+        "Lot de 5"
+      ],
+      "price": 16.03,
+      "compareAtPrice": 19.24,
+      "unitPrice": "16.03 € / lot de 5",
+      "badge": {
+        "label": "Carbure",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "consommables-embouts-de-vissage-02",
+      "sku": "WER-CONS-002",
+      "brand": "Wera",
+      "name": "Wera Embout de vissage Renforcé - Lot de 10",
+      "image": "/products/consommables-embouts-de-vissage/2.jpg",
+      "tags": [
+        "Métal",
+        "Lot de 10"
+      ],
+      "price": 29.53,
+      "compareAtPrice": null,
+      "unitPrice": "29.53 € / lot de 10",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "consommables-embouts-de-vissage-03",
+      "sku": "MAK-CONS-003",
+      "brand": "Makita",
+      "name": "Makita Embout de vissage HSS - Lot de 25",
+      "image": "/products/consommables-embouts-de-vissage/3.jpg",
+      "tags": [
+        "Placo",
+        "Lot de 25"
+      ],
+      "price": 29.27,
+      "compareAtPrice": null,
+      "unitPrice": "29.27 € / lot de 25",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "consommables-embouts-de-vissage-04",
+      "sku": "DEW-CONS-004",
+      "brand": "DeWalt",
+      "name": "DeWalt Embout de vissage Carbure - Lot de 50",
+      "image": "/products/consommables-embouts-de-vissage/4.jpg",
+      "tags": [
+        "Multi-matériaux",
+        "Lot de 50"
+      ],
+      "price": 22.53,
+      "compareAtPrice": 27.04,
+      "unitPrice": "22.53 € / lot de 50",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "consommables-embouts-de-vissage-05",
+      "sku": "FAC-CONS-005",
+      "brand": "Facom",
+      "name": "Facom Embout de vissage Longue Durée - Boîte 100",
+      "image": "/products/consommables-embouts-de-vissage/5.jpg",
+      "tags": [
+        "Meuble",
+        "Boîte 100"
+      ],
+      "price": 4.03,
+      "compareAtPrice": null,
+      "unitPrice": "4.03 € / boîte 100",
+      "badge": {
+        "label": "Carbure",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "consommables-embouts-de-vissage-06",
+      "sku": "BOS-CONS-006",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Embout de vissage Multi-matériaux - Coffret",
+      "image": "/products/consommables-embouts-de-vissage/6.jpg",
+      "tags": [
+        "Bois",
+        "Coffret"
+      ],
+      "price": 37.06,
+      "compareAtPrice": null,
+      "unitPrice": "37.06 € / coffret",
+      "badge": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "consommables-embouts-de-vissage-07",
+      "sku": "WER-CONS-007",
+      "brand": "Wera",
+      "name": "Wera Embout de vissage Expert - Unité",
+      "image": "/products/consommables-embouts-de-vissage/7.jpg",
+      "tags": [
+        "Métal",
+        "Unité"
+      ],
+      "price": 10.56,
+      "compareAtPrice": 12.67,
+      "unitPrice": "10.56 € / unité",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "consommables-embouts-de-vissage-08",
+      "sku": "MAK-CONS-008",
+      "brand": "Makita",
+      "name": "Makita Embout de vissage Chantier - Lot de 5",
+      "image": "/products/consommables-embouts-de-vissage/8.jpg",
+      "tags": [
+        "Placo",
+        "Lot de 5"
+      ],
+      "price": 49.32,
+      "compareAtPrice": null,
+      "unitPrice": "49.32 € / lot de 5",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "consommables-embouts-de-vissage-09",
+      "sku": "DEW-CONS-009",
+      "brand": "DeWalt",
+      "name": "DeWalt Embout de vissage Standard - Lot de 10",
+      "image": "/products/consommables-embouts-de-vissage/9.jpg",
+      "tags": [
+        "Multi-matériaux",
+        "Lot de 10"
+      ],
+      "price": 9.21,
+      "compareAtPrice": null,
+      "unitPrice": "9.21 € / lot de 10",
+      "badge": {
+        "label": "Carbure",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

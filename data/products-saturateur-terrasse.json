@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "saturateur-terrasse",
+    "parentLabel": "Sous-couche & Primaire",
+    "parentHref": "/peintures/sous-couche-primaire",
+    "name": "Saturateur terrasse",
+    "tagline": "nourrit et ravive le bois de vos terrasses",
+    "description": "Saturateurs nourrissants qui pénètrent le bois en profondeur pour préserver l'aspect naturel des terrasses face aux UV et à l'humidité.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "V33",
+      "count": 2
+    },
+    {
+      "name": "Blanchon",
+      "count": 2
+    },
+    {
+      "name": "Bondex",
+      "count": 2
+    },
+    {
+      "name": "Syntilor",
+      "count": 2
+    },
+    {
+      "name": "Zolpan",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Terrasse bois",
+      "count": 2
+    },
+    {
+      "name": "Bois exotique",
+      "count": 2
+    },
+    {
+      "name": "Pin autoclave",
+      "count": 2
+    },
+    {
+      "name": "Composite",
+      "count": 2
+    },
+    {
+      "name": "Claustra",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "saturateur-terrasse-01",
+      "sku": "V33-SATU-001",
+      "brand": "V33",
+      "name": "V33 Saturateur terrasse Pro 0.5L",
+      "image": "/products/saturateur-terrasse/1.jpg",
+      "tags": [
+        "Terrasse bois",
+        "0.5L"
+      ],
+      "price": 17.64,
+      "compareAtPrice": 21.17,
+      "unitPrice": "35.28 €/L",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "saturateur-terrasse-02",
+      "sku": "BLA-SATU-002",
+      "brand": "Blanchon",
+      "name": "Blanchon Saturateur terrasse Premium 0.75L",
+      "image": "/products/saturateur-terrasse/2.jpg",
+      "tags": [
+        "Bois exotique",
+        "0.75L"
+      ],
+      "price": 77.7,
+      "compareAtPrice": null,
+      "unitPrice": "103.6 €/L",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "saturateur-terrasse-03",
+      "sku": "BON-SATU-003",
+      "brand": "Bondex",
+      "name": "Bondex Saturateur terrasse Extra 1L",
+      "image": "/products/saturateur-terrasse/3.jpg",
+      "tags": [
+        "Pin autoclave",
+        "1L"
+      ],
+      "price": 58.2,
+      "compareAtPrice": null,
+      "unitPrice": "58.2 €/L",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "saturateur-terrasse-04",
+      "sku": "SYN-SATU-004",
+      "brand": "Syntilor",
+      "name": "Syntilor Saturateur terrasse Confort 2.5L",
+      "image": "/products/saturateur-terrasse/4.jpg",
+      "tags": [
+        "Composite",
+        "2.5L"
+      ],
+      "price": 74.47,
+      "compareAtPrice": 89.36,
+      "unitPrice": "29.79 €/L",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "saturateur-terrasse-05",
+      "sku": "ZOL-SATU-005",
+      "brand": "Zolpan",
+      "name": "Zolpan Saturateur terrasse Longue Durée 3L",
+      "image": "/products/saturateur-terrasse/5.jpg",
+      "tags": [
+        "Claustra",
+        "3L"
+      ],
+      "price": 68.28,
+      "compareAtPrice": null,
+      "unitPrice": "22.76 €/L",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "saturateur-terrasse-06",
+      "sku": "V33-SATU-006",
+      "brand": "V33",
+      "name": "V33 Saturateur terrasse Multi-supports 5L",
+      "image": "/products/saturateur-terrasse/6.jpg",
+      "tags": [
+        "Terrasse bois",
+        "5L"
+      ],
+      "price": 52.8,
+      "compareAtPrice": null,
+      "unitPrice": "10.56 €/L",
+      "badge": {
+        "label": "Eco-responsable",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "saturateur-terrasse-07",
+      "sku": "BLA-SATU-007",
+      "brand": "Blanchon",
+      "name": "Blanchon Saturateur terrasse Expert 10L",
+      "image": "/products/saturateur-terrasse/7.jpg",
+      "tags": [
+        "Bois exotique",
+        "10L"
+      ],
+      "price": 87.75,
+      "compareAtPrice": 105.3,
+      "unitPrice": "8.78 €/L",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "saturateur-terrasse-08",
+      "sku": "BON-SATU-008",
+      "brand": "Bondex",
+      "name": "Bondex Saturateur terrasse Classic 0.5L",
+      "image": "/products/saturateur-terrasse/8.jpg",
+      "tags": [
+        "Pin autoclave",
+        "0.5L"
+      ],
+      "price": 40.18,
+      "compareAtPrice": null,
+      "unitPrice": "80.36 €/L",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "saturateur-terrasse-09",
+      "sku": "SYN-SATU-009",
+      "brand": "Syntilor",
+      "name": "Syntilor Saturateur terrasse Renov 0.75L",
+      "image": "/products/saturateur-terrasse/9.jpg",
+      "tags": [
+        "Composite",
+        "0.75L"
+      ],
+      "price": 54.06,
+      "compareAtPrice": null,
+      "unitPrice": "72.08 €/L",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

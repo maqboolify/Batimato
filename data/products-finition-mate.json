@@ -1,0 +1,186 @@
+{
+  "category": {
+    "slug": "finition-mate",
+    "parentLabel": "Peinture",
+    "parentHref": "/peinture",
+    "name": "Finition Mate",
+    "tagline": "Uniformité & Profondeur de Couleur",
+    "description": "Peintures de finition mate pour murs et plafonds, offrant une couvrance opaque et un rendu uniforme qui masque les petites imperfections.",
+    "stats": {
+      "products": 33,
+      "brands": 7,
+      "delivery": "J+1"
+    }
+  },
+  "brands": [
+    {
+      "name": "Tollens",
+      "count": 9
+    },
+    {
+      "name": "Dulux Valentine",
+      "count": 7
+    },
+    {
+      "name": "Luxens",
+      "count": 6
+    },
+    {
+      "name": "Ripolin",
+      "count": 4
+    },
+    {
+      "name": "Seigneurie",
+      "count": 3
+    },
+    {
+      "name": "V33",
+      "count": 2
+    },
+    {
+      "name": "Zolpan",
+      "count": 2
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Mur intérieur",
+      "count": 20
+    },
+    {
+      "name": "Plafond",
+      "count": 15
+    },
+    {
+      "name": "Placo",
+      "count": 9
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 140,
+    "currentMin": 0,
+    "currentMax": 85
+  },
+  "activeFilters": [],
+  "totalCount": 33,
+  "page": 1,
+  "totalPages": 5,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés",
+    "Meilleures ventes"
+  ],
+  "products": [
+    {
+      "id": "TLN-MAT-BLC-10L",
+      "sku": "TLN-MAT-BLC-10L",
+      "brand": "Tollens",
+      "name": "Peinture Mate Murs & Plafonds Blanc 10L",
+      "image": "https://images.unsplash.com/photo-1595079676339-1534801ad6cf?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "10 L",
+        "MAT",
+        "MUR INTÉRIEUR"
+      ],
+      "price": 44.9,
+      "compareAtPrice": 51.9,
+      "unitPrice": "4,49 €/L",
+      "stock": "in_stock",
+      "badge": {
+        "label": "PRO",
+        "tone": "dark"
+      },
+      "discount": "-13%"
+    },
+    {
+      "id": "DLX-MAT-BLC-2L5",
+      "sku": "DLX-MAT-BLC-2L5",
+      "brand": "Dulux Valentine",
+      "name": "Peinture Mate Extra-Blanche 2,5L",
+      "image": "https://images.unsplash.com/photo-1595079676339-1534801ad6cf?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "2.5 L",
+        "MAT",
+        "PLAFOND"
+      ],
+      "price": 24.9,
+      "compareAtPrice": null,
+      "unitPrice": "9,96 €/L",
+      "stock": "in_stock",
+      "badge": {
+        "label": "NOUVEAU",
+        "tone": "stock"
+      }
+    },
+    {
+      "id": "LUX-MAT-GRI-2L5",
+      "sku": "LUX-MAT-GRI-2L5",
+      "brand": "Luxens",
+      "name": "Peinture Mate Gris Perle 2,5L",
+      "image": "https://images.unsplash.com/photo-1595079676339-1534801ad6cf?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "2.5 L",
+        "MAT",
+        "MUR INTÉRIEUR"
+      ],
+      "price": 26.9,
+      "compareAtPrice": null,
+      "unitPrice": "10,76 €/L",
+      "stock": "in_stock",
+      "ribbon": "STOCK"
+    },
+    {
+      "id": "RIP-MAT-BLC-10L",
+      "sku": "RIP-MAT-BLC-10L",
+      "brand": "Ripolin",
+      "name": "Peinture Mate Professionnelle Blanc 10L",
+      "image": "https://images.unsplash.com/photo-1595079676339-1534801ad6cf?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "10 L",
+        "MAT",
+        "PLACO"
+      ],
+      "price": 39.9,
+      "compareAtPrice": 44.9,
+      "unitPrice": "3,99 €/L",
+      "stock": "low_stock",
+      "cornerBadge": "A+"
+    },
+    {
+      "id": "SGN-MAT-BLC-15L",
+      "sku": "SGN-MAT-BLC-15L",
+      "brand": "Seigneurie",
+      "name": "Peinture Mate Chantier Blanc 15L",
+      "image": "https://images.unsplash.com/photo-1595079676339-1534801ad6cf?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "15 L",
+        "MAT",
+        "MUR INTÉRIEUR"
+      ],
+      "price": 59.9,
+      "compareAtPrice": null,
+      "unitPrice": "4,00 €/L",
+      "stock": "in_stock"
+    },
+    {
+      "id": "V33-MAT-BLC-2L5",
+      "sku": "V33-MAT-BLC-2L5",
+      "brand": "V33",
+      "name": "Peinture Mate Anti-Taches Blanc 2,5L",
+      "image": "https://images.unsplash.com/photo-1595079676339-1534801ad6cf?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "2.5 L",
+        "MAT",
+        "PLAFOND"
+      ],
+      "price": 27.9,
+      "compareAtPrice": null,
+      "unitPrice": "11,16 €/L",
+      "stock": "out_of_stock",
+      "ribbon": "RUPTURE"
+    }
+  ]
+}

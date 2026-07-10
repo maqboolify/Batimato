@@ -10,7 +10,7 @@
  *  4. ExpertiseStrip    — Large split-screen photo + copy bento
  *  5. Projects          — Masonry-style real project photos
  *  6. ProcessTimeline   — How we work together
- *  7. Testimonials      — Quote carousel with avatar photos
+ *  7. Testimonials      — Quote carousel with avatar photos (currently disabled)
  *  8. CTABanner         — Full-bleed yellow conversion banner
  *  9. Footer
  *
@@ -46,15 +46,15 @@ const DIM  = "rgba(255,255,255,0.16)";
 // Using Unsplash source URLs — swap for your own photos in production
 const PHOTOS = {
   // Category cards
-  paint:      "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=800&q=80&auto=format&fit=crop",
-  tools:      "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=800&q=80&auto=format&fit=crop",
+  paint:      "/paint.png",
+  tools:      "/outillage.png",
   prep:       "downbg.png",
   electric:   "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=80&auto=format&fit=crop",
   protection: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR23jxEOJTz4u2Ssl30DSfQ_1rvGqyIv3gVYtdQTOM6L-szZL5ibDXqNnI&s=10",
   materials:  "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80&auto=format&fit=crop",
 
   // Expertise split
-  expertise:  "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=85&auto=format&fit=crop",
+  expertise:  "/iso.png",
   showroom:   "/main.png",
 
   // Projects masonry
@@ -241,7 +241,7 @@ function ResponsiveStyles() {
 // ═══════════════════════════════════════════════════════════════════════════
 const CATEGORIES = [
   { label: "Peintures & Revêtements", sub: "Intérieur · Extérieur · Façades", href: "/peintures",              img: PHOTOS.paint,      span: 2 },
-  { label: "Outillage Électroportatif", sub: "Perceuses · Scies · Meuleuses",  href: "/outillage",             img: PHOTOS.tools,      span: 1 },
+  { label: "Outillage Électroportatif", sub: "Perceuses · Scies · Meuleuses",  href: "/outillage",             img: PHOTOS.tools,      span: 2 },
   { label: "Préparation des supports",  sub: "Enduits · Abrasifs · Toile de verre", href: "/preparation-materiaux", img: PHOTOS.prep,   span: 1 },
   { label: "Câblage & Électricité",     sub: "Tableaux · Câbles · Prises",     href: "/electricite",           img: PHOTOS.electric,   span: 1 },
   { label: "Protection & EPI",          sub: "Masques · Combinaisons · Gants", href: "/protection",            img: PHOTOS.protection, span: 1 },
@@ -354,8 +354,8 @@ function CategoryShowcase() {
           </motion.a>
         </div>
 
-        {/* Main 2+1 top row */}
-        <div className="bm-cat-top" style={{ display: "grid", gridTemplateColumns: "2fr 1fr", gap: "12px", marginBottom: "12px" }}>
+        {/* Main top row — both cards now full-width and equal size, stacked */}
+        <div className="bm-cat-top" style={{ display: "grid", gridTemplateColumns: "1fr", gap: "12px", marginBottom: "12px" }}>
           <CategoryCard cat={CATEGORIES[0]} delay={0} />
           <CategoryCard cat={CATEGORIES[1]} delay={0.1} />
         </div>
@@ -748,7 +748,8 @@ function ProcessTimeline() {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
-// 6. TESTIMONIALS
+// 6. TESTIMONIALS — currently disabled (not rendered in HomePage below).
+// Left in place so it can be re-enabled later with no rework needed.
 // ═══════════════════════════════════════════════════════════════════════════
 const TESTIMONIALS = [
   { quote: "Depuis qu'on travaille avec Batimato, nos délais d'approvisionnement ont été divisés par deux. Le service client répond en moins d'une heure — c'est rare dans le secteur.", name: "Karim Benali", role: "Chef de chantier, Groupe Vinci", initials: "KB" },
@@ -1142,7 +1143,7 @@ export default function HomePage() {
       <ExpertiseStrip />
       {/* <Projects /> */}
       <ProcessTimeline />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <CTABanner />
       <Footer />
     </main>

@@ -1,0 +1,180 @@
+{
+  "category": {
+    "slug": "finition-tous-temps",
+    "parentLabel": "Peinture Extérieure",
+    "parentHref": "/peintures",
+    "name": "Finition Tous-Temps",
+    "tagline": "Résistance Pluie, UV & Gel",
+    "description": "Peintures de finition façade résistantes à toutes les conditions climatiques : pluie battante, exposition UV et cycles de gel, pour une protection longue durée.",
+    "stats": {
+      "products": 26,
+      "brands": 6,
+      "delivery": "J+1"
+    }
+  },
+  "brands": [
+    {
+      "name": "Tollens",
+      "count": 7
+    },
+    {
+      "name": "Seigneurie",
+      "count": 6
+    },
+    {
+      "name": "V33",
+      "count": 5
+    },
+    {
+      "name": "Zolpan",
+      "count": 4
+    },
+    {
+      "name": "Ripolin",
+      "count": 2
+    },
+    {
+      "name": "Julien",
+      "count": 2
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Façade",
+      "count": 18
+    },
+    {
+      "name": "Volet & Bardage",
+      "count": 8
+    },
+    {
+      "name": "Béton",
+      "count": 6
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 150,
+    "currentMin": 0,
+    "currentMax": 90
+  },
+  "activeFilters": [],
+  "totalCount": 26,
+  "page": 1,
+  "totalPages": 4,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés",
+    "Meilleures ventes"
+  ],
+  "products": [
+    {
+      "id": "TLN-TTT-BLC-15L",
+      "sku": "TLN-TTT-BLC-15L",
+      "brand": "Tollens",
+      "name": "Peinture Façade Tous-Temps Blanc 15L",
+      "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "15 L",
+        "FAÇADE",
+        "ANTI-UV"
+      ],
+      "price": 84.9,
+      "compareAtPrice": 96.9,
+      "unitPrice": "5,66 €/L",
+      "stock": "in_stock",
+      "badge": {
+        "label": "PRO",
+        "tone": "dark"
+      },
+      "discount": "-12%"
+    },
+    {
+      "id": "SGN-TTT-GRI-10L",
+      "sku": "SGN-TTT-GRI-10L",
+      "brand": "Seigneurie",
+      "name": "Peinture Façade Résist. Intempéries Gris 10L",
+      "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "10 L",
+        "FAÇADE",
+        "ANTI-PLUIE"
+      ],
+      "price": 69.9,
+      "compareAtPrice": null,
+      "unitPrice": "6,99 €/L",
+      "stock": "in_stock",
+      "badge": {
+        "label": "NOUVEAU",
+        "tone": "stock"
+      }
+    },
+    {
+      "id": "V33-TTT-BLC-5L",
+      "sku": "V33-TTT-BLC-5L",
+      "brand": "V33",
+      "name": "Peinture Volets & Bardage Tous-Temps Blanc 5L",
+      "image": "https://images.unsplash.com/photo-1595079676339-1534801ad6cf?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "5 L",
+        "VOLET & BARDAGE"
+      ],
+      "price": 44.9,
+      "compareAtPrice": null,
+      "unitPrice": "8,98 €/L",
+      "stock": "in_stock",
+      "ribbon": "STOCK"
+    },
+    {
+      "id": "ZLP-TTT-GRI-15L",
+      "sku": "ZLP-TTT-GRI-15L",
+      "brand": "Zolpan",
+      "name": "Peinture Façade Anti-Gel Gris Clair 15L",
+      "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "15 L",
+        "FAÇADE",
+        "ANTI-GEL"
+      ],
+      "price": 89.9,
+      "compareAtPrice": 99.9,
+      "unitPrice": "5,99 €/L",
+      "stock": "low_stock",
+      "cornerBadge": "A+"
+    },
+    {
+      "id": "RIP-TTT-BLC-2L5",
+      "sku": "RIP-TTT-BLC-2L5",
+      "brand": "Ripolin",
+      "name": "Peinture Bardage Tous-Temps Blanc 2,5L",
+      "image": "https://images.unsplash.com/photo-1595079676339-1534801ad6cf?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "2.5 L",
+        "VOLET & BARDAGE"
+      ],
+      "price": 32.9,
+      "compareAtPrice": null,
+      "unitPrice": "13,16 €/L",
+      "stock": "in_stock"
+    },
+    {
+      "id": "JUL-TTT-GRI-10L",
+      "sku": "JUL-TTT-GRI-10L",
+      "brand": "Julien",
+      "name": "Peinture Façade Résist. UV Gris 10L",
+      "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "10 L",
+        "FAÇADE",
+        "ANTI-UV"
+      ],
+      "price": 64.9,
+      "compareAtPrice": null,
+      "unitPrice": "6,49 €/L",
+      "stock": "out_of_stock",
+      "ribbon": "RUPTURE"
+    }
+  ]
+}

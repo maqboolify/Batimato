@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "batteries-et-chargeurs-electroportatifs",
+    "parentLabel": "Consommables",
+    "parentHref": "/outillage/consommables",
+    "name": "Batteries & chargeurs électroportatifs",
+    "tagline": "l'autonomie de vos outils sur batterie",
+    "description": "Batteries et chargeurs compatibles avec les principales gammes d'outils électroportatifs, pour garder vos machines toujours prêtes.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Makita",
+      "count": 2
+    },
+    {
+      "name": "Bosch Professional",
+      "count": 2
+    },
+    {
+      "name": "DeWalt",
+      "count": 2
+    },
+    {
+      "name": "Milwaukee",
+      "count": 2
+    },
+    {
+      "name": "Metabo",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "18V",
+      "count": 2
+    },
+    {
+      "name": "12V",
+      "count": 2
+    },
+    {
+      "name": "Multi-outils",
+      "count": 2
+    },
+    {
+      "name": "Chargeur rapide",
+      "count": 2
+    },
+    {
+      "name": "Chantier",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "batteries-et-chargeurs-electroportatifs-01",
+      "sku": "MAK-BATT-001",
+      "brand": "Makita",
+      "name": "Makita Batterie / chargeur Pro - Lot de 5",
+      "image": "/products/batteries-et-chargeurs-electroportatifs/1.jpg",
+      "tags": [
+        "18V",
+        "Lot de 5"
+      ],
+      "price": 29.51,
+      "compareAtPrice": 35.41,
+      "unitPrice": "29.51 € / lot de 5",
+      "badge": {
+        "label": "Carbure",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "batteries-et-chargeurs-electroportatifs-02",
+      "sku": "BOS-BATT-002",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Batterie / chargeur Renforcé - Lot de 10",
+      "image": "/products/batteries-et-chargeurs-electroportatifs/2.jpg",
+      "tags": [
+        "12V",
+        "Lot de 10"
+      ],
+      "price": 33.63,
+      "compareAtPrice": null,
+      "unitPrice": "33.63 € / lot de 10",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "batteries-et-chargeurs-electroportatifs-03",
+      "sku": "DEW-BATT-003",
+      "brand": "DeWalt",
+      "name": "DeWalt Batterie / chargeur HSS - Lot de 25",
+      "image": "/products/batteries-et-chargeurs-electroportatifs/3.jpg",
+      "tags": [
+        "Multi-outils",
+        "Lot de 25"
+      ],
+      "price": 9.47,
+      "compareAtPrice": null,
+      "unitPrice": "9.47 € / lot de 25",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "batteries-et-chargeurs-electroportatifs-04",
+      "sku": "MIL-BATT-004",
+      "brand": "Milwaukee",
+      "name": "Milwaukee Batterie / chargeur Carbure - Lot de 50",
+      "image": "/products/batteries-et-chargeurs-electroportatifs/4.jpg",
+      "tags": [
+        "Chargeur rapide",
+        "Lot de 50"
+      ],
+      "price": 38.61,
+      "compareAtPrice": 46.33,
+      "unitPrice": "38.61 € / lot de 50",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "batteries-et-chargeurs-electroportatifs-05",
+      "sku": "MET-BATT-005",
+      "brand": "Metabo",
+      "name": "Metabo Batterie / chargeur Longue Durée - Boîte 100",
+      "image": "/products/batteries-et-chargeurs-electroportatifs/5.jpg",
+      "tags": [
+        "Chantier",
+        "Boîte 100"
+      ],
+      "price": 47.46,
+      "compareAtPrice": null,
+      "unitPrice": "47.46 € / boîte 100",
+      "badge": {
+        "label": "Carbure",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "batteries-et-chargeurs-electroportatifs-06",
+      "sku": "MAK-BATT-006",
+      "brand": "Makita",
+      "name": "Makita Batterie / chargeur Multi-matériaux - Coffret",
+      "image": "/products/batteries-et-chargeurs-electroportatifs/6.jpg",
+      "tags": [
+        "18V",
+        "Coffret"
+      ],
+      "price": 29.44,
+      "compareAtPrice": null,
+      "unitPrice": "29.44 € / coffret",
+      "badge": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "batteries-et-chargeurs-electroportatifs-07",
+      "sku": "BOS-BATT-007",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Batterie / chargeur Expert - Unité",
+      "image": "/products/batteries-et-chargeurs-electroportatifs/7.jpg",
+      "tags": [
+        "12V",
+        "Unité"
+      ],
+      "price": 18.27,
+      "compareAtPrice": 21.92,
+      "unitPrice": "18.27 € / unité",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "batteries-et-chargeurs-electroportatifs-08",
+      "sku": "DEW-BATT-008",
+      "brand": "DeWalt",
+      "name": "DeWalt Batterie / chargeur Chantier - Lot de 5",
+      "image": "/products/batteries-et-chargeurs-electroportatifs/8.jpg",
+      "tags": [
+        "Multi-outils",
+        "Lot de 5"
+      ],
+      "price": 10.6,
+      "compareAtPrice": null,
+      "unitPrice": "10.6 € / lot de 5",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "batteries-et-chargeurs-electroportatifs-09",
+      "sku": "MIL-BATT-009",
+      "brand": "Milwaukee",
+      "name": "Milwaukee Batterie / chargeur Standard - Lot de 10",
+      "image": "/products/batteries-et-chargeurs-electroportatifs/9.jpg",
+      "tags": [
+        "Chargeur rapide",
+        "Lot de 10"
+      ],
+      "price": 51.65,
+      "compareAtPrice": null,
+      "unitPrice": "51.65 € / lot de 10",
+      "badge": {
+        "label": "Carbure",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

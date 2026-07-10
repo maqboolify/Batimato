@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "cles-et-pinces",
+    "parentLabel": "Outillage et outil à main",
+    "parentHref": "/outillage/outillage-et-outil-a-main",
+    "name": "Clés et pinces",
+    "tagline": "le serrage adapté à chaque écrou",
+    "description": "Clés plates, à molette et pinces multiprises pour interventions en plomberie, électricité et montage mécanique.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Facom",
+      "count": 2
+    },
+    {
+      "name": "Stanley",
+      "count": 2
+    },
+    {
+      "name": "Irwin",
+      "count": 2
+    },
+    {
+      "name": "Knipex",
+      "count": 2
+    },
+    {
+      "name": "DeWalt",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Métal",
+      "count": 2
+    },
+    {
+      "name": "Plomberie",
+      "count": 2
+    },
+    {
+      "name": "Électricité",
+      "count": 2
+    },
+    {
+      "name": "Multi-usages",
+      "count": 2
+    },
+    {
+      "name": "Serrage",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "cles-et-pinces-01",
+      "sku": "FAC-CLES-001",
+      "brand": "Facom",
+      "name": "Facom Clé / pince Pro - Unité",
+      "image": "/products/cles-et-pinces/1.jpg",
+      "tags": [
+        "Métal",
+        "Unité"
+      ],
+      "price": 34.45,
+      "compareAtPrice": 41.34,
+      "unitPrice": "34.45 € / unité",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "cles-et-pinces-02",
+      "sku": "STA-CLES-002",
+      "brand": "Stanley",
+      "name": "Stanley Clé / pince Renforcé - Lot de 2",
+      "image": "/products/cles-et-pinces/2.jpg",
+      "tags": [
+        "Plomberie",
+        "Lot de 2"
+      ],
+      "price": 39.9,
+      "compareAtPrice": null,
+      "unitPrice": "39.9 € / lot de 2",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "cles-et-pinces-03",
+      "sku": "IRW-CLES-003",
+      "brand": "Irwin",
+      "name": "Irwin Clé / pince Ergonomique - Lot de 3",
+      "image": "/products/cles-et-pinces/3.jpg",
+      "tags": [
+        "Électricité",
+        "Lot de 3"
+      ],
+      "price": 64.52,
+      "compareAtPrice": null,
+      "unitPrice": "64.52 € / lot de 3",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "cles-et-pinces-04",
+      "sku": "KNI-CLES-004",
+      "brand": "Knipex",
+      "name": "Knipex Clé / pince Robuste - Coffret complet",
+      "image": "/products/cles-et-pinces/4.jpg",
+      "tags": [
+        "Multi-usages",
+        "Coffret complet"
+      ],
+      "price": 52.21,
+      "compareAtPrice": 62.65,
+      "unitPrice": "52.21 € / coffret complet",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "cles-et-pinces-05",
+      "sku": "DEW-CLES-005",
+      "brand": "DeWalt",
+      "name": "DeWalt Clé / pince Compact - Set pro",
+      "image": "/products/cles-et-pinces/5.jpg",
+      "tags": [
+        "Serrage",
+        "Set pro"
+      ],
+      "price": 58.98,
+      "compareAtPrice": null,
+      "unitPrice": "58.98 € / set pro",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "cles-et-pinces-06",
+      "sku": "FAC-CLES-006",
+      "brand": "Facom",
+      "name": "Facom Clé / pince Expert - Format XL",
+      "image": "/products/cles-et-pinces/6.jpg",
+      "tags": [
+        "Métal",
+        "Format XL"
+      ],
+      "price": 6.96,
+      "compareAtPrice": null,
+      "unitPrice": "6.96 € / format xl",
+      "badge": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "cles-et-pinces-07",
+      "sku": "STA-CLES-007",
+      "brand": "Stanley",
+      "name": "Stanley Clé / pince Chantier - Format compact",
+      "image": "/products/cles-et-pinces/7.jpg",
+      "tags": [
+        "Plomberie",
+        "Format compact"
+      ],
+      "price": 65.18,
+      "compareAtPrice": 78.22,
+      "unitPrice": "65.18 € / format compact",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "cles-et-pinces-08",
+      "sku": "IRW-CLES-008",
+      "brand": "Irwin",
+      "name": "Irwin Clé / pince Standard - Unité",
+      "image": "/products/cles-et-pinces/8.jpg",
+      "tags": [
+        "Électricité",
+        "Unité"
+      ],
+      "price": 21.1,
+      "compareAtPrice": null,
+      "unitPrice": "21.1 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "cles-et-pinces-09",
+      "sku": "KNI-CLES-009",
+      "brand": "Knipex",
+      "name": "Knipex Clé / pince Confort - Lot de 2",
+      "image": "/products/cles-et-pinces/9.jpg",
+      "tags": [
+        "Multi-usages",
+        "Lot de 2"
+      ],
+      "price": 32.06,
+      "compareAtPrice": null,
+      "unitPrice": "32.06 € / lot de 2",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

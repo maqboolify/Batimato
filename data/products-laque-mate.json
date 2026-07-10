@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "laque-mate",
+    "parentLabel": "Sous-couche & Primaire",
+    "parentHref": "/peintures/sous-couche-primaire",
+    "name": "Laque mate",
+    "tagline": "une finition sans reflet, tout en élégance",
+    "description": "Laques finition mate pour boiseries, portes et radiateurs, offrant un rendu contemporain qui masque les petites imperfections.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Ripolin",
+      "count": 2
+    },
+    {
+      "name": "Tollens",
+      "count": 2
+    },
+    {
+      "name": "V33",
+      "count": 2
+    },
+    {
+      "name": "Julien",
+      "count": 2
+    },
+    {
+      "name": "Levis",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Boiseries",
+      "count": 2
+    },
+    {
+      "name": "Radiateur",
+      "count": 2
+    },
+    {
+      "name": "Porte",
+      "count": 2
+    },
+    {
+      "name": "Fenêtre",
+      "count": 2
+    },
+    {
+      "name": "Meuble",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "laque-mate-01",
+      "sku": "RIP-LAQU-001",
+      "brand": "Ripolin",
+      "name": "Ripolin Laque mate Pro 0.5L",
+      "image": "/products/laque-mate/1.jpg",
+      "tags": [
+        "Boiseries",
+        "0.5L"
+      ],
+      "price": 76.25,
+      "compareAtPrice": 91.5,
+      "unitPrice": "152.5 €/L",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "laque-mate-02",
+      "sku": "TOL-LAQU-002",
+      "brand": "Tollens",
+      "name": "Tollens Laque mate Premium 0.75L",
+      "image": "/products/laque-mate/2.jpg",
+      "tags": [
+        "Radiateur",
+        "0.75L"
+      ],
+      "price": 59.38,
+      "compareAtPrice": null,
+      "unitPrice": "79.17 €/L",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "laque-mate-03",
+      "sku": "V33-LAQU-003",
+      "brand": "V33",
+      "name": "V33 Laque mate Extra 1L",
+      "image": "/products/laque-mate/3.jpg",
+      "tags": [
+        "Porte",
+        "1L"
+      ],
+      "price": 78.84,
+      "compareAtPrice": null,
+      "unitPrice": "78.84 €/L",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "laque-mate-04",
+      "sku": "JUL-LAQU-004",
+      "brand": "Julien",
+      "name": "Julien Laque mate Confort 2.5L",
+      "image": "/products/laque-mate/4.jpg",
+      "tags": [
+        "Fenêtre",
+        "2.5L"
+      ],
+      "price": 56.09,
+      "compareAtPrice": 67.31,
+      "unitPrice": "22.44 €/L",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "laque-mate-05",
+      "sku": "LEV-LAQU-005",
+      "brand": "Levis",
+      "name": "Levis Laque mate Longue Durée 3L",
+      "image": "/products/laque-mate/5.jpg",
+      "tags": [
+        "Meuble",
+        "3L"
+      ],
+      "price": 66.27,
+      "compareAtPrice": null,
+      "unitPrice": "22.09 €/L",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "laque-mate-06",
+      "sku": "RIP-LAQU-006",
+      "brand": "Ripolin",
+      "name": "Ripolin Laque mate Multi-supports 5L",
+      "image": "/products/laque-mate/6.jpg",
+      "tags": [
+        "Boiseries",
+        "5L"
+      ],
+      "price": 13.57,
+      "compareAtPrice": null,
+      "unitPrice": "2.71 €/L",
+      "badge": {
+        "label": "Eco-responsable",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "laque-mate-07",
+      "sku": "TOL-LAQU-007",
+      "brand": "Tollens",
+      "name": "Tollens Laque mate Expert 10L",
+      "image": "/products/laque-mate/7.jpg",
+      "tags": [
+        "Radiateur",
+        "10L"
+      ],
+      "price": 28.13,
+      "compareAtPrice": 33.76,
+      "unitPrice": "2.81 €/L",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "laque-mate-08",
+      "sku": "V33-LAQU-008",
+      "brand": "V33",
+      "name": "V33 Laque mate Classic 0.5L",
+      "image": "/products/laque-mate/8.jpg",
+      "tags": [
+        "Porte",
+        "0.5L"
+      ],
+      "price": 33.05,
+      "compareAtPrice": null,
+      "unitPrice": "66.1 €/L",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "laque-mate-09",
+      "sku": "JUL-LAQU-009",
+      "brand": "Julien",
+      "name": "Julien Laque mate Renov 0.75L",
+      "image": "/products/laque-mate/9.jpg",
+      "tags": [
+        "Fenêtre",
+        "0.75L"
+      ],
+      "price": 16.28,
+      "compareAtPrice": null,
+      "unitPrice": "21.71 €/L",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

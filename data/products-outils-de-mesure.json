@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "outils-de-mesure",
+    "parentLabel": "Outillage et outil à main",
+    "parentHref": "/outillage/outillage-et-outil-a-main",
+    "name": "Outils de mesure",
+    "tagline": "précision au millimètre sur chantier",
+    "description": "Mètres, niveaux et équerres pour des relevés précis en intérieur comme en extérieur, sur tous types de chantier.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Stanley",
+      "count": 2
+    },
+    {
+      "name": "Bosch Professional",
+      "count": 2
+    },
+    {
+      "name": "Facom",
+      "count": 2
+    },
+    {
+      "name": "Stabila",
+      "count": 2
+    },
+    {
+      "name": "Leica",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Chantier",
+      "count": 2
+    },
+    {
+      "name": "Intérieur",
+      "count": 2
+    },
+    {
+      "name": "Extérieur",
+      "count": 2
+    },
+    {
+      "name": "Menuiserie",
+      "count": 2
+    },
+    {
+      "name": "Maçonnerie",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "outils-de-mesure-01",
+      "sku": "STA-OUTI-001",
+      "brand": "Stanley",
+      "name": "Stanley Outil de mesure Pro - Unité",
+      "image": "/products/outils-de-mesure/1.jpg",
+      "tags": [
+        "Chantier",
+        "Unité"
+      ],
+      "price": 68.14,
+      "compareAtPrice": 81.77,
+      "unitPrice": "68.14 € / unité",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "outils-de-mesure-02",
+      "sku": "BOS-OUTI-002",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Outil de mesure Renforcé - Lot de 2",
+      "image": "/products/outils-de-mesure/2.jpg",
+      "tags": [
+        "Intérieur",
+        "Lot de 2"
+      ],
+      "price": 20.68,
+      "compareAtPrice": null,
+      "unitPrice": "20.68 € / lot de 2",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "outils-de-mesure-03",
+      "sku": "FAC-OUTI-003",
+      "brand": "Facom",
+      "name": "Facom Outil de mesure Ergonomique - Lot de 3",
+      "image": "/products/outils-de-mesure/3.jpg",
+      "tags": [
+        "Extérieur",
+        "Lot de 3"
+      ],
+      "price": 69.66,
+      "compareAtPrice": null,
+      "unitPrice": "69.66 € / lot de 3",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "outils-de-mesure-04",
+      "sku": "STA-OUTI-004",
+      "brand": "Stabila",
+      "name": "Stabila Outil de mesure Robuste - Coffret complet",
+      "image": "/products/outils-de-mesure/4.jpg",
+      "tags": [
+        "Menuiserie",
+        "Coffret complet"
+      ],
+      "price": 39.19,
+      "compareAtPrice": 47.03,
+      "unitPrice": "39.19 € / coffret complet",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "outils-de-mesure-05",
+      "sku": "LEI-OUTI-005",
+      "brand": "Leica",
+      "name": "Leica Outil de mesure Compact - Set pro",
+      "image": "/products/outils-de-mesure/5.jpg",
+      "tags": [
+        "Maçonnerie",
+        "Set pro"
+      ],
+      "price": 30.19,
+      "compareAtPrice": null,
+      "unitPrice": "30.19 € / set pro",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "outils-de-mesure-06",
+      "sku": "STA-OUTI-006",
+      "brand": "Stanley",
+      "name": "Stanley Outil de mesure Expert - Format XL",
+      "image": "/products/outils-de-mesure/6.jpg",
+      "tags": [
+        "Chantier",
+        "Format XL"
+      ],
+      "price": 75.23,
+      "compareAtPrice": null,
+      "unitPrice": "75.23 € / format xl",
+      "badge": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "outils-de-mesure-07",
+      "sku": "BOS-OUTI-007",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Outil de mesure Chantier - Format compact",
+      "image": "/products/outils-de-mesure/7.jpg",
+      "tags": [
+        "Intérieur",
+        "Format compact"
+      ],
+      "price": 13.11,
+      "compareAtPrice": 15.73,
+      "unitPrice": "13.11 € / format compact",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "outils-de-mesure-08",
+      "sku": "FAC-OUTI-008",
+      "brand": "Facom",
+      "name": "Facom Outil de mesure Standard - Unité",
+      "image": "/products/outils-de-mesure/8.jpg",
+      "tags": [
+        "Extérieur",
+        "Unité"
+      ],
+      "price": 84.21,
+      "compareAtPrice": null,
+      "unitPrice": "84.21 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "outils-de-mesure-09",
+      "sku": "STA-OUTI-009",
+      "brand": "Stabila",
+      "name": "Stabila Outil de mesure Confort - Lot de 2",
+      "image": "/products/outils-de-mesure/9.jpg",
+      "tags": [
+        "Menuiserie",
+        "Lot de 2"
+      ],
+      "price": 30.61,
+      "compareAtPrice": null,
+      "unitPrice": "30.61 € / lot de 2",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

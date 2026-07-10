@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "scie-a-metaux-et-bois",
+    "parentLabel": "Outillage et outil à main",
+    "parentHref": "/outillage/outillage-et-outil-a-main",
+    "name": "Scie à métaux et bois",
+    "tagline": "une découpe manuelle précise et rapide",
+    "description": "Scies à métaux et scies égoïnes pour couper bois, métal et PVC avec précision, en atelier comme sur chantier.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Stanley",
+      "count": 2
+    },
+    {
+      "name": "Facom",
+      "count": 2
+    },
+    {
+      "name": "Irwin",
+      "count": 2
+    },
+    {
+      "name": "Bahco",
+      "count": 2
+    },
+    {
+      "name": "DeWalt",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Bois",
+      "count": 2
+    },
+    {
+      "name": "Métal",
+      "count": 2
+    },
+    {
+      "name": "PVC",
+      "count": 2
+    },
+    {
+      "name": "Multi-matériaux",
+      "count": 2
+    },
+    {
+      "name": "Menuiserie",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "scie-a-metaux-et-bois-01",
+      "sku": "STA-SCIE-001",
+      "brand": "Stanley",
+      "name": "Stanley Scie à main Pro - Unité",
+      "image": "/products/scie-a-metaux-et-bois/1.jpg",
+      "tags": [
+        "Bois",
+        "Unité"
+      ],
+      "price": 49.55,
+      "compareAtPrice": 59.46,
+      "unitPrice": "49.55 € / unité",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "scie-a-metaux-et-bois-02",
+      "sku": "FAC-SCIE-002",
+      "brand": "Facom",
+      "name": "Facom Scie à main Renforcé - Lot de 2",
+      "image": "/products/scie-a-metaux-et-bois/2.jpg",
+      "tags": [
+        "Métal",
+        "Lot de 2"
+      ],
+      "price": 85.53,
+      "compareAtPrice": null,
+      "unitPrice": "85.53 € / lot de 2",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "scie-a-metaux-et-bois-03",
+      "sku": "IRW-SCIE-003",
+      "brand": "Irwin",
+      "name": "Irwin Scie à main Ergonomique - Lot de 3",
+      "image": "/products/scie-a-metaux-et-bois/3.jpg",
+      "tags": [
+        "PVC",
+        "Lot de 3"
+      ],
+      "price": 38.78,
+      "compareAtPrice": null,
+      "unitPrice": "38.78 € / lot de 3",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "scie-a-metaux-et-bois-04",
+      "sku": "BAH-SCIE-004",
+      "brand": "Bahco",
+      "name": "Bahco Scie à main Robuste - Coffret complet",
+      "image": "/products/scie-a-metaux-et-bois/4.jpg",
+      "tags": [
+        "Multi-matériaux",
+        "Coffret complet"
+      ],
+      "price": 59.47,
+      "compareAtPrice": 71.36,
+      "unitPrice": "59.47 € / coffret complet",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "scie-a-metaux-et-bois-05",
+      "sku": "DEW-SCIE-005",
+      "brand": "DeWalt",
+      "name": "DeWalt Scie à main Compact - Set pro",
+      "image": "/products/scie-a-metaux-et-bois/5.jpg",
+      "tags": [
+        "Menuiserie",
+        "Set pro"
+      ],
+      "price": 21.84,
+      "compareAtPrice": null,
+      "unitPrice": "21.84 € / set pro",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "scie-a-metaux-et-bois-06",
+      "sku": "STA-SCIE-006",
+      "brand": "Stanley",
+      "name": "Stanley Scie à main Expert - Format XL",
+      "image": "/products/scie-a-metaux-et-bois/6.jpg",
+      "tags": [
+        "Bois",
+        "Format XL"
+      ],
+      "price": 84.7,
+      "compareAtPrice": null,
+      "unitPrice": "84.7 € / format xl",
+      "badge": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "scie-a-metaux-et-bois-07",
+      "sku": "FAC-SCIE-007",
+      "brand": "Facom",
+      "name": "Facom Scie à main Chantier - Format compact",
+      "image": "/products/scie-a-metaux-et-bois/7.jpg",
+      "tags": [
+        "Métal",
+        "Format compact"
+      ],
+      "price": 25.2,
+      "compareAtPrice": 30.24,
+      "unitPrice": "25.2 € / format compact",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "scie-a-metaux-et-bois-08",
+      "sku": "IRW-SCIE-008",
+      "brand": "Irwin",
+      "name": "Irwin Scie à main Standard - Unité",
+      "image": "/products/scie-a-metaux-et-bois/8.jpg",
+      "tags": [
+        "PVC",
+        "Unité"
+      ],
+      "price": 50.41,
+      "compareAtPrice": null,
+      "unitPrice": "50.41 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "scie-a-metaux-et-bois-09",
+      "sku": "BAH-SCIE-009",
+      "brand": "Bahco",
+      "name": "Bahco Scie à main Confort - Lot de 2",
+      "image": "/products/scie-a-metaux-et-bois/9.jpg",
+      "tags": [
+        "Multi-matériaux",
+        "Lot de 2"
+      ],
+      "price": 62.44,
+      "compareAtPrice": null,
+      "unitPrice": "62.44 € / lot de 2",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

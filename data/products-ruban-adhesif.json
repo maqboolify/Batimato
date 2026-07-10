@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "ruban-adhesif",
+    "parentLabel": "Protection sol & EPI",
+    "parentHref": "/preparation-materiaux/protection-sol-epi",
+    "name": "Ruban Adhésif",
+    "tagline": "des lignes nettes, sans bavure",
+    "description": "Rubans adhésifs de masquage pour tous supports, garantissant des lignes précises et un démasquage propre sans arrachage de peinture.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "3M",
+      "count": 2
+    },
+    {
+      "name": "Presto",
+      "count": 2
+    },
+    {
+      "name": "Anza",
+      "count": 2
+    },
+    {
+      "name": "Storch",
+      "count": 2
+    },
+    {
+      "name": "SPI",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Vitrerie",
+      "count": 2
+    },
+    {
+      "name": "Boiseries",
+      "count": 2
+    },
+    {
+      "name": "Mur",
+      "count": 2
+    },
+    {
+      "name": "Sol",
+      "count": 2
+    },
+    {
+      "name": "Multi-supports",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "ruban-adhesif-01",
+      "sku": "3M-RUBA-001",
+      "brand": "3M",
+      "name": "3M Ruban adhésif Pro Boîte 50",
+      "image": "/products/ruban-adhesif/1.jpg",
+      "tags": [
+        "Vitrerie",
+        "Boîte 50"
+      ],
+      "price": 20.22,
+      "compareAtPrice": 24.26,
+      "unitPrice": "20.22 € / boîte 50",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "ruban-adhesif-02",
+      "sku": "PRE-RUBA-002",
+      "brand": "Presto",
+      "name": "Presto Ruban adhésif Premium Rouleau",
+      "image": "/products/ruban-adhesif/2.jpg",
+      "tags": [
+        "Boiseries",
+        "Rouleau"
+      ],
+      "price": 10.18,
+      "compareAtPrice": null,
+      "unitPrice": "10.18 € / rouleau",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "ruban-adhesif-03",
+      "sku": "ANZ-RUBA-003",
+      "brand": "Anza",
+      "name": "Anza Ruban adhésif Confort Lot de 5",
+      "image": "/products/ruban-adhesif/3.jpg",
+      "tags": [
+        "Mur",
+        "Lot de 5"
+      ],
+      "price": 41.32,
+      "compareAtPrice": null,
+      "unitPrice": "41.32 € / lot de 5",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "ruban-adhesif-04",
+      "sku": "STO-RUBA-004",
+      "brand": "Storch",
+      "name": "Storch Ruban adhésif Longue Durée Taille unique",
+      "image": "/products/ruban-adhesif/4.jpg",
+      "tags": [
+        "Sol",
+        "Taille unique"
+      ],
+      "price": 8.77,
+      "compareAtPrice": 10.52,
+      "unitPrice": "8.77 € / taille unique",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "ruban-adhesif-05",
+      "sku": "SPI-RUBA-005",
+      "brand": "SPI",
+      "name": "SPI Ruban adhésif Multi-usages Lot de 10",
+      "image": "/products/ruban-adhesif/5.jpg",
+      "tags": [
+        "Multi-supports",
+        "Lot de 10"
+      ],
+      "price": 46.51,
+      "compareAtPrice": null,
+      "unitPrice": "46.51 € / lot de 10",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "ruban-adhesif-06",
+      "sku": "3M-RUBA-006",
+      "brand": "3M",
+      "name": "3M Ruban adhésif Expert Pack pro",
+      "image": "/products/ruban-adhesif/6.jpg",
+      "tags": [
+        "Vitrerie",
+        "Pack pro"
+      ],
+      "price": 24.2,
+      "compareAtPrice": null,
+      "unitPrice": "24.2 € / pack pro",
+      "badge": {
+        "label": "Certifié CE",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "ruban-adhesif-07",
+      "sku": "PRE-RUBA-007",
+      "brand": "Presto",
+      "name": "Presto Ruban adhésif Classic Unité",
+      "image": "/products/ruban-adhesif/7.jpg",
+      "tags": [
+        "Boiseries",
+        "Unité"
+      ],
+      "price": 28.84,
+      "compareAtPrice": 34.61,
+      "unitPrice": "28.84 € / unité",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "ruban-adhesif-08",
+      "sku": "ANZ-RUBA-008",
+      "brand": "Anza",
+      "name": "Anza Ruban adhésif Chantier Boîte 50",
+      "image": "/products/ruban-adhesif/8.jpg",
+      "tags": [
+        "Mur",
+        "Boîte 50"
+      ],
+      "price": 19.02,
+      "compareAtPrice": null,
+      "unitPrice": "19.02 € / boîte 50",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "ruban-adhesif-09",
+      "sku": "STO-RUBA-009",
+      "brand": "Storch",
+      "name": "Storch Ruban adhésif Renfort Rouleau",
+      "image": "/products/ruban-adhesif/9.jpg",
+      "tags": [
+        "Sol",
+        "Rouleau"
+      ],
+      "price": 25.68,
+      "compareAtPrice": null,
+      "unitPrice": "25.68 € / rouleau",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

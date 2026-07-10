@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "outillage-de-jardin-pro",
+    "parentLabel": "Outillage électroportatif",
+    "parentHref": "/outillage/outillage-electroportatif",
+    "name": "Outillage de jardin Pro",
+    "tagline": "l'entretien extérieur, version professionnelle",
+    "description": "Taille-haies, tondeuses et débroussailleuses professionnelles sur batterie ou thermique pour l'entretien des espaces verts.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Makita",
+      "count": 2
+    },
+    {
+      "name": "Stihl",
+      "count": 2
+    },
+    {
+      "name": "Husqvarna",
+      "count": 2
+    },
+    {
+      "name": "Ryobi",
+      "count": 2
+    },
+    {
+      "name": "Einhell",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Jardin",
+      "count": 2
+    },
+    {
+      "name": "Haie",
+      "count": 2
+    },
+    {
+      "name": "Pelouse",
+      "count": 2
+    },
+    {
+      "name": "Arbustes",
+      "count": 2
+    },
+    {
+      "name": "Extérieur",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 500,
+    "currentMin": 0,
+    "currentMax": 500
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "outillage-de-jardin-pro-01",
+      "sku": "MAK-OUTI-001",
+      "brand": "Makita",
+      "name": "Makita Outil de jardin Pro - Solo (nu)",
+      "image": "/products/outillage-de-jardin-pro/1.jpg",
+      "tags": [
+        "Jardin",
+        "Solo (nu)"
+      ],
+      "price": 388.35,
+      "compareAtPrice": 466.02,
+      "unitPrice": "388.35 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "outillage-de-jardin-pro-02",
+      "sku": "STI-OUTI-002",
+      "brand": "Stihl",
+      "name": "Stihl Outil de jardin Brushless - 1 batterie 4Ah",
+      "image": "/products/outillage-de-jardin-pro/2.jpg",
+      "tags": [
+        "Haie",
+        "1 batterie 4Ah"
+      ],
+      "price": 96.79,
+      "compareAtPrice": null,
+      "unitPrice": "96.79 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "outillage-de-jardin-pro-03",
+      "sku": "HUS-OUTI-003",
+      "brand": "Husqvarna",
+      "name": "Husqvarna Outil de jardin Robuste - 2 batteries 5Ah",
+      "image": "/products/outillage-de-jardin-pro/3.jpg",
+      "tags": [
+        "Pelouse",
+        "2 batteries 5Ah"
+      ],
+      "price": 378.84,
+      "compareAtPrice": null,
+      "unitPrice": "378.84 € / unité",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "outillage-de-jardin-pro-04",
+      "sku": "RYO-OUTI-004",
+      "brand": "Ryobi",
+      "name": "Ryobi Outil de jardin Compact - Coffret complet",
+      "image": "/products/outillage-de-jardin-pro/4.jpg",
+      "tags": [
+        "Arbustes",
+        "Coffret complet"
+      ],
+      "price": 124.28,
+      "compareAtPrice": 149.14,
+      "unitPrice": "124.28 € / unité",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "outillage-de-jardin-pro-05",
+      "sku": "EIN-OUTI-005",
+      "brand": "Einhell",
+      "name": "Einhell Outil de jardin Longue Durée - Filaire secteur",
+      "image": "/products/outillage-de-jardin-pro/5.jpg",
+      "tags": [
+        "Extérieur",
+        "Filaire secteur"
+      ],
+      "price": 78.86,
+      "compareAtPrice": null,
+      "unitPrice": "78.86 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "outillage-de-jardin-pro-06",
+      "sku": "MAK-OUTI-006",
+      "brand": "Makita",
+      "name": "Makita Outil de jardin XR - Kit chargeur",
+      "image": "/products/outillage-de-jardin-pro/6.jpg",
+      "tags": [
+        "Jardin",
+        "Kit chargeur"
+      ],
+      "price": 164.99,
+      "compareAtPrice": null,
+      "unitPrice": "164.99 € / unité",
+      "badge": {
+        "label": "Garantie 3 ans",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "outillage-de-jardin-pro-07",
+      "sku": "STI-OUTI-007",
+      "brand": "Stihl",
+      "name": "Stihl Outil de jardin Expert - Machine seule",
+      "image": "/products/outillage-de-jardin-pro/7.jpg",
+      "tags": [
+        "Haie",
+        "Machine seule"
+      ],
+      "price": 284.18,
+      "compareAtPrice": 341.02,
+      "unitPrice": "284.18 € / unité",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "outillage-de-jardin-pro-08",
+      "sku": "HUS-OUTI-008",
+      "brand": "Husqvarna",
+      "name": "Husqvarna Outil de jardin Chantier - Solo (nu)",
+      "image": "/products/outillage-de-jardin-pro/8.jpg",
+      "tags": [
+        "Pelouse",
+        "Solo (nu)"
+      ],
+      "price": 68.97,
+      "compareAtPrice": null,
+      "unitPrice": "68.97 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "outillage-de-jardin-pro-09",
+      "sku": "RYO-OUTI-009",
+      "brand": "Ryobi",
+      "name": "Ryobi Outil de jardin Performance - 1 batterie 4Ah",
+      "image": "/products/outillage-de-jardin-pro/9.jpg",
+      "tags": [
+        "Arbustes",
+        "1 batterie 4Ah"
+      ],
+      "price": 136.43,
+      "compareAtPrice": null,
+      "unitPrice": "136.43 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

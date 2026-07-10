@@ -1,158 +1,258 @@
 {
   "category": {
     "slug": "accessoire-du-peintre",
-    "parentLabel": "Préparation des supports",
-    "parentHref": "/preparation-materiaux",
-    "name": "Accessoire du Peintre",
-    "tagline": "Outils & Accessoires Pro",
-    "description": "Pinceaux, rouleaux, bacs, manchons et tout le petit matériel indispensable pour une finition professionnelle.",
-    "stats": { "products": 58, "brands": 9, "delivery": "J+1" }
+    "parentLabel": "Quincaillerie",
+    "parentHref": "/preparation-materiaux/quincaillerie",
+    "name": "Accessoire du peintre",
+    "tagline": "l'outillage indispensable pour un travail net",
+    "description": "Pinceaux, rouleaux, bacs, adhésifs et bâches : tout l'accessoire du peintre professionnel pour préparer, protéger et parfaire chaque chantier.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
   },
   "brands": [
-    { "name": "Storch", "count": 15 },
-    { "name": "Wagner", "count": 12 },
-    { "name": "Harris", "count": 10 },
-    { "name": "Tollens", "count": 8 },
-    { "name": "Julien", "count": 6 },
-    { "name": "Bosch", "count": 4 },
-    { "name": "Decapfix", "count": 3 }
+    {
+      "name": "Anza",
+      "count": 2
+    },
+    {
+      "name": "Wagner",
+      "count": 2
+    },
+    {
+      "name": "Storch",
+      "count": 2
+    },
+    {
+      "name": "SPI",
+      "count": 2
+    },
+    {
+      "name": "Presto",
+      "count": 1
+    }
   ],
   "surfaceTypes": [
-    { "name": "Bois", "count": 14 },
-    { "name": "Métal", "count": 9 },
-    { "name": "Peinture", "count": 28 },
-    { "name": "Béton", "count": 6 },
-    { "name": "Carrelage", "count": 4 },
-    { "name": "Vernis", "count": 7 }
+    {
+      "name": "Mur intérieur",
+      "count": 2
+    },
+    {
+      "name": "Plafond",
+      "count": 2
+    },
+    {
+      "name": "Boiseries",
+      "count": 2
+    },
+    {
+      "name": "Sol",
+      "count": 2
+    },
+    {
+      "name": "Vitrerie",
+      "count": 1
+    }
   ],
-  "priceRange": { "min": 0, "max": 150, "currentMin": 0, "currentMax": 100 },
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
   "activeFilters": [],
-  "totalCount": 58,
+  "totalCount": 9,
   "page": 1,
-  "totalPages": 7,
-  "sortOptions": ["Pertinence", "Prix croissant", "Prix décroissant", "Nouveautés", "Meilleures ventes"],
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
   "products": [
     {
-      "id": "STO-PIN-45",
-      "sku": "STO-PIN-45",
-      "brand": "Storch",
-      "name": "Pinceau Plat Soie de Porc 45mm",
-      "image": "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&q=80&auto=format&fit=crop",
-      "tags": ["45 MM", "PEINTURE", "BOIS"],
-      "price": 9.90,
-      "compareAtPrice": 12.50,
-      "unitPrice": "9,90 €/u",
-      "badge": { "label": "PRO", "tone": "dark" },
-      "discount": "-21%",
-      "stock": "in_stock"
-    },
-    {
-      "id": "WAG-ROU-250",
-      "sku": "WAG-ROU-250",
-      "brand": "Wagner",
-      "name": "Rouleau Anti-Goutte 250mm",
-      "image": "https://images.unsplash.com/photo-1581090700227-1e8e02763f9c?w=600&q=80&auto=format&fit=crop",
-      "tags": ["250 MM", "PEINTURE"],
-      "price": 14.20,
-      "compareAtPrice": null,
-      "unitPrice": "14,20 €/u",
-      "badge": { "label": "NOUVEAU", "tone": "stock" },
-      "ribbon": "STOCK",
-      "stock": "in_stock"
-    },
-    {
-      "id": "HAR-BAC-1",
-      "sku": "HAR-BAC-1",
-      "brand": "Harris",
-      "name": "Bac à Peinture avec Grille 1L",
-      "image": "https://images.unsplash.com/photo-1604152135912-04a022e23696?w=600&q=80&auto=format&fit=crop",
-      "tags": ["1 L", "PEINTURE"],
-      "price": 6.50,
-      "compareAtPrice": 7.90,
-      "unitPrice": "6,50 €/u",
-      "badge": { "label": "PRO", "tone": "dark" },
-      "stock": "in_stock"
-    },
-    {
-      "id": "TOL-MAN-180",
-      "sku": "TOL-MAN-180",
-      "brand": "Tollens",
-      "name": "Manchon Velours Spécial Laque 180mm",
-      "image": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=600&q=80&auto=format&fit=crop",
-      "tags": ["180 MM", "VERNIS", "BOIS"],
-      "price": 8.90,
-      "compareAtPrice": null,
-      "unitPrice": "8,90 €/u",
-      "badge": { "label": "NOUVEAU", "tone": "stock" },
+      "id": "accessoire-du-peintre-01",
+      "sku": "ANZ-ACCE-001",
+      "brand": "Anza",
+      "name": "Anza Accessoire peintre Pro 100ml",
+      "image": "/products/accessoire-du-peintre/1.jpg",
+      "tags": [
+        "Mur intérieur",
+        "100ml"
+      ],
+      "price": 22.44,
+      "compareAtPrice": 26.93,
+      "unitPrice": "224.4 €/L",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
       "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "accessoire-du-peintre-02",
+      "sku": "WAG-ACCE-002",
+      "brand": "Wagner",
+      "name": "Wagner Accessoire peintre Premium 250ml",
+      "image": "/products/accessoire-du-peintre/2.jpg",
+      "tags": [
+        "Plafond",
+        "250ml"
+      ],
+      "price": 12.86,
+      "compareAtPrice": null,
+      "unitPrice": "51.44 €/L",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "accessoire-du-peintre-03",
+      "sku": "STO-ACCE-003",
+      "brand": "Storch",
+      "name": "Storch Accessoire peintre Confort 0.5L",
+      "image": "/products/accessoire-du-peintre/3.jpg",
+      "tags": [
+        "Boiseries",
+        "0.5L"
+      ],
+      "price": 40.56,
+      "compareAtPrice": null,
+      "unitPrice": "81.12 €/L",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "accessoire-du-peintre-04",
+      "sku": "SPI-ACCE-004",
+      "brand": "SPI",
+      "name": "SPI Accessoire peintre Longue Durée 1L",
+      "image": "/products/accessoire-du-peintre/4.jpg",
+      "tags": [
+        "Sol",
+        "1L"
+      ],
+      "price": 8.51,
+      "compareAtPrice": 10.21,
+      "unitPrice": "8.51 €/L",
+      "discount": "-17%",
       "stock": "low_stock"
     },
     {
-      "id": "JUL-PER-MUL",
-      "sku": "JUL-PER-MUL",
-      "brand": "Julien",
-      "name": "Perche Télescopique Multi-Usages 1-3m",
-      "image": "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=600&q=80&auto=format&fit=crop",
-      "tags": ["1-3 M", "PEINTURE"],
-      "price": 22.40,
-      "compareAtPrice": 25.00,
-      "unitPrice": "22,40 €/u",
-      "badge": { "label": "PRO", "tone": "dark" },
-      "discount": "-10%",
-      "stock": "in_stock"
-    },
-    {
-      "id": "BOS-PIS-700",
-      "sku": "BOS-PIS-700",
-      "brand": "Bosch",
-      "name": "Pistolet à Peinture Électrique 700W",
-      "image": "https://images.unsplash.com/photo-1620626011761-996317b8d101?w=600&q=80&auto=format&fit=crop",
-      "tags": ["700 W", "PEINTURE", "MÉTAL"],
-      "price": 79.90,
+      "id": "accessoire-du-peintre-05",
+      "sku": "PRE-ACCE-005",
+      "brand": "Presto",
+      "name": "Presto Accessoire peintre Multi-supports 2.5L",
+      "image": "/products/accessoire-du-peintre/5.jpg",
+      "tags": [
+        "Vitrerie",
+        "2.5L"
+      ],
+      "price": 34.19,
       "compareAtPrice": null,
-      "unitPrice": "79,90 €/u",
-      "ribbon": "STOCK",
-      "stock": "in_stock"
-    },
-    {
-      "id": "DCF-GRA-PRO",
-      "sku": "DCF-GRA-PRO",
-      "brand": "Decapfix",
-      "name": "Grille Essoreuse Universelle Pro",
-      "image": "https://images.unsplash.com/photo-1607400201889-565b1ee75f8e?w=600&q=80&auto=format&fit=crop",
-      "tags": ["UNIVERSEL", "PEINTURE"],
-      "price": 5.90,
-      "compareAtPrice": null,
-      "unitPrice": "5,90 €/u",
-      "badge": { "label": "PRO", "tone": "dark" },
-      "stock": "in_stock"
-    },
-    {
-      "id": "STO-PIN-RAD",
-      "sku": "STO-PIN-RAD",
-      "brand": "Storch",
-      "name": "Pinceau Radiateur Tête Coudée",
-      "image": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=600&q=80&auto=format&fit=crop",
-      "tags": ["PEINTURE", "MÉTAL"],
-      "price": 4.50,
-      "compareAtPrice": null,
-      "unitPrice": "4,50 €/u",
+      "unitPrice": "13.68 €/L",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
       "ribbon": "RUPTURE",
       "stock": "out_of_stock"
     },
     {
-      "id": "HAR-KIT-COMP",
-      "sku": "HAR-KIT-COMP",
-      "brand": "Harris",
-      "name": "Kit Complet Peintre 12 Pièces",
-      "image": "https://images.unsplash.com/photo-1597844760930-e7115bc1a4ec?w=600&q=80&auto=format&fit=crop",
-      "tags": ["12 PCS", "PEINTURE", "BOIS"],
-      "price": 34.90,
+      "id": "accessoire-du-peintre-06",
+      "sku": "ANZ-ACCE-006",
+      "brand": "Anza",
+      "name": "Anza Accessoire peintre Expert 5L",
+      "image": "/products/accessoire-du-peintre/6.jpg",
+      "tags": [
+        "Mur intérieur",
+        "5L"
+      ],
+      "price": 24.76,
       "compareAtPrice": null,
-      "unitPrice": "34,90 €/u",
-      "badge": { "label": "PRO", "tone": "dark" },
-      "badge2": { "label": "NOUVEAU", "tone": "stock" },
+      "unitPrice": "4.95 €/L",
+      "badge": {
+        "label": "Eco-responsable",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
       "stock": "in_stock"
+    },
+    {
+      "id": "accessoire-du-peintre-07",
+      "sku": "WAG-ACCE-007",
+      "brand": "Wagner",
+      "name": "Wagner Accessoire peintre Classic Boîte",
+      "image": "/products/accessoire-du-peintre/7.jpg",
+      "tags": [
+        "Plafond",
+        "Boîte"
+      ],
+      "price": 7.71,
+      "compareAtPrice": 9.25,
+      "unitPrice": "-",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "accessoire-du-peintre-08",
+      "sku": "STO-ACCE-008",
+      "brand": "Storch",
+      "name": "Storch Accessoire peintre Renov 100ml",
+      "image": "/products/accessoire-du-peintre/8.jpg",
+      "tags": [
+        "Boiseries",
+        "100ml"
+      ],
+      "price": 32.61,
+      "compareAtPrice": null,
+      "unitPrice": "326.1 €/L",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "accessoire-du-peintre-09",
+      "sku": "SPI-ACCE-009",
+      "brand": "SPI",
+      "name": "SPI Accessoire peintre Chantier 250ml",
+      "image": "/products/accessoire-du-peintre/9.jpg",
+      "tags": [
+        "Sol",
+        "250ml"
+      ],
+      "price": 6.58,
+      "compareAtPrice": null,
+      "unitPrice": "26.32 €/L",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
     }
   ]
 }

@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "projecteur-et-lampe",
+    "parentLabel": "Outillage électroportatif",
+    "parentHref": "/outillage/outillage-electroportatif",
+    "name": "Projecteur et Lampe",
+    "tagline": "un éclairage puissant sur tous les chantiers",
+    "description": "Projecteurs et lampes de chantier sur batterie ou secteur pour éclairer efficacement atelier, intervention et travaux extérieurs.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Makita",
+      "count": 2
+    },
+    {
+      "name": "DeWalt",
+      "count": 2
+    },
+    {
+      "name": "Milwaukee",
+      "count": 2
+    },
+    {
+      "name": "Ledlenser",
+      "count": 2
+    },
+    {
+      "name": "Einhell",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Chantier",
+      "count": 2
+    },
+    {
+      "name": "Atelier",
+      "count": 2
+    },
+    {
+      "name": "Extérieur",
+      "count": 2
+    },
+    {
+      "name": "Intervention",
+      "count": 2
+    },
+    {
+      "name": "Éclairage",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 500,
+    "currentMin": 0,
+    "currentMax": 500
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "projecteur-et-lampe-01",
+      "sku": "MAK-PROJ-001",
+      "brand": "Makita",
+      "name": "Makita Projecteur / lampe Pro - Solo (nu)",
+      "image": "/products/projecteur-et-lampe/1.jpg",
+      "tags": [
+        "Chantier",
+        "Solo (nu)"
+      ],
+      "price": 209.33,
+      "compareAtPrice": 251.2,
+      "unitPrice": "209.33 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "projecteur-et-lampe-02",
+      "sku": "DEW-PROJ-002",
+      "brand": "DeWalt",
+      "name": "DeWalt Projecteur / lampe Brushless - 1 batterie 4Ah",
+      "image": "/products/projecteur-et-lampe/2.jpg",
+      "tags": [
+        "Atelier",
+        "1 batterie 4Ah"
+      ],
+      "price": 227.49,
+      "compareAtPrice": null,
+      "unitPrice": "227.49 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "projecteur-et-lampe-03",
+      "sku": "MIL-PROJ-003",
+      "brand": "Milwaukee",
+      "name": "Milwaukee Projecteur / lampe Robuste - 2 batteries 5Ah",
+      "image": "/products/projecteur-et-lampe/3.jpg",
+      "tags": [
+        "Extérieur",
+        "2 batteries 5Ah"
+      ],
+      "price": 174.47,
+      "compareAtPrice": null,
+      "unitPrice": "174.47 € / unité",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "projecteur-et-lampe-04",
+      "sku": "LED-PROJ-004",
+      "brand": "Ledlenser",
+      "name": "Ledlenser Projecteur / lampe Compact - Coffret complet",
+      "image": "/products/projecteur-et-lampe/4.jpg",
+      "tags": [
+        "Intervention",
+        "Coffret complet"
+      ],
+      "price": 311.63,
+      "compareAtPrice": 373.96,
+      "unitPrice": "311.63 € / unité",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "projecteur-et-lampe-05",
+      "sku": "EIN-PROJ-005",
+      "brand": "Einhell",
+      "name": "Einhell Projecteur / lampe Longue Durée - Filaire secteur",
+      "image": "/products/projecteur-et-lampe/5.jpg",
+      "tags": [
+        "Éclairage",
+        "Filaire secteur"
+      ],
+      "price": 311.25,
+      "compareAtPrice": null,
+      "unitPrice": "311.25 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "projecteur-et-lampe-06",
+      "sku": "MAK-PROJ-006",
+      "brand": "Makita",
+      "name": "Makita Projecteur / lampe XR - Kit chargeur",
+      "image": "/products/projecteur-et-lampe/6.jpg",
+      "tags": [
+        "Chantier",
+        "Kit chargeur"
+      ],
+      "price": 174.16,
+      "compareAtPrice": null,
+      "unitPrice": "174.16 € / unité",
+      "badge": {
+        "label": "Garantie 3 ans",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "projecteur-et-lampe-07",
+      "sku": "DEW-PROJ-007",
+      "brand": "DeWalt",
+      "name": "DeWalt Projecteur / lampe Expert - Machine seule",
+      "image": "/products/projecteur-et-lampe/7.jpg",
+      "tags": [
+        "Atelier",
+        "Machine seule"
+      ],
+      "price": 399.59,
+      "compareAtPrice": 479.51,
+      "unitPrice": "399.59 € / unité",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "projecteur-et-lampe-08",
+      "sku": "MIL-PROJ-008",
+      "brand": "Milwaukee",
+      "name": "Milwaukee Projecteur / lampe Chantier - Solo (nu)",
+      "image": "/products/projecteur-et-lampe/8.jpg",
+      "tags": [
+        "Extérieur",
+        "Solo (nu)"
+      ],
+      "price": 338.19,
+      "compareAtPrice": null,
+      "unitPrice": "338.19 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "projecteur-et-lampe-09",
+      "sku": "LED-PROJ-009",
+      "brand": "Ledlenser",
+      "name": "Ledlenser Projecteur / lampe Performance - 1 batterie 4Ah",
+      "image": "/products/projecteur-et-lampe/9.jpg",
+      "tags": [
+        "Intervention",
+        "1 batterie 4Ah"
+      ],
+      "price": 137.34,
+      "compareAtPrice": null,
+      "unitPrice": "137.34 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

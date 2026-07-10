@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "melangeur-et-malaxeur",
+    "parentLabel": "Outillage électroportatif",
+    "parentHref": "/outillage/outillage-electroportatif",
+    "name": "Mélangeur et malaxeur",
+    "tagline": "un mélange homogène, sans effort",
+    "description": "Mélangeurs et malaxeurs pour préparer enduits, colles à carrelage, mortiers et peintures avec une consistance homogène.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Makita",
+      "count": 2
+    },
+    {
+      "name": "Collomix",
+      "count": 2
+    },
+    {
+      "name": "Bosch Professional",
+      "count": 2
+    },
+    {
+      "name": "DeWalt",
+      "count": 2
+    },
+    {
+      "name": "Einhell",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Enduit",
+      "count": 2
+    },
+    {
+      "name": "Béton",
+      "count": 2
+    },
+    {
+      "name": "Colle carrelage",
+      "count": 2
+    },
+    {
+      "name": "Peinture",
+      "count": 2
+    },
+    {
+      "name": "Mortier",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 500,
+    "currentMin": 0,
+    "currentMax": 500
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "melangeur-et-malaxeur-01",
+      "sku": "MAK-MELA-001",
+      "brand": "Makita",
+      "name": "Makita Malaxeur Pro - Solo (nu)",
+      "image": "/products/melangeur-et-malaxeur/1.jpg",
+      "tags": [
+        "Enduit",
+        "Solo (nu)"
+      ],
+      "price": 209.54,
+      "compareAtPrice": 251.45,
+      "unitPrice": "209.54 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "melangeur-et-malaxeur-02",
+      "sku": "COL-MELA-002",
+      "brand": "Collomix",
+      "name": "Collomix Malaxeur Brushless - 1 batterie 4Ah",
+      "image": "/products/melangeur-et-malaxeur/2.jpg",
+      "tags": [
+        "Béton",
+        "1 batterie 4Ah"
+      ],
+      "price": 378.85,
+      "compareAtPrice": null,
+      "unitPrice": "378.85 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "melangeur-et-malaxeur-03",
+      "sku": "BOS-MELA-003",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Malaxeur Robuste - 2 batteries 5Ah",
+      "image": "/products/melangeur-et-malaxeur/3.jpg",
+      "tags": [
+        "Colle carrelage",
+        "2 batteries 5Ah"
+      ],
+      "price": 209.66,
+      "compareAtPrice": null,
+      "unitPrice": "209.66 € / unité",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "melangeur-et-malaxeur-04",
+      "sku": "DEW-MELA-004",
+      "brand": "DeWalt",
+      "name": "DeWalt Malaxeur Compact - Coffret complet",
+      "image": "/products/melangeur-et-malaxeur/4.jpg",
+      "tags": [
+        "Peinture",
+        "Coffret complet"
+      ],
+      "price": 215.53,
+      "compareAtPrice": 258.64,
+      "unitPrice": "215.53 € / unité",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "melangeur-et-malaxeur-05",
+      "sku": "EIN-MELA-005",
+      "brand": "Einhell",
+      "name": "Einhell Malaxeur Longue Durée - Filaire secteur",
+      "image": "/products/melangeur-et-malaxeur/5.jpg",
+      "tags": [
+        "Mortier",
+        "Filaire secteur"
+      ],
+      "price": 198.29,
+      "compareAtPrice": null,
+      "unitPrice": "198.29 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "melangeur-et-malaxeur-06",
+      "sku": "MAK-MELA-006",
+      "brand": "Makita",
+      "name": "Makita Malaxeur XR - Kit chargeur",
+      "image": "/products/melangeur-et-malaxeur/6.jpg",
+      "tags": [
+        "Enduit",
+        "Kit chargeur"
+      ],
+      "price": 86.97,
+      "compareAtPrice": null,
+      "unitPrice": "86.97 € / unité",
+      "badge": {
+        "label": "Garantie 3 ans",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "melangeur-et-malaxeur-07",
+      "sku": "COL-MELA-007",
+      "brand": "Collomix",
+      "name": "Collomix Malaxeur Expert - Machine seule",
+      "image": "/products/melangeur-et-malaxeur/7.jpg",
+      "tags": [
+        "Béton",
+        "Machine seule"
+      ],
+      "price": 401.73,
+      "compareAtPrice": 482.08,
+      "unitPrice": "401.73 € / unité",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "melangeur-et-malaxeur-08",
+      "sku": "BOS-MELA-008",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Malaxeur Chantier - Solo (nu)",
+      "image": "/products/melangeur-et-malaxeur/8.jpg",
+      "tags": [
+        "Colle carrelage",
+        "Solo (nu)"
+      ],
+      "price": 419.11,
+      "compareAtPrice": null,
+      "unitPrice": "419.11 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "melangeur-et-malaxeur-09",
+      "sku": "DEW-MELA-009",
+      "brand": "DeWalt",
+      "name": "DeWalt Malaxeur Performance - 1 batterie 4Ah",
+      "image": "/products/melangeur-et-malaxeur/9.jpg",
+      "tags": [
+        "Peinture",
+        "1 batterie 4Ah"
+      ],
+      "price": 338.56,
+      "compareAtPrice": null,
+      "unitPrice": "338.56 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

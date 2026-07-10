@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "vetement-de-protection",
+    "parentLabel": "Protection sol & EPI",
+    "parentHref": "/preparation-materiaux/protection-sol-epi",
+    "name": "Vêtement de protection",
+    "tagline": "travaillez protégé du premier au dernier geste",
+    "description": "Combinaisons, blouses et surchaussures jetables ou réutilisables pour protéger le peintre des projections, poussières et produits chimiques.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "3M",
+      "count": 2
+    },
+    {
+      "name": "Presto",
+      "count": 2
+    },
+    {
+      "name": "Delta Plus",
+      "count": 2
+    },
+    {
+      "name": "Anza",
+      "count": 2
+    },
+    {
+      "name": "OCAI",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Peinture",
+      "count": 2
+    },
+    {
+      "name": "Poussière",
+      "count": 2
+    },
+    {
+      "name": "Produits chimiques",
+      "count": 2
+    },
+    {
+      "name": "Chantier extérieur",
+      "count": 2
+    },
+    {
+      "name": "Rénovation",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "vetement-de-protection-01",
+      "sku": "3M-VETE-001",
+      "brand": "3M",
+      "name": "3M Vêtement de protection Pro Boîte 50",
+      "image": "/products/vetement-de-protection/1.jpg",
+      "tags": [
+        "Peinture",
+        "Boîte 50"
+      ],
+      "price": 13.99,
+      "compareAtPrice": 16.79,
+      "unitPrice": "13.99 € / boîte 50",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "vetement-de-protection-02",
+      "sku": "PRE-VETE-002",
+      "brand": "Presto",
+      "name": "Presto Vêtement de protection Premium Rouleau",
+      "image": "/products/vetement-de-protection/2.jpg",
+      "tags": [
+        "Poussière",
+        "Rouleau"
+      ],
+      "price": 3.05,
+      "compareAtPrice": null,
+      "unitPrice": "3.05 € / rouleau",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "vetement-de-protection-03",
+      "sku": "DEL-VETE-003",
+      "brand": "Delta Plus",
+      "name": "Delta Plus Vêtement de protection Confort Lot de 5",
+      "image": "/products/vetement-de-protection/3.jpg",
+      "tags": [
+        "Produits chimiques",
+        "Lot de 5"
+      ],
+      "price": 20.34,
+      "compareAtPrice": null,
+      "unitPrice": "20.34 € / lot de 5",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "vetement-de-protection-04",
+      "sku": "ANZ-VETE-004",
+      "brand": "Anza",
+      "name": "Anza Vêtement de protection Longue Durée Taille unique",
+      "image": "/products/vetement-de-protection/4.jpg",
+      "tags": [
+        "Chantier extérieur",
+        "Taille unique"
+      ],
+      "price": 30.41,
+      "compareAtPrice": 36.49,
+      "unitPrice": "30.41 € / taille unique",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "vetement-de-protection-05",
+      "sku": "OCA-VETE-005",
+      "brand": "OCAI",
+      "name": "OCAI Vêtement de protection Multi-usages Lot de 10",
+      "image": "/products/vetement-de-protection/5.jpg",
+      "tags": [
+        "Rénovation",
+        "Lot de 10"
+      ],
+      "price": 6.16,
+      "compareAtPrice": null,
+      "unitPrice": "6.16 € / lot de 10",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "vetement-de-protection-06",
+      "sku": "3M-VETE-006",
+      "brand": "3M",
+      "name": "3M Vêtement de protection Expert Pack pro",
+      "image": "/products/vetement-de-protection/6.jpg",
+      "tags": [
+        "Peinture",
+        "Pack pro"
+      ],
+      "price": 40.21,
+      "compareAtPrice": null,
+      "unitPrice": "40.21 € / pack pro",
+      "badge": {
+        "label": "Certifié CE",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "vetement-de-protection-07",
+      "sku": "PRE-VETE-007",
+      "brand": "Presto",
+      "name": "Presto Vêtement de protection Classic Unité",
+      "image": "/products/vetement-de-protection/7.jpg",
+      "tags": [
+        "Poussière",
+        "Unité"
+      ],
+      "price": 13.82,
+      "compareAtPrice": 16.58,
+      "unitPrice": "13.82 € / unité",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "vetement-de-protection-08",
+      "sku": "DEL-VETE-008",
+      "brand": "Delta Plus",
+      "name": "Delta Plus Vêtement de protection Chantier Boîte 50",
+      "image": "/products/vetement-de-protection/8.jpg",
+      "tags": [
+        "Produits chimiques",
+        "Boîte 50"
+      ],
+      "price": 13.84,
+      "compareAtPrice": null,
+      "unitPrice": "13.84 € / boîte 50",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "vetement-de-protection-09",
+      "sku": "ANZ-VETE-009",
+      "brand": "Anza",
+      "name": "Anza Vêtement de protection Renfort Rouleau",
+      "image": "/products/vetement-de-protection/9.jpg",
+      "tags": [
+        "Chantier extérieur",
+        "Rouleau"
+      ],
+      "price": 4.89,
+      "compareAtPrice": null,
+      "unitPrice": "4.89 € / rouleau",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

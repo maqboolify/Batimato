@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "marqueur",
+    "parentLabel": "Outillage et outil à main",
+    "parentHref": "/outillage/outillage-et-outil-a-main",
+    "name": "Marqueur",
+    "tagline": "un marquage visible et durable",
+    "description": "Marqueurs et craies pour repérer, tracer et annoter sur bois, métal, béton et la plupart des supports de chantier.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Edding",
+      "count": 2
+    },
+    {
+      "name": "Stanley",
+      "count": 2
+    },
+    {
+      "name": "Facom",
+      "count": 2
+    },
+    {
+      "name": "Sharpie",
+      "count": 2
+    },
+    {
+      "name": "Posca",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Bois",
+      "count": 2
+    },
+    {
+      "name": "Métal",
+      "count": 2
+    },
+    {
+      "name": "Chantier",
+      "count": 2
+    },
+    {
+      "name": "Multi-supports",
+      "count": 2
+    },
+    {
+      "name": "Marquage",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "marqueur-01",
+      "sku": "EDD-MARQ-001",
+      "brand": "Edding",
+      "name": "Edding Marqueur Pro - Unité",
+      "image": "/products/marqueur/1.jpg",
+      "tags": [
+        "Bois",
+        "Unité"
+      ],
+      "price": 64.0,
+      "compareAtPrice": 76.8,
+      "unitPrice": "64.0 € / unité",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "marqueur-02",
+      "sku": "STA-MARQ-002",
+      "brand": "Stanley",
+      "name": "Stanley Marqueur Renforcé - Lot de 2",
+      "image": "/products/marqueur/2.jpg",
+      "tags": [
+        "Métal",
+        "Lot de 2"
+      ],
+      "price": 29.55,
+      "compareAtPrice": null,
+      "unitPrice": "29.55 € / lot de 2",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "marqueur-03",
+      "sku": "FAC-MARQ-003",
+      "brand": "Facom",
+      "name": "Facom Marqueur Ergonomique - Lot de 3",
+      "image": "/products/marqueur/3.jpg",
+      "tags": [
+        "Chantier",
+        "Lot de 3"
+      ],
+      "price": 27.11,
+      "compareAtPrice": null,
+      "unitPrice": "27.11 € / lot de 3",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "marqueur-04",
+      "sku": "SHA-MARQ-004",
+      "brand": "Sharpie",
+      "name": "Sharpie Marqueur Robuste - Coffret complet",
+      "image": "/products/marqueur/4.jpg",
+      "tags": [
+        "Multi-supports",
+        "Coffret complet"
+      ],
+      "price": 11.12,
+      "compareAtPrice": 13.34,
+      "unitPrice": "11.12 € / coffret complet",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "marqueur-05",
+      "sku": "POS-MARQ-005",
+      "brand": "Posca",
+      "name": "Posca Marqueur Compact - Set pro",
+      "image": "/products/marqueur/5.jpg",
+      "tags": [
+        "Marquage",
+        "Set pro"
+      ],
+      "price": 39.52,
+      "compareAtPrice": null,
+      "unitPrice": "39.52 € / set pro",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "marqueur-06",
+      "sku": "EDD-MARQ-006",
+      "brand": "Edding",
+      "name": "Edding Marqueur Expert - Format XL",
+      "image": "/products/marqueur/6.jpg",
+      "tags": [
+        "Bois",
+        "Format XL"
+      ],
+      "price": 42.7,
+      "compareAtPrice": null,
+      "unitPrice": "42.7 € / format xl",
+      "badge": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "marqueur-07",
+      "sku": "STA-MARQ-007",
+      "brand": "Stanley",
+      "name": "Stanley Marqueur Chantier - Format compact",
+      "image": "/products/marqueur/7.jpg",
+      "tags": [
+        "Métal",
+        "Format compact"
+      ],
+      "price": 45.77,
+      "compareAtPrice": 54.92,
+      "unitPrice": "45.77 € / format compact",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "marqueur-08",
+      "sku": "FAC-MARQ-008",
+      "brand": "Facom",
+      "name": "Facom Marqueur Standard - Unité",
+      "image": "/products/marqueur/8.jpg",
+      "tags": [
+        "Chantier",
+        "Unité"
+      ],
+      "price": 45.31,
+      "compareAtPrice": null,
+      "unitPrice": "45.31 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "marqueur-09",
+      "sku": "SHA-MARQ-009",
+      "brand": "Sharpie",
+      "name": "Sharpie Marqueur Confort - Lot de 2",
+      "image": "/products/marqueur/9.jpg",
+      "tags": [
+        "Multi-supports",
+        "Lot de 2"
+      ],
+      "price": 51.08,
+      "compareAtPrice": null,
+      "unitPrice": "51.08 € / lot de 2",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

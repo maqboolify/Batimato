@@ -1,0 +1,179 @@
+{
+  "category": {
+    "slug": "anti-mousse-et-traitement",
+    "parentLabel": "Peinture Extérieure",
+    "parentHref": "/peintures",
+    "name": "Anti-Mousse & Traitement",
+    "tagline": "Nettoyage & Prévention Façade",
+    "description": "Traitements anti-mousse, fongicides et hydrofuges pour nettoyer, assainir et protéger durablement les façades, toitures et surfaces extérieures.",
+    "stats": {
+      "products": 23,
+      "brands": 6,
+      "delivery": "J+1"
+    }
+  },
+  "brands": [
+    {
+      "name": "V33",
+      "count": 6
+    },
+    {
+      "name": "Zolpan",
+      "count": 5
+    },
+    {
+      "name": "Seigneurie",
+      "count": 4
+    },
+    {
+      "name": "Tollens",
+      "count": 3
+    },
+    {
+      "name": "Julien",
+      "count": 3
+    },
+    {
+      "name": "Ripolin",
+      "count": 2
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Façade",
+      "count": 12
+    },
+    {
+      "name": "Toiture",
+      "count": 8
+    },
+    {
+      "name": "Terrasse",
+      "count": 6
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 60
+  },
+  "activeFilters": [],
+  "totalCount": 23,
+  "page": 1,
+  "totalPages": 3,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés",
+    "Meilleures ventes"
+  ],
+  "products": [
+    {
+      "id": "V33-ANM-INC-5L",
+      "sku": "V33-ANM-INC-5L",
+      "brand": "V33",
+      "name": "Traitement Anti-Mousse Longue Durée 5L",
+      "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "5 L",
+        "FAÇADE",
+        "TOITURE"
+      ],
+      "price": 34.9,
+      "compareAtPrice": 39.9,
+      "unitPrice": "6,98 €/L",
+      "stock": "in_stock",
+      "badge": {
+        "label": "PRO",
+        "tone": "dark"
+      },
+      "discount": "-13%"
+    },
+    {
+      "id": "ZLP-ANM-INC-10L",
+      "sku": "ZLP-ANM-INC-10L",
+      "brand": "Zolpan",
+      "name": "Fongicide Façade & Toiture Concentré 10L",
+      "image": "https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "10 L",
+        "TOITURE",
+        "FAÇADE"
+      ],
+      "price": 49.9,
+      "compareAtPrice": null,
+      "unitPrice": "4,99 €/L",
+      "stock": "in_stock",
+      "badge": {
+        "label": "NOUVEAU",
+        "tone": "stock"
+      }
+    },
+    {
+      "id": "SGN-HYD-INC-5L",
+      "sku": "SGN-HYD-INC-5L",
+      "brand": "Seigneurie",
+      "name": "Hydrofuge Façade Incolore 5L",
+      "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "5 L",
+        "FAÇADE"
+      ],
+      "price": 42.9,
+      "compareAtPrice": null,
+      "unitPrice": "8,58 €/L",
+      "stock": "in_stock",
+      "ribbon": "STOCK"
+    },
+    {
+      "id": "TLN-ANM-INC-1L",
+      "sku": "TLN-ANM-INC-1L",
+      "brand": "Tollens",
+      "name": "Anti-Mousse Terrasse Prêt à l'Emploi 1L",
+      "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "1 L",
+        "TERRASSE"
+      ],
+      "price": 12.9,
+      "compareAtPrice": 14.9,
+      "unitPrice": "12,90 €/L",
+      "stock": "low_stock",
+      "cornerBadge": "A+"
+    },
+    {
+      "id": "JUL-ANM-INC-5L",
+      "sku": "JUL-ANM-INC-5L",
+      "brand": "Julien",
+      "name": "Traitement Curatif Anti-Mousse 5L",
+      "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "5 L",
+        "TOITURE",
+        "FAÇADE"
+      ],
+      "price": 29.9,
+      "compareAtPrice": null,
+      "unitPrice": "5,98 €/L",
+      "stock": "in_stock"
+    },
+    {
+      "id": "RIP-HYD-INC-2L5",
+      "sku": "RIP-HYD-INC-2L5",
+      "brand": "Ripolin",
+      "name": "Hydrofuge Toiture Incolore 2,5L",
+      "image": "https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "2.5 L",
+        "TOITURE"
+      ],
+      "price": 22.9,
+      "compareAtPrice": null,
+      "unitPrice": "9,16 €/L",
+      "stock": "out_of_stock",
+      "ribbon": "RUPTURE"
+    }
+  ]
+}

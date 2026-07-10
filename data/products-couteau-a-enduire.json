@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "couteau-a-enduire",
+    "parentLabel": "Outillage et outil à main",
+    "parentHref": "/outillage/outillage-et-outil-a-main",
+    "name": "Couteau à enduire",
+    "tagline": "des surfaces lisses avant finition",
+    "description": "Couteaux à enduire de différentes largeurs pour reboucher, lisser et préparer murs, plafonds et façades avant peinture.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Storch",
+      "count": 2
+    },
+    {
+      "name": "Anza",
+      "count": 2
+    },
+    {
+      "name": "Purdy",
+      "count": 2
+    },
+    {
+      "name": "SPI",
+      "count": 2
+    },
+    {
+      "name": "Presto",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Enduit",
+      "count": 2
+    },
+    {
+      "name": "Plâtre",
+      "count": 2
+    },
+    {
+      "name": "Façade",
+      "count": 2
+    },
+    {
+      "name": "Rebouchage",
+      "count": 2
+    },
+    {
+      "name": "Multi-supports",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "couteau-a-enduire-01",
+      "sku": "STO-COUT-001",
+      "brand": "Storch",
+      "name": "Storch Couteau à enduire Pro - Unité",
+      "image": "/products/couteau-a-enduire/1.jpg",
+      "tags": [
+        "Enduit",
+        "Unité"
+      ],
+      "price": 11.67,
+      "compareAtPrice": 14.0,
+      "unitPrice": "11.67 € / unité",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "couteau-a-enduire-02",
+      "sku": "ANZ-COUT-002",
+      "brand": "Anza",
+      "name": "Anza Couteau à enduire Renforcé - Lot de 2",
+      "image": "/products/couteau-a-enduire/2.jpg",
+      "tags": [
+        "Plâtre",
+        "Lot de 2"
+      ],
+      "price": 85.65,
+      "compareAtPrice": null,
+      "unitPrice": "85.65 € / lot de 2",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "couteau-a-enduire-03",
+      "sku": "PUR-COUT-003",
+      "brand": "Purdy",
+      "name": "Purdy Couteau à enduire Ergonomique - Lot de 3",
+      "image": "/products/couteau-a-enduire/3.jpg",
+      "tags": [
+        "Façade",
+        "Lot de 3"
+      ],
+      "price": 16.8,
+      "compareAtPrice": null,
+      "unitPrice": "16.8 € / lot de 3",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "couteau-a-enduire-04",
+      "sku": "SPI-COUT-004",
+      "brand": "SPI",
+      "name": "SPI Couteau à enduire Robuste - Coffret complet",
+      "image": "/products/couteau-a-enduire/4.jpg",
+      "tags": [
+        "Rebouchage",
+        "Coffret complet"
+      ],
+      "price": 67.49,
+      "compareAtPrice": 80.99,
+      "unitPrice": "67.49 € / coffret complet",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "couteau-a-enduire-05",
+      "sku": "PRE-COUT-005",
+      "brand": "Presto",
+      "name": "Presto Couteau à enduire Compact - Set pro",
+      "image": "/products/couteau-a-enduire/5.jpg",
+      "tags": [
+        "Multi-supports",
+        "Set pro"
+      ],
+      "price": 76.25,
+      "compareAtPrice": null,
+      "unitPrice": "76.25 € / set pro",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "couteau-a-enduire-06",
+      "sku": "STO-COUT-006",
+      "brand": "Storch",
+      "name": "Storch Couteau à enduire Expert - Format XL",
+      "image": "/products/couteau-a-enduire/6.jpg",
+      "tags": [
+        "Enduit",
+        "Format XL"
+      ],
+      "price": 68.15,
+      "compareAtPrice": null,
+      "unitPrice": "68.15 € / format xl",
+      "badge": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "couteau-a-enduire-07",
+      "sku": "ANZ-COUT-007",
+      "brand": "Anza",
+      "name": "Anza Couteau à enduire Chantier - Format compact",
+      "image": "/products/couteau-a-enduire/7.jpg",
+      "tags": [
+        "Plâtre",
+        "Format compact"
+      ],
+      "price": 29.87,
+      "compareAtPrice": 35.84,
+      "unitPrice": "29.87 € / format compact",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "couteau-a-enduire-08",
+      "sku": "PUR-COUT-008",
+      "brand": "Purdy",
+      "name": "Purdy Couteau à enduire Standard - Unité",
+      "image": "/products/couteau-a-enduire/8.jpg",
+      "tags": [
+        "Façade",
+        "Unité"
+      ],
+      "price": 34.14,
+      "compareAtPrice": null,
+      "unitPrice": "34.14 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "couteau-a-enduire-09",
+      "sku": "SPI-COUT-009",
+      "brand": "SPI",
+      "name": "SPI Couteau à enduire Confort - Lot de 2",
+      "image": "/products/couteau-a-enduire/9.jpg",
+      "tags": [
+        "Rebouchage",
+        "Lot de 2"
+      ],
+      "price": 65.98,
+      "compareAtPrice": null,
+      "unitPrice": "65.98 € / lot de 2",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

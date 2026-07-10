@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "laque-brillante",
+    "parentLabel": "Sous-couche & Primaire",
+    "parentHref": "/peintures/sous-couche-primaire",
+    "name": "Laque brillante",
+    "tagline": "un fini miroir haute résistance",
+    "description": "Laques brillantes très résistantes offrant un fini lumineux et lessivable, parfaites pour boiseries, portes et radiateurs.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Ripolin",
+      "count": 2
+    },
+    {
+      "name": "Tollens",
+      "count": 2
+    },
+    {
+      "name": "V33",
+      "count": 2
+    },
+    {
+      "name": "Julien",
+      "count": 2
+    },
+    {
+      "name": "Seigneurie",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Boiseries",
+      "count": 2
+    },
+    {
+      "name": "Porte",
+      "count": 2
+    },
+    {
+      "name": "Radiateur",
+      "count": 2
+    },
+    {
+      "name": "Meuble",
+      "count": 2
+    },
+    {
+      "name": "Rampe",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "laque-brillante-01",
+      "sku": "RIP-LAQU-001",
+      "brand": "Ripolin",
+      "name": "Ripolin Laque brillante Pro 0.5L",
+      "image": "/products/laque-brillante/1.jpg",
+      "tags": [
+        "Boiseries",
+        "0.5L"
+      ],
+      "price": 61.74,
+      "compareAtPrice": 74.09,
+      "unitPrice": "123.48 €/L",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "laque-brillante-02",
+      "sku": "TOL-LAQU-002",
+      "brand": "Tollens",
+      "name": "Tollens Laque brillante Premium 0.75L",
+      "image": "/products/laque-brillante/2.jpg",
+      "tags": [
+        "Porte",
+        "0.75L"
+      ],
+      "price": 58.63,
+      "compareAtPrice": null,
+      "unitPrice": "78.17 €/L",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "laque-brillante-03",
+      "sku": "V33-LAQU-003",
+      "brand": "V33",
+      "name": "V33 Laque brillante Extra 1L",
+      "image": "/products/laque-brillante/3.jpg",
+      "tags": [
+        "Radiateur",
+        "1L"
+      ],
+      "price": 23.59,
+      "compareAtPrice": null,
+      "unitPrice": "23.59 €/L",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "laque-brillante-04",
+      "sku": "JUL-LAQU-004",
+      "brand": "Julien",
+      "name": "Julien Laque brillante Confort 2.5L",
+      "image": "/products/laque-brillante/4.jpg",
+      "tags": [
+        "Meuble",
+        "2.5L"
+      ],
+      "price": 68.23,
+      "compareAtPrice": 81.88,
+      "unitPrice": "27.29 €/L",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "laque-brillante-05",
+      "sku": "SEI-LAQU-005",
+      "brand": "Seigneurie",
+      "name": "Seigneurie Laque brillante Longue Durée 3L",
+      "image": "/products/laque-brillante/5.jpg",
+      "tags": [
+        "Rampe",
+        "3L"
+      ],
+      "price": 22.97,
+      "compareAtPrice": null,
+      "unitPrice": "7.66 €/L",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "laque-brillante-06",
+      "sku": "RIP-LAQU-006",
+      "brand": "Ripolin",
+      "name": "Ripolin Laque brillante Multi-supports 5L",
+      "image": "/products/laque-brillante/6.jpg",
+      "tags": [
+        "Boiseries",
+        "5L"
+      ],
+      "price": 40.26,
+      "compareAtPrice": null,
+      "unitPrice": "8.05 €/L",
+      "badge": {
+        "label": "Eco-responsable",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "laque-brillante-07",
+      "sku": "TOL-LAQU-007",
+      "brand": "Tollens",
+      "name": "Tollens Laque brillante Expert 10L",
+      "image": "/products/laque-brillante/7.jpg",
+      "tags": [
+        "Porte",
+        "10L"
+      ],
+      "price": 89.06,
+      "compareAtPrice": 106.87,
+      "unitPrice": "8.91 €/L",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "laque-brillante-08",
+      "sku": "V33-LAQU-008",
+      "brand": "V33",
+      "name": "V33 Laque brillante Classic 0.5L",
+      "image": "/products/laque-brillante/8.jpg",
+      "tags": [
+        "Radiateur",
+        "0.5L"
+      ],
+      "price": 61.1,
+      "compareAtPrice": null,
+      "unitPrice": "122.2 €/L",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "laque-brillante-09",
+      "sku": "JUL-LAQU-009",
+      "brand": "Julien",
+      "name": "Julien Laque brillante Renov 0.75L",
+      "image": "/products/laque-brillante/9.jpg",
+      "tags": [
+        "Meuble",
+        "0.75L"
+      ],
+      "price": 54.46,
+      "compareAtPrice": null,
+      "unitPrice": "72.61 €/L",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

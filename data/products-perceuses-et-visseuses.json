@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "perceuses-et-visseuses",
+    "parentLabel": "Outillage électroportatif",
+    "parentHref": "/outillage/outillage-electroportatif",
+    "name": "Perceuses et visseuses",
+    "tagline": "perçage et vissage précis, sur batterie ou filaire",
+    "description": "Perceuses-visseuses professionnelles pour perçage et vissage rapide sur bois, métal et matériaux de construction, en solo ou en kit batterie.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Makita",
+      "count": 2
+    },
+    {
+      "name": "Bosch Professional",
+      "count": 2
+    },
+    {
+      "name": "DeWalt",
+      "count": 2
+    },
+    {
+      "name": "Milwaukee",
+      "count": 2
+    },
+    {
+      "name": "Metabo",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Bois",
+      "count": 2
+    },
+    {
+      "name": "Métal",
+      "count": 2
+    },
+    {
+      "name": "Béton",
+      "count": 2
+    },
+    {
+      "name": "Plâtre",
+      "count": 2
+    },
+    {
+      "name": "Multi-matériaux",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 500,
+    "currentMin": 0,
+    "currentMax": 500
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "perceuses-et-visseuses-01",
+      "sku": "MAK-PERC-001",
+      "brand": "Makita",
+      "name": "Makita Perceuse-visseuse Pro - Solo (nu)",
+      "image": "/products/perceuses-et-visseuses/1.jpg",
+      "tags": [
+        "Bois",
+        "Solo (nu)"
+      ],
+      "price": 211.49,
+      "compareAtPrice": 253.79,
+      "unitPrice": "211.49 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "perceuses-et-visseuses-02",
+      "sku": "BOS-PERC-002",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Perceuse-visseuse Brushless - 1 batterie 4Ah",
+      "image": "/products/perceuses-et-visseuses/2.jpg",
+      "tags": [
+        "Métal",
+        "1 batterie 4Ah"
+      ],
+      "price": 129.93,
+      "compareAtPrice": null,
+      "unitPrice": "129.93 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "perceuses-et-visseuses-03",
+      "sku": "DEW-PERC-003",
+      "brand": "DeWalt",
+      "name": "DeWalt Perceuse-visseuse Robuste - 2 batteries 5Ah",
+      "image": "/products/perceuses-et-visseuses/3.jpg",
+      "tags": [
+        "Béton",
+        "2 batteries 5Ah"
+      ],
+      "price": 121.42,
+      "compareAtPrice": null,
+      "unitPrice": "121.42 € / unité",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "perceuses-et-visseuses-04",
+      "sku": "MIL-PERC-004",
+      "brand": "Milwaukee",
+      "name": "Milwaukee Perceuse-visseuse Compact - Coffret complet",
+      "image": "/products/perceuses-et-visseuses/4.jpg",
+      "tags": [
+        "Plâtre",
+        "Coffret complet"
+      ],
+      "price": 149.27,
+      "compareAtPrice": 179.12,
+      "unitPrice": "149.27 € / unité",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "perceuses-et-visseuses-05",
+      "sku": "MET-PERC-005",
+      "brand": "Metabo",
+      "name": "Metabo Perceuse-visseuse Longue Durée - Filaire secteur",
+      "image": "/products/perceuses-et-visseuses/5.jpg",
+      "tags": [
+        "Multi-matériaux",
+        "Filaire secteur"
+      ],
+      "price": 353.85,
+      "compareAtPrice": null,
+      "unitPrice": "353.85 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "perceuses-et-visseuses-06",
+      "sku": "MAK-PERC-006",
+      "brand": "Makita",
+      "name": "Makita Perceuse-visseuse XR - Kit chargeur",
+      "image": "/products/perceuses-et-visseuses/6.jpg",
+      "tags": [
+        "Bois",
+        "Kit chargeur"
+      ],
+      "price": 150.36,
+      "compareAtPrice": null,
+      "unitPrice": "150.36 € / unité",
+      "badge": {
+        "label": "Garantie 3 ans",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "perceuses-et-visseuses-07",
+      "sku": "BOS-PERC-007",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Perceuse-visseuse Expert - Machine seule",
+      "image": "/products/perceuses-et-visseuses/7.jpg",
+      "tags": [
+        "Métal",
+        "Machine seule"
+      ],
+      "price": 203.13,
+      "compareAtPrice": 243.76,
+      "unitPrice": "203.13 € / unité",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "perceuses-et-visseuses-08",
+      "sku": "DEW-PERC-008",
+      "brand": "DeWalt",
+      "name": "DeWalt Perceuse-visseuse Chantier - Solo (nu)",
+      "image": "/products/perceuses-et-visseuses/8.jpg",
+      "tags": [
+        "Béton",
+        "Solo (nu)"
+      ],
+      "price": 323.62,
+      "compareAtPrice": null,
+      "unitPrice": "323.62 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "perceuses-et-visseuses-09",
+      "sku": "MIL-PERC-009",
+      "brand": "Milwaukee",
+      "name": "Milwaukee Perceuse-visseuse Performance - 1 batterie 4Ah",
+      "image": "/products/perceuses-et-visseuses/9.jpg",
+      "tags": [
+        "Plâtre",
+        "1 batterie 4Ah"
+      ],
+      "price": 265.35,
+      "compareAtPrice": null,
+      "unitPrice": "265.35 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

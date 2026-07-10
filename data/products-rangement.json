@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "rangement",
+    "parentLabel": "Outillage et outil à main",
+    "parentHref": "/outillage/outillage-et-outil-a-main",
+    "name": "Rangement",
+    "tagline": "vos outils organisés et prêts à partir",
+    "description": "Caisses, sacs et systèmes de rangement modulaires pour transporter et organiser l'outillage sur chantier ou en atelier.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Stanley",
+      "count": 2
+    },
+    {
+      "name": "Facom",
+      "count": 2
+    },
+    {
+      "name": "Milwaukee",
+      "count": 2
+    },
+    {
+      "name": "Makita",
+      "count": 2
+    },
+    {
+      "name": "DeWalt",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Atelier",
+      "count": 2
+    },
+    {
+      "name": "Chantier",
+      "count": 2
+    },
+    {
+      "name": "Véhicule",
+      "count": 2
+    },
+    {
+      "name": "Établi",
+      "count": 2
+    },
+    {
+      "name": "Transport",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "rangement-01",
+      "sku": "STA-RANG-001",
+      "brand": "Stanley",
+      "name": "Stanley Rangement outillage Pro - Unité",
+      "image": "/products/rangement/1.jpg",
+      "tags": [
+        "Atelier",
+        "Unité"
+      ],
+      "price": 35.06,
+      "compareAtPrice": 42.07,
+      "unitPrice": "35.06 € / unité",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "rangement-02",
+      "sku": "FAC-RANG-002",
+      "brand": "Facom",
+      "name": "Facom Rangement outillage Renforcé - Lot de 2",
+      "image": "/products/rangement/2.jpg",
+      "tags": [
+        "Chantier",
+        "Lot de 2"
+      ],
+      "price": 21.36,
+      "compareAtPrice": null,
+      "unitPrice": "21.36 € / lot de 2",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "rangement-03",
+      "sku": "MIL-RANG-003",
+      "brand": "Milwaukee",
+      "name": "Milwaukee Rangement outillage Ergonomique - Lot de 3",
+      "image": "/products/rangement/3.jpg",
+      "tags": [
+        "Véhicule",
+        "Lot de 3"
+      ],
+      "price": 44.15,
+      "compareAtPrice": null,
+      "unitPrice": "44.15 € / lot de 3",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "rangement-04",
+      "sku": "MAK-RANG-004",
+      "brand": "Makita",
+      "name": "Makita Rangement outillage Robuste - Coffret complet",
+      "image": "/products/rangement/4.jpg",
+      "tags": [
+        "Établi",
+        "Coffret complet"
+      ],
+      "price": 76.34,
+      "compareAtPrice": 91.61,
+      "unitPrice": "76.34 € / coffret complet",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "rangement-05",
+      "sku": "DEW-RANG-005",
+      "brand": "DeWalt",
+      "name": "DeWalt Rangement outillage Compact - Set pro",
+      "image": "/products/rangement/5.jpg",
+      "tags": [
+        "Transport",
+        "Set pro"
+      ],
+      "price": 22.91,
+      "compareAtPrice": null,
+      "unitPrice": "22.91 € / set pro",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "rangement-06",
+      "sku": "STA-RANG-006",
+      "brand": "Stanley",
+      "name": "Stanley Rangement outillage Expert - Format XL",
+      "image": "/products/rangement/6.jpg",
+      "tags": [
+        "Atelier",
+        "Format XL"
+      ],
+      "price": 51.55,
+      "compareAtPrice": null,
+      "unitPrice": "51.55 € / format xl",
+      "badge": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "rangement-07",
+      "sku": "FAC-RANG-007",
+      "brand": "Facom",
+      "name": "Facom Rangement outillage Chantier - Format compact",
+      "image": "/products/rangement/7.jpg",
+      "tags": [
+        "Chantier",
+        "Format compact"
+      ],
+      "price": 41.76,
+      "compareAtPrice": 50.11,
+      "unitPrice": "41.76 € / format compact",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "rangement-08",
+      "sku": "MIL-RANG-008",
+      "brand": "Milwaukee",
+      "name": "Milwaukee Rangement outillage Standard - Unité",
+      "image": "/products/rangement/8.jpg",
+      "tags": [
+        "Véhicule",
+        "Unité"
+      ],
+      "price": 29.85,
+      "compareAtPrice": null,
+      "unitPrice": "29.85 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "rangement-09",
+      "sku": "MAK-RANG-009",
+      "brand": "Makita",
+      "name": "Makita Rangement outillage Confort - Lot de 2",
+      "image": "/products/rangement/9.jpg",
+      "tags": [
+        "Établi",
+        "Lot de 2"
+      ],
+      "price": 15.1,
+      "compareAtPrice": null,
+      "unitPrice": "15.1 € / lot de 2",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

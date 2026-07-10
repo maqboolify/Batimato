@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "scies-sabres",
+    "parentLabel": "Outillage électroportatif",
+    "parentHref": "/outillage/outillage-electroportatif",
+    "name": "Scies sabres",
+    "tagline": "puissance et polyvalence pour la démolition",
+    "description": "Scies sabres robustes pour découpe et démolition rapide de bois, métal et plastique sur chantier de rénovation.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Bosch Professional",
+      "count": 2
+    },
+    {
+      "name": "Makita",
+      "count": 2
+    },
+    {
+      "name": "DeWalt",
+      "count": 2
+    },
+    {
+      "name": "Milwaukee",
+      "count": 2
+    },
+    {
+      "name": "Metabo",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Bois",
+      "count": 2
+    },
+    {
+      "name": "Métal",
+      "count": 2
+    },
+    {
+      "name": "Plastique",
+      "count": 2
+    },
+    {
+      "name": "Démolition",
+      "count": 2
+    },
+    {
+      "name": "Multi-matériaux",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 500,
+    "currentMin": 0,
+    "currentMax": 500
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "scies-sabres-01",
+      "sku": "BOS-SCIE-001",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Scie sabre Pro - Solo (nu)",
+      "image": "/products/scies-sabres/1.jpg",
+      "tags": [
+        "Bois",
+        "Solo (nu)"
+      ],
+      "price": 181.78,
+      "compareAtPrice": 218.14,
+      "unitPrice": "181.78 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "scies-sabres-02",
+      "sku": "MAK-SCIE-002",
+      "brand": "Makita",
+      "name": "Makita Scie sabre Brushless - 1 batterie 4Ah",
+      "image": "/products/scies-sabres/2.jpg",
+      "tags": [
+        "Métal",
+        "1 batterie 4Ah"
+      ],
+      "price": 259.26,
+      "compareAtPrice": null,
+      "unitPrice": "259.26 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "scies-sabres-03",
+      "sku": "DEW-SCIE-003",
+      "brand": "DeWalt",
+      "name": "DeWalt Scie sabre Robuste - 2 batteries 5Ah",
+      "image": "/products/scies-sabres/3.jpg",
+      "tags": [
+        "Plastique",
+        "2 batteries 5Ah"
+      ],
+      "price": 130.22,
+      "compareAtPrice": null,
+      "unitPrice": "130.22 € / unité",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "scies-sabres-04",
+      "sku": "MIL-SCIE-004",
+      "brand": "Milwaukee",
+      "name": "Milwaukee Scie sabre Compact - Coffret complet",
+      "image": "/products/scies-sabres/4.jpg",
+      "tags": [
+        "Démolition",
+        "Coffret complet"
+      ],
+      "price": 364.79,
+      "compareAtPrice": 437.75,
+      "unitPrice": "364.79 € / unité",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "scies-sabres-05",
+      "sku": "MET-SCIE-005",
+      "brand": "Metabo",
+      "name": "Metabo Scie sabre Longue Durée - Filaire secteur",
+      "image": "/products/scies-sabres/5.jpg",
+      "tags": [
+        "Multi-matériaux",
+        "Filaire secteur"
+      ],
+      "price": 72.06,
+      "compareAtPrice": null,
+      "unitPrice": "72.06 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "scies-sabres-06",
+      "sku": "BOS-SCIE-006",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Scie sabre XR - Kit chargeur",
+      "image": "/products/scies-sabres/6.jpg",
+      "tags": [
+        "Bois",
+        "Kit chargeur"
+      ],
+      "price": 134.47,
+      "compareAtPrice": null,
+      "unitPrice": "134.47 € / unité",
+      "badge": {
+        "label": "Garantie 3 ans",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "scies-sabres-07",
+      "sku": "MAK-SCIE-007",
+      "brand": "Makita",
+      "name": "Makita Scie sabre Expert - Machine seule",
+      "image": "/products/scies-sabres/7.jpg",
+      "tags": [
+        "Métal",
+        "Machine seule"
+      ],
+      "price": 152.93,
+      "compareAtPrice": 183.52,
+      "unitPrice": "152.93 € / unité",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "scies-sabres-08",
+      "sku": "DEW-SCIE-008",
+      "brand": "DeWalt",
+      "name": "DeWalt Scie sabre Chantier - Solo (nu)",
+      "image": "/products/scies-sabres/8.jpg",
+      "tags": [
+        "Plastique",
+        "Solo (nu)"
+      ],
+      "price": 211.53,
+      "compareAtPrice": null,
+      "unitPrice": "211.53 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "scies-sabres-09",
+      "sku": "MIL-SCIE-009",
+      "brand": "Milwaukee",
+      "name": "Milwaukee Scie sabre Performance - 1 batterie 4Ah",
+      "image": "/products/scies-sabres/9.jpg",
+      "tags": [
+        "Démolition",
+        "1 batterie 4Ah"
+      ],
+      "price": 355.42,
+      "compareAtPrice": null,
+      "unitPrice": "355.42 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

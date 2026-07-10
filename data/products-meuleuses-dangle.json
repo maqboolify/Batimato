@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "meuleuses-dangle",
+    "parentLabel": "Outillage électroportatif",
+    "parentHref": "/outillage/outillage-electroportatif",
+    "name": "Meuleuses d'angle",
+    "tagline": "tronçonnage, ébarbage et ponçage du métal",
+    "description": "Meuleuses d'angle filaires et sur batterie pour tronçonner, ébarber et poncer métal, inox, béton et carrelage sur chantier.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Makita",
+      "count": 2
+    },
+    {
+      "name": "Bosch Professional",
+      "count": 2
+    },
+    {
+      "name": "DeWalt",
+      "count": 2
+    },
+    {
+      "name": "Metabo",
+      "count": 2
+    },
+    {
+      "name": "Milwaukee",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Métal",
+      "count": 2
+    },
+    {
+      "name": "Inox",
+      "count": 2
+    },
+    {
+      "name": "Béton",
+      "count": 2
+    },
+    {
+      "name": "Carrelage",
+      "count": 2
+    },
+    {
+      "name": "Pierre",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 500,
+    "currentMin": 0,
+    "currentMax": 500
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "meuleuses-dangle-01",
+      "sku": "MAK-MEUL-001",
+      "brand": "Makita",
+      "name": "Makita Meuleuse d'angle Pro - Solo (nu)",
+      "image": "/products/meuleuses-dangle/1.jpg",
+      "tags": [
+        "Métal",
+        "Solo (nu)"
+      ],
+      "price": 192.91,
+      "compareAtPrice": 231.49,
+      "unitPrice": "192.91 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "meuleuses-dangle-02",
+      "sku": "BOS-MEUL-002",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Meuleuse d'angle Brushless - 1 batterie 4Ah",
+      "image": "/products/meuleuses-dangle/2.jpg",
+      "tags": [
+        "Inox",
+        "1 batterie 4Ah"
+      ],
+      "price": 136.23,
+      "compareAtPrice": null,
+      "unitPrice": "136.23 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "meuleuses-dangle-03",
+      "sku": "DEW-MEUL-003",
+      "brand": "DeWalt",
+      "name": "DeWalt Meuleuse d'angle Robuste - 2 batteries 5Ah",
+      "image": "/products/meuleuses-dangle/3.jpg",
+      "tags": [
+        "Béton",
+        "2 batteries 5Ah"
+      ],
+      "price": 418.21,
+      "compareAtPrice": null,
+      "unitPrice": "418.21 € / unité",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "meuleuses-dangle-04",
+      "sku": "MET-MEUL-004",
+      "brand": "Metabo",
+      "name": "Metabo Meuleuse d'angle Compact - Coffret complet",
+      "image": "/products/meuleuses-dangle/4.jpg",
+      "tags": [
+        "Carrelage",
+        "Coffret complet"
+      ],
+      "price": 114.22,
+      "compareAtPrice": 137.06,
+      "unitPrice": "114.22 € / unité",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "meuleuses-dangle-05",
+      "sku": "MIL-MEUL-005",
+      "brand": "Milwaukee",
+      "name": "Milwaukee Meuleuse d'angle Longue Durée - Filaire secteur",
+      "image": "/products/meuleuses-dangle/5.jpg",
+      "tags": [
+        "Pierre",
+        "Filaire secteur"
+      ],
+      "price": 366.64,
+      "compareAtPrice": null,
+      "unitPrice": "366.64 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "meuleuses-dangle-06",
+      "sku": "MAK-MEUL-006",
+      "brand": "Makita",
+      "name": "Makita Meuleuse d'angle XR - Kit chargeur",
+      "image": "/products/meuleuses-dangle/6.jpg",
+      "tags": [
+        "Métal",
+        "Kit chargeur"
+      ],
+      "price": 288.07,
+      "compareAtPrice": null,
+      "unitPrice": "288.07 € / unité",
+      "badge": {
+        "label": "Garantie 3 ans",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "meuleuses-dangle-07",
+      "sku": "BOS-MEUL-007",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Meuleuse d'angle Expert - Machine seule",
+      "image": "/products/meuleuses-dangle/7.jpg",
+      "tags": [
+        "Inox",
+        "Machine seule"
+      ],
+      "price": 443.06,
+      "compareAtPrice": 531.67,
+      "unitPrice": "443.06 € / unité",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "meuleuses-dangle-08",
+      "sku": "DEW-MEUL-008",
+      "brand": "DeWalt",
+      "name": "DeWalt Meuleuse d'angle Chantier - Solo (nu)",
+      "image": "/products/meuleuses-dangle/8.jpg",
+      "tags": [
+        "Béton",
+        "Solo (nu)"
+      ],
+      "price": 427.46,
+      "compareAtPrice": null,
+      "unitPrice": "427.46 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "meuleuses-dangle-09",
+      "sku": "MET-MEUL-009",
+      "brand": "Metabo",
+      "name": "Metabo Meuleuse d'angle Performance - 1 batterie 4Ah",
+      "image": "/products/meuleuses-dangle/9.jpg",
+      "tags": [
+        "Carrelage",
+        "1 batterie 4Ah"
+      ],
+      "price": 314.02,
+      "compareAtPrice": null,
+      "unitPrice": "314.02 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

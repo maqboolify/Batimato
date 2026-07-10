@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "disques-et-lames-de-decoupe",
+    "parentLabel": "Consommables",
+    "parentHref": "/outillage/consommables",
+    "name": "Disques & lames de découpe",
+    "tagline": "des découpes nettes sur tous matériaux",
+    "description": "Disques et lames de découpe pour meuleuses et scies, conçus pour le métal, l'inox, le bois, le béton et le carrelage.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Bosch Professional",
+      "count": 2
+    },
+    {
+      "name": "Makita",
+      "count": 2
+    },
+    {
+      "name": "Norton",
+      "count": 2
+    },
+    {
+      "name": "Diager",
+      "count": 2
+    },
+    {
+      "name": "DeWalt",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Métal",
+      "count": 2
+    },
+    {
+      "name": "Inox",
+      "count": 2
+    },
+    {
+      "name": "Bois",
+      "count": 2
+    },
+    {
+      "name": "Béton",
+      "count": 2
+    },
+    {
+      "name": "Carrelage",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "disques-et-lames-de-decoupe-01",
+      "sku": "BOS-DISQ-001",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Disque / lame de découpe Pro - Lot de 5",
+      "image": "/products/disques-et-lames-de-decoupe/1.jpg",
+      "tags": [
+        "Métal",
+        "Lot de 5"
+      ],
+      "price": 24.06,
+      "compareAtPrice": 28.87,
+      "unitPrice": "24.06 € / lot de 5",
+      "badge": {
+        "label": "Carbure",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "disques-et-lames-de-decoupe-02",
+      "sku": "MAK-DISQ-002",
+      "brand": "Makita",
+      "name": "Makita Disque / lame de découpe Renforcé - Lot de 10",
+      "image": "/products/disques-et-lames-de-decoupe/2.jpg",
+      "tags": [
+        "Inox",
+        "Lot de 10"
+      ],
+      "price": 67.58,
+      "compareAtPrice": null,
+      "unitPrice": "67.58 € / lot de 10",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "disques-et-lames-de-decoupe-03",
+      "sku": "NOR-DISQ-003",
+      "brand": "Norton",
+      "name": "Norton Disque / lame de découpe HSS - Lot de 25",
+      "image": "/products/disques-et-lames-de-decoupe/3.jpg",
+      "tags": [
+        "Bois",
+        "Lot de 25"
+      ],
+      "price": 62.33,
+      "compareAtPrice": null,
+      "unitPrice": "62.33 € / lot de 25",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "disques-et-lames-de-decoupe-04",
+      "sku": "DIA-DISQ-004",
+      "brand": "Diager",
+      "name": "Diager Disque / lame de découpe Carbure - Lot de 50",
+      "image": "/products/disques-et-lames-de-decoupe/4.jpg",
+      "tags": [
+        "Béton",
+        "Lot de 50"
+      ],
+      "price": 30.0,
+      "compareAtPrice": 36.0,
+      "unitPrice": "30.0 € / lot de 50",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "disques-et-lames-de-decoupe-05",
+      "sku": "DEW-DISQ-005",
+      "brand": "DeWalt",
+      "name": "DeWalt Disque / lame de découpe Longue Durée - Boîte 100",
+      "image": "/products/disques-et-lames-de-decoupe/5.jpg",
+      "tags": [
+        "Carrelage",
+        "Boîte 100"
+      ],
+      "price": 64.81,
+      "compareAtPrice": null,
+      "unitPrice": "64.81 € / boîte 100",
+      "badge": {
+        "label": "Carbure",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "disques-et-lames-de-decoupe-06",
+      "sku": "BOS-DISQ-006",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Disque / lame de découpe Multi-matériaux - Coffret",
+      "image": "/products/disques-et-lames-de-decoupe/6.jpg",
+      "tags": [
+        "Métal",
+        "Coffret"
+      ],
+      "price": 19.62,
+      "compareAtPrice": null,
+      "unitPrice": "19.62 € / coffret",
+      "badge": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "disques-et-lames-de-decoupe-07",
+      "sku": "MAK-DISQ-007",
+      "brand": "Makita",
+      "name": "Makita Disque / lame de découpe Expert - Unité",
+      "image": "/products/disques-et-lames-de-decoupe/7.jpg",
+      "tags": [
+        "Inox",
+        "Unité"
+      ],
+      "price": 50.18,
+      "compareAtPrice": 60.22,
+      "unitPrice": "50.18 € / unité",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "disques-et-lames-de-decoupe-08",
+      "sku": "NOR-DISQ-008",
+      "brand": "Norton",
+      "name": "Norton Disque / lame de découpe Chantier - Lot de 5",
+      "image": "/products/disques-et-lames-de-decoupe/8.jpg",
+      "tags": [
+        "Bois",
+        "Lot de 5"
+      ],
+      "price": 43.96,
+      "compareAtPrice": null,
+      "unitPrice": "43.96 € / lot de 5",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "disques-et-lames-de-decoupe-09",
+      "sku": "DIA-DISQ-009",
+      "brand": "Diager",
+      "name": "Diager Disque / lame de découpe Standard - Lot de 10",
+      "image": "/products/disques-et-lames-de-decoupe/9.jpg",
+      "tags": [
+        "Béton",
+        "Lot de 10"
+      ],
+      "price": 65.41,
+      "compareAtPrice": null,
+      "unitPrice": "65.41 € / lot de 10",
+      "badge": {
+        "label": "Carbure",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

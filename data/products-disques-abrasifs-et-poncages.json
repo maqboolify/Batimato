@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "disques-abrasifs-et-poncages",
+    "parentLabel": "Consommables",
+    "parentHref": "/outillage/consommables",
+    "name": "Disques abrasifs & ponçages",
+    "tagline": "une finition impeccable avant peinture",
+    "description": "Disques abrasifs et feuilles de ponçage pour ponceuses, adaptés au bois, au métal, à la peinture et au vernis.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Bosch Professional",
+      "count": 2
+    },
+    {
+      "name": "Makita",
+      "count": 2
+    },
+    {
+      "name": "Norton",
+      "count": 2
+    },
+    {
+      "name": "3M",
+      "count": 2
+    },
+    {
+      "name": "Mirka",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Bois",
+      "count": 2
+    },
+    {
+      "name": "Métal",
+      "count": 2
+    },
+    {
+      "name": "Peinture",
+      "count": 2
+    },
+    {
+      "name": "Vernis",
+      "count": 2
+    },
+    {
+      "name": "Carrosserie",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "disques-abrasifs-et-poncages-01",
+      "sku": "BOS-DISQ-001",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Disque abrasif Pro - Lot de 5",
+      "image": "/products/disques-abrasifs-et-poncages/1.jpg",
+      "tags": [
+        "Bois",
+        "Lot de 5"
+      ],
+      "price": 54.7,
+      "compareAtPrice": 65.64,
+      "unitPrice": "54.7 € / lot de 5",
+      "badge": {
+        "label": "Carbure",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "disques-abrasifs-et-poncages-02",
+      "sku": "MAK-DISQ-002",
+      "brand": "Makita",
+      "name": "Makita Disque abrasif Renforcé - Lot de 10",
+      "image": "/products/disques-abrasifs-et-poncages/2.jpg",
+      "tags": [
+        "Métal",
+        "Lot de 10"
+      ],
+      "price": 32.36,
+      "compareAtPrice": null,
+      "unitPrice": "32.36 € / lot de 10",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "disques-abrasifs-et-poncages-03",
+      "sku": "NOR-DISQ-003",
+      "brand": "Norton",
+      "name": "Norton Disque abrasif HSS - Lot de 25",
+      "image": "/products/disques-abrasifs-et-poncages/3.jpg",
+      "tags": [
+        "Peinture",
+        "Lot de 25"
+      ],
+      "price": 6.32,
+      "compareAtPrice": null,
+      "unitPrice": "6.32 € / lot de 25",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "disques-abrasifs-et-poncages-04",
+      "sku": "3M-DISQ-004",
+      "brand": "3M",
+      "name": "3M Disque abrasif Carbure - Lot de 50",
+      "image": "/products/disques-abrasifs-et-poncages/4.jpg",
+      "tags": [
+        "Vernis",
+        "Lot de 50"
+      ],
+      "price": 61.22,
+      "compareAtPrice": 73.46,
+      "unitPrice": "61.22 € / lot de 50",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "disques-abrasifs-et-poncages-05",
+      "sku": "MIR-DISQ-005",
+      "brand": "Mirka",
+      "name": "Mirka Disque abrasif Longue Durée - Boîte 100",
+      "image": "/products/disques-abrasifs-et-poncages/5.jpg",
+      "tags": [
+        "Carrosserie",
+        "Boîte 100"
+      ],
+      "price": 17.69,
+      "compareAtPrice": null,
+      "unitPrice": "17.69 € / boîte 100",
+      "badge": {
+        "label": "Carbure",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "disques-abrasifs-et-poncages-06",
+      "sku": "BOS-DISQ-006",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Disque abrasif Multi-matériaux - Coffret",
+      "image": "/products/disques-abrasifs-et-poncages/6.jpg",
+      "tags": [
+        "Bois",
+        "Coffret"
+      ],
+      "price": 66.23,
+      "compareAtPrice": null,
+      "unitPrice": "66.23 € / coffret",
+      "badge": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "disques-abrasifs-et-poncages-07",
+      "sku": "MAK-DISQ-007",
+      "brand": "Makita",
+      "name": "Makita Disque abrasif Expert - Unité",
+      "image": "/products/disques-abrasifs-et-poncages/7.jpg",
+      "tags": [
+        "Métal",
+        "Unité"
+      ],
+      "price": 73.34,
+      "compareAtPrice": 88.01,
+      "unitPrice": "73.34 € / unité",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "disques-abrasifs-et-poncages-08",
+      "sku": "NOR-DISQ-008",
+      "brand": "Norton",
+      "name": "Norton Disque abrasif Chantier - Lot de 5",
+      "image": "/products/disques-abrasifs-et-poncages/8.jpg",
+      "tags": [
+        "Peinture",
+        "Lot de 5"
+      ],
+      "price": 53.91,
+      "compareAtPrice": null,
+      "unitPrice": "53.91 € / lot de 5",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "disques-abrasifs-et-poncages-09",
+      "sku": "3M-DISQ-009",
+      "brand": "3M",
+      "name": "3M Disque abrasif Standard - Lot de 10",
+      "image": "/products/disques-abrasifs-et-poncages/9.jpg",
+      "tags": [
+        "Vernis",
+        "Lot de 10"
+      ],
+      "price": 16.83,
+      "compareAtPrice": null,
+      "unitPrice": "16.83 € / lot de 10",
+      "badge": {
+        "label": "Carbure",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

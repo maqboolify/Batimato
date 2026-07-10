@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "embouts-burin-pour-perforateurs",
+    "parentLabel": "Consommables",
+    "parentHref": "/outillage/consommables",
+    "name": "Embouts burin pour perforateurs",
+    "tagline": "démolition et burinage précis",
+    "description": "Burins SDS-plus et SDS-max pour perforateurs, adaptés au piquage, au burinage et à la démolition de béton et maçonnerie.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Bosch Professional",
+      "count": 2
+    },
+    {
+      "name": "Makita",
+      "count": 2
+    },
+    {
+      "name": "DeWalt",
+      "count": 2
+    },
+    {
+      "name": "Hikoki",
+      "count": 2
+    },
+    {
+      "name": "Milwaukee",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Béton",
+      "count": 2
+    },
+    {
+      "name": "Maçonnerie",
+      "count": 2
+    },
+    {
+      "name": "Pierre",
+      "count": 2
+    },
+    {
+      "name": "Carrelage",
+      "count": 2
+    },
+    {
+      "name": "Démolition",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "embouts-burin-pour-perforateurs-01",
+      "sku": "BOS-EMBO-001",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Burin SDS Pro - Lot de 5",
+      "image": "/products/embouts-burin-pour-perforateurs/1.jpg",
+      "tags": [
+        "Béton",
+        "Lot de 5"
+      ],
+      "price": 27.87,
+      "compareAtPrice": 33.44,
+      "unitPrice": "27.87 € / lot de 5",
+      "badge": {
+        "label": "Carbure",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "embouts-burin-pour-perforateurs-02",
+      "sku": "MAK-EMBO-002",
+      "brand": "Makita",
+      "name": "Makita Burin SDS Renforcé - Lot de 10",
+      "image": "/products/embouts-burin-pour-perforateurs/2.jpg",
+      "tags": [
+        "Maçonnerie",
+        "Lot de 10"
+      ],
+      "price": 37.97,
+      "compareAtPrice": null,
+      "unitPrice": "37.97 € / lot de 10",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "embouts-burin-pour-perforateurs-03",
+      "sku": "DEW-EMBO-003",
+      "brand": "DeWalt",
+      "name": "DeWalt Burin SDS HSS - Lot de 25",
+      "image": "/products/embouts-burin-pour-perforateurs/3.jpg",
+      "tags": [
+        "Pierre",
+        "Lot de 25"
+      ],
+      "price": 72.71,
+      "compareAtPrice": null,
+      "unitPrice": "72.71 € / lot de 25",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "embouts-burin-pour-perforateurs-04",
+      "sku": "HIK-EMBO-004",
+      "brand": "Hikoki",
+      "name": "Hikoki Burin SDS Carbure - Lot de 50",
+      "image": "/products/embouts-burin-pour-perforateurs/4.jpg",
+      "tags": [
+        "Carrelage",
+        "Lot de 50"
+      ],
+      "price": 10.95,
+      "compareAtPrice": 13.14,
+      "unitPrice": "10.95 € / lot de 50",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "embouts-burin-pour-perforateurs-05",
+      "sku": "MIL-EMBO-005",
+      "brand": "Milwaukee",
+      "name": "Milwaukee Burin SDS Longue Durée - Boîte 100",
+      "image": "/products/embouts-burin-pour-perforateurs/5.jpg",
+      "tags": [
+        "Démolition",
+        "Boîte 100"
+      ],
+      "price": 14.71,
+      "compareAtPrice": null,
+      "unitPrice": "14.71 € / boîte 100",
+      "badge": {
+        "label": "Carbure",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "embouts-burin-pour-perforateurs-06",
+      "sku": "BOS-EMBO-006",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Burin SDS Multi-matériaux - Coffret",
+      "image": "/products/embouts-burin-pour-perforateurs/6.jpg",
+      "tags": [
+        "Béton",
+        "Coffret"
+      ],
+      "price": 63.95,
+      "compareAtPrice": null,
+      "unitPrice": "63.95 € / coffret",
+      "badge": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "embouts-burin-pour-perforateurs-07",
+      "sku": "MAK-EMBO-007",
+      "brand": "Makita",
+      "name": "Makita Burin SDS Expert - Unité",
+      "image": "/products/embouts-burin-pour-perforateurs/7.jpg",
+      "tags": [
+        "Maçonnerie",
+        "Unité"
+      ],
+      "price": 5.51,
+      "compareAtPrice": 6.61,
+      "unitPrice": "5.51 € / unité",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "embouts-burin-pour-perforateurs-08",
+      "sku": "DEW-EMBO-008",
+      "brand": "DeWalt",
+      "name": "DeWalt Burin SDS Chantier - Lot de 5",
+      "image": "/products/embouts-burin-pour-perforateurs/8.jpg",
+      "tags": [
+        "Pierre",
+        "Lot de 5"
+      ],
+      "price": 73.15,
+      "compareAtPrice": null,
+      "unitPrice": "73.15 € / lot de 5",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "embouts-burin-pour-perforateurs-09",
+      "sku": "HIK-EMBO-009",
+      "brand": "Hikoki",
+      "name": "Hikoki Burin SDS Standard - Lot de 10",
+      "image": "/products/embouts-burin-pour-perforateurs/9.jpg",
+      "tags": [
+        "Carrelage",
+        "Lot de 10"
+      ],
+      "price": 47.48,
+      "compareAtPrice": null,
+      "unitPrice": "47.48 € / lot de 10",
+      "badge": {
+        "label": "Carbure",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "embouts-de-vissage",
+    "parentLabel": "Outillage et outil à main",
+    "parentHref": "/outillage/outillage-et-outil-a-main",
+    "name": "Embouts de vissage",
+    "tagline": "un vissage précis sans dérapage",
+    "description": "Embouts de vissage haute résistance compatibles avec la plupart des empreintes, pour un vissage précis et durable.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Wera",
+      "count": 2
+    },
+    {
+      "name": "Bosch Professional",
+      "count": 2
+    },
+    {
+      "name": "Facom",
+      "count": 2
+    },
+    {
+      "name": "Makita",
+      "count": 2
+    },
+    {
+      "name": "DeWalt",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Bois",
+      "count": 2
+    },
+    {
+      "name": "Métal",
+      "count": 2
+    },
+    {
+      "name": "Placo",
+      "count": 2
+    },
+    {
+      "name": "Multi-matériaux",
+      "count": 2
+    },
+    {
+      "name": "Meuble",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "embouts-de-vissage-01",
+      "sku": "WER-EMBO-001",
+      "brand": "Wera",
+      "name": "Wera Embout de vissage Pro - Unité",
+      "image": "/products/embouts-de-vissage/1.jpg",
+      "tags": [
+        "Bois",
+        "Unité"
+      ],
+      "price": 64.02,
+      "compareAtPrice": 76.82,
+      "unitPrice": "64.02 € / unité",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "embouts-de-vissage-02",
+      "sku": "BOS-EMBO-002",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Embout de vissage Renforcé - Lot de 2",
+      "image": "/products/embouts-de-vissage/2.jpg",
+      "tags": [
+        "Métal",
+        "Lot de 2"
+      ],
+      "price": 42.21,
+      "compareAtPrice": null,
+      "unitPrice": "42.21 € / lot de 2",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "embouts-de-vissage-03",
+      "sku": "FAC-EMBO-003",
+      "brand": "Facom",
+      "name": "Facom Embout de vissage Ergonomique - Lot de 3",
+      "image": "/products/embouts-de-vissage/3.jpg",
+      "tags": [
+        "Placo",
+        "Lot de 3"
+      ],
+      "price": 59.55,
+      "compareAtPrice": null,
+      "unitPrice": "59.55 € / lot de 3",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "embouts-de-vissage-04",
+      "sku": "MAK-EMBO-004",
+      "brand": "Makita",
+      "name": "Makita Embout de vissage Robuste - Coffret complet",
+      "image": "/products/embouts-de-vissage/4.jpg",
+      "tags": [
+        "Multi-matériaux",
+        "Coffret complet"
+      ],
+      "price": 4.78,
+      "compareAtPrice": 5.74,
+      "unitPrice": "4.78 € / coffret complet",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "embouts-de-vissage-05",
+      "sku": "DEW-EMBO-005",
+      "brand": "DeWalt",
+      "name": "DeWalt Embout de vissage Compact - Set pro",
+      "image": "/products/embouts-de-vissage/5.jpg",
+      "tags": [
+        "Meuble",
+        "Set pro"
+      ],
+      "price": 88.63,
+      "compareAtPrice": null,
+      "unitPrice": "88.63 € / set pro",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "embouts-de-vissage-06",
+      "sku": "WER-EMBO-006",
+      "brand": "Wera",
+      "name": "Wera Embout de vissage Expert - Format XL",
+      "image": "/products/embouts-de-vissage/6.jpg",
+      "tags": [
+        "Bois",
+        "Format XL"
+      ],
+      "price": 51.92,
+      "compareAtPrice": null,
+      "unitPrice": "51.92 € / format xl",
+      "badge": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "embouts-de-vissage-07",
+      "sku": "BOS-EMBO-007",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Embout de vissage Chantier - Format compact",
+      "image": "/products/embouts-de-vissage/7.jpg",
+      "tags": [
+        "Métal",
+        "Format compact"
+      ],
+      "price": 55.08,
+      "compareAtPrice": 66.1,
+      "unitPrice": "55.08 € / format compact",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "embouts-de-vissage-08",
+      "sku": "FAC-EMBO-008",
+      "brand": "Facom",
+      "name": "Facom Embout de vissage Standard - Unité",
+      "image": "/products/embouts-de-vissage/8.jpg",
+      "tags": [
+        "Placo",
+        "Unité"
+      ],
+      "price": 25.78,
+      "compareAtPrice": null,
+      "unitPrice": "25.78 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "embouts-de-vissage-09",
+      "sku": "MAK-EMBO-009",
+      "brand": "Makita",
+      "name": "Makita Embout de vissage Confort - Lot de 2",
+      "image": "/products/embouts-de-vissage/9.jpg",
+      "tags": [
+        "Multi-matériaux",
+        "Lot de 2"
+      ],
+      "price": 45.19,
+      "compareAtPrice": null,
+      "unitPrice": "45.19 € / lot de 2",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

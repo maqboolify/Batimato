@@ -1,0 +1,159 @@
+{
+  "category": {
+    "slug": "revetement-bas-carbone",
+    "parentLabel": "Peinture Extérieure",
+    "parentHref": "/peintures",
+    "name": "Revêtement Bas-Carbone",
+    "tagline": "Solutions Éco-Responsables",
+    "description": "Revêtements de façade à faible empreinte carbone, formulés à base de liants minéraux ou biosourcés, pour une rénovation extérieure plus durable.",
+    "stats": {
+      "products": 17,
+      "brands": 5,
+      "delivery": "J+2"
+    }
+  },
+  "brands": [
+    {
+      "name": "Seigneurie",
+      "count": 5
+    },
+    {
+      "name": "Zolpan",
+      "count": 4
+    },
+    {
+      "name": "Tollens",
+      "count": 3
+    },
+    {
+      "name": "V33",
+      "count": 3
+    },
+    {
+      "name": "Julien",
+      "count": 2
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Façade",
+      "count": 11
+    },
+    {
+      "name": "Enduit minéral",
+      "count": 6
+    },
+    {
+      "name": "Béton",
+      "count": 4
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 150,
+    "currentMin": 0,
+    "currentMax": 95
+  },
+  "activeFilters": [],
+  "totalCount": 17,
+  "page": 1,
+  "totalPages": 3,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés",
+    "Meilleures ventes"
+  ],
+  "products": [
+    {
+      "id": "SGN-BCB-BLC-15L",
+      "sku": "SGN-BCB-BLC-15L",
+      "brand": "Seigneurie",
+      "name": "Revêtement Façade Bas-Carbone Blanc 15L",
+      "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "15 L",
+        "FAÇADE",
+        "ÉCO"
+      ],
+      "price": 89.9,
+      "compareAtPrice": 99.9,
+      "unitPrice": "5,99 €/L",
+      "stock": "in_stock",
+      "badge": {
+        "label": "PRO",
+        "tone": "dark"
+      },
+      "discount": "-10%"
+    },
+    {
+      "id": "ZLP-BCB-GRI-15L",
+      "sku": "ZLP-BCB-GRI-15L",
+      "brand": "Zolpan",
+      "name": "Peinture Minérale Silicate Gris Clair 15L",
+      "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "15 L",
+        "ENDUIT MINÉRAL"
+      ],
+      "price": 94.9,
+      "compareAtPrice": null,
+      "unitPrice": "6,33 €/L",
+      "stock": "in_stock",
+      "badge": {
+        "label": "NOUVEAU",
+        "tone": "stock"
+      }
+    },
+    {
+      "id": "TLN-BCB-BLC-10L",
+      "sku": "TLN-BCB-BLC-10L",
+      "brand": "Tollens",
+      "name": "Revêtement Biosourcé Façade Blanc 10L",
+      "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "10 L",
+        "FAÇADE"
+      ],
+      "price": 74.9,
+      "compareAtPrice": null,
+      "unitPrice": "7,49 €/L",
+      "stock": "in_stock",
+      "ribbon": "STOCK"
+    },
+    {
+      "id": "V33-BCB-GRI-10L",
+      "sku": "V33-BCB-GRI-10L",
+      "brand": "V33",
+      "name": "Peinture Façade Faible Empreinte Gris 10L",
+      "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "10 L",
+        "BÉTON",
+        "ÉCO"
+      ],
+      "price": 69.9,
+      "compareAtPrice": 79.9,
+      "unitPrice": "6,99 €/L",
+      "stock": "low_stock",
+      "cornerBadge": "A+"
+    },
+    {
+      "id": "JUL-BCB-BLC-5L",
+      "sku": "JUL-BCB-BLC-5L",
+      "brand": "Julien",
+      "name": "Enduit Minéral Bas-Carbone Blanc 5L",
+      "image": "https://images.unsplash.com/photo-1580983230786-cc02fe968de1?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "5 L",
+        "ENDUIT MINÉRAL"
+      ],
+      "price": 39.9,
+      "compareAtPrice": null,
+      "unitPrice": "7,98 €/L",
+      "stock": "out_of_stock",
+      "ribbon": "RUPTURE"
+    }
+  ]
+}

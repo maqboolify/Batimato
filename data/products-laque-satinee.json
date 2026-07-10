@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "laque-satinee",
+    "parentLabel": "Sous-couche & Primaire",
+    "parentHref": "/peintures/sous-couche-primaire",
+    "name": "Laque satinée",
+    "tagline": "l'équilibre parfait entre éclat et discrétion",
+    "description": "Laques satinées lessivables et résistantes, idéales pour boiseries, portes et meubles soumis à un usage intensif.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Ripolin",
+      "count": 2
+    },
+    {
+      "name": "Tollens",
+      "count": 2
+    },
+    {
+      "name": "V33",
+      "count": 2
+    },
+    {
+      "name": "Zolpan",
+      "count": 2
+    },
+    {
+      "name": "Levis",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Boiseries",
+      "count": 2
+    },
+    {
+      "name": "Porte",
+      "count": 2
+    },
+    {
+      "name": "Plinthe",
+      "count": 2
+    },
+    {
+      "name": "Meuble",
+      "count": 2
+    },
+    {
+      "name": "Volet",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "laque-satinee-01",
+      "sku": "RIP-LAQU-001",
+      "brand": "Ripolin",
+      "name": "Ripolin Laque satinée Pro 0.5L",
+      "image": "/products/laque-satinee/1.jpg",
+      "tags": [
+        "Boiseries",
+        "0.5L"
+      ],
+      "price": 28.52,
+      "compareAtPrice": 34.22,
+      "unitPrice": "57.04 €/L",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "laque-satinee-02",
+      "sku": "TOL-LAQU-002",
+      "brand": "Tollens",
+      "name": "Tollens Laque satinée Premium 0.75L",
+      "image": "/products/laque-satinee/2.jpg",
+      "tags": [
+        "Porte",
+        "0.75L"
+      ],
+      "price": 17.98,
+      "compareAtPrice": null,
+      "unitPrice": "23.97 €/L",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "laque-satinee-03",
+      "sku": "V33-LAQU-003",
+      "brand": "V33",
+      "name": "V33 Laque satinée Extra 1L",
+      "image": "/products/laque-satinee/3.jpg",
+      "tags": [
+        "Plinthe",
+        "1L"
+      ],
+      "price": 32.14,
+      "compareAtPrice": null,
+      "unitPrice": "32.14 €/L",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "laque-satinee-04",
+      "sku": "ZOL-LAQU-004",
+      "brand": "Zolpan",
+      "name": "Zolpan Laque satinée Confort 2.5L",
+      "image": "/products/laque-satinee/4.jpg",
+      "tags": [
+        "Meuble",
+        "2.5L"
+      ],
+      "price": 60.75,
+      "compareAtPrice": 72.9,
+      "unitPrice": "24.3 €/L",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "laque-satinee-05",
+      "sku": "LEV-LAQU-005",
+      "brand": "Levis",
+      "name": "Levis Laque satinée Longue Durée 3L",
+      "image": "/products/laque-satinee/5.jpg",
+      "tags": [
+        "Volet",
+        "3L"
+      ],
+      "price": 39.09,
+      "compareAtPrice": null,
+      "unitPrice": "13.03 €/L",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "laque-satinee-06",
+      "sku": "RIP-LAQU-006",
+      "brand": "Ripolin",
+      "name": "Ripolin Laque satinée Multi-supports 5L",
+      "image": "/products/laque-satinee/6.jpg",
+      "tags": [
+        "Boiseries",
+        "5L"
+      ],
+      "price": 39.51,
+      "compareAtPrice": null,
+      "unitPrice": "7.9 €/L",
+      "badge": {
+        "label": "Eco-responsable",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "laque-satinee-07",
+      "sku": "TOL-LAQU-007",
+      "brand": "Tollens",
+      "name": "Tollens Laque satinée Expert 10L",
+      "image": "/products/laque-satinee/7.jpg",
+      "tags": [
+        "Porte",
+        "10L"
+      ],
+      "price": 26.66,
+      "compareAtPrice": 31.99,
+      "unitPrice": "2.67 €/L",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "laque-satinee-08",
+      "sku": "V33-LAQU-008",
+      "brand": "V33",
+      "name": "V33 Laque satinée Classic 0.5L",
+      "image": "/products/laque-satinee/8.jpg",
+      "tags": [
+        "Plinthe",
+        "0.5L"
+      ],
+      "price": 31.26,
+      "compareAtPrice": null,
+      "unitPrice": "62.52 €/L",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "laque-satinee-09",
+      "sku": "ZOL-LAQU-009",
+      "brand": "Zolpan",
+      "name": "Zolpan Laque satinée Renov 0.75L",
+      "image": "/products/laque-satinee/9.jpg",
+      "tags": [
+        "Meuble",
+        "0.75L"
+      ],
+      "price": 84.83,
+      "compareAtPrice": null,
+      "unitPrice": "113.11 €/L",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

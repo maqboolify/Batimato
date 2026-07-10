@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "tournevis",
+    "parentLabel": "Outillage et outil à main",
+    "parentHref": "/outillage/outillage-et-outil-a-main",
+    "name": "Tournevis",
+    "tagline": "le bon embout, toujours à portée de main",
+    "description": "Tournevis plats, cruciformes et Torx pour tous travaux de bricolage, montage mobilier et petite électroménager.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Wera",
+      "count": 2
+    },
+    {
+      "name": "Facom",
+      "count": 2
+    },
+    {
+      "name": "Stanley",
+      "count": 2
+    },
+    {
+      "name": "Knipex",
+      "count": 2
+    },
+    {
+      "name": "Irwin",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Électronique",
+      "count": 2
+    },
+    {
+      "name": "Mobilier",
+      "count": 2
+    },
+    {
+      "name": "Multi-usages",
+      "count": 2
+    },
+    {
+      "name": "Électroménager",
+      "count": 2
+    },
+    {
+      "name": "Bricolage",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "tournevis-01",
+      "sku": "WER-TOUR-001",
+      "brand": "Wera",
+      "name": "Wera Tournevis Pro - Unité",
+      "image": "/products/tournevis/1.jpg",
+      "tags": [
+        "Électronique",
+        "Unité"
+      ],
+      "price": 59.15,
+      "compareAtPrice": 70.98,
+      "unitPrice": "59.15 € / unité",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "tournevis-02",
+      "sku": "FAC-TOUR-002",
+      "brand": "Facom",
+      "name": "Facom Tournevis Renforcé - Lot de 2",
+      "image": "/products/tournevis/2.jpg",
+      "tags": [
+        "Mobilier",
+        "Lot de 2"
+      ],
+      "price": 39.37,
+      "compareAtPrice": null,
+      "unitPrice": "39.37 € / lot de 2",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "tournevis-03",
+      "sku": "STA-TOUR-003",
+      "brand": "Stanley",
+      "name": "Stanley Tournevis Ergonomique - Lot de 3",
+      "image": "/products/tournevis/3.jpg",
+      "tags": [
+        "Multi-usages",
+        "Lot de 3"
+      ],
+      "price": 14.35,
+      "compareAtPrice": null,
+      "unitPrice": "14.35 € / lot de 3",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "tournevis-04",
+      "sku": "KNI-TOUR-004",
+      "brand": "Knipex",
+      "name": "Knipex Tournevis Robuste - Coffret complet",
+      "image": "/products/tournevis/4.jpg",
+      "tags": [
+        "Électroménager",
+        "Coffret complet"
+      ],
+      "price": 20.79,
+      "compareAtPrice": 24.95,
+      "unitPrice": "20.79 € / coffret complet",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "tournevis-05",
+      "sku": "IRW-TOUR-005",
+      "brand": "Irwin",
+      "name": "Irwin Tournevis Compact - Set pro",
+      "image": "/products/tournevis/5.jpg",
+      "tags": [
+        "Bricolage",
+        "Set pro"
+      ],
+      "price": 79.04,
+      "compareAtPrice": null,
+      "unitPrice": "79.04 € / set pro",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "tournevis-06",
+      "sku": "WER-TOUR-006",
+      "brand": "Wera",
+      "name": "Wera Tournevis Expert - Format XL",
+      "image": "/products/tournevis/6.jpg",
+      "tags": [
+        "Électronique",
+        "Format XL"
+      ],
+      "price": 21.59,
+      "compareAtPrice": null,
+      "unitPrice": "21.59 € / format xl",
+      "badge": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "tournevis-07",
+      "sku": "FAC-TOUR-007",
+      "brand": "Facom",
+      "name": "Facom Tournevis Chantier - Format compact",
+      "image": "/products/tournevis/7.jpg",
+      "tags": [
+        "Mobilier",
+        "Format compact"
+      ],
+      "price": 48.12,
+      "compareAtPrice": 57.74,
+      "unitPrice": "48.12 € / format compact",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "tournevis-08",
+      "sku": "STA-TOUR-008",
+      "brand": "Stanley",
+      "name": "Stanley Tournevis Standard - Unité",
+      "image": "/products/tournevis/8.jpg",
+      "tags": [
+        "Multi-usages",
+        "Unité"
+      ],
+      "price": 65.05,
+      "compareAtPrice": null,
+      "unitPrice": "65.05 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "tournevis-09",
+      "sku": "KNI-TOUR-009",
+      "brand": "Knipex",
+      "name": "Knipex Tournevis Confort - Lot de 2",
+      "image": "/products/tournevis/9.jpg",
+      "tags": [
+        "Électroménager",
+        "Lot de 2"
+      ],
+      "price": 22.93,
+      "compareAtPrice": null,
+      "unitPrice": "22.93 € / lot de 2",
+      "badge": {
+        "label": "Ergonomique",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

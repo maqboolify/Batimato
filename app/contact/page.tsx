@@ -9,15 +9,30 @@
  *  3. ContactMain       — 2-column: coordinates card + dynamic quote form
  *  4. Footer            — same dark card / yellow bottom bar as the homepage
  *
- * The quote form lets a customer pick a product category (mirroring your
- * nav: Peinture, Outillage, Préparation & Matériaux, plus Électricité and
- * Plomberie) and specify how many of each item they need — they can add as
- * many line items as their project requires.
+ * EMAILJS INTEGRATION
+ * ─────────────────────────────────────────────────────────────────
+ * The form submits through EmailJS. EmailJS templates run on Mustache,
+ * which DOES support real loops and conditionals — just not the
+ * Handlebars `{{#each}}` syntax. The correct tags are:
+ *   {{#items}} ... {{/items}}     → repeats once per array item
+ *   {{#message}} ... {{/message}} → only renders if `message` is truthy
+ * So instead of pre-rendering HTML rows in JS (which is unnecessary
+ * and was tripping EmailJS's "dynamic variables are corrupted" check
+ * on the large injected HTML blob), we just send `items` as a plain
+ * array of objects and let the template's own {{#items}} block repeat
+ * for us. Cleaner, smaller payload, and it's what EmailJS is built for.
  *
- * UPDATED: reworked for a polished, professional mobile experience —
- * tighter breakpoints, a stacked 2-column layout for line items on small
- * screens, richer yellow accents (glow, gradient rails, focus rings,
- * hover lift on the CTA), and tuned spacing at every viewport.
+ * Setup:
+ *   1. npm install @emailjs/browser
+ *   2. Create a .env.local with:
+ *        NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
+ *        NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
+ *        NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
+ *   3. In EmailJS, set the template body to the updated
+ *      batimato-devis-email.html (see accompanying file) and make sure
+ *      the template's "To email" is set to your inbox (or {{email}}
+ *      if you also want to auto-reply to the client with a second
+ *      template).
  *
  * NOTE: adjust the Navbar import path below to match your project
  * structure (e.g. "@/components/Navbar").
@@ -26,7 +41,12 @@ import Link from "next/link";
 import { useState } from "react";
 import type { ReactNode, ComponentType } from "react";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 import Navbar from "@/components/navbar/page";
+
+const EMAILJS_SERVICE_ID = "service_tmpk0xw";
+const EMAILJS_TEMPLATE_ID = "template_ifq8kvo";
+const EMAILJS_PUBLIC_KEY = "n6hxwlY7kDmmnvihx";
 
 // ─── Tokens — matches the Batimato navbar/site theme ─────────────────────────
 const YELLOW      = "#F5C300";
@@ -41,6 +61,7 @@ const DIM          = "rgba(26,26,26,0.28)";
 const MUT_DARKBG   = "rgba(255,255,255,0.55)";
 const DIM_DARKBG   = "rgba(255,255,255,0.16)";
 const RING         = "0 0 0 4px rgba(245,195,0,0.16)";
+const RED          = "#C23B3B";
 
 // ─── Quote form data ──────────────────────────────────────────────────────────
 // Categories mirror the site catalogue (Peinture, Outillage, Préparation &
@@ -75,6 +96,14 @@ const makeItem = (): QuoteItem => ({
   unit: UNIT_OPTIONS[0],
 });
 
+// ─── Helper: order number sent to the EmailJS template ──────────────────────
+function generateOrderNumber() {
+  const now = new Date();
+  const y = now.getFullYear();
+  const rand = Math.floor(10000 + Math.random() * 90000);
+  return `DEV-${y}-${rand}`;
+}
+
 // ─── Icons ─────────────────────────────────────────────────────────────────────
 const Icon = {
   Phone: () => (<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.57 3.37 2 2 0 0 1 3.55 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.5a16 16 0 0 0 6.29 6.29l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" /></svg>),
@@ -85,6 +114,7 @@ const Icon = {
   Minus: () => (<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="5" y1="12" x2="19" y2="12" /></svg>),
   Trash: () => (<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="3 6 5 6 21 6" /><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" /></svg>),
   Check: () => (<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>),
+  Alert: () => (<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>),
   ArrowRight: () => (<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>),
   Instagram: () => (<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="2" width="20" height="20" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" /></svg>),
   TikTok: () => (<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 1h-3.3v14.6c0 1.6-1.3 2.9-2.9 2.9a2.9 2.9 0 0 1-2.9-2.9 2.9 2.9 0 0 1 2.9-2.9c.3 0 .6 0 .9.1V9.4a6.2 6.2 0 0 0-.9-.1A6.2 6.2 0 0 0 4.1 15.6a6.2 6.2 0 0 0 6.2 6.2 6.2 6.2 0 0 0 6.2-6.2V8.1a8.4 8.4 0 0 0 4.9 1.6V6.4a5 5 0 0 1-4.9-5.4z" /></svg>),
@@ -317,18 +347,58 @@ function QuoteForm() {
   const [consent, setConsent] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const updateItem = (id: number, field: keyof QuoteItem, value: string | number) =>
     setItems(prev => prev.map(it => (it.id === id ? { ...it, [field]: value } : it)));
   const addItem = () => setItems(prev => [...prev, makeItem()]);
   const removeItem = (id: number) => setItems(prev => (prev.length > 1 ? prev.filter(it => it.id !== id) : prev));
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!consent) return;
     setSubmitting(true);
-    // TODO: wire this up to your form endpoint / API route (e.g. POST /api/devis)
-    setTimeout(() => { setSubmitting(false); setSubmitted(true); }, 900);
+    setError(null);
+
+    const orderNumber = generateOrderNumber();
+
+    // Every form entry — identity fields, every line item, and the optional
+    // message — is passed here as plain data. The template's own
+    // {{#items}}...{{/items}} section repeats once per array entry, and
+    // {{#message}}...{{/message}} only renders when message is non-empty.
+    // No HTML needs to be built on this side — EmailJS/Mustache does it.
+    const templateParams = {
+      firstName: form.firstName,
+      lastName: form.lastName,
+      company: form.company, // falsy (empty string) → {{#company}} block hidden
+      email: form.email,
+      phone: form.phone,
+      orderNumber,
+      itemsCount: items.length,
+      items: items.map(({ category, description, quantity, unit }) => ({
+        category,
+        description: description.trim() || "Référence non précisée",
+        quantity,
+        unit,
+      })),
+      message, // falsy (empty string) → {{#message}} block hidden
+      year: new Date().getFullYear(),
+    };
+
+    try {
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, {
+        publicKey: EMAILJS_PUBLIC_KEY,
+      });
+      setSubmitted(true);
+    } catch (err: any) {
+      console.error("EmailJS send failed:", err);
+      // TEMP: surfacing the raw EmailJS error so we can see the exact cause.
+      // Swap back to the generic French message once this is confirmed working.
+      const detail = err?.text || err?.message || JSON.stringify(err);
+      setError(`Erreur EmailJS : ${detail}`);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const resetForm = () => {
@@ -337,6 +407,7 @@ function QuoteForm() {
     setMessage("");
     setConsent(false);
     setSubmitted(false);
+    setError(null);
   };
 
   if (submitted) {
@@ -366,6 +437,13 @@ function QuoteForm() {
     >
       <div style={{ color: INK, fontWeight: 900, fontSize: "1.5rem", letterSpacing: "-0.01em", marginBottom: 6 }}>Demande de devis</div>
       <p style={{ color: MUT, fontSize: "0.88rem", marginBottom: 32 }}>Indiquez vos coordonnées et les articles dont vous avez besoin — un expert vous répond sous 2h.</p>
+
+      {error && (
+        <div style={{ display: "flex", gap: 10, alignItems: "flex-start", background: "#FBEAEA", border: `1px solid rgba(194,59,59,0.3)`, borderRadius: 10, padding: "12px 14px", marginBottom: 24, color: RED, fontSize: "0.85rem", lineHeight: 1.5 }}>
+          <span style={{ flexShrink: 0, marginTop: 1 }}><Icon.Alert /></span>
+          <span>{error}</span>
+        </div>
+      )}
 
       {/* Identity fields */}
       <div className="cf-row2" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 16 }}>

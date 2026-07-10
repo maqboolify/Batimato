@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "masques-et-lunettes",
+    "parentLabel": "Protection sol & EPI",
+    "parentHref": "/preparation-materiaux/protection-sol-epi",
+    "name": "Masques et lunettes",
+    "tagline": "préservez votre respiration et votre vue",
+    "description": "Masques anti-poussière, demi-masques filtrants et lunettes de protection pour travailler en toute sécurité face aux vapeurs et particules.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "3M",
+      "count": 2
+    },
+    {
+      "name": "Delta Plus",
+      "count": 2
+    },
+    {
+      "name": "Presto",
+      "count": 2
+    },
+    {
+      "name": "Honeywell",
+      "count": 2
+    },
+    {
+      "name": "OCAI",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Ponçage",
+      "count": 2
+    },
+    {
+      "name": "Peinture",
+      "count": 2
+    },
+    {
+      "name": "Solvants",
+      "count": 2
+    },
+    {
+      "name": "Poussière fine",
+      "count": 2
+    },
+    {
+      "name": "Projections",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "masques-et-lunettes-01",
+      "sku": "3M-MASQ-001",
+      "brand": "3M",
+      "name": "3M Masque / lunette Pro Boîte 50",
+      "image": "/products/masques-et-lunettes/1.jpg",
+      "tags": [
+        "Ponçage",
+        "Boîte 50"
+      ],
+      "price": 49.79,
+      "compareAtPrice": 59.75,
+      "unitPrice": "49.79 € / boîte 50",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "masques-et-lunettes-02",
+      "sku": "DEL-MASQ-002",
+      "brand": "Delta Plus",
+      "name": "Delta Plus Masque / lunette Premium Rouleau",
+      "image": "/products/masques-et-lunettes/2.jpg",
+      "tags": [
+        "Peinture",
+        "Rouleau"
+      ],
+      "price": 37.62,
+      "compareAtPrice": null,
+      "unitPrice": "37.62 € / rouleau",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "masques-et-lunettes-03",
+      "sku": "PRE-MASQ-003",
+      "brand": "Presto",
+      "name": "Presto Masque / lunette Confort Lot de 5",
+      "image": "/products/masques-et-lunettes/3.jpg",
+      "tags": [
+        "Solvants",
+        "Lot de 5"
+      ],
+      "price": 44.03,
+      "compareAtPrice": null,
+      "unitPrice": "44.03 € / lot de 5",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "masques-et-lunettes-04",
+      "sku": "HON-MASQ-004",
+      "brand": "Honeywell",
+      "name": "Honeywell Masque / lunette Longue Durée Taille unique",
+      "image": "/products/masques-et-lunettes/4.jpg",
+      "tags": [
+        "Poussière fine",
+        "Taille unique"
+      ],
+      "price": 31.85,
+      "compareAtPrice": 38.22,
+      "unitPrice": "31.85 € / taille unique",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "masques-et-lunettes-05",
+      "sku": "OCA-MASQ-005",
+      "brand": "OCAI",
+      "name": "OCAI Masque / lunette Multi-usages Lot de 10",
+      "image": "/products/masques-et-lunettes/5.jpg",
+      "tags": [
+        "Projections",
+        "Lot de 10"
+      ],
+      "price": 4.5,
+      "compareAtPrice": null,
+      "unitPrice": "4.5 € / lot de 10",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "masques-et-lunettes-06",
+      "sku": "3M-MASQ-006",
+      "brand": "3M",
+      "name": "3M Masque / lunette Expert Pack pro",
+      "image": "/products/masques-et-lunettes/6.jpg",
+      "tags": [
+        "Ponçage",
+        "Pack pro"
+      ],
+      "price": 18.36,
+      "compareAtPrice": null,
+      "unitPrice": "18.36 € / pack pro",
+      "badge": {
+        "label": "Certifié CE",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "masques-et-lunettes-07",
+      "sku": "DEL-MASQ-007",
+      "brand": "Delta Plus",
+      "name": "Delta Plus Masque / lunette Classic Unité",
+      "image": "/products/masques-et-lunettes/7.jpg",
+      "tags": [
+        "Peinture",
+        "Unité"
+      ],
+      "price": 26.28,
+      "compareAtPrice": 31.54,
+      "unitPrice": "26.28 € / unité",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "masques-et-lunettes-08",
+      "sku": "PRE-MASQ-008",
+      "brand": "Presto",
+      "name": "Presto Masque / lunette Chantier Boîte 50",
+      "image": "/products/masques-et-lunettes/8.jpg",
+      "tags": [
+        "Solvants",
+        "Boîte 50"
+      ],
+      "price": 8.34,
+      "compareAtPrice": null,
+      "unitPrice": "8.34 € / boîte 50",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "masques-et-lunettes-09",
+      "sku": "HON-MASQ-009",
+      "brand": "Honeywell",
+      "name": "Honeywell Masque / lunette Renfort Rouleau",
+      "image": "/products/masques-et-lunettes/9.jpg",
+      "tags": [
+        "Poussière fine",
+        "Rouleau"
+      ],
+      "price": 47.64,
+      "compareAtPrice": null,
+      "unitPrice": "47.64 € / rouleau",
+      "badge": {
+        "label": "Écolabel",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

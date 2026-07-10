@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "ponceuses-electriques",
+    "parentLabel": "Outillage électroportatif",
+    "parentHref": "/outillage/outillage-electroportatif",
+    "name": "Ponceuses électriques",
+    "tagline": "un ponçage net avant chaque finition",
+    "description": "Ponceuses orbitales, excentriques et à bande pour préparer bois, métal et anciennes peintures avant application de la finition.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Makita",
+      "count": 2
+    },
+    {
+      "name": "Bosch Professional",
+      "count": 2
+    },
+    {
+      "name": "Festool",
+      "count": 2
+    },
+    {
+      "name": "DeWalt",
+      "count": 2
+    },
+    {
+      "name": "Metabo",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Bois",
+      "count": 2
+    },
+    {
+      "name": "Vernis",
+      "count": 2
+    },
+    {
+      "name": "Peinture",
+      "count": 2
+    },
+    {
+      "name": "Métal",
+      "count": 2
+    },
+    {
+      "name": "Placo",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 500,
+    "currentMin": 0,
+    "currentMax": 500
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "ponceuses-electriques-01",
+      "sku": "MAK-PONC-001",
+      "brand": "Makita",
+      "name": "Makita Ponceuse Pro - Solo (nu)",
+      "image": "/products/ponceuses-electriques/1.jpg",
+      "tags": [
+        "Bois",
+        "Solo (nu)"
+      ],
+      "price": 110.81,
+      "compareAtPrice": 132.97,
+      "unitPrice": "110.81 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "ponceuses-electriques-02",
+      "sku": "BOS-PONC-002",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Ponceuse Brushless - 1 batterie 4Ah",
+      "image": "/products/ponceuses-electriques/2.jpg",
+      "tags": [
+        "Vernis",
+        "1 batterie 4Ah"
+      ],
+      "price": 314.13,
+      "compareAtPrice": null,
+      "unitPrice": "314.13 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "ponceuses-electriques-03",
+      "sku": "FES-PONC-003",
+      "brand": "Festool",
+      "name": "Festool Ponceuse Robuste - 2 batteries 5Ah",
+      "image": "/products/ponceuses-electriques/3.jpg",
+      "tags": [
+        "Peinture",
+        "2 batteries 5Ah"
+      ],
+      "price": 389.89,
+      "compareAtPrice": null,
+      "unitPrice": "389.89 € / unité",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "ponceuses-electriques-04",
+      "sku": "DEW-PONC-004",
+      "brand": "DeWalt",
+      "name": "DeWalt Ponceuse Compact - Coffret complet",
+      "image": "/products/ponceuses-electriques/4.jpg",
+      "tags": [
+        "Métal",
+        "Coffret complet"
+      ],
+      "price": 185.42,
+      "compareAtPrice": 222.5,
+      "unitPrice": "185.42 € / unité",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "ponceuses-electriques-05",
+      "sku": "MET-PONC-005",
+      "brand": "Metabo",
+      "name": "Metabo Ponceuse Longue Durée - Filaire secteur",
+      "image": "/products/ponceuses-electriques/5.jpg",
+      "tags": [
+        "Placo",
+        "Filaire secteur"
+      ],
+      "price": 428.64,
+      "compareAtPrice": null,
+      "unitPrice": "428.64 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "ponceuses-electriques-06",
+      "sku": "MAK-PONC-006",
+      "brand": "Makita",
+      "name": "Makita Ponceuse XR - Kit chargeur",
+      "image": "/products/ponceuses-electriques/6.jpg",
+      "tags": [
+        "Bois",
+        "Kit chargeur"
+      ],
+      "price": 261.39,
+      "compareAtPrice": null,
+      "unitPrice": "261.39 € / unité",
+      "badge": {
+        "label": "Garantie 3 ans",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "ponceuses-electriques-07",
+      "sku": "BOS-PONC-007",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Ponceuse Expert - Machine seule",
+      "image": "/products/ponceuses-electriques/7.jpg",
+      "tags": [
+        "Vernis",
+        "Machine seule"
+      ],
+      "price": 359.69,
+      "compareAtPrice": 431.63,
+      "unitPrice": "359.69 € / unité",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "ponceuses-electriques-08",
+      "sku": "FES-PONC-008",
+      "brand": "Festool",
+      "name": "Festool Ponceuse Chantier - Solo (nu)",
+      "image": "/products/ponceuses-electriques/8.jpg",
+      "tags": [
+        "Peinture",
+        "Solo (nu)"
+      ],
+      "price": 237.52,
+      "compareAtPrice": null,
+      "unitPrice": "237.52 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "ponceuses-electriques-09",
+      "sku": "DEW-PONC-009",
+      "brand": "DeWalt",
+      "name": "DeWalt Ponceuse Performance - 1 batterie 4Ah",
+      "image": "/products/ponceuses-electriques/9.jpg",
+      "tags": [
+        "Métal",
+        "1 batterie 4Ah"
+      ],
+      "price": 210.95,
+      "compareAtPrice": null,
+      "unitPrice": "210.95 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "scies-sauteuses",
+    "parentLabel": "Outillage électroportatif",
+    "parentHref": "/outillage/outillage-electroportatif",
+    "name": "Scies sauteuses",
+    "tagline": "des découpes précises, droites ou courbes",
+    "description": "Scies sauteuses pour coupes droites et courbes sur bois, métal et plastique, avec lames interchangeables adaptées à chaque matériau.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Bosch Professional",
+      "count": 2
+    },
+    {
+      "name": "Makita",
+      "count": 2
+    },
+    {
+      "name": "DeWalt",
+      "count": 2
+    },
+    {
+      "name": "Metabo",
+      "count": 2
+    },
+    {
+      "name": "Milwaukee",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Bois",
+      "count": 2
+    },
+    {
+      "name": "Métal",
+      "count": 2
+    },
+    {
+      "name": "Plastique",
+      "count": 2
+    },
+    {
+      "name": "Stratifié",
+      "count": 2
+    },
+    {
+      "name": "Multi-matériaux",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 500,
+    "currentMin": 0,
+    "currentMax": 500
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "scies-sauteuses-01",
+      "sku": "BOS-SCIE-001",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Scie sauteuse Pro - Solo (nu)",
+      "image": "/products/scies-sauteuses/1.jpg",
+      "tags": [
+        "Bois",
+        "Solo (nu)"
+      ],
+      "price": 157.66,
+      "compareAtPrice": 189.19,
+      "unitPrice": "157.66 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "scies-sauteuses-02",
+      "sku": "MAK-SCIE-002",
+      "brand": "Makita",
+      "name": "Makita Scie sauteuse Brushless - 1 batterie 4Ah",
+      "image": "/products/scies-sauteuses/2.jpg",
+      "tags": [
+        "Métal",
+        "1 batterie 4Ah"
+      ],
+      "price": 52.95,
+      "compareAtPrice": null,
+      "unitPrice": "52.95 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "scies-sauteuses-03",
+      "sku": "DEW-SCIE-003",
+      "brand": "DeWalt",
+      "name": "DeWalt Scie sauteuse Robuste - 2 batteries 5Ah",
+      "image": "/products/scies-sauteuses/3.jpg",
+      "tags": [
+        "Plastique",
+        "2 batteries 5Ah"
+      ],
+      "price": 131.41,
+      "compareAtPrice": null,
+      "unitPrice": "131.41 € / unité",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "scies-sauteuses-04",
+      "sku": "MET-SCIE-004",
+      "brand": "Metabo",
+      "name": "Metabo Scie sauteuse Compact - Coffret complet",
+      "image": "/products/scies-sauteuses/4.jpg",
+      "tags": [
+        "Stratifié",
+        "Coffret complet"
+      ],
+      "price": 445.73,
+      "compareAtPrice": 534.88,
+      "unitPrice": "445.73 € / unité",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "scies-sauteuses-05",
+      "sku": "MIL-SCIE-005",
+      "brand": "Milwaukee",
+      "name": "Milwaukee Scie sauteuse Longue Durée - Filaire secteur",
+      "image": "/products/scies-sauteuses/5.jpg",
+      "tags": [
+        "Multi-matériaux",
+        "Filaire secteur"
+      ],
+      "price": 263.62,
+      "compareAtPrice": null,
+      "unitPrice": "263.62 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "scies-sauteuses-06",
+      "sku": "BOS-SCIE-006",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Scie sauteuse XR - Kit chargeur",
+      "image": "/products/scies-sauteuses/6.jpg",
+      "tags": [
+        "Bois",
+        "Kit chargeur"
+      ],
+      "price": 234.73,
+      "compareAtPrice": null,
+      "unitPrice": "234.73 € / unité",
+      "badge": {
+        "label": "Garantie 3 ans",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "scies-sauteuses-07",
+      "sku": "MAK-SCIE-007",
+      "brand": "Makita",
+      "name": "Makita Scie sauteuse Expert - Machine seule",
+      "image": "/products/scies-sauteuses/7.jpg",
+      "tags": [
+        "Métal",
+        "Machine seule"
+      ],
+      "price": 410.0,
+      "compareAtPrice": 492.0,
+      "unitPrice": "410.0 € / unité",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "scies-sauteuses-08",
+      "sku": "DEW-SCIE-008",
+      "brand": "DeWalt",
+      "name": "DeWalt Scie sauteuse Chantier - Solo (nu)",
+      "image": "/products/scies-sauteuses/8.jpg",
+      "tags": [
+        "Plastique",
+        "Solo (nu)"
+      ],
+      "price": 292.1,
+      "compareAtPrice": null,
+      "unitPrice": "292.1 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "scies-sauteuses-09",
+      "sku": "MET-SCIE-009",
+      "brand": "Metabo",
+      "name": "Metabo Scie sauteuse Performance - 1 batterie 4Ah",
+      "image": "/products/scies-sauteuses/9.jpg",
+      "tags": [
+        "Stratifié",
+        "1 batterie 4Ah"
+      ],
+      "price": 440.58,
+      "compareAtPrice": null,
+      "unitPrice": "440.58 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

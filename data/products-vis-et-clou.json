@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "vis-et-clou",
+    "parentLabel": "Consommables",
+    "parentHref": "/outillage/consommables",
+    "name": "Vis et clou",
+    "tagline": "la fixation adaptée à chaque usage",
+    "description": "Vis et clous pour bois, métal et charpente, en boîte ou en lot, compatibles avec cloueurs et visseuses professionnels.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Spax",
+      "count": 2
+    },
+    {
+      "name": "Rawlplug",
+      "count": 2
+    },
+    {
+      "name": "Fischer",
+      "count": 2
+    },
+    {
+      "name": "Würth",
+      "count": 2
+    },
+    {
+      "name": "SPIT",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Bois",
+      "count": 2
+    },
+    {
+      "name": "Métal",
+      "count": 2
+    },
+    {
+      "name": "Charpente",
+      "count": 2
+    },
+    {
+      "name": "Menuiserie",
+      "count": 2
+    },
+    {
+      "name": "Cloueur",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "vis-et-clou-01",
+      "sku": "SPA-VIS--001",
+      "brand": "Spax",
+      "name": "Spax Vis / clou Pro - Lot de 5",
+      "image": "/products/vis-et-clou/1.jpg",
+      "tags": [
+        "Bois",
+        "Lot de 5"
+      ],
+      "price": 4.88,
+      "compareAtPrice": 5.86,
+      "unitPrice": "4.88 € / lot de 5",
+      "badge": {
+        "label": "Carbure",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "vis-et-clou-02",
+      "sku": "RAW-VIS--002",
+      "brand": "Rawlplug",
+      "name": "Rawlplug Vis / clou Renforcé - Lot de 10",
+      "image": "/products/vis-et-clou/2.jpg",
+      "tags": [
+        "Métal",
+        "Lot de 10"
+      ],
+      "price": 30.65,
+      "compareAtPrice": null,
+      "unitPrice": "30.65 € / lot de 10",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "vis-et-clou-03",
+      "sku": "FIS-VIS--003",
+      "brand": "Fischer",
+      "name": "Fischer Vis / clou HSS - Lot de 25",
+      "image": "/products/vis-et-clou/3.jpg",
+      "tags": [
+        "Charpente",
+        "Lot de 25"
+      ],
+      "price": 21.31,
+      "compareAtPrice": null,
+      "unitPrice": "21.31 € / lot de 25",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "vis-et-clou-04",
+      "sku": "WÜR-VIS--004",
+      "brand": "Würth",
+      "name": "Würth Vis / clou Carbure - Lot de 50",
+      "image": "/products/vis-et-clou/4.jpg",
+      "tags": [
+        "Menuiserie",
+        "Lot de 50"
+      ],
+      "price": 44.33,
+      "compareAtPrice": 53.2,
+      "unitPrice": "44.33 € / lot de 50",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "vis-et-clou-05",
+      "sku": "SPI-VIS--005",
+      "brand": "SPIT",
+      "name": "SPIT Vis / clou Longue Durée - Boîte 100",
+      "image": "/products/vis-et-clou/5.jpg",
+      "tags": [
+        "Cloueur",
+        "Boîte 100"
+      ],
+      "price": 58.9,
+      "compareAtPrice": null,
+      "unitPrice": "58.9 € / boîte 100",
+      "badge": {
+        "label": "Carbure",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "vis-et-clou-06",
+      "sku": "SPA-VIS--006",
+      "brand": "Spax",
+      "name": "Spax Vis / clou Multi-matériaux - Coffret",
+      "image": "/products/vis-et-clou/6.jpg",
+      "tags": [
+        "Bois",
+        "Coffret"
+      ],
+      "price": 73.0,
+      "compareAtPrice": null,
+      "unitPrice": "73.0 € / coffret",
+      "badge": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "vis-et-clou-07",
+      "sku": "RAW-VIS--007",
+      "brand": "Rawlplug",
+      "name": "Rawlplug Vis / clou Expert - Unité",
+      "image": "/products/vis-et-clou/7.jpg",
+      "tags": [
+        "Métal",
+        "Unité"
+      ],
+      "price": 52.45,
+      "compareAtPrice": 62.94,
+      "unitPrice": "52.45 € / unité",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "vis-et-clou-08",
+      "sku": "FIS-VIS--008",
+      "brand": "Fischer",
+      "name": "Fischer Vis / clou Chantier - Lot de 5",
+      "image": "/products/vis-et-clou/8.jpg",
+      "tags": [
+        "Charpente",
+        "Lot de 5"
+      ],
+      "price": 79.28,
+      "compareAtPrice": null,
+      "unitPrice": "79.28 € / lot de 5",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "vis-et-clou-09",
+      "sku": "WÜR-VIS--009",
+      "brand": "Würth",
+      "name": "Würth Vis / clou Standard - Lot de 10",
+      "image": "/products/vis-et-clou/9.jpg",
+      "tags": [
+        "Menuiserie",
+        "Lot de 10"
+      ],
+      "price": 77.17,
+      "compareAtPrice": null,
+      "unitPrice": "77.17 € / lot de 10",
+      "badge": {
+        "label": "Carbure",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "category": {
+    "slug": "impression-sous-couche",
+    "parentLabel": "Peinture",
+    "parentHref": "/peinture",
+    "name": "Impression / Sous-couche",
+    "tagline": "Préparation Avant Finition",
+    "description": "Impressions et sous-couches d'accrochage pour uniformiser, boucher et préparer les supports avant l'application de la peinture de finition.",
+    "stats": {
+      "products": 28,
+      "brands": 6,
+      "delivery": "J+1"
+    }
+  },
+  "brands": [
+    {
+      "name": "Tollens",
+      "count": 8
+    },
+    {
+      "name": "Dulux Valentine",
+      "count": 6
+    },
+    {
+      "name": "V33",
+      "count": 5
+    },
+    {
+      "name": "Seigneurie",
+      "count": 4
+    },
+    {
+      "name": "Luxens",
+      "count": 3
+    },
+    {
+      "name": "Zolpan",
+      "count": 2
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Plâtre",
+      "count": 12
+    },
+    {
+      "name": "Placo",
+      "count": 10
+    },
+    {
+      "name": "Béton",
+      "count": 6
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 60
+  },
+  "activeFilters": [],
+  "totalCount": 28,
+  "page": 1,
+  "totalPages": 4,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés",
+    "Meilleures ventes"
+  ],
+  "products": [
+    {
+      "id": "TLN-IMP-BLC-10L",
+      "sku": "TLN-IMP-BLC-10L",
+      "brand": "Tollens",
+      "name": "Impression Universelle Blanc 10L",
+      "image": "https://images.unsplash.com/photo-1580983230786-cc02fe968de1?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "10 L",
+        "PLACO",
+        "PLÂTRE"
+      ],
+      "price": 34.9,
+      "compareAtPrice": 39.9,
+      "unitPrice": "3,49 €/L",
+      "stock": "in_stock",
+      "badge": {
+        "label": "PRO",
+        "tone": "dark"
+      },
+      "discount": "-13%"
+    },
+    {
+      "id": "DLX-SCH-BLC-2L5",
+      "sku": "DLX-SCH-BLC-2L5",
+      "brand": "Dulux Valentine",
+      "name": "Sous-Couche d'Accrochage Blanc 2,5L",
+      "image": "https://images.unsplash.com/photo-1580983230786-cc02fe968de1?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "2.5 L",
+        "PLÂTRE"
+      ],
+      "price": 19.9,
+      "compareAtPrice": null,
+      "unitPrice": "7,96 €/L",
+      "stock": "in_stock",
+      "badge": {
+        "label": "NOUVEAU",
+        "tone": "stock"
+      }
+    },
+    {
+      "id": "V33-IMP-BET-5L",
+      "sku": "V33-IMP-BET-5L",
+      "brand": "V33",
+      "name": "Impression Béton & Ciment 5L",
+      "image": "https://images.unsplash.com/photo-1580983230786-cc02fe968de1?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "5 L",
+        "BÉTON"
+      ],
+      "price": 29.9,
+      "compareAtPrice": null,
+      "unitPrice": "5,98 €/L",
+      "stock": "in_stock",
+      "ribbon": "STOCK"
+    },
+    {
+      "id": "SGN-SCH-BLC-10L",
+      "sku": "SGN-SCH-BLC-10L",
+      "brand": "Seigneurie",
+      "name": "Sous-Couche Professionnelle Blanc 10L",
+      "image": "https://images.unsplash.com/photo-1580983230786-cc02fe968de1?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "10 L",
+        "PLACO"
+      ],
+      "price": 42.9,
+      "compareAtPrice": 48.9,
+      "unitPrice": "4,29 €/L",
+      "stock": "low_stock",
+      "cornerBadge": "A+"
+    },
+    {
+      "id": "LUX-IMP-BLC-2L5",
+      "sku": "LUX-IMP-BLC-2L5",
+      "brand": "Luxens",
+      "name": "Impression Multi-Supports Blanc 2,5L",
+      "image": "https://images.unsplash.com/photo-1580983230786-cc02fe968de1?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "2.5 L",
+        "PLÂTRE",
+        "PLACO"
+      ],
+      "price": 17.9,
+      "compareAtPrice": null,
+      "unitPrice": "7,16 €/L",
+      "stock": "in_stock"
+    },
+    {
+      "id": "ZLP-SCH-BLC-15L",
+      "sku": "ZLP-SCH-BLC-15L",
+      "brand": "Zolpan",
+      "name": "Sous-Couche Chantier Blanc 15L",
+      "image": "https://images.unsplash.com/photo-1580983230786-cc02fe968de1?w=600&q=80&auto=format&fit=crop",
+      "tags": [
+        "15 L",
+        "BÉTON",
+        "PLACO"
+      ],
+      "price": 54.9,
+      "compareAtPrice": null,
+      "unitPrice": "3,66 €/L",
+      "stock": "out_of_stock",
+      "ribbon": "RUPTURE"
+    }
+  ]
+}

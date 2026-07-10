@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "forets-et-meches-pour-perceuses",
+    "parentLabel": "Consommables",
+    "parentHref": "/outillage/consommables",
+    "name": "Forets & mèches pour perceuses",
+    "tagline": "le bon foret pour chaque matériau",
+    "description": "Forets et mèches pour perceuses adaptés au bois, au métal, au béton et aux matériaux composites, en coffret ou à l'unité.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Bosch Professional",
+      "count": 2
+    },
+    {
+      "name": "Makita",
+      "count": 2
+    },
+    {
+      "name": "DeWalt",
+      "count": 2
+    },
+    {
+      "name": "Diager",
+      "count": 2
+    },
+    {
+      "name": "Irwin",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Bois",
+      "count": 2
+    },
+    {
+      "name": "Métal",
+      "count": 2
+    },
+    {
+      "name": "Béton",
+      "count": 2
+    },
+    {
+      "name": "Multi-matériaux",
+      "count": 2
+    },
+    {
+      "name": "Inox",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "forets-et-meches-pour-perceuses-01",
+      "sku": "BOS-FORE-001",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Foret / mèche Pro - Lot de 5",
+      "image": "/products/forets-et-meches-pour-perceuses/1.jpg",
+      "tags": [
+        "Bois",
+        "Lot de 5"
+      ],
+      "price": 7.88,
+      "compareAtPrice": 9.46,
+      "unitPrice": "7.88 € / lot de 5",
+      "badge": {
+        "label": "Carbure",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "forets-et-meches-pour-perceuses-02",
+      "sku": "MAK-FORE-002",
+      "brand": "Makita",
+      "name": "Makita Foret / mèche Renforcé - Lot de 10",
+      "image": "/products/forets-et-meches-pour-perceuses/2.jpg",
+      "tags": [
+        "Métal",
+        "Lot de 10"
+      ],
+      "price": 10.53,
+      "compareAtPrice": null,
+      "unitPrice": "10.53 € / lot de 10",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "forets-et-meches-pour-perceuses-03",
+      "sku": "DEW-FORE-003",
+      "brand": "DeWalt",
+      "name": "DeWalt Foret / mèche HSS - Lot de 25",
+      "image": "/products/forets-et-meches-pour-perceuses/3.jpg",
+      "tags": [
+        "Béton",
+        "Lot de 25"
+      ],
+      "price": 34.85,
+      "compareAtPrice": null,
+      "unitPrice": "34.85 € / lot de 25",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "forets-et-meches-pour-perceuses-04",
+      "sku": "DIA-FORE-004",
+      "brand": "Diager",
+      "name": "Diager Foret / mèche Carbure - Lot de 50",
+      "image": "/products/forets-et-meches-pour-perceuses/4.jpg",
+      "tags": [
+        "Multi-matériaux",
+        "Lot de 50"
+      ],
+      "price": 12.09,
+      "compareAtPrice": 14.51,
+      "unitPrice": "12.09 € / lot de 50",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "forets-et-meches-pour-perceuses-05",
+      "sku": "IRW-FORE-005",
+      "brand": "Irwin",
+      "name": "Irwin Foret / mèche Longue Durée - Boîte 100",
+      "image": "/products/forets-et-meches-pour-perceuses/5.jpg",
+      "tags": [
+        "Inox",
+        "Boîte 100"
+      ],
+      "price": 72.39,
+      "compareAtPrice": null,
+      "unitPrice": "72.39 € / boîte 100",
+      "badge": {
+        "label": "Carbure",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "forets-et-meches-pour-perceuses-06",
+      "sku": "BOS-FORE-006",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Foret / mèche Multi-matériaux - Coffret",
+      "image": "/products/forets-et-meches-pour-perceuses/6.jpg",
+      "tags": [
+        "Bois",
+        "Coffret"
+      ],
+      "price": 6.8,
+      "compareAtPrice": null,
+      "unitPrice": "6.8 € / coffret",
+      "badge": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "forets-et-meches-pour-perceuses-07",
+      "sku": "MAK-FORE-007",
+      "brand": "Makita",
+      "name": "Makita Foret / mèche Expert - Unité",
+      "image": "/products/forets-et-meches-pour-perceuses/7.jpg",
+      "tags": [
+        "Métal",
+        "Unité"
+      ],
+      "price": 44.65,
+      "compareAtPrice": 53.58,
+      "unitPrice": "44.65 € / unité",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "forets-et-meches-pour-perceuses-08",
+      "sku": "DEW-FORE-008",
+      "brand": "DeWalt",
+      "name": "DeWalt Foret / mèche Chantier - Lot de 5",
+      "image": "/products/forets-et-meches-pour-perceuses/8.jpg",
+      "tags": [
+        "Béton",
+        "Lot de 5"
+      ],
+      "price": 29.15,
+      "compareAtPrice": null,
+      "unitPrice": "29.15 € / lot de 5",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "forets-et-meches-pour-perceuses-09",
+      "sku": "DIA-FORE-009",
+      "brand": "Diager",
+      "name": "Diager Foret / mèche Standard - Lot de 10",
+      "image": "/products/forets-et-meches-pour-perceuses/9.jpg",
+      "tags": [
+        "Multi-matériaux",
+        "Lot de 10"
+      ],
+      "price": 68.66,
+      "compareAtPrice": null,
+      "unitPrice": "68.66 € / lot de 10",
+      "badge": {
+        "label": "Carbure",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

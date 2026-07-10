@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "scies-cloches",
+    "parentLabel": "Consommables",
+    "parentHref": "/outillage/consommables",
+    "name": "Scies cloches",
+    "tagline": "des perçages larges et nets",
+    "description": "Scies cloches pour perçages de gros diamètre dans le bois, le métal, le placo et le carrelage, avec queue adaptable.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Bosch Professional",
+      "count": 2
+    },
+    {
+      "name": "Makita",
+      "count": 2
+    },
+    {
+      "name": "DeWalt",
+      "count": 2
+    },
+    {
+      "name": "Diager",
+      "count": 2
+    },
+    {
+      "name": "Irwin",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Bois",
+      "count": 2
+    },
+    {
+      "name": "Métal",
+      "count": 2
+    },
+    {
+      "name": "Placo",
+      "count": 2
+    },
+    {
+      "name": "Carrelage",
+      "count": 2
+    },
+    {
+      "name": "Multi-matériaux",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 100,
+    "currentMin": 0,
+    "currentMax": 100
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "scies-cloches-01",
+      "sku": "BOS-SCIE-001",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Scie cloche Pro - Lot de 5",
+      "image": "/products/scies-cloches/1.jpg",
+      "tags": [
+        "Bois",
+        "Lot de 5"
+      ],
+      "price": 27.86,
+      "compareAtPrice": 33.43,
+      "unitPrice": "27.86 € / lot de 5",
+      "badge": {
+        "label": "Carbure",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "scies-cloches-02",
+      "sku": "MAK-SCIE-002",
+      "brand": "Makita",
+      "name": "Makita Scie cloche Renforcé - Lot de 10",
+      "image": "/products/scies-cloches/2.jpg",
+      "tags": [
+        "Métal",
+        "Lot de 10"
+      ],
+      "price": 34.17,
+      "compareAtPrice": null,
+      "unitPrice": "34.17 € / lot de 10",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "scies-cloches-03",
+      "sku": "DEW-SCIE-003",
+      "brand": "DeWalt",
+      "name": "DeWalt Scie cloche HSS - Lot de 25",
+      "image": "/products/scies-cloches/3.jpg",
+      "tags": [
+        "Placo",
+        "Lot de 25"
+      ],
+      "price": 62.37,
+      "compareAtPrice": null,
+      "unitPrice": "62.37 € / lot de 25",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "scies-cloches-04",
+      "sku": "DIA-SCIE-004",
+      "brand": "Diager",
+      "name": "Diager Scie cloche Carbure - Lot de 50",
+      "image": "/products/scies-cloches/4.jpg",
+      "tags": [
+        "Carrelage",
+        "Lot de 50"
+      ],
+      "price": 42.87,
+      "compareAtPrice": 51.44,
+      "unitPrice": "42.87 € / lot de 50",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "scies-cloches-05",
+      "sku": "IRW-SCIE-005",
+      "brand": "Irwin",
+      "name": "Irwin Scie cloche Longue Durée - Boîte 100",
+      "image": "/products/scies-cloches/5.jpg",
+      "tags": [
+        "Multi-matériaux",
+        "Boîte 100"
+      ],
+      "price": 55.95,
+      "compareAtPrice": null,
+      "unitPrice": "55.95 € / boîte 100",
+      "badge": {
+        "label": "Carbure",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "scies-cloches-06",
+      "sku": "BOS-SCIE-006",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Scie cloche Multi-matériaux - Coffret",
+      "image": "/products/scies-cloches/6.jpg",
+      "tags": [
+        "Bois",
+        "Coffret"
+      ],
+      "price": 52.41,
+      "compareAtPrice": null,
+      "unitPrice": "52.41 € / coffret",
+      "badge": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "scies-cloches-07",
+      "sku": "MAK-SCIE-007",
+      "brand": "Makita",
+      "name": "Makita Scie cloche Expert - Unité",
+      "image": "/products/scies-cloches/7.jpg",
+      "tags": [
+        "Métal",
+        "Unité"
+      ],
+      "price": 54.57,
+      "compareAtPrice": 65.48,
+      "unitPrice": "54.57 € / unité",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "scies-cloches-08",
+      "sku": "DEW-SCIE-008",
+      "brand": "DeWalt",
+      "name": "DeWalt Scie cloche Chantier - Lot de 5",
+      "image": "/products/scies-cloches/8.jpg",
+      "tags": [
+        "Placo",
+        "Lot de 5"
+      ],
+      "price": 71.55,
+      "compareAtPrice": null,
+      "unitPrice": "71.55 € / lot de 5",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "scies-cloches-09",
+      "sku": "DIA-SCIE-009",
+      "brand": "Diager",
+      "name": "Diager Scie cloche Standard - Lot de 10",
+      "image": "/products/scies-cloches/9.jpg",
+      "tags": [
+        "Carrelage",
+        "Lot de 10"
+      ],
+      "price": 40.85,
+      "compareAtPrice": null,
+      "unitPrice": "40.85 € / lot de 10",
+      "badge": {
+        "label": "Carbure",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}

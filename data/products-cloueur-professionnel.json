@@ -1,0 +1,258 @@
+{
+  "category": {
+    "slug": "cloueur-professionnel",
+    "parentLabel": "Outillage électroportatif",
+    "parentHref": "/outillage/outillage-electroportatif",
+    "name": "Cloueur professionnel",
+    "tagline": "fixation rapide pour charpente et menuiserie",
+    "description": "Cloueurs pneumatiques et sur batterie pour charpente, bardage, menuiserie et coffrage, avec cadence de tir professionnelle.",
+    "stats": {
+      "products": 9,
+      "brands": 5,
+      "delivery": "24-48h"
+    }
+  },
+  "brands": [
+    {
+      "name": "Bosch Professional",
+      "count": 2
+    },
+    {
+      "name": "Makita",
+      "count": 2
+    },
+    {
+      "name": "DeWalt",
+      "count": 2
+    },
+    {
+      "name": "Paslode",
+      "count": 2
+    },
+    {
+      "name": "Milwaukee",
+      "count": 1
+    }
+  ],
+  "surfaceTypes": [
+    {
+      "name": "Bois",
+      "count": 2
+    },
+    {
+      "name": "Charpente",
+      "count": 2
+    },
+    {
+      "name": "Bardage",
+      "count": 2
+    },
+    {
+      "name": "Menuiserie",
+      "count": 2
+    },
+    {
+      "name": "Coffrage",
+      "count": 1
+    }
+  ],
+  "priceRange": {
+    "min": 0,
+    "max": 500,
+    "currentMin": 0,
+    "currentMax": 500
+  },
+  "activeFilters": [],
+  "totalCount": 9,
+  "page": 1,
+  "totalPages": 1,
+  "sortOptions": [
+    "Pertinence",
+    "Prix croissant",
+    "Prix décroissant",
+    "Nouveautés"
+  ],
+  "products": [
+    {
+      "id": "cloueur-professionnel-01",
+      "sku": "BOS-CLOU-001",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Cloueur Pro - Solo (nu)",
+      "image": "/products/cloueur-professionnel/1.jpg",
+      "tags": [
+        "Bois",
+        "Solo (nu)"
+      ],
+      "price": 191.42,
+      "compareAtPrice": 229.7,
+      "unitPrice": "191.42 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "cloueur-professionnel-02",
+      "sku": "MAK-CLOU-002",
+      "brand": "Makita",
+      "name": "Makita Cloueur Brushless - 1 batterie 4Ah",
+      "image": "/products/cloueur-professionnel/2.jpg",
+      "tags": [
+        "Charpente",
+        "1 batterie 4Ah"
+      ],
+      "price": 327.9,
+      "compareAtPrice": null,
+      "unitPrice": "327.9 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "cloueur-professionnel-03",
+      "sku": "DEW-CLOU-003",
+      "brand": "DeWalt",
+      "name": "DeWalt Cloueur Robuste - 2 batteries 5Ah",
+      "image": "/products/cloueur-professionnel/3.jpg",
+      "tags": [
+        "Bardage",
+        "2 batteries 5Ah"
+      ],
+      "price": 418.78,
+      "compareAtPrice": null,
+      "unitPrice": "418.78 € / unité",
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "cloueur-professionnel-04",
+      "sku": "PAS-CLOU-004",
+      "brand": "Paslode",
+      "name": "Paslode Cloueur Compact - Coffret complet",
+      "image": "/products/cloueur-professionnel/4.jpg",
+      "tags": [
+        "Menuiserie",
+        "Coffret complet"
+      ],
+      "price": 102.27,
+      "compareAtPrice": 122.72,
+      "unitPrice": "102.27 € / unité",
+      "discount": "-17%",
+      "stock": "low_stock"
+    },
+    {
+      "id": "cloueur-professionnel-05",
+      "sku": "MIL-CLOU-005",
+      "brand": "Milwaukee",
+      "name": "Milwaukee Cloueur Longue Durée - Filaire secteur",
+      "image": "/products/cloueur-professionnel/5.jpg",
+      "tags": [
+        "Coffrage",
+        "Filaire secteur"
+      ],
+      "price": 395.47,
+      "compareAtPrice": null,
+      "unitPrice": "395.47 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "ribbon": "RUPTURE",
+      "stock": "out_of_stock"
+    },
+    {
+      "id": "cloueur-professionnel-06",
+      "sku": "BOS-CLOU-006",
+      "brand": "Bosch Professional",
+      "name": "Bosch Professional Cloueur XR - Kit chargeur",
+      "image": "/products/cloueur-professionnel/6.jpg",
+      "tags": [
+        "Bois",
+        "Kit chargeur"
+      ],
+      "price": 289.77,
+      "compareAtPrice": null,
+      "unitPrice": "289.77 € / unité",
+      "badge": {
+        "label": "Garantie 3 ans",
+        "tone": "stock"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "cloueur-professionnel-07",
+      "sku": "MAK-CLOU-007",
+      "brand": "Makita",
+      "name": "Makita Cloueur Expert - Machine seule",
+      "image": "/products/cloueur-professionnel/7.jpg",
+      "tags": [
+        "Charpente",
+        "Machine seule"
+      ],
+      "price": 348.79,
+      "compareAtPrice": 418.55,
+      "unitPrice": "348.79 € / unité",
+      "cornerBadge": "PRO",
+      "discount": "-17%",
+      "stock": "in_stock"
+    },
+    {
+      "id": "cloueur-professionnel-08",
+      "sku": "DEW-CLOU-008",
+      "brand": "DeWalt",
+      "name": "DeWalt Cloueur Chantier - Solo (nu)",
+      "image": "/products/cloueur-professionnel/8.jpg",
+      "tags": [
+        "Bardage",
+        "Solo (nu)"
+      ],
+      "price": 293.11,
+      "compareAtPrice": null,
+      "unitPrice": "293.11 € / unité",
+      "badge2": {
+        "label": "Nouveau",
+        "tone": "dark"
+      },
+      "stock": "in_stock"
+    },
+    {
+      "id": "cloueur-professionnel-09",
+      "sku": "PAS-CLOU-009",
+      "brand": "Paslode",
+      "name": "Paslode Cloueur Performance - 1 batterie 4Ah",
+      "image": "/products/cloueur-professionnel/9.jpg",
+      "tags": [
+        "Menuiserie",
+        "1 batterie 4Ah"
+      ],
+      "price": 213.22,
+      "compareAtPrice": null,
+      "unitPrice": "213.22 € / unité",
+      "badge": {
+        "label": "Brushless",
+        "tone": "dark"
+      },
+      "badge2": {
+        "label": "Best-seller",
+        "tone": "stock"
+      },
+      "stock": "low_stock"
+    }
+  ]
+}
